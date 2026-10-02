@@ -103,9 +103,15 @@ El usuario puede aportar un brief completo si desea mayor control, pero no es re
 
 El contenido entregado por el usuario **no es una orden de incluirlo todo**.
 
-Antes de diseñar, decidir el destino del contenido: **arte**, **texto complementario de la publicación** o **contexto no publicable**. Un dato puede ser verdadero y útil para comprender el negocio sin pertenecer a la imagen. Incluir en el arte lo que el público necesita ver para reconocer la propuesta, entenderla y realizar la acción prevista; trasladar información secundaria cuando exista un lugar adecuado para comunicarla. Excluir instrucciones al asistente, comentarios internos y detalles ajenos al objetivo, salvo que el usuario los convierta expresamente en contenido público.
+### Distribución entre pieza y texto de publicación
 
-La selección no consiste en reducir todos los textos ni repartir todo entre bloques más pequeños. Determinar qué merece aparecer antes de jerarquizarlo. No preguntar al usuario por cada descarte: tomar decisiones editoriales; aclarar únicamente dudas que alteren hechos, condiciones o intención. Aplicar `references/CONTENT_HIERARCHY.md` para decidir el destino y preservar las condiciones materiales.
+Antes de diseñar, seleccionar la información pertinente y decidir su destino: **PIEZA / TEXTO COMPLEMENTARIO / OMITIR**. La pieza no es un contenedor de todo el brief: conserva lo necesario para captar atención, comprender la propuesta y reconocer los datos esenciales para actuar. Detalles secundarios, explicaciones, condiciones extensas, dirección completa y aclaraciones pueden pasar al caption, descripción o mensaje asociado cuando su ausencia en el arte no cambie materialmente la oferta. El contexto de trabajo y las instrucciones al asistente se omiten del contenido público.
+
+Trasladar no significa eliminar: redactar y entregar la información necesaria que queda fuera del arte como texto complementario. Resolver según el soporte; si no dispone de texto asociado o la pieza circulará sola, asumir en ella la información necesaria. No depender de un caption inexistente ni establecer una lista fija de datos que siempre entren o salgan.
+
+**Orden obligatorio: seleccionar → decidir PIEZA / TEXTO COMPLEMENTARIO / OMITIR → jerarquizar lo que queda en la pieza → diseñar.** La selección no consiste en reducir todos los textos ni repartirlos entre bloques más pequeños.
+
+Ejercer criterio editorial antes de preguntar. Una frase extraña o humorística no exige por sí sola una aclaración. Consultar únicamente cuando la ambigüedad impida decidir de forma fiable qué se ofrece, qué condición debe comunicarse o qué intención debe respetarse. Aplicar `references/CONTENT_HIERARCHY.md` para resolver la distribución.
 
 Antes de componer, clasificar internamente la información en:
 - **dominante**: mensaje que gobierna la pieza;
@@ -215,7 +221,7 @@ Regla general:
 El asistente aplica este skill antes de llamar a una herramienta de imagen o diseño. El generador no recibe ni interpreta automáticamente las bibliotecas del skill: las decisiones deben quedar expresadas en el encargo que el asistente le envía. No utilizar el mensaje original del usuario como prompt de generación ni añadirle simplemente «aplica el skill».
 
 ### 1. Interpretar y seleccionar
-Determinar objetivo, público, formato y restricciones. Resolver tres destinos: contenido del arte, información complementaria y contexto no publicable. Redactar el texto final del arte solo después de esa selección. Consultar `references/CONTENT_HIERARCHY.md`. Preguntar solo por ausencias o ambigüedades que cambien hechos, condiciones o intención. No generar una pieza final mientras una aclaración imprescindible esté pendiente.
+Determinar objetivo, público, formato y restricciones. Seleccionar y resolver los destinos PIEZA / TEXTO COMPLEMENTARIO / OMITIR según el soporte. Redactar el texto final del arte solo después de esa selección. Consultar `references/CONTENT_HIERARCHY.md`. Ejercer primero criterio editorial y preguntar solo por ausencias o ambigüedades que impidan una decisión fiable sobre hechos, condiciones o intención. No generar una pieza final mientras una aclaración imprescindible esté pendiente.
 
 ### 2. Resolver la dirección gráfica
 Elegir estilo, foco, jerarquía textual, composición, tipografía y recursos pertinentes. Consultar `references/VISUAL_SYSTEM.md`. Concretar las relaciones de importancia con diferencias de escala, peso, caja, contraste, posición y agrupación. La dirección debe estar resuelta antes de ejecutar; no pedir al generador que seleccione por su cuenta qué contenido importa o qué estilo corresponde.
@@ -230,7 +236,7 @@ Construir internamente un encargo compacto con:
 - **Referencias:** cuáles se utilizarán y qué debe conservarse de cada una; adjuntarlas a la herramienta cuando lo admita.
 - **Límites pertinentes:** recursos excluidos de esta dirección y elementos que no deben inventarse.
 
-No adjuntar el brief bruto, comentarios descartados ni el razonamiento interno. Los datos trasladados al caption quedan fuera del encargo de imagen. Indicar que solo los textos de la lista son contenido visible y que no se añadan eslóganes, etiquetas, iconos, escenas o personajes que no se hayan decidido.
+No adjuntar el brief bruto, comentarios descartados ni el razonamiento interno. El contenido asignado a TEXTO COMPLEMENTARIO y OMITIR queda fuera del encargo de imagen, tanto como texto visible como tema para ilustrar. Indicar que solo los textos de la lista son contenido visible y que no se añadan eslóganes, etiquetas, iconos, escenas o personajes que no se hayan decidido.
 
 Revisar este encargo con `references/ANTI_AI_STYLE_QA.md`: debe contener la selección editorial y traducir las decisiones a instrucciones ejecutables, no limitarse a «buena jerarquía», «sin estilo IA» o una lista de prohibiciones. Si falta una decisión necesaria, resolverla antes de llamar a la herramienta.
 
@@ -246,11 +252,18 @@ Si el resultado es accesible, contrastar el arte con el encargo: textos y datos,
 
 Si la herramienta permite corregir, realizar una corrección dirigida y volver a comprobar. Si persiste una desviación relevante, indicar qué sigue fallando y proponer composición o ajuste en un editor, sin ciclos de regeneración indefinidos ni afirmar que el arte está validado. Si no se puede inspeccionar el resultado, declarar esa limitación. Entregar el arte o el encargo solicitado con información breve y útil; la selección y la revisión internas no se convierten en un cuestionario o una auditoría pública.
 
-Si la selección trasladó información necesaria a un caption o texto complementario, entregarlo junto al arte para que esa información no se pierda. En una revisión o iteración, actualizar el encargo existente y mantenerlo como referencia de ejecución; no reiniciar desde el mensaje original.
+Entregar la información necesaria trasladada conforme a «Salida por defecto»; comprobar que se conserva en el texto complementario y no reaparece en el arte. En una revisión o iteración, actualizar el encargo existente y mantenerlo como referencia de ejecución; no reiniciar desde el mensaje original.
 
 ---
 
 ## Salida por defecto
+
+Cuando la distribución lo requiera, producir dos entregables naturales:
+
+- **ARTE:** la pieza ejecutada o, si se pidió dirección o prompt, el encargo con solo el contenido asignado a PIEZA y su jerarquía.
+- **TEXTO COMPLEMENTARIO:** caption, descripción o mensaje listo para usar con la información necesaria trasladada fuera del arte, adaptado al soporte y separado del prompt de imagen.
+
+No crear un segundo entregable vacío ni repetir todo el contenido del arte en él. OMITIR no produce un bloque público. Si la solicitud se limita a una parte de la tarea, respetar ese alcance.
 
 Si el usuario pide crear una imagen o un arte, aplicar el flujo de ejecución y entregar el resultado cuando exista una herramienta disponible. Cuando pide desarrollar la dirección de una pieza sin solicitar ejecución, responder de forma compacta con:
 

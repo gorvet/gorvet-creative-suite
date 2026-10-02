@@ -8,13 +8,13 @@ No convertir esta clasificación en cuatro bloques obligatorios. Si basta un tí
 
 ## Decidir el destino, no acomodar todo
 
-El brief es material de trabajo, no el texto final del promocional. Separar hechos sobre la oferta, información para el cliente, contexto interno, opiniones, humor e instrucciones al asistente. Después asignar un destino según objetivo, público y soporte:
+El brief es material de trabajo, no el texto final del promocional. Separar hechos sobre la oferta, información para el cliente, contexto interno, opiniones, humor e instrucciones al asistente. Seleccionar lo pertinente y asignar un destino según objetivo, público y soporte antes de jerarquizar o componer:
 
 | Destino | Criterio de selección | Tratamiento |
 | --- | --- | --- |
-| Arte | Ayuda a reconocer la propuesta, entender su argumento principal o realizar la acción prevista; o está exigido expresamente en la pieza. | Seleccionar y condensar sin cambiar los hechos; después asignar jerarquía. |
-| Texto complementario | Es información pública útil, pero no necesita competir en el plano visual principal. | Redactarla para el caption, descripción o soporte complementario disponible y entregarla separada del encargo de imagen. |
-| Contexto no publicable | Orienta el trabajo o describe circunstancias sin aportar al objetivo público: instrucciones, comentarios internos, anécdotas o digresiones. | Utilizarlo para comprender la solicitud cuando corresponda, sin convertirlo en texto, icono o escena del arte. |
+| PIEZA | Ayuda a reconocer la propuesta, entender su argumento principal o realizar la acción prevista; o está exigido expresamente en la pieza. | Seleccionar y condensar sin cambiar los hechos; después asignar jerarquía. |
+| TEXTO COMPLEMENTARIO | Es información pública útil, pero no necesita competir en el plano visual principal. | Redactarla para el caption, descripción o soporte complementario disponible y entregarla separada del encargo de imagen. |
+| OMITIR | Orienta el trabajo o describe circunstancias sin aportar al objetivo público: instrucciones, comentarios internos, anécdotas o digresiones. | Utilizarlo para comprender la solicitud cuando corresponda, sin convertirlo en texto, icono o escena del arte. |
 
 No hay una lista universal de datos que siempre entren o salgan. Decidir para esta pieza: una misma información puede ser principal, secundaria o irrelevante según el objetivo. Un dato llamativo no gana lugar por ser llamativo. La longitud del brief no determina la cantidad de contenido visible ni obliga a crear una infografía.
 
@@ -26,7 +26,7 @@ No esconder una condición real que cambie precio, alcance, disponibilidad o acc
 
 Trasladar información requiere un canal real. Si el arte circulará solo, no depender de un caption inexistente: mantener lo indispensable y proponer, cuando haga falta, un apoyo que el usuario pueda publicar junto a él. No inventar una página, un contacto ni un canal para justificar una omisión.
 
-Si una frase puede ser tanto una broma como un requisito real y esa diferencia cambia lo ofrecido, pedir una aclaración breve. No asumir una campaña humorística porque el brief contiene comentarios extraños. Si el usuario pide expresamente humor o sátira, seleccionar también según esa intención sin transformar todos los comentarios en copy por defecto.
+No preguntar si una frase es una broma por el solo hecho de resultar extraña. Aplicar primero criterio editorial y utilizar el contexto disponible; preguntar solo si no puede decidirse de manera fiable cómo comunicar una condición material o respetar la intención. No asumir una campaña humorística porque el brief contiene comentarios extraños. Si el usuario pide expresamente humor o sátira, seleccionar también según esa intención sin transformar todos los comentarios en copy por defecto.
 
 Estas decisiones son parte del trabajo del skill. No devolver al usuario un cuestionario para que él clasifique cada frase; explicar brevemente los traslados relevantes al entregar y consultar solo las ambigüedades materiales.
 
@@ -39,7 +39,7 @@ Estas decisiones son parte del trabajo del skill. No devolver al usuario un cues
 - No añadir beneficios o cualidades comerciales por costumbre: «cómodo», «original», «ajuste cómodo» o «diseño único» necesitan respaldo en el brief. Una imagen permite describir rasgos visibles, no demostrar comodidad, autenticidad o exclusividad comercial.
 - Si todo el texto es obligatorio y no cabe de forma legible, proponer otro formato o varias piezas; no reducirlo hasta volverlo ilegible.
 
-El contenido secundario puede trasladarse al caption, una página o una pieza complementaria cuando no sea obligatorio en el arte. Indicar brevemente ese traslado para que el usuario pueda aplicarlo.
+Cuando información necesaria pasa a TEXTO COMPLEMENTARIO, redactarla y entregarla; no basta anunciar que se trasladó. Mantenerla separada del encargo de generación y comprobar que no se perdió entre la selección y la entrega. Los detalles secundarios, explicaciones, condiciones extensas o direcciones completas no tienen un destino fijo: depende de su necesidad en la pieza y del texto asociado disponible.
 
 ## Jerarquizar por importancia
 

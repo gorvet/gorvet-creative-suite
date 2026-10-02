@@ -64,7 +64,7 @@ Los skills no dependen de un proveedor o modelo concreto y no requieren un servi
 
 ## Descarga rápida
 
-Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.3.5.zip` contiene el manifiesto, los tres skills completos, sus referencias, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad.
+Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.3.6.zip` contiene el manifiesto, los tres skills completos, sus referencias, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad.
 
 El ZIP reúne toda la suite. Impórtalo directamente solo si la aplicación admite este formato de complemento. Para aplicaciones que instalan Agent Skills individuales, extrae el paquete y utiliza cada carpeta de `skills/`, siguiendo los pasos siguientes. No necesitas Git para descargarlo.
 
@@ -116,7 +116,7 @@ Con `luces-camara-prompt`, primero recibirás una propuesta de escena, estilo, i
 
 Con `image-prompt-qa`, proporciona el prompt original y describe exactamente qué salió mal. Adjunta las imágenes de referencia o del resultado cuando estén disponibles y el asistente pueda analizarlas.
 
-Con `poster-promotional-design`, aporta el objetivo, el contenido y el formato de la pieza. El skill selecciona el contenido, resuelve jerarquía, layout y tipografía, y prepara un encargo para el generador. Si pides una imagen y hay una herramienta disponible, ejecuta ese encargo y revisa el resultado cuando pueda verlo. También puedes pedir solo copy, estructura, crítica o un prompt. Funciona por separado; sus referencias a `luces-camara-prompt` son apoyos opcionales.
+Con `poster-promotional-design`, aporta el objetivo, el contenido y el formato de la pieza. El skill selecciona el contenido, resuelve jerarquía, layout y tipografía, y prepara un encargo para el generador. Si pides una imagen y hay una herramienta disponible, ejecuta ese encargo y revisa el resultado cuando pueda verlo. Cuando corresponda, entrega el arte y un texto complementario listo para publicar con la información necesaria que quedó fuera de la imagen. También puedes pedir solo copy, estructura, crítica o un prompt. Funciona por separado; sus referencias a `luces-camara-prompt` son apoyos opcionales.
 
 ### Ejemplos
 
