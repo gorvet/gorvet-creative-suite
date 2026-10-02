@@ -1,6 +1,6 @@
 ---
 name: poster-promotional-design
-description: Diseña y dirige pósters y piezas promocionales estáticas con criterio editorial, jerarquía clara y control anti-AI-style. Úsala para pósters, posts, stories, flyers, anuncios gráficos, banners estáticos, portadas promocionales e invitaciones visuales. Interviene el contenido, decide qué debe verse y evita recursos decorativos genéricos o injustificados.
+description: Procesa briefs para pósters y piezas promocionales estáticas: selecciona contenido, resuelve jerarquía y dirección gráfica, y prepara el encargo que guía su ejecución. Úsala para pósters, posts, stories, flyers, anuncios gráficos, banners estáticos, portadas promocionales e invitaciones visuales. Si se solicita el arte y hay herramientas disponibles, ejecuta el encargo y revisa el resultado.
 ---
 
 # GORVET — Poster & Promotional Design
@@ -202,37 +202,49 @@ Regla general:
 
 ---
 
-## Flujo operativo
+## Flujo operativo: del brief a la ejecución
 
-### 1. Interpretar
-Determinar objetivo, público, mensaje, acción, formato y restricciones a partir de lo disponible.
+El asistente aplica este skill antes de llamar a una herramienta de imagen o diseño. El generador no recibe ni interpreta automáticamente las bibliotecas del skill: las decisiones deben quedar expresadas en el encargo que el asistente le envía. No utilizar el mensaje original del usuario como prompt de generación ni añadirle simplemente «aplica el skill».
 
-### 2. Editar contenido
-Separar contenido público, contexto e instrucciones. Seleccionar qué entra, qué se resume, qué se agrupa y qué se excluye del plano principal. Resolver dudas sobre condiciones reales que afecten al cliente antes de omitirlas o convertirlas en reclamos.
+### 1. Interpretar y seleccionar
+Determinar objetivo, público, formato y restricciones. Separar contenido público, contexto e instrucciones; decidir qué se incluye, se resume o se traslada fuera del arte. Consultar `references/CONTENT_HIERARCHY.md`. Preguntar solo por ausencias o ambigüedades que cambien hechos, condiciones o intención. No generar una pieza final mientras una aclaración imprescindible esté pendiente.
 
-### 3. Definir jerarquía
-Establecer foco, apoyo, información funcional y CTA cuando corresponda; concretar sus diferencias de escala, peso y posición para que la herramienta de ejecución no decida de nuevo qué es importante.
+### 2. Resolver la dirección gráfica
+Elegir estilo, foco, jerarquía textual, composición, tipografía y recursos pertinentes. Consultar `references/VISUAL_SYSTEM.md`. Concretar las relaciones de importancia con diferencias de escala, peso, caja, contraste, posición y agrupación. La dirección debe estar resuelta antes de ejecutar; no pedir al generador que seleccione por su cuenta qué contenido importa o qué estilo corresponde.
 
-### 4. Elegir dirección visual
-Definir una dirección gráfica coherente con el contenido y la marca. Evitar mezclar estilos sin necesidad.
+### 3. Preparar y revisar el encargo de ejecución
+Construir internamente un encargo compacto con:
 
-### 5. Diseñar estructura
-Resolver composición, distribución, relación texto-imagen, escala, espacio negativo y ritmo.
+- **Formato:** soporte, orientación y proporción o dimensiones necesarias.
+- **Texto visible:** lista cerrada de textos finales; para cada bloque, indicar función, importancia y tratamiento, diferenciándolo de las instrucciones.
+- **Composición:** foco, recorrido, posiciones y relaciones de escala entre imagen y textos, agrupaciones y espacio útil.
+- **Lenguaje visual:** estilo elegido, paleta por función, tipografía y tratamiento de imagen.
+- **Referencias:** cuáles se utilizarán y qué debe conservarse de cada una; adjuntarlas a la herramienta cuando lo admita.
+- **Límites pertinentes:** recursos excluidos de esta dirección y elementos que no deben inventarse.
 
-### 6. Resolver tipografía y recursos gráficos
-Asignar roles tipográficos y justificar cualquier elemento decorativo, iconográfico o expresivo.
+No adjuntar el brief bruto, comentarios descartados ni el razonamiento interno. Los datos trasladados al caption quedan fuera del encargo de imagen. Indicar que solo los textos de la lista son contenido visible y que no se añadan eslóganes, etiquetas, iconos, escenas o personajes que no se hayan decidido.
 
-### 7. Auditar
-Aplicar el control anti-AI-style y eliminar ruido, redundancia o recursos gratuitos. Si se obtiene una imagen y puede inspeccionarse, revisar el arte, no solo el prompt: corregir las desviaciones visibles antes de darlo por validado. Si no se puede ver, indicar esa limitación sin afirmar que el resultado supera la revisión.
+Revisar este encargo con `references/ANTI_AI_STYLE_QA.md`: debe contener la selección editorial y traducir las decisiones a instrucciones ejecutables, no limitarse a «buena jerarquía», «sin estilo IA» o una lista de prohibiciones. Si falta una decisión necesaria, resolverla antes de llamar a la herramienta.
 
-### 8. Entregar
-Presentar una solución concreta y utilizable. No abrumar al usuario con todo el razonamiento interno.
+### 4. Ejecutar según la petición
+Si el usuario pide una imagen o un arte y hay una herramienta apropiada disponible, enviarle el encargo procesado y las referencias pertinentes. Si pide solo un prompt, copy, dirección o crítica, entregar ese resultado sin generar una imagen. No añadir una aprobación obligatoria entre estas fases; proceder cuando haya información suficiente y autorización para la tarea.
+
+El campo de instrucciones o prompt de la llamada a la herramienta debe contener ese encargo como fuente de dirección. No sustituirlo por un resumen del mensaje del usuario, no anexar ese mensaje y no remitir a archivos del skill que el generador no pueda leer. Los textos seleccionados pueden coincidir con los del usuario; lo que debe cambiar es que su inclusión y tratamiento ya estén decididos. Antes de enviar, comprobar que todos los bloques visibles y sus prioridades están especificados y que el material excluido no reaparece en la llamada.
+
+Si no hay herramienta de ejecución, entregar el encargo utilizable y señalar que la imagen no se ha generado. Este skill no instala herramientas ni exige otro skill como intermediario.
+
+### 5. Verificar y entregar
+Si el resultado es accesible, contrastar el arte con el encargo: textos y datos, selección, jerarquía, composición, fidelidad de referencias y recursos excluidos. Conservar lo que funciona y corregir la capa que se desvió. La corrección también se envía como encargo procesado; no volver al brief bruto ni aceptar una plantilla genérica porque la fotografía esté lograda.
+
+Si la herramienta permite corregir, realizar una corrección dirigida y volver a comprobar. Si persiste una desviación relevante, indicar qué sigue fallando y proponer composición o ajuste en un editor, sin ciclos de regeneración indefinidos ni afirmar que el arte está validado. Si no se puede inspeccionar el resultado, declarar esa limitación. Entregar el arte o el encargo solicitado con información breve y útil; la selección y la revisión internas no se convierten en un cuestionario o una auditoría pública.
+
+Si la selección trasladó información necesaria a un caption o texto complementario, entregarlo junto al arte para que esa información no se pierda. En una revisión o iteración, actualizar el encargo existente y mantenerlo como referencia de ejecución; no reiniciar desde el mensaje original.
 
 ---
 
 ## Salida por defecto
 
-Cuando el usuario pide desarrollar una pieza y no especifica formato de entrega, responder de forma compacta con:
+Si el usuario pide crear una imagen o un arte, aplicar el flujo de ejecución y entregar el resultado cuando exista una herramienta disponible. Cuando pide desarrollar la dirección de una pieza sin solicitar ejecución, responder de forma compacta con:
 
 - **concepto / dirección visual**;
 - **contenido final recomendado**, ya intervenido y jerarquizado;

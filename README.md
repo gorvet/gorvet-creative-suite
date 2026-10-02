@@ -12,7 +12,7 @@ Ayuda a resolver la falta de dirección en peticiones visuales, las instruccione
 
 Los tres skills funcionan de forma independiente. `image-prompt-qa` se utiliza cuando se solicita una corrección; no es un paso obligatorio después de `luces-camara-prompt`.
 
-Los skills trabajan con texto. La generación o edición de imágenes requiere una herramienta externa; no se ejecuta durante la preparación del prompt.
+Los skills de prompts trabajan con texto. `poster-promotional-design` procesa el brief y prepara un encargo de diseño antes de ejecutarlo, si el usuario pide un arte y el asistente dispone de una herramienta de imagen o diseño. La suite no incluye un generador propio.
 
 ## Método G.O.R.V.E.T.
 
@@ -56,13 +56,13 @@ Cada carpeta de `skills/` es una unidad independiente en formato Agent Skills: c
 - Una aplicación o agente que implemente el estándar Agent Skills y pueda cargar `SKILL.md` junto con sus recursos.
 - Acceso del asistente a las carpetas instaladas y a sus referencias. Para analizar imágenes adjuntas, también necesita capacidad de visión.
 - Git, si se descarga mediante clonación; también puede descargarse el repositorio desde GitHub.
-- Una herramienta de imágenes, únicamente si se desea ejecutar el prompt obtenido.
+- Una herramienta de imagen o diseño, si se desea ejecutar un prompt o producir el arte solicitado mediante `poster-promotional-design`.
 
 Los skills no dependen de un proveedor o modelo concreto y no requieren un servidor MCP, claves de API ni código ejecutable propio. La aplicación anfitriona gestiona la carga de instrucciones, las referencias y el acceso al modelo; la calidad de seguimiento depende de ese modelo. El script de distribución del repositorio solo sirve para preparar las Releases.
 
 ## Descarga rápida
 
-Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.3.2.zip` contiene el manifiesto, los tres skills completos, sus referencias, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad.
+Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.3.3.zip` contiene el manifiesto, los tres skills completos, sus referencias, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad.
 
 El ZIP reúne toda la suite. Impórtalo directamente solo si la aplicación admite este formato de complemento. Para aplicaciones que instalan Agent Skills individuales, extrae el paquete y utiliza cada carpeta de `skills/`, siguiendo los pasos siguientes. No necesitas Git para descargarlo.
 
@@ -114,7 +114,7 @@ Con `luces-camara-prompt`, primero recibirás una propuesta de escena, estilo, i
 
 Con `image-prompt-qa`, proporciona el prompt original y describe exactamente qué salió mal. Adjunta las imágenes de referencia o del resultado cuando estén disponibles y el asistente pueda analizarlas.
 
-Con `poster-promotional-design`, aporta el objetivo, el contenido y el formato de la pieza. Recibirás una dirección gráfica con contenido jerarquizado, layout y tipografía. Puedes pedir solo copy, estructura, crítica o un prompt. Funciona por separado; sus referencias a `luces-camara-prompt` son apoyos opcionales.
+Con `poster-promotional-design`, aporta el objetivo, el contenido y el formato de la pieza. El skill selecciona el contenido, resuelve jerarquía, layout y tipografía, y prepara un encargo para el generador. Si pides una imagen y hay una herramienta disponible, ejecuta ese encargo y revisa el resultado cuando pueda verlo. También puedes pedir solo copy, estructura, crítica o un prompt. Funciona por separado; sus referencias a `luces-camara-prompt` son apoyos opcionales.
 
 ### Ejemplos
 

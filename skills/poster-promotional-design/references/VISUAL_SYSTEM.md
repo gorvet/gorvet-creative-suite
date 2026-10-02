@@ -77,6 +77,10 @@ Confirmar dimensiones y zonas seguras actuales cuando se necesite una entrega ex
 
 ## Dirección gráfica frente a instrucciones de generación
 
-Si se pide un prompt, traducir las decisiones a relaciones visibles: qué domina, dónde se agrupa el texto, cómo se trata la imagen y qué contraste construye la lectura. Separar claramente el texto que debe aparecer de las instrucciones de diseño.
+Para construir un prompt o enviar un encargo a una herramienta, traducir las decisiones a relaciones visibles: qué domina, dónde se agrupa el texto, cómo se trata la imagen y qué contraste construye la lectura. Separar claramente el texto que debe aparecer de las instrucciones de diseño.
 
 Evitar copiar el razonamiento interno o toda la auditoría al prompt. Incluir solo restricciones pertinentes al caso: «sin iconos junto a los datos» si ese es el problema, en lugar de una lista de veinte prohibiciones. La entrega no necesita pasar por otro skill para ser utilizable.
+
+El encargo de ejecución es la versión operativa de la dirección ya resuelta. No reenviar el mensaje original junto a él: el material descartado puede reaparecer como texto o ilustración si el generador lo recibe. Separar los textos literales de las indicaciones sobre escala, caja, posición y tratamiento; asociar esas indicaciones a cada bloque, sin establecer tamaños o cantidades universales.
+
+Las imágenes de referencia aportan los rasgos que deben conservarse, no sustituyen el encargo. Si una imagen contiene una composición anterior rechazada, especificar qué se conserva y qué se reemplaza para que la herramienta no reproduzca su layout.
