@@ -103,7 +103,9 @@ El usuario puede aportar un brief completo si desea mayor control, pero no es re
 
 El contenido entregado por el usuario **no es una orden de incluirlo todo**.
 
-Distinguir antes de componer el mensaje público, los datos necesarios para decidir o actuar, el contexto que orienta el diseño y las instrucciones dirigidas al asistente. No convertir automáticamente comentarios, anécdotas o bromas en copy. Seleccionar contenido por su utilidad para el público y el objetivo; la selección precede a la jerarquía visual.
+Antes de diseñar, decidir el destino del contenido: **arte**, **texto complementario de la publicación** o **contexto no publicable**. Un dato puede ser verdadero y útil para comprender el negocio sin pertenecer a la imagen. Incluir en el arte lo que el público necesita ver para reconocer la propuesta, entenderla y realizar la acción prevista; trasladar información secundaria cuando exista un lugar adecuado para comunicarla. Excluir instrucciones al asistente, comentarios internos y detalles ajenos al objetivo, salvo que el usuario los convierta expresamente en contenido público.
+
+La selección no consiste en reducir todos los textos ni repartir todo entre bloques más pequeños. Determinar qué merece aparecer antes de jerarquizarlo. No preguntar al usuario por cada descarte: tomar decisiones editoriales; aclarar únicamente dudas que alteren hechos, condiciones o intención. Aplicar `references/CONTENT_HIERARCHY.md` para decidir el destino y preservar las condiciones materiales.
 
 Antes de componer, clasificar internamente la información en:
 - **dominante**: mensaje que gobierna la pieza;
@@ -213,7 +215,7 @@ Regla general:
 El asistente aplica este skill antes de llamar a una herramienta de imagen o diseño. El generador no recibe ni interpreta automáticamente las bibliotecas del skill: las decisiones deben quedar expresadas en el encargo que el asistente le envía. No utilizar el mensaje original del usuario como prompt de generación ni añadirle simplemente «aplica el skill».
 
 ### 1. Interpretar y seleccionar
-Determinar objetivo, público, formato y restricciones. Separar contenido público, contexto e instrucciones; decidir qué se incluye, se resume o se traslada fuera del arte. Consultar `references/CONTENT_HIERARCHY.md`. Preguntar solo por ausencias o ambigüedades que cambien hechos, condiciones o intención. No generar una pieza final mientras una aclaración imprescindible esté pendiente.
+Determinar objetivo, público, formato y restricciones. Resolver tres destinos: contenido del arte, información complementaria y contexto no publicable. Redactar el texto final del arte solo después de esa selección. Consultar `references/CONTENT_HIERARCHY.md`. Preguntar solo por ausencias o ambigüedades que cambien hechos, condiciones o intención. No generar una pieza final mientras una aclaración imprescindible esté pendiente.
 
 ### 2. Resolver la dirección gráfica
 Elegir estilo, foco, jerarquía textual, composición, tipografía y recursos pertinentes. Consultar `references/VISUAL_SYSTEM.md`. Concretar las relaciones de importancia con diferencias de escala, peso, caja, contraste, posición y agrupación. La dirección debe estar resuelta antes de ejecutar; no pedir al generador que seleccione por su cuenta qué contenido importa o qué estilo corresponde.

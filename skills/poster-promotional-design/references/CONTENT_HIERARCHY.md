@@ -6,19 +6,29 @@ Identificar la promesa, el evento o la idea que debe entenderse primero. Separar
 
 No convertir esta clasificación en cuatro bloques obligatorios. Si basta un título y una fecha, conservar esa economía.
 
-## Separar el brief del texto publicable
+## Decidir el destino, no acomodar todo
 
-El mensaje de entrada puede mezclar hechos, instrucciones, contexto interno, opiniones y humor. Determinar la función de cada información antes de decidir si aparece en el arte:
+El brief es material de trabajo, no el texto final del promocional. Separar hechos sobre la oferta, información para el cliente, contexto interno, opiniones, humor e instrucciones al asistente. Después asignar un destino según objetivo, público y soporte:
 
-- **Mensaje público:** comunica lo que se ofrece y su interés para el público.
-- **Información de decisión o acción:** permite entender precio, condiciones, disponibilidad, ubicación o cómo proceder.
-- **Contexto de trabajo:** ayuda al asistente a elegir una solución, pero no se transforma automáticamente en texto publicitario.
-- **Comentario incidental:** anécdota, opinión o broma sin función para la solicitud. Omitirlo del copy salvo que el usuario pida utilizarlo como concepto o tono.
-- **Instrucción al asistente:** determina cómo producir la pieza; no pertenece al texto visible salvo petición explícita.
+| Destino | Criterio de selección | Tratamiento |
+| --- | --- | --- |
+| Arte | Ayuda a reconocer la propuesta, entender su argumento principal o realizar la acción prevista; o está exigido expresamente en la pieza. | Seleccionar y condensar sin cambiar los hechos; después asignar jerarquía. |
+| Texto complementario | Es información pública útil, pero no necesita competir en el plano visual principal. | Redactarla para el caption, descripción o soporte complementario disponible y entregarla separada del encargo de imagen. |
+| Contexto no publicable | Orienta el trabajo o describe circunstancias sin aportar al objetivo público: instrucciones, comentarios internos, anécdotas o digresiones. | Utilizarlo para comprender la solicitud cuando corresponda, sin convertirlo en texto, icono o escena del arte. |
 
-Preguntar internamente si el dato ayuda al destinatario a entender, decidir o actuar, si fue exigido en la pieza y si omitirlo cambia materialmente lo ofrecido. Que una frase sea llamativa no la convierte en un reclamo apropiado. Tampoco asignar un icono o bloque a cada frase para evitar tomar decisiones editoriales.
+No hay una lista universal de datos que siempre entren o salgan. Decidir para esta pieza: una misma información puede ser principal, secundaria o irrelevante según el objetivo. Un dato llamativo no gana lugar por ser llamativo. La longitud del brief no determina la cantidad de contenido visible ni obliga a crear una infografía.
 
-Una condición poco favorable o inusual no debe ocultarse por resultar incómoda para la promoción. Si puede ser tanto una broma como un requisito real y esa diferencia afecta al servicio, pedir una aclaración breve y conjunta. Si es real, comunicarla de forma proporcionada en el arte o en información complementaria accesible antes de comprar o asistir. No asumir una campaña humorística porque el brief contiene comentarios extraños.
+Para decidir, preguntar internamente qué pierde el destinatario si el dato no aparece en la imagen: si pierde comprensión de la propuesta o de una condición que la modifica, conservarlo o asegurar su comunicación pertinente; si pierde solo un detalle secundario, considerar texto complementario; si no pierde nada útil para la solicitud, dejarlo fuera. No agregar un bloque o ilustración para dar cabida a información que debía descartarse.
+
+## Condiciones y canales de publicación
+
+No esconder una condición real que cambie precio, alcance, disponibilidad o acceso al servicio por resultar poco atractiva. La opción principal y su condición deben entenderse juntas; no mostrar una promesa en el arte y relegar una restricción que la contradice a un texto que el destinatario podría no recibir.
+
+Trasladar información requiere un canal real. Si el arte circulará solo, no depender de un caption inexistente: mantener lo indispensable y proponer, cuando haga falta, un apoyo que el usuario pueda publicar junto a él. No inventar una página, un contacto ni un canal para justificar una omisión.
+
+Si una frase puede ser tanto una broma como un requisito real y esa diferencia cambia lo ofrecido, pedir una aclaración breve. No asumir una campaña humorística porque el brief contiene comentarios extraños. Si el usuario pide expresamente humor o sátira, seleccionar también según esa intención sin transformar todos los comentarios en copy por defecto.
+
+Estas decisiones son parte del trabajo del skill. No devolver al usuario un cuestionario para que él clasifique cada frase; explicar brevemente los traslados relevantes al entregar y consultar solo las ambigüedades materiales.
 
 ## Editar sin cambiar los hechos
 
