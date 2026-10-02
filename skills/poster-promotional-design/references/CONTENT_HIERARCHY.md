@@ -6,15 +6,40 @@ Identificar la promesa, el evento o la idea que debe entenderse primero. Separar
 
 No convertir esta clasificación en cuatro bloques obligatorios. Si basta un título y una fecha, conservar esa economía.
 
+## Separar el brief del texto publicable
+
+El mensaje de entrada puede mezclar hechos, instrucciones, contexto interno, opiniones y humor. Determinar la función de cada información antes de decidir si aparece en el arte:
+
+- **Mensaje público:** comunica lo que se ofrece y su interés para el público.
+- **Información de decisión o acción:** permite entender precio, condiciones, disponibilidad, ubicación o cómo proceder.
+- **Contexto de trabajo:** ayuda al asistente a elegir una solución, pero no se transforma automáticamente en texto publicitario.
+- **Comentario incidental:** anécdota, opinión o broma sin función para la solicitud. Omitirlo del copy salvo que el usuario pida utilizarlo como concepto o tono.
+- **Instrucción al asistente:** determina cómo producir la pieza; no pertenece al texto visible salvo petición explícita.
+
+Preguntar internamente si el dato ayuda al destinatario a entender, decidir o actuar, si fue exigido en la pieza y si omitirlo cambia materialmente lo ofrecido. Que una frase sea llamativa no la convierte en un reclamo apropiado. Tampoco asignar un icono o bloque a cada frase para evitar tomar decisiones editoriales.
+
+Una condición poco favorable o inusual no debe ocultarse por resultar incómoda para la promoción. Si puede ser tanto una broma como un requisito real y esa diferencia afecta al servicio, pedir una aclaración breve y conjunta. Si es real, comunicarla de forma proporcionada en el arte o en información complementaria accesible antes de comprar o asistir. No asumir una campaña humorística porque el brief contiene comentarios extraños.
+
 ## Editar sin cambiar los hechos
 
 - Condensar explicaciones y eliminar repeticiones que no aporten información.
-- Mantener exactamente nombres, fechas, cifras, precios, direcciones, URLs, condiciones y textos marcados como literales u obligatorios.
+- Mantener fieles nombres, fechas, cifras, precios, direcciones, URLs y condiciones del contenido seleccionado. Conservar literalmente lo marcado como literal u obligatorio. No confundir fidelidad a los hechos con obligación de publicar todo el mensaje recibido.
 - No completar datos comerciales ausentes. Usar un marcador explícito si permite avanzar o preguntar por el dato imprescindible.
 - No convertir una posibilidad en una promesa ni omitir condiciones que cambien el significado de una oferta.
+- No añadir beneficios o cualidades comerciales por costumbre: «cómodo», «original», «ajuste cómodo» o «diseño único» necesitan respaldo en el brief. Una imagen permite describir rasgos visibles, no demostrar comodidad, autenticidad o exclusividad comercial.
 - Si todo el texto es obligatorio y no cabe de forma legible, proponer otro formato o varias piezas; no reducirlo hasta volverlo ilegible.
 
 El contenido secundario puede trasladarse al caption, una página o una pieza complementaria cuando no sea obligatorio en el arte. Indicar brevemente ese traslado para que el usuario pueda aplicarlo.
+
+## Jerarquizar por importancia
+
+Jerarquizar es ordenar los textos según su importancia para el objetivo y expresar ese orden visualmente. Decidir primero qué debe leerse antes, qué aporta apoyo y qué información se consulta después. La condición de obligatorio exige conservar un dato; no exige darle protagonismo.
+
+Diferenciar niveles mediante tamaño, grosor, color, contraste, posición, separación y agrupación. Elegir las variables que hagan visible la relación; no es necesario cambiarlas todas ni usar una familia diferente en cada nivel. Textos de igual importancia pueden compartir tratamiento; textos de distinta importancia deben percibirse distintos en el conjunto.
+
+No equiparar importancia con mayúsculas. Elegir mayúsculas, minúsculas o caja de oración por legibilidad, tono y función. No transformar todos los textos a mayúsculas ni darles el mismo peso por tratarse de publicidad. Conservar la caja si el texto es literal.
+
+El tamaño aislado no determina la jerarquía: un texto pequeño con color intenso, marco o aislamiento puede competir con uno grande. Revisar el peso visual combinado, incluida su relación con la imagen. Subordinar conserva legibilidad; no significa ocultar datos o hacerlos diminutos.
 
 ## Construir el recorrido
 
@@ -39,19 +64,6 @@ Entregar el contenido recomendado con sus roles, sin mostrar toda la clasificaci
 | Invitación con todo el texto marcado como literal | Organizarlo sin reescribirlo; separar niveles mediante composición. | Todo el texto literal, aunque la solución requiera cambiar el formato. |
 
 Estas situaciones ayudan a decidir; no imponen un orden idéntico para todas las campañas.
-
-## Ejemplo de reducción con datos protegidos
-
-Brief ficticio: «Luz de ventana. Taller práctico para aprender a fotografiar con luz natural, conocer sus posibilidades y descubrir cómo usar la luz de una ventana. 18 de noviembre, 10:00. Estudio Norte. Inscripción: 25 €. Incluye materiales. Plazas limitadas».
-
-Si no se exige conservar todo literalmente:
-
-- Dominante: «Luz de ventana».
-- Apoyo: «Taller práctico de fotografía con luz natural».
-- Datos agrupados: «18 de noviembre · 10:00 · Estudio Norte».
-- Información de inscripción: «25 € · Materiales incluidos · Plazas limitadas».
-
-Se reduce la explicación repetida; no se inventa una URL, un descuento ni un número de plazas. Si el precio era el argumento principal de la solicitud, puede cambiar su protagonismo sin alterar el dato.
 
 ## Lectura rápida y lectura completa
 

@@ -97,6 +97,8 @@ El usuario puede aportar un brief completo si desea mayor control, pero no es re
 
 El contenido entregado por el usuario **no es una orden de incluirlo todo**.
 
+Distinguir antes de componer el mensaje público, los datos necesarios para decidir o actuar, el contexto que orienta el diseño y las instrucciones dirigidas al asistente. No convertir automáticamente comentarios, anécdotas o bromas en copy. Seleccionar contenido por su utilidad para el público y el objetivo; la selección precede a la jerarquía visual.
+
 Antes de componer, clasificar internamente la información en:
 - **dominante**: mensaje que gobierna la pieza;
 - **apoyo**: completa o contextualiza el mensaje;
@@ -113,7 +115,7 @@ El skill puede:
 - retirar contenido secundario del plano principal;
 - recomendar mover información extensa al copy, caption, landing o pieza complementaria.
 
-Debe preservar sin alterar:
+En el contenido seleccionado, preservar sin alterar los hechos siguientes. Conservar además todo texto declarado obligatorio y comunicar las condiciones que cambien la oferta o el acceso al servicio; preservar datos no significa publicar cada frase del brief:
 - nombres propios;
 - fechas y cifras;
 - precios;
@@ -140,6 +142,8 @@ Por defecto:
 
 No convertir cada dato en un elemento protagonista.
 
+Jerarquizar es ordenar los textos por su importancia para el objetivo y hacer visible ese orden mediante tamaño, grosor, color, contraste, posición y agrupación. Definir qué se lee primero, qué apoya y qué se consulta después. Los datos obligatorios deben conservarse, pero no tienen todos la misma importancia visual. Diferenciar niveles sin sacrificar legibilidad y relacionarlos con el peso de la imagen. Consultar `references/CONTENT_HIERARCHY.md` para aplicar estos criterios.
+
 Elegir la composición según contenido e intención, no según una plantilla repetida. La solución puede ser centrada, asimétrica, editorial, tipográfica, fotográfica, modular, de alto contraste, experimental u otra, siempre que mantenga lectura y propósito.
 
 El espacio negativo es una herramienta compositiva. **No rellenar una zona vacía solo porque está vacía.**
@@ -157,6 +161,7 @@ Principios:
 - introducir una segunda voz tipográfica solo cuando exista una razón clara;
 - construir contraste mediante escala, peso, ancho, tracking, caja, posición y ritmo antes de recurrir a efectos;
 - mantener coherencia entre título, apoyo, datos y CTA;
+- elegir mayúsculas, minúsculas o caja de oración según función, tono y legibilidad; no usar mayúsculas en todos los niveles por defecto ni confundirlas con importancia;
 - evitar que cada palabra tenga un tratamiento diferente;
 - no inclinar, deformar, contornear o decorar texto automáticamente para “dar dinamismo”.
 
@@ -177,7 +182,9 @@ Un icono, figura, flecha, estrella, brochazo, sticker, marco, línea, textura, o
 - expresar la identidad visual;
 - aportar narrativa o información.
 
-Si su única función es ocupar espacio o “hacer que se vea diseñado”, eliminarlo.
+La función por sí sola no basta: comparar el recurso con una solución sin él. Si la tipografía, la posición o el espacio resuelven igual de bien esa función, preferir esa solución. No justificar a posteriori un brochazo como «jerarquía» o un sello como «identificación» si no mejora la comunicación en esta pieza. La excepción expresiva debe apoyarse en el brief, la marca o el concepto concreto, no en palabras genéricas como «impacto» o «dinamismo».
+
+Elegir los recursos a partir del contenido y sus prioridades, sin adoptar un layout fijo para una categoría. Mejorar una fotografía no implica crear vistas del sujeto o producto que no estén documentadas.
 
 ---
 
@@ -201,10 +208,10 @@ Regla general:
 Determinar objetivo, público, mensaje, acción, formato y restricciones a partir de lo disponible.
 
 ### 2. Editar contenido
-Seleccionar qué entra, qué se resume, qué se agrupa y qué se excluye del plano principal.
+Separar contenido público, contexto e instrucciones. Seleccionar qué entra, qué se resume, qué se agrupa y qué se excluye del plano principal. Resolver dudas sobre condiciones reales que afecten al cliente antes de omitirlas o convertirlas en reclamos.
 
 ### 3. Definir jerarquía
-Establecer foco, apoyo, información funcional y CTA cuando corresponda.
+Establecer foco, apoyo, información funcional y CTA cuando corresponda; concretar sus diferencias de escala, peso y posición para que la herramienta de ejecución no decida de nuevo qué es importante.
 
 ### 4. Elegir dirección visual
 Definir una dirección gráfica coherente con el contenido y la marca. Evitar mezclar estilos sin necesidad.
@@ -216,7 +223,7 @@ Resolver composición, distribución, relación texto-imagen, escala, espacio ne
 Asignar roles tipográficos y justificar cualquier elemento decorativo, iconográfico o expresivo.
 
 ### 7. Auditar
-Aplicar el control anti-AI-style y eliminar ruido, redundancia o recursos gratuitos.
+Aplicar el control anti-AI-style y eliminar ruido, redundancia o recursos gratuitos. Si se obtiene una imagen y puede inspeccionarse, revisar el arte, no solo el prompt: corregir las desviaciones visibles antes de darlo por validado. Si no se puede ver, indicar esa limitación sin afirmar que el resultado supera la revisión.
 
 ### 8. Entregar
 Presentar una solución concreta y utilizable. No abrumar al usuario con todo el razonamiento interno.
@@ -248,6 +255,8 @@ Cuando el usuario pida cambios:
 - no reconstruir toda la pieza si basta con ajustar contenido, jerarquía, tipografía o composición;
 - no reintroducir elementos ya eliminados sin una razón nueva;
 - si el usuario pide deliberadamente una dirección expresiva o maximalista, respetarla y controlar su jerarquía en lugar de simplificarla automáticamente.
+
+Distinguir refinamiento de alternativa: una corrección conserva lo que funciona; una alternativa de diseño cambia una decisión estructural reconocible, como el foco, la relación texto-imagen o la distribución. Cambiar solo la luz, el fondo o el recorte mantiene el mismo layout y debe presentarse como una variación de ese diseño. Si el usuario rechaza sellos o inclinaciones, no repetirlos en la siguiente versión.
 
 ---
 

@@ -4,6 +4,7 @@ Aplicar esta revisión internamente después de definir la pieza. Evaluar el uso
 
 ## Detectar problemas concretos
 
+- **Brief convertido en inventario visual:** cada frase recibe texto, icono o recuadro aunque no contribuya al objetivo. Revisar primero la selección editorial, separando contenido público de contexto e instrucciones; después componer lo seleccionado.
 - **Jerarquía plana:** demasiados elementos reclaman atención. Reforzar el mensaje dominante y ajustar el peso de los demás.
 - **Repetición verbal:** título y apoyo comunican lo mismo. Conservar la formulación más útil y añadir solo información distinta.
 - **Decoración acumulada:** iconos, brillos, marcos o texturas ocupan espacio sin comunicar. Retirar los que no tengan un papel reconocible.
@@ -44,15 +45,9 @@ La presencia de estos recursos no demuestra autoría por IA. Son señales para r
 | Decoración duplicada para equilibrar | Confunde balance con simetría y multiplica elementos sin función. | Reequilibrar masas, escala o posición. | Repetición deliberada que construye ritmo, patrón o reconocimiento. |
 | Precio, título, imagen y CTA con igual peso | No hay una prioridad reconocible. | Elegir qué comunica primero y subordinar el resto. | Varios elementos pueden formar un único foco si se leen como una unidad. |
 
-## Ejemplos de corrección sin borrar el carácter
+## Conservar el carácter al corregir
 
-**Oferta de producto:** título con brochazo, tres destellos y cuatro iconos junto a los datos. Si ninguno se relaciona con la marca, retirar esos recursos, agrupar la información y conservar producto, precio y condición. No cambiar la oferta ni convertirla automáticamente en blanco y negro.
-
-**Concierto con estética gótica:** conservar la voz gótica del título si sostiene el género y la identidad. Si fecha y lugar no se leen, corregir su tratamiento y contraste. El fallo está en la lectura de los datos, no en la existencia de la gótica.
-
-**Festival maximalista:** mantener color, textura y energía; concentrar el mayor contraste en el nombre del festival y ordenar la programación. No eliminar toda la expresión para conseguir silencio visual.
-
-**Pieza tipográfica sobria:** conservar el vacío cuando organiza el mensaje. No añadir iconos, marcos o una fotografía solo para que parezca más elaborada.
+Corregir la relación que falla sin reemplazar automáticamente la dirección expresiva. Si un tratamiento funciona en el foco pero dificulta los datos, resolver el nivel informativo. Si hay densidad deliberada, ordenar pesos y agrupaciones. Si el vacío organiza la lectura, conservarlo.
 
 ## Priorizar la corrección final
 
@@ -61,3 +56,15 @@ Resolver primero errores de datos, contenido obligatorio ilegible y ausencia de 
 Con una imagen disponible, comprobar si el foco se reconoce en una vista reducida y si los datos necesarios se leen en el tamaño previsto. Una revisión de instrucciones solo permite comprobar su coherencia; no equivale a validar el arte. No asignar puntuaciones inventadas ni afirmar tiempos de lectura medidos sin una prueba.
 
 Una vez corregido el problema concreto, entregar. Repetir la revisión si aparecen nuevos fallos, no hasta alcanzar una perfección abstracta ni para mostrar más pasos al usuario.
+
+## Comprobar que la excepción no se convierte en excusa
+
+«Destaca el precio» no justifica por sí solo un brochazo; comparar con contraste de escala y peso. «Comunica escasez» no exige un sello circular; una línea subordinada puede comunicarla. «Da energía» no basta para inclinar todos los textos. Mantener un recurso expresivo cuando aporta una relación concreta con el concepto que se perdería al retirarlo.
+
+La categoría del negocio tampoco basta para justificar un recurso: no deducir tipografía gestual, textura de pincel, etiquetas inclinadas o iconos ilustrados solo por tratarse de comida, artesanía o una promoción informal. Partir de la dirección solicitada y las prioridades del contenido, no de una plantilla temática del generador.
+
+Comprobar que el orden de importancia del contenido coincide con el peso visual del resultado. Si todos los textos parecen titulares, diferenciar niveles mediante escala, grosor, contraste, caja y posición; no basta cambiar su ubicación. Si un texto secundario llama más la atención, revisar también color, efectos y aislamiento.
+
+Comprobar la agrupación de información relacionada y la legibilidad de los datos funcionales. La posición adecuada depende del recorrido elegido, no de una zona obligatoria del lienzo.
+
+Las vistas adicionales requieren una función informativa y referencias que las respalden. Las alternativas deben cambiar una relación estructural, no solo el acabado. Un buen tratamiento de imagen no compensa una jerarquía textual fallida; conservar lo que funciona y corregir la capa afectada.
