@@ -1,0 +1,37 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "gorvet-creative-suite",
+  "version": "1.1.1",
+  "description": "Suite of GORVET creative skills for visual direction, image prompting, editing workflows, consistency, and AI-assisted creative production.",
+  "author": {
+    "name": "Gorvet Estudios",
+    "url": "https://gorvet.com"
+  },
+  "keywords": [
+    "gorvet",
+    "image prompting",
+    "creative direction",
+    "visual consistency",
+    "image editing",
+    "generative ai"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "GORVET Creative Suite",
+        "shortDescription": "Dirección creativa y prompts de imagen con el Método GORVET.",
+        "longDescription": "Suite modular de GORVET para dirección creativa y producción visual con IA. Incluye Luces, Cámara, ¡Prompt!, especializada en construcción de prompts, referencias visuales, consistencia, retoque y restauración.",
+        "developerName": "Gorvet Estudios",
+        "category": "Productivity",
+        "capabilities": [
+          "image-prompting",
+          "creative-direction",
+          "visual-consistency",
+          "image-editing"
+        ],
+        "websiteURL": "https://gorvet.com",
+        "defaultPrompt": "Ayúdame a desarrollar esta idea visual usando Luces, Cámara, ¡Prompt! y el Método GORVET."
+      }
+    }
+  }
+}
