@@ -1,6 +1,6 @@
 # GORVET Creative Suite
 
-GORVET Creative Suite es una colección de skills de **Gorvet Estudios** en el formato abierto [Agent Skills](https://agentskills.io/specification), para convertir ideas visuales en prompts de imagen claros y corregir fallos concretos en prompts existentes. Está basada en el **Método G.O.R.V.E.T.** y reúne bibliotecas operativas para dirigir escenas, referencias, estilos, iluminación y composición.
+GORVET Creative Suite es una colección de skills de **Gorvet Estudios** en el formato abierto [Agent Skills](https://agentskills.io/specification), para convertir ideas visuales en prompts de imagen claros, corregir fallos concretos en prompts existentes y dirigir el diseño de piezas promocionales estáticas. Está basada en el **Método G.O.R.V.E.T.** y reúne bibliotecas operativas para dirigir escenas, referencias, estilos, iluminación y composición.
 
 Ayuda a resolver la falta de dirección en peticiones visuales, las instrucciones contradictorias y la pérdida de consistencia al ajustar un prompt.
 
@@ -8,8 +8,9 @@ Ayuda a resolver la falta de dirección en peticiones visuales, las instruccione
 
 - **`luces-camara-prompt`**: desarrolla una dirección creativa y, después de que el usuario la apruebe, entrega el prompt en español e inglés. Incluye recursos para retrato, producto, publicidad, ilustración, interiores, retoque y restauración.
 - **`image-prompt-qa`**: diagnostica el problema indicado por el usuario y corrige el prompt con el mínimo cambio necesario. Corrige identidad y selección de referencias, proporciones, producto, iluminación, composición, integración y repetición innecesaria. Conserva las convenciones de photobook cuando correspondan.
+- **`poster-promotional-design`**: selecciona y jerarquiza el contenido de pósters, posts, stories, flyers y otras piezas promocionales estáticas. Define composición, tipografía y tratamiento visual, preservando los datos obligatorios y evitando decoración sin función. Incluye tres bibliotecas locales.
 
-Ambos skills funcionan de forma independiente. `image-prompt-qa` se utiliza cuando se solicita una corrección; no es un paso obligatorio después de `luces-camara-prompt`.
+Los tres skills funcionan de forma independiente. `image-prompt-qa` se utiliza cuando se solicita una corrección; no es un paso obligatorio después de `luces-camara-prompt`.
 
 Los skills trabajan con texto. La generación o edición de imágenes requiere una herramienta externa; no se ejecuta durante la preparación del prompt.
 
@@ -38,9 +39,12 @@ gorvet-creative-suite/
 └── skills/
     ├── image-prompt-qa/
     │   └── SKILL.md
-    └── luces-camara-prompt/
+    ├── luces-camara-prompt/
+    │   ├── SKILL.md
+    │   └── references/     # 28 bibliotecas operativas
+    └── poster-promotional-design/
         ├── SKILL.md
-        └── references/     # 28 bibliotecas operativas
+        └── references/     # Contenido, sistema visual y revisión
 ```
 
 Cada carpeta de `skills/` es una unidad independiente en formato Agent Skills: contiene un `SKILL.md` con metadatos YAML e instrucciones Markdown, además de sus recursos cuando corresponda. La carpeta `references/` forma parte de la funcionalidad y debe conservarse completa.
@@ -58,7 +62,7 @@ Los skills no dependen de un proveedor o modelo concreto y no requieren un servi
 
 ## Descarga rápida
 
-Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.2.1.zip` contiene el manifiesto, los dos skills completos, sus referencias, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad.
+Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.3.0.zip` contiene el manifiesto, los tres skills completos, sus referencias, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad.
 
 El ZIP reúne toda la suite. Impórtalo directamente solo si la aplicación admite este formato de complemento. Para aplicaciones que instalan Agent Skills individuales, extrae el paquete y utiliza cada carpeta de `skills/`, siguiendo los pasos siguientes. No necesitas Git para descargarlo.
 
@@ -67,7 +71,7 @@ Para estudiar o modificar el producto, utiliza el repositorio. El paquete se gen
 ## Instalación en una aplicación compatible con Agent Skills
 
 1. Descarga y extrae el paquete de la Release.
-2. Elige `skills/luces-camara-prompt`, `skills/image-prompt-qa` o ambas carpetas. Pueden instalarse y utilizarse por separado.
+2. Elige una o varias carpetas: `skills/luces-camara-prompt`, `skills/image-prompt-qa` y `skills/poster-promotional-design`. Pueden instalarse y utilizarse por separado.
 3. Utiliza el mecanismo de instalación de la aplicación: copiar al directorio de skills, importar una carpeta o subir un ZIP individual, según indique su documentación.
 4. Conserva `SKILL.md` en la raíz de cada carpeta de skill y todas sus referencias junto a él. Si la aplicación exige un ZIP individual, empaqueta esa unidad completa con la estructura de archivo que la aplicación indique; el ZIP de toda la suite no equivale a un skill individual.
 5. Actualiza la lista de skills o abre una nueva sesión, según la aplicación, y comprueba que reconozca el nombre instalado.
@@ -77,10 +81,10 @@ El estándar define cómo se organiza un skill; cada aplicación decide dónde i
 ### Ejemplo de instalación manual en Codex
 
 1. Descarga o clona este repositorio y abre su carpeta.
-2. Copia las carpetas completas `skills/luces-camara-prompt` y `skills/image-prompt-qa` al directorio de skills de Codex: `$CODEX_HOME/skills` si está configurado, o `~/.codex/skills` en caso contrario.
-3. Abre una nueva sesión de Codex y comprueba que ambos skills estén disponibles.
+2. Copia las carpetas completas de los skills elegidos al directorio de skills de Codex: `$CODEX_HOME/skills` si está configurado, o `~/.codex/skills` en caso contrario.
+3. Abre una nueva sesión de Codex y comprueba que los skills estén disponibles.
 
-En Windows, ejecuta lo siguiente desde la raíz del repositorio. El comando se detiene si ya existe cualquiera de los dos skills para evitar sobrescribir una instalación:
+En Windows, ejecuta lo siguiente desde la raíz del repositorio. El comando se detiene si ya existe cualquiera de los skills para evitar sobrescribir una instalación:
 
 ```powershell
 $skillDirectory = if ($env:CODEX_HOME) {
@@ -88,7 +92,7 @@ $skillDirectory = if ($env:CODEX_HOME) {
 } else {
     Join-Path ([Environment]::GetFolderPath('UserProfile')) '.codex/skills'
 }
-$skillNames = @('luces-camara-prompt', 'image-prompt-qa')
+$skillNames = @('luces-camara-prompt', 'image-prompt-qa', 'poster-promotional-design')
 foreach ($skillName in $skillNames) {
     if (Test-Path -LiteralPath (Join-Path $skillDirectory $skillName)) {
         throw "El skill $skillName ya está instalado. Revisa la instalación antes de actualizarlo."
@@ -109,6 +113,8 @@ Activa el skill mediante el selector, comando o mecanismo de tu aplicación e in
 Con `luces-camara-prompt`, primero recibirás una propuesta de escena, estilo, iluminación y composición. Solicita ajustes o apruébala para recibir el prompt final. Puedes pedir una entrega en un solo idioma o el desglose en la plantilla G.O.R.V.E.T.
 
 Con `image-prompt-qa`, proporciona el prompt original y describe exactamente qué salió mal. Adjunta las imágenes de referencia o del resultado cuando estén disponibles y el asistente pueda analizarlas.
+
+Con `poster-promotional-design`, aporta el objetivo, el contenido y el formato de la pieza. Recibirás una dirección gráfica con contenido jerarquizado, layout y tipografía. Puedes pedir solo copy, estructura, crítica o un prompt. Funciona por separado; sus referencias a `luces-camara-prompt` son apoyos opcionales.
 
 ### Ejemplos
 
@@ -132,6 +138,18 @@ Apruebo la dirección creativa. Entrega el prompt final en español e inglés.
 Usa el skill image-prompt-qa. En este prompt, el rostro de la persona de referencia
 parece pegado al cuerpo. Corrige únicamente su integración con la escena.
 Prompt original: [pega aquí el prompt completo].
+```
+
+**Dirigir una pieza promocional**
+
+Ejemplo ficticio:
+
+```text
+Usa el skill poster-promotional-design para un póster vertical de un taller
+de fotografía. Texto obligatorio: «Luz de ventana», «18 de noviembre, 10:00»,
+«Estudio Norte». Público: principiantes. Quiero una composición tipográfica
+con una fotografía de apoyo. No añadas precios ni datos de inscripción.
+Entrega el contenido jerarquizado y la estructura del layout.
 ```
 
 ## Demostración breve
@@ -163,7 +181,7 @@ La entrega del skill también incluye la mención al Método GORVET, el enlace a
 ## Ayuda rápida
 
 - **El skill no aparece:** comprueba que la carpeta instalada contiene directamente `SKILL.md` y abre una nueva sesión del asistente.
-- **No recibes todavía el prompt final:** revisa y aprueba la propuesta de dirección creativa; la entrega ocurre en el segundo flujo.
+- **En `luces-camara-prompt`, no recibes todavía el prompt final:** revisa y aprueba la propuesta de dirección creativa; la entrega ocurre en el segundo flujo.
 - **Quieres corregir un resultado:** aporta el prompt original, el fallo concreto y, si es posible, la imagen. Utiliza `image-prompt-qa` para corregirlo con cambios mínimos.
 - **Utilizas referencias:** indica qué debe conservar cada una, como identidad, producto, pose o composición.
 - **Quieres otro idioma:** solicítalo expresamente al pedir el prompt.
