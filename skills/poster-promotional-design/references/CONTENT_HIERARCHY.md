@@ -1,82 +1,50 @@
-# Contenido y jerarquía editorial
+# Edición y jerarquía de la comunicación
 
-## Seleccionar antes de componer
+## Decidir qué necesita entender el público
 
-Identificar la promesa, el evento o la idea que debe entenderse primero. Separar el mensaje dominante, el apoyo y los datos necesarios para actuar. La jerarquía depende del objetivo: en una oferta puede dominar el precio; en una invitación, el nombre del evento; en una campaña de marca, el concepto.
+Antes de repartir textos en el formato, formula la proposición principal: qué se ofrece, anuncia o comunica y por qué le importa a ese público. Distingue hechos comerciales, datos prácticos, condiciones, comentarios de contexto e instrucciones dirigidas al asistente. Una frase peculiar no define por sí sola el tono de la campaña.
 
-No convertir esta clasificación en cuatro bloques obligatorios. Si basta un título y una fecha, conservar esa economía.
-
-## Decidir el destino, no acomodar todo
-
-El brief es material de trabajo, no el texto final del promocional. Separar hechos sobre la oferta, información para el cliente, contexto interno, opiniones, humor e instrucciones al asistente. Seleccionar lo pertinente y asignar un destino según objetivo, público y soporte antes de jerarquizar o componer:
-
-| Destino | Criterio de selección | Tratamiento |
+| Destino | Decisión editorial | Consecuencia |
 | --- | --- | --- |
-| PIEZA | Ayuda a reconocer la propuesta, entender su argumento principal o realizar la acción prevista; o está exigido expresamente en la pieza. | Seleccionar y condensar sin cambiar los hechos; después asignar jerarquía. |
-| TEXTO COMPLEMENTARIO | Es información pública útil, pero no necesita competir en el plano visual principal. | Redactarla para el caption, descripción o soporte complementario disponible y entregarla separada del encargo de imagen. |
-| OMITIR | Orienta el trabajo o describe circunstancias sin aportar al objetivo público: instrucciones, comentarios internos, anécdotas o digresiones. | Utilizarlo para comprender la solicitud cuando corresponda, sin convertirlo en texto, icono o escena del arte. |
+| PIEZA | Permite reconocer la propuesta, entender su argumento, actuar o cumplir una exigencia explícita del arte. | Editar con fidelidad y darle una función visual. |
+| TEXTO COMPLEMENTARIO | Aporta información pública útil que puede comunicarse fuera del plano principal sin alterar lo anunciado. | Redactar y entregar para un soporte asociado real. |
+| OMITIR | Es contexto interno, una instrucción al asistente o una digresión sin valor para el objetivo público. | Sirve para interpretar el encargo; no aparece en el arte ni se ilustra. |
 
-No hay una lista universal de datos que siempre entren o salgan. Decidir para esta pieza: una misma información puede ser principal, secundaria o irrelevante según el objetivo. Un dato llamativo no gana lugar por ser llamativo. La longitud del brief no determina la cantidad de contenido visible ni obliga a crear una infografía.
+Pregúntate qué pierde el destinatario al sacar un dato de la pieza. Si pierde una condición que modifica su decisión, debe recibirla en un lugar pertinente y suficientemente visible. Si pierde un detalle consultable después, puede pasar al complemento. Si no pierde información útil, no necesita publicarse. El usuario puede exigir textos concretos; respeta esa intención sin convertir lo obligatorio en protagonista.
 
-Para decidir, preguntar internamente qué pierde el destinatario si el dato no aparece en la imagen: si pierde comprensión de la propuesta o de una condición que la modifica, conservarlo o asegurar su comunicación pertinente; si pierde solo un detalle secundario, considerar texto complementario; si no pierde nada útil para la solicitud, dejarlo fuera. No agregar un bloque o ilustración para dar cabida a información que debía descartarse.
+## La comunicación completa y el soporte
 
-## Condiciones y canales de publicación
+Trasladar no equivale a eliminar. Entrega redactada toda información necesaria que salga del arte. Un post con descripción, un cartel que circulará solo y una secuencia tienen capacidades distintas. Una story o un estado no garantizan que exista caption: determina si habrá mensaje asociado; si no lo hay, diseña para una pieza autónoma.
 
-No esconder una condición real que cambie precio, alcance, disponibilidad o acceso al servicio por resultar poco atractiva. La opción principal y su condición deben entenderse juntas; no mostrar una promesa en el arte y relegar una restricción que la contradice a un texto que el destinatario podría no recibir.
+Una condición que cambia precio, acceso, alcance o disponibilidad debe acompañar la oferta de modo que no la contradiga ni quede oculta. La condición puede ser tipográficamente secundaria y seguir siendo legible. Una dirección completa puede ser imprescindible en una invitación presencial y prescindible en una campaña de reconocimiento: no fijes su destino por categoría.
 
-Trasladar información requiere un canal real. Si el arte circulará solo, no depender de un caption inexistente: mantener lo indispensable y proponer, cuando haga falta, un apoyo que el usuario pueda publicar junto a él. No inventar una página, un contacto ni un canal para justificar una omisión.
+Si hay información necesaria excesiva, organiza la lectura o propone un soporte ampliado cuando el encargo lo permita. Reducir todo hasta hacerlo ilegible no resuelve el problema. No inventes enlaces o canales para justificar un traslado.
 
-No preguntar si una frase es una broma por el solo hecho de resultar extraña. Aplicar primero criterio editorial y utilizar el contexto disponible; preguntar solo si no puede decidirse de manera fiable cómo comunicar una condición material o respetar la intención. No asumir una campaña humorística porque el brief contiene comentarios extraños. Si el usuario pide expresamente humor o sátira, seleccionar también según esa intención sin transformar todos los comentarios en copy por defecto.
+## Editar con criterio
 
-Estas decisiones son parte del trabajo del skill. No devolver al usuario un cuestionario para que él clasifique cada frase; explicar brevemente los traslados relevantes al entregar y consultar solo las ambigüedades materiales.
+Cada frase visible cumple una función diferente. Un título reconoce o propone; el apoyo aclara o argumenta; los datos prácticos orientan; una llamada a la acción indica un siguiente paso real. No todos son necesarios. Evita tres reformulaciones de una misma promesa.
 
-## Editar sin cambiar los hechos
+Conserva nombres, fechas, cifras, monedas, URLs y condiciones; reproduce literalmente lo marcado como literal. Corrige ortografía sin cambiar el sentido. No conviertas «hasta» en una cantidad garantizada ni atribuyas beneficios que el brief no sostiene. No deduzcas calidad comercial, comodidad o autenticidad solo por una fotografía.
 
-- Condensar explicaciones y eliminar repeticiones que no aporten información.
-- Mantener fieles nombres, fechas, cifras, precios, direcciones, URLs y condiciones del contenido seleccionado. Conservar literalmente lo marcado como literal u obligatorio. No confundir fidelidad a los hechos con obligación de publicar todo el mensaje recibido.
-- No completar datos comerciales ausentes. Usar un marcador explícito si permite avanzar o preguntar por el dato imprescindible.
-- No convertir una posibilidad en una promesa ni omitir condiciones que cambien el significado de una oferta.
-- No añadir beneficios o cualidades comerciales por costumbre: «cómodo», «original», «ajuste cómodo» o «diseño único» necesitan respaldo en el brief. Una imagen permite describir rasgos visibles, no demostrar comodidad, autenticidad o exclusividad comercial.
-- Si todo el texto es obligatorio y no cabe de forma legible, proponer otro formato o varias piezas; no reducirlo hasta volverlo ilegible.
+Ejerce criterio antes de preguntar. La rareza de una frase no obliga a consultar si es humor: normalmente basta distinguir contexto de mensaje público. Pregunta si una ambigüedad impide comunicar fielmente una condición material. No suprimas una condición incómoda suponiendo que es una broma.
 
-Cuando información necesaria pasa a TEXTO COMPLEMENTARIO, redactarla y entregarla; no basta anunciar que se trasladó. Mantenerla separada del encargo de generación y comprobar que no se perdió entre la selección y la entrega. Los detalles secundarios, explicaciones, condiciones extensas o direcciones completas no tienen un destino fijo: depende de su necesidad en la pieza y del texto asociado disponible.
+## Convertir importancia en tratamiento
 
-## Jerarquizar por importancia
+Jerarquía es un orden de atención, no una colección de textos grandes. Decide qué se reconoce primero, qué se lee después y qué se consulta al necesitarlo. El foco puede ser una imagen, un concepto, un nombre, una oferta o una cifra según el objetivo.
 
-Jerarquizar es ordenar los textos según su importancia para el objetivo y expresar ese orden visualmente. Decidir primero qué debe leerse antes, qué aporta apoyo y qué información se consulta después. La condición de obligatorio exige conservar un dato; no exige darle protagonismo.
+| Función | Relación visual a resolver |
+| --- | --- |
+| Dominante | Una diferencia inequívoca de escala, masa, posición o contraste respecto al resto. |
+| Apoyo | Cercanía semántica al foco y menor peso; añade información nueva. |
+| Información práctica | Agrupación y alineación estable; localizable y legible sin competir por la primera mirada. |
+| Acción | Visibilidad suficiente para ejecutar el paso esperado; protagonismo según el objetivo. |
 
-Diferenciar niveles mediante tamaño, grosor, color, contraste, posición, separación y agrupación. Elegir las variables que hagan visible la relación; no es necesario cambiarlas todas ni usar una familia diferente en cada nivel. Textos de igual importancia pueden compartir tratamiento; textos de distinta importancia deben percibirse distintos en el conjunto.
+Son funciones, no cuatro bloques obligatorios. Dos mensajes equivalentes pueden compartir nivel. Una oferta puede necesitar que precio y condición se lean juntos. El nombre de marca no tiene que ocupar siempre la mayor superficie.
 
-No equiparar importancia con mayúsculas. Elegir mayúsculas, minúsculas o caja de oración por legibilidad, tono y función. No transformar todos los textos a mayúsculas ni darles el mismo peso por tratarse de publicidad. Conservar la caja si el texto es literal.
+Tamaño, peso, color, posición, espacio y agrupación actúan conjuntamente. Un texto pequeño dentro de una estrella saturada puede dominar más que un título grande. Evalúa el peso combinado. Subordinar no significa ocultar ni bajar el contraste hasta perder legibilidad.
 
-El tamaño aislado no determina la jerarquía: un texto pequeño con color intenso, marco o aislamiento puede competir con uno grande. Revisar el peso visual combinado, incluida su relación con la imagen. Subordinar conserva legibilidad; no significa ocultar datos o hacerlos diminutos.
+Las mayúsculas son una elección de tono y lectura, no una medida de importancia. La caja de oración suele distinguir bien los datos prácticos; las mayúsculas pueden servir a un título corto o a una identidad existente. Mantén la caja si es literal. No asignes la misma combinación de mayúsculas, negrita, color y marco a todos los niveles.
 
-## Construir el recorrido
+## Comprobar antes de dibujar
 
-El título debe comunicar, no limitarse a una frase decorativa. El apoyo aporta una razón, una explicación o un contexto nuevo. Los datos funcionales deben encontrarse con facilidad. Incluir una llamada a la acción solo cuando exista una acción pertinente; no inventar un canal de reserva o compra.
-
-Evitar repetir la misma promesa en título, subtítulo y CTA con palabras distintas. Cada nivel debe cumplir una función diferente.
-
-## Comprobar el contenido final
-
-Leer solo el foco dominante: debe permitir reconocer el tema. Leer después el conjunto: debe quedar clara la información necesaria para interpretar o actuar. Comparar los datos protegidos con el original y comprobar que las omisiones propuestas no alteren la oferta.
-
-Entregar el contenido recomendado con sus roles, sin mostrar toda la clasificación interna.
-
-## Decisiones según la pieza
-
-| Situación | Decisión editorial | Lo que se conserva |
-| --- | --- | --- |
-| Evento con una descripción extensa | Dar protagonismo al evento; condensar la descripción y agrupar los datos de asistencia. | Nombre, fecha, hora, lugar y condiciones necesarias. |
-| Oferta con varios beneficios similares | Elegir el beneficio que sostiene la oferta y reunir los detalles secundarios. | Precio, vigencia, alcance y restricciones; no transformar «hasta» en una cifra garantizada. |
-| Producto con una lista de características | Priorizar las características pertinentes al público y trasladar el resto si no son obligatorias. | Nombre, identidad y afirmaciones verificables del producto. |
-| Pieza de reconocimiento de marca | Dar prioridad a una idea o imagen reconocible; no añadir una llamada a comprar por rutina. | Identidad visual y mensaje solicitado. |
-| Invitación con todo el texto marcado como literal | Organizarlo sin reescribirlo; separar niveles mediante composición. | Todo el texto literal, aunque la solución requiera cambiar el formato. |
-
-Estas situaciones ayudan a decidir; no imponen un orden idéntico para todas las campañas.
-
-## Lectura rápida y lectura completa
-
-Separar reconocimiento de lectura detallada: de un vistazo debe reconocerse el mensaje dominante, pero un cartel de programación puede contener detalles que requieren más tiempo. No eliminar información necesaria solo para cumplir una cifra de segundos.
-
-Si hay demasiados mensajes independientes, proponer una pieza principal y apoyos, o una secuencia estática cuando la solicitud lo permita. No convertir esa alternativa en una campaña obligatoria.
+Lee el contenido seleccionado sin decoración: debe comunicar una propuesta comprensible y datos suficientes. Después mira únicamente el foco: debe identificar el tema o abrir una idea pertinente. Finalmente compara la comunicación completa con el brief para detectar pérdidas o afirmaciones inventadas. Esta revisión termina en textos concretos, no en una lista de todos los datos recibidos.

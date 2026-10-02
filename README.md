@@ -8,7 +8,7 @@ Ayuda a resolver la falta de dirección en peticiones visuales, las instruccione
 
 - **`luces-camara-prompt`**: desarrolla una dirección creativa y, después de que el usuario la apruebe, entrega el prompt en español e inglés. Incluye recursos para retrato, producto, publicidad, ilustración, interiores, retoque y restauración.
 - **`image-prompt-qa`**: diagnostica el problema indicado por el usuario y corrige el prompt con el mínimo cambio necesario. Corrige identidad y selección de referencias, proporciones, producto, iluminación, composición, integración y repetición innecesaria. Conserva las convenciones de photobook cuando correspondan.
-- **`poster-promotional-design`**: selecciona y jerarquiza el contenido de pósters, posts, stories, flyers y otras piezas promocionales estáticas. Define composición, tipografía y tratamiento visual, preservando los datos obligatorios y evitando decoración sin función. Incluye tres bibliotecas locales.
+- **`poster-promotional-design`**: selecciona y jerarquiza el contenido de pósters, posts, stories, flyers y otras piezas promocionales estáticas. Define composición, tipografía y tratamiento visual, preservando los datos obligatorios y evitando decoración sin función. Incluye bibliotecas de criterio editorial, sistema visual, referencias comentadas, encargo de ejecución y revisión, además de cuatro esquemas visuales originales.
 
 Cuando se invoca la suite, el asistente debe seleccionar el skill por el resultado solicitado: diseño de piezas con texto y layout, reparación de un prompt existente o dirección de escena y creación de prompts. No necesitas indicar el nombre interno para pedir un póster o un estado de WhatsApp. La selección depende de que la aplicación cargue las instrucciones actualizadas.
 
@@ -46,7 +46,8 @@ gorvet-creative-suite/
     │   └── references/     # 28 bibliotecas operativas
     └── poster-promotional-design/
         ├── SKILL.md
-        └── references/     # Contenido, sistema visual y revisión
+        ├── assets/         # Esquemas visuales originales
+        └── references/     # Edición, diseño, referentes, ejecución y revisión
 ```
 
 Cada carpeta de `skills/` es una unidad independiente en formato Agent Skills: contiene un `SKILL.md` con metadatos YAML e instrucciones Markdown, además de sus recursos cuando corresponda. La carpeta `references/` forma parte de la funcionalidad y debe conservarse completa.
@@ -64,7 +65,7 @@ Los skills no dependen de un proveedor o modelo concreto y no requieren un servi
 
 ## Descarga rápida
 
-Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.3.6.zip` contiene el manifiesto, los tres skills completos, sus referencias, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad.
+Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.4.0.zip` contiene el manifiesto, los tres skills completos, sus referencias, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad.
 
 El ZIP reúne toda la suite. Impórtalo directamente solo si la aplicación admite este formato de complemento. Para aplicaciones que instalan Agent Skills individuales, extrae el paquete y utiliza cada carpeta de `skills/`, siguiendo los pasos siguientes. No necesitas Git para descargarlo.
 
