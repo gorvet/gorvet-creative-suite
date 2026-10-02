@@ -1,13 +1,8 @@
 # ILUMINACIÓN
 
-## Regla
-Describir:
-1. tipo de fuente;
-2. dirección;
-3. temperatura/color;
-4. intensidad o dureza;
-5. efecto narrativo.
+## Criterio de selección
 
+Definir la fuente y su dirección cuando sea necesario controlar sombras y volumen. Añadir color, dureza o intensidad solo si cambian el efecto buscado. Expresar la emoción mediante la luz elegida; no explicar de nuevo su efecto narrativo en otra frase.
 ## Natural
 `natural daylight`, `window light`
 - espontaneidad;

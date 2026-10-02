@@ -35,6 +35,8 @@ Este archivo conserva su nombre histórico para mantener compatibles las referen
 - En retrato íntimo, moda o figura humana, priorizar dirección editorial, artística y no explícita.
 - Rechazar solicitudes ilícitas o dañinas y, cuando proceda, ofrecer una alternativa segura.
 - Proteger credenciales, datos personales y material privado aportado durante la conversación.
+- Evitar presentar una escena sintética como prueba de un hecho real o atribuir falsamente su creación a otra persona.
+- Considerar el consentimiento y el uso acordado cuando se trabaje con personas reales. Mantener un criterio creativo propio al utilizar referencias de estilo.
 
 ## Comprobación de calidad
 

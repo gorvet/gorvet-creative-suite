@@ -7,13 +7,24 @@ Ayuda a resolver la falta de dirección en peticiones visuales, las instruccione
 ## Skills incluidos
 
 - **`luces-camara-prompt`**: desarrolla una dirección creativa y, después de que el usuario la apruebe, entrega el prompt en español e inglés. Incluye recursos para retrato, producto, publicidad, ilustración, interiores, retoque y restauración.
-- **`image-prompt-qa`**: diagnostica el problema indicado por el usuario y corrige el prompt con el mínimo cambio necesario. Se centra en identidad, proporciones e integración de personas de referencia en la escena.
+- **`image-prompt-qa`**: diagnostica el problema indicado por el usuario y corrige el prompt con el mínimo cambio necesario. Corrige identidad y selección de referencias, proporciones, producto, iluminación, composición, integración y repetición innecesaria. Conserva las convenciones de photobook cuando correspondan.
+
+Ambos skills funcionan de forma independiente. `image-prompt-qa` se utiliza cuando se solicita una corrección; no es un paso obligatorio después de `luces-camara-prompt`.
 
 Los skills trabajan con texto. La generación o edición de imágenes requiere una herramienta externa; no se ejecuta durante la preparación del prompt.
 
 ## Método G.O.R.V.E.T.
 
-El método organiza la dirección visual en seis dimensiones: **Guion visual, Observación, Recursos técnicos, Valor emocional, Estructura y Tono**. Conecta la intención de una imagen con decisiones visuales concretas.
+El Método G.O.R.V.E.T. organiza el proceso de transformar una idea en una escena y construir un prompt con intención, claridad y estilo:
+
+- **G — Guion visual:** definir la historia o el instante que se quiere contar.
+- **O — Observación del entorno:** situar la escena mediante lugar, momento y atmósfera.
+- **R — Recursos técnicos:** elegir cámara, lente, luz, estilo y tratamiento visual según la intención.
+- **V — Valor emocional:** expresar la emoción mediante señales visuales concretas.
+- **E — Estructura narrativa:** organizar el prompt en frases cortas y jerarquizadas; cada oración añade algo nuevo al plano.
+- **T — Tono:** mantener un lenguaje visual coherente con el propósito de la imagen.
+
+Puede utilizarse como briefing visual antes de redactar y como guía para identificar qué revisar cuando el resultado falla. La historia, la técnica y la emoción se integran en la escena; no requieren seis párrafos en el prompt final.
 
 ## Estructura
 
@@ -45,9 +56,9 @@ Este paquete no requiere un servidor MCP, claves de API ni dependencias de ejecu
 
 ## Descarga rápida
 
-Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.1.1.zip` contiene el manifiesto, los dos skills completos, sus referencias, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad.
+Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.2.0.zip` contiene el manifiesto, los dos skills completos, sus referencias, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad.
 
-Utiliza este paquete para importar el complemento en una interfaz compatible con este formato. Si la interfaz requiere instalar cada skill por separado, extrae el ZIP y utiliza la carpeta correspondiente de `skills/`. No necesitas Git para esta descarga.
+Utiliza este paquete para importar el complemento en una interfaz compatible con este formato. Si la interfaz requiere instalar cada skill por separado, extrae el ZIP y utiliza la carpeta correspondiente de `skills/`. No necesitas Git para esta descarga. El ZIP del complemento y el ZIP de código fuente que ofrece GitHub tienen finalidades distintas.
 
 Para Codex, extrae el paquete y sigue la instalación manual indicada abajo. Para estudiar o modificar el producto, utiliza el repositorio. El paquete se genera desde el mismo código publicado.
 

@@ -13,6 +13,8 @@ Prioridades:
 Sentencia útil:
 `poster layout with integrated text area`
 
+Distinguir diseño gráfico plano de presentación física. Añadir iluminación de estudio, volumen y sombras cuando se solicite un mockup; no introducirlos automáticamente en una portada o cartel plano.
+
 ## Texto generado
 El libro advierte que textos largos o composiciones cargadas pueden producir errores.
 Cuando la exactitud tipográfica sea crítica:

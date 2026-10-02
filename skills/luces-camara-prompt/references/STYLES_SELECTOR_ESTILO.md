@@ -39,7 +39,7 @@
 
 ## Fusión
 Regla:
-`1 estilo dominante + 1 matiz técnico + 1 atmósfera`
+Elegir un estilo dominante. Añadir un matiz técnico o una atmósfera solo si aportan una decisión distinta; no completar los tres por obligación.
 
 Ejemplo de estructura:
 `Editorial photo with cinematic lighting and fine-art color grading.`

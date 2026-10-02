@@ -1,7 +1,9 @@
 # ESTRUCTURA DEL PROMPT
 
-## Fórmula base
+## Mapa de decisiones
 `[SUJETO / OBJETO] + [ACCIÓN / POSICIÓN] + [ENTORNO / ESCENARIO] + [ESTILO FOTOGRÁFICO O ARTÍSTICO] + [DETALLES TÉCNICOS] + [ATMÓSFERA / EMOCIÓN]`
+
+La fórmula es un mapa de selección, no una lista de campos obligatorios. Aplicar la redacción y la depuración definidas en «Construcción del prompt final» de `../SKILL.md`.
 
 ## Sujeto
 Incluir solo información visualmente útil:
@@ -33,33 +35,19 @@ Evitar acciones vagas cuando la pose importe.
 
 ## Entorno
 Especificar contexto espacial.
-Cuando sea amplio, añadir:
+Añadir los datos de contexto que cambien la escena:
 - hora del día;
 - clima;
 - iluminación ambiental;
 - elementos contextuales.
 
-## Estilo
-Elegir un estilo dominante.
+## Estilo, técnica y emoción
 
-Regla:
-`1 estilo dominante + 1 matiz técnico + 1 atmósfera`
+Elegir el estilo que gobierna la escena. Añadir matices solo cuando describan un acabado diferente y compatible.
 
-## Detalles técnicos
-Bloque de seis piezas cuando el realismo lo requiera:
-`[LENTE/CÁMARA] + [ILUMINACIÓN] + [PROFUNDIDAD DE CAMPO] + [ATMÓSFERA] + [TEXTURA] + [COMPOSICIÓN]`
+Seleccionar cámara, lente, luz, foco, textura y composición según lo que necesite la imagen; no completar un bloque técnico de seis piezas por defecto. Si la luz ya está descrita junto al entorno, no volver a describirla con otros adjetivos.
 
-## Emoción
-Combinar emoción con señales visuales.
-Ejemplo estructural:
-`melancholic mood + cloudy afternoon light`
-o
-`joyful atmosphere + golden sunlight reflections`
-
-## Prompts complejos
-Si hay demasiadas capas:
-- párrafo 1: sujeto + acción + entorno;
-- párrafo 2: estilo + cámara/luz + emoción.
+Traducir la emoción a señales visibles, como gesto, clima, color o contraste. Conservar un descriptor emocional cuando aporte una intención que esas señales no expresen por sí solas.
 
 ## Orden
 Por defecto:
@@ -73,5 +61,10 @@ Cambiar el orden cuando:
 - el producto debe ser el hero;
 - la composición es la restricción principal.
 
-## Inglés
-La versión inglesa debe utilizar vocabulario técnico natural del medio visual, no traducción literal.
+## Ejemplo de decisiones distintas
+
+Una escena de producto puede resolverse así:
+
+> Fotografía editorial de un frasco de perfume ámbar sobre una mesa junto a una ventana. Conservar el diseño, las proporciones y la marca del producto de referencia. Al fondo, una calle mojada ligeramente desenfocada. Luz lateral suave de cielo nublado, con reflejos controlados en el vidrio. Frasco en primer plano y espacio superior para un titular. Atmósfera íntima, de elegancia artesanal. Formato vertical 4:5.
+
+Cada frase aporta escena, fidelidad del producto, entorno, iluminación, composición o tono. No hace falta repetir «elegante, refinado, sofisticado» ni reafirmar el protagonismo del frasco en otro párrafo. Un encargo con más restricciones puede necesitar más texto.

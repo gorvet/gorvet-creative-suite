@@ -1,5 +1,7 @@
 # MÉTODO G.O.R.V.E.T.
 
+Proceso de dirección creativa para transformar ideas en escenas y construir prompts con intención, claridad y estilo. Los seis pasos conectan pensamiento, observación y técnica; también permiten diagnosticar qué debe mejorar cuando un resultado falla.
+
 ## G — Guion visual
 Definir la historia o instante antes de generar.
 Preguntas internas:
@@ -7,7 +9,7 @@ Preguntas internas:
 - ¿cuál es el instante exacto?
 - ¿qué cambia si elimino el fondo o la acción?
 
-## O — Observación
+## O — Observación del entorno
 Definir:
 - dónde;
 - cuándo;
@@ -41,17 +43,11 @@ Traducirla a:
 
 No depender de palabras vagas como “bonito” o “feliz”.
 
-## E — Estructura
-Construir por capas:
-- sujeto y acción;
-- ambiente;
-- luz;
-- textura;
-- color;
-- emoción.
+## E — Estructura narrativa
 
-Cada frase debe añadir una capa nueva.
+Construir el prompt en capas mediante frases cortas organizadas por jerarquía. Cada oración debe sumar algo nuevo al plano, siguiendo las decisiones de sujeto y acción, entorno, luz, estilo y emoción que necesite la escena.
 
+El orden se adapta al encargo. Una capa organiza una decisión; no exige un párrafo independiente, una lista de adjetivos ni una nueva descripción de lo que ya se dijo. Aplicar «Construcción del prompt final» de `../SKILL.md`.
 ## T — Tono
 Relacionar propósito con lenguaje visual:
 - campaña → cinematic / editorial;
@@ -61,7 +57,7 @@ Relacionar propósito con lenguaje visual:
 - marca personal → lifestyle / professional.
 
 ## Uso como briefing
-La plantilla GORVET puede utilizarse como briefing visual previo al prompt.
+Antes de redactar, definir la historia y organizar las decisiones como instrucciones para un fotógrafo o equipo creativo. La plantilla GORVET puede utilizarse como briefing visual sin perder fluidez.
 
 ## Diagnóstico
 Cuando un resultado falla, revisar:
@@ -69,5 +65,5 @@ Cuando un resultado falla, revisar:
 - O: ¿el entorno aporta?
 - R: ¿la técnica es coherente?
 - V: ¿la emoción aparece?
-- E: ¿la jerarquía favorece lo importante?
+- E: ¿el orden del prompt favorece la lectura y cada frase aporta algo nuevo?
 - T: ¿el acabado pertenece al universo correcto?

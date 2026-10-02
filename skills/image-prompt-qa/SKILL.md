@@ -1,74 +1,71 @@
 ---
 name: image-prompt-qa
-description: Review and correct production image prompts that use human reference photos. Keep the original prompt as the base and correct only the exact reported failure with the minimum necessary change.
+description: Diagnose and repair an existing image prompt for the exact failure reported by the user, including human references, photobook compositions, product identity, lighting, composition, editing, and unnecessary repetition. Preserve working decisions and use the smallest correction that solves the problem. Use for requested repairs, not new creative briefs or automatic review after prompt creation.
 ---
 
 # Image Prompt QA
 
-Review a production image prompt and correct only the exact problem reported by the user.
+Repair an existing image prompt when the user asks for a correction. This skill works independently with prompts from GORVET, photobook templates, or any other source. It does not require a prior creative-direction approval, run after every prompt, generate images, or rebuild the creative brief.
 
-## Main rule
-Treat the original prompt as the base.
+## Repair contract
 
-Keep the original structure.
-Keep the original paragraph order.
-Keep all working blocks unchanged.
+Use the original prompt as the base. Identify the reported failure and change only the instructions responsible for it. Preserve all working decisions, wording, paragraph order, and template blocks unless changing them is necessary to solve that failure.
 
-Do not rewrite the prompt for style, clarity, fluency, elegance, or completeness.
-Do not improve anything that the user did not report as broken.
+A repair may add, replace, or remove a phrase or block. Prefer replacing an ambiguous instruction to appending several synonyms. Do not polish or expand unrelated content. If the user asks to shorten or deduplicate the prompt, removing repetition and joining blocks are permitted; preserve every distinct visual decision and constraint.
 
-Correct the reported failure with the minimum necessary intervention.
-That intervention may be:
-- adding one line;
-- modifying one line;
-- replacing one line or block.
+## Inputs and diagnosis
 
-Use whichever of those three solves the problem with the smallest change.
+1. Read the original prompt and the user's stated problem. If the prompt is missing, request it. Ask for a missing detail only when it changes the repair.
+2. Determine the intended scene and which reference controls each attribute. Use supplied images when the host can inspect them; do not claim to have viewed an absent image or promise a guaranteed result.
+3. Identify the instruction likely responsible for the failure and select the smallest repair. Without a result image, frame the diagnosis as a likely textual cause rather than a confirmed visual observation.
+4. Return the complete repaired prompt in its original language. If the user supplied parallel language versions, apply the equivalent correction to both without adding new details.
 
-## What to protect
-1. Preserve the likeness of the reference person(s).
-2. Maintain correct head-body proportions.
-3. Maintain correspondence with the requested theme.
+## References and selection
 
-## Fixed rules
-- Use `the reference person(s)` for the human reference.
-- Keep `Maintain the exact number of people from the reference image.` when relevant.
-- Do not use `selfie`.
-- Do not use `group` or `person` as a replacement label for `the reference person(s)`.
-- Do not leave contradictions.
+A reference may control a person's identity, a product, pose, clothing, composition, style, or a base image for editing. Preserve only the attributes assigned to it. Do not inherit its people or background when it is only a style or lighting reference.
 
-## How to work
-1. Read the original prompt.
-2. Read the user's reported problem literally.
-3. Find the exact line or block likely causing that problem.
-4. Decide the smallest valid correction: add, modify, or replace.
-5. Return the full prompt with only that correction applied.
+For human identity:
 
-## What not to do
-- Do not rewrite the opening line unless it is causing the reported problem.
-- Do not change paragraph order.
-- Do not change `If male:` / `If female:` unless they are causing the reported problem.
-- Do not change wardrobe, environment, pose, lighting, or restrictions unless they are causing the reported problem.
-- Do not replace valid original wording just because another wording sounds better.
+- Preserve the identity of each selected person, their relevant proportions, and any age or gender constraints already requested.
+- Follow the requested selection: everyone, one identified person, the person in the foreground, or another specified subset. If that selection is genuinely ambiguous and affects the correction, ask instead of inventing it.
+- Preserve `the reference person(s)` when it is an established photobook convention. Do not replace it with `group`, `person`, or another label just to improve style.
+- In other prompts, keep the existing unambiguous reference wording; there is no mandatory English label. Clarify singular, plural, or selection only when needed to solve the reported failure.
+- Keep `Maintain the exact number of people from the reference image.` when all people must appear. If only a subset is requested, correct a conflicting count instruction to that subset; do not import everyone automatically.
+- A selfie supplied as an identity reference does not require a selfie composition in the final image. If unintended selfie framing is the reported failure, adjust the framing or the reference's role. If the user wants a selfie composition, preserve it.
+
+For product or object references, preserve the requested design, proportions, geometry, colors, label, and branding. Do not introduce human-reference rules into a product prompt.
 
 ## Repair focus
-- If the problem is likeness: correct only identity wording.
-- If the problem is head/body proportion: correct only anatomy or proportion wording.
-- If the problem is theme fidelity: correct only wardrobe, place, props, or theme details.
-- If the problem is pasted-face look or poor scene integration: correct only the wording responsible for integration of face, neck, body, lighting, shadows, color cast, reflections, atmospheric effects, or continuity.
+
+Select the relevant case; do not fill every category:
+
+- **Identity or selection:** clarify who to preserve and what the reference controls.
+- **Anatomy or proportion:** correct the responsible pose, framing, scale, or proportion instruction while retaining identity.
+- **Pasted-face appearance or compositing:** correct continuity of face, neck, body, light, shadows, color, reflections, or perspective only where it fails.
+- **Product fidelity:** clarify the reference's design constraints; do not redesign the object or repeat the same fidelity instruction in several forms.
+- **Lighting or composition:** resolve the conflicting light source, focus, framing, scale, hierarchy, or text area. Retain compatible decisions.
+- **Theme or narrative:** correct the mismatched wardrobe, setting, props, action, emotion, or tone that the user identified.
+- **Editing or restoration:** delimit the requested change and preserve unaffected areas and original attributes.
+- **Length or repetition:** keep one formulation per visual decision, remove equivalent adjectives and explanations, and retain distinct requirements. Do not impose a word quota or a two-line template.
+
+For a GORVET prompt, its story, environment, technique, emotion, narrative structure, and tone are decisions to preserve or repair as relevant. They are not six new sections to add. A photobook template does not need conversion to GORVET.
+
+## Template preservation
+
+Keep the opening, `If male:` / `If female:` blocks, wardrobe, pose, environment, and restrictions unless they cause the reported failure. If multiple lines encode the same conflicting instruction, correct those lines together; one-line changes must not leave the contradiction elsewhere.
+
+Do not add a creative-direction phase, a marketing closing, a GORVET attribution, or image-generation instructions to the repaired prompt. Keep existing material outside the prompt separate from the text intended for the generator.
 
 ## Output
-Reply briefly.
 
-**Diagnosis:** one short sentence.
+Use the user's language for a brief diagnosis, then return the complete corrected prompt. Preserve the prompt's language and format except where the requested repair requires a change. No second approval is needed for a requested repair.
 
-**Corrected prompt:** the full prompt with only the minimum necessary correction applied.
+## Final review
 
-## Final check
-Before answering, verify:
-- the original structure is preserved;
-- only the reported problem was corrected;
-- the correction is the minimum necessary one;
-- `the reference person(s)` is preserved correctly;
-- no `selfie` appears;
-- no contradiction remains.
+Verify that the reported problem has been addressed, all unrelated decisions remain intact, references select the intended people or objects, and no contradictory instruction survives. Every added phrase must add control needed for the repair. If a contradiction reflects an unresolved user choice, ask for that choice rather than silently dropping a requirement.
+
+## Examples of scope
+
+- A photobook prompt uses `the reference person(s)` and the user reports a pasted-face appearance: preserve that label, person count, theme, and wardrobe blocks; repair only the integration instruction.
+- A perfume prompt repeats its atmosphere and the user asks to shorten it: remove equivalent mood descriptions while preserving product identity, lighting, background, copy space, and aspect ratio.
+- A reference contains three people but the user wants only the foreground person: preserve that person's identity and correct any instruction that unnecessarily requires all three. Do not rewrite the scene around a group.

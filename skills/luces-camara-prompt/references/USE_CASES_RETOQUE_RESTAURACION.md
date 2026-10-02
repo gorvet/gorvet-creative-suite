@@ -27,7 +27,7 @@ Indicar explícitamente:
 
 ## Restauración
 Objetivo:
-recuperar una imagen sin perder identidad visual.
+recuperar una imagen sin perder identidad visual. Por defecto, conservar también el estilo y la iluminación originales. Colorización, modernización o cambio de acabado requieren que formen parte del encargo.
 
 Estructura:
 `[foto] + [qué preservar] + [daño/acciones] + [grado de restauración] + [acabado] + [técnica]`

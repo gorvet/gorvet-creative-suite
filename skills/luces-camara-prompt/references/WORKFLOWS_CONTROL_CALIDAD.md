@@ -1,55 +1,8 @@
 # CONTROL DE CALIDAD
 
-## Regla de optimización obligatoria
-Antes de entregar cualquier prompt final, hacer una pasada de compresión semántica.
+## Revisión del prompt
 
-El conocimiento interno puede ser extenso; la salida no debe volcar toda la biblioteca. Seleccionar únicamente los elementos que cambian de forma material el resultado visual.
-
-### Longitud
-- Prompt normal: 1 párrafo compacto.
-- Prompt realmente complejo: máximo 2 párrafos.
-- No crear 3, 4 o más párrafos para reiterar la misma escena.
-- Si una instrucción puede decirse con menos palabras sin perder control visual, usar la versión más corta.
-
-### Deduplicación
-Cada función visual debe expresarse una sola vez.
-
-No repetir con sinónimos equivalentes:
-- realismo;
-- calidad;
-- nitidez;
-- estilo;
-- iluminación;
-- profundidad de campo;
-- composición;
-- atmósfera;
-- relación de aspecto.
-
-Ejemplo de redundancia a evitar:
-`photorealistic, ultra-realistic, hyperrealistic, realistic photography, realistic textures`.
-Elegir solo el descriptor o combinación mínima que aporte control real.
-
-### Técnica mínima suficiente
-Por defecto usar como máximo:
-- 1 estilo dominante;
-- 1 cámara o look de captura, solo si aporta;
-- 1 lente, solo si aporta;
-- 1 instrucción de profundidad/enfoque;
-- 1 esquema principal de iluminación;
-- 1 composición/encuadre principal;
-- 1 atmósfera o emoción dominante;
-- materialidad y microdetalle solo cuando sean relevantes.
-
-No añadir especificaciones técnicas para “sonar profesional”.
-
-### Relación de aspecto
-- Mencionarla exactamente UNA vez.
-- Colocarla al final del prompt.
-- Omitirla si el usuario no la necesita o si no aporta al uso previsto.
-- Nunca repetirla en narrativa, bloque técnico y cierre.
-
-### Español / inglés
-La versión inglesa debe conservar la misma densidad informativa que la española. No expandirla con listas de sinónimos o especificaciones nuevas.
+Aplicar «Construcción del prompt final» de `../SKILL.md` antes de entregar. Comprobar que cada frase añade una decisión y que la depuración conserva las restricciones del encargo. Estas comprobaciones revisan el contenido existente; no son una lista de elementos que deban añadirse al prompt.
 
 ## Técnico
 - sujeto/objeto claro;
@@ -86,7 +39,7 @@ La versión inglesa debe conservar la misma densidad informativa que la español
 - sin redundancia.
 
 ## Mini-brief
-El prompt final debe ser interpretable por un fotógrafo, director de arte, diseñador o artista 3D sin explicación adicional, pero no debe parecer un briefing inflado.
+Las instrucciones deben permitir entender la escena y sus restricciones sin explicaciones añadidas sobre la intención de cada frase.
 
 ## Revisión del resultado
 Tres filtros del libro:

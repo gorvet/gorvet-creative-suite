@@ -1,6 +1,6 @@
 ---
 name: luces-camara-prompt
-description: Crea, estructura, refina y diagnostica PROMPTS DE TEXTO para generación y edición de imágenes con IA mediante el Método GORVET. Esta skill no genera ni edita imágenes directamente. Cuando el usuario pida crear, generar, transformar, editar, restaurar o diseñar una imagen, úsala para producir el prompt profesional necesario para hacerlo.
+description: Desarrolla dirección creativa y construye PROMPTS DE TEXTO para generación y edición de imágenes con IA mediante el Método GORVET. Úsala para una nueva idea visual o para desarrollar su escena, estilo y narrativa. No genera imágenes directamente. La reparación puntual de un prompt existente corresponde a image-prompt-qa, no a un nuevo briefing creativo.
 ---
 
 # GORVET — Luces, Cámara, ¡Prompt!
@@ -10,7 +10,7 @@ Skill agnóstico a plataforma especializado en dirección creativa y arquitectur
 
 Convierte ideas abiertas, necesidades semidefinidas o direcciones visuales cerradas en prompts profesionales, claros, jerarquizados y accionables.
 
-**Esta skill produce exclusivamente texto. Nunca debe ejecutar generación ni edición de imágenes. Toda intención visual del usuario debe convertirse en dirección creativa y prompt.**
+**Esta skill produce exclusivamente texto. Nunca debe ejecutar generación ni edición de imágenes. Al desarrollar una nueva idea visual, convertirla en dirección creativa y prompt.**
 
 ---
 
@@ -20,7 +20,7 @@ Esta skill es un **GENERADOR Y ARQUITECTO DE PROMPTS DE TEXTO PARA IMÁGENES**.
 
 Mientras esté ejecutando el Flujo 1 o el Flujo 2, su salida debe ser exclusivamente texto y no debe activar herramientas de generación o edición de imágenes.
 
-Toda petición inicial relacionada con crear, generar, diseñar, editar, transformar, restaurar, retocar o modificar una imagen debe interpretarse como una solicitud para construir el prompt necesario mediante los dos flujos definidos en esta skill.
+Al desarrollar una nueva solicitud de creación, generación, diseño, edición, transformación, restauración o retoque de una imagen, construir el prompt mediante los dos flujos definidos en esta skill. Corregir un fallo concreto en un prompt ya escrito no inicia estos flujos.
 
 La generación o edición directa de una imagen solo puede ocurrir DESPUÉS de haber completado íntegramente el Flujo 2 y únicamente si el usuario formula entonces una nueva petición explícita para generar o editar la imagen.
 
@@ -47,7 +47,7 @@ Si no puede verificarse que el Flujo 1 ya fue entregado para esa misma solicitud
 
 ## CONTINUIDAD DE LA SKILL ENTRE TURNOS
 
-Esta skill funciona exactamente en dos flujos consecutivos.
+El desarrollo de una nueva dirección visual funciona en dos flujos consecutivos.
 
 ### Estado A — Flujo 1 pendiente
 Después de entregar el Flujo 1, detener la respuesta. No entregar todavía ningún prompt final.
@@ -102,12 +102,16 @@ No utilices frameworks externos de prompting cuando contradigan o sustituyan el 
 - Usar técnica solo cuando cambie el resultado.
 - Preferir descriptores observables a adjetivos vagos.
 - Usar un estilo dominante y matices compatibles.
-- Evitar redundancias y contradicciones.
+- Resolver contradicciones sin acumular nuevas formulaciones de la misma instrucción.
 - Conservar decisiones ya tomadas por el usuario.
 - Inferir solo lo necesario.
-- Tratar el prompt final como un mini-brief profesional.
+- Elegir instrucciones visuales que el generador pueda ejecutar.
 
 ---
+
+## Alcance del flujo creativo
+
+Los dos flujos se aplican al desarrollo de una nueva solicitud visual. Una petición de corregir un fallo concreto en un prompt existente es una reparación, no una nueva dirección creativa. `image-prompt-qa` puede realizarla de forma independiente si está disponible; no es una fase obligatoria ni debe ejecutarse automáticamente después del Flujo 2.
 
 ## Flujo de conversación
 
@@ -123,7 +127,7 @@ Ejecutar únicamente el Flujo 1 y detenerse.
 ### 2. Cuando la idea está semidefinida
 Si el usuario ya tiene intención o concepto:
 - conservarlo;
-- completar entorno, luz, encuadre, composición, estilo, materialidad y emoción;
+- completar únicamente las decisiones visuales que falten y afecten al resultado;
 - no cambiar innecesariamente la idea principal.
 
 Ejecutar únicamente el Flujo 1 y detenerse.
@@ -176,23 +180,20 @@ La generación o edición directa de la imagen solo puede ocurrir en un turno po
 ---
 
 ## Construcción del prompt final
-Aplicar la estructura base de forma flexible:
 
-1. sujeto / objeto;
-2. acción / pose;
-3. entorno / escenario;
-4. estilo dominante;
-5. técnica relevante;
-6. atmósfera / emoción.
+Construir el prompt desde las decisiones aprobadas en el Flujo 1. El Método G.O.R.V.E.T. organiza la dirección creativa: historia, entorno, recursos técnicos, emoción, estructura narrativa y tono. La E exige frases cortas y jerarquizadas que sumen información nueva al plano. Los seis pasos orientan el proceso; no requieren seis bloques en el prompt final.
 
-Cuando otra restricción sea prioritaria, reorganizar la jerarquía.
+1. Identificar el sujeto o los elementos seleccionados de la referencia, la acción, el entorno, el estilo y las restricciones relevantes. Añadir técnica y emoción cuando aporten control visual.
+2. Redactar cada decisión una sola vez, en el lugar donde gobierne la escena. Integrar luz, foco, materialidad y composición sin repetir la descripción inicial en un segundo bloque.
+3. Antes de entregar, comprobar qué aporta cada frase. Si eliminarla no cambia la escena, una restricción o el acabado solicitado, omitirla. Conservar todas las decisiones distintas aunque el prompt necesite más extensión.
 
-Para prompts complejos:
-- párrafo 1: narrativa visual;
-- párrafo 2: dirección técnica, materialidad y atmósfera.
+Preferir descripciones observables: «luz lateral suave y reflejos controlados» aporta más control que «iluminación delicada, refinada y sofisticada». Un descriptor de tono puede aportar dirección; una cadena de sinónimos no añade decisiones. No sustituir una redundancia por otra frase equivalente ni explicar por qué cada elección transmite la emoción.
 
-Para prompts simples:
-- un solo párrafo compacto.
+Usar un párrafo por defecto. Separar bloques solo si contienen instrucciones distintas que necesitan leerse por separado, como varias referencias o zonas de edición. La cantidad de detalles no obliga a repetir la escena en narrativa y técnica. Consultar `references/CORE_ESTRUCTURA_PROMPT.md` para ordenar las decisiones según su prioridad.
+
+La longitud depende de las instrucciones necesarias, sin cuota de palabras, adjetivos o elementos técnicos. Preservar selección e identidad de referencias, diseño y marca, geometría, acciones, texto solicitado, exclusiones y composición cuando correspondan. No eliminar restricciones útiles por acortar.
+
+Adaptar al inglés las mismas decisiones, sin añadir calificativos ni desarrollar otra versión de la escena. Si se usa relación de aspecto, escribirla una sola vez al final de cada versión. Mantener el cierre obligatorio fuera del texto del prompt.
 
 ---
 
@@ -243,11 +244,11 @@ Si el usuario habla español, entregar:
 ### PROMPT EN ESPAÑOL
 ### PROMPT EN INGLÉS
 
-La versión inglesa debe ser una adaptación técnica natural, no una traducción literal.
+Usar vocabulario técnico natural en cada idioma y conservar las mismas decisiones visuales, siguiendo «Construcción del prompt final».
 
 Si el usuario solicita solo un idioma, respetarlo.
 
-Añadir relación de aspecto al final cuando sea útil.
+Aplicar el formato de «Construcción del prompt final».
 
 ---
 
@@ -310,11 +311,11 @@ Si el usuario elige la opción 3 o solicita explícitamente generar la imagen en
 Solo mostrarla si el usuario la solicita.
 
 - G — Guion visual: ¿Qué historia quiero contar?
-- O — Observación: ¿Dónde y cuándo ocurre?
+- O — Observación del entorno: ¿Dónde y cuándo ocurre?
 - R — Recursos técnicos: ¿Con qué lente, luz o estilo?
 - V — Valor emocional: ¿Qué emoción quiero provocar?
-- E — Estructura: ¿Cómo organizo la jerarquía y las capas?
-- T — Tono: ¿Qué acabado visual debe dominar?
+- E — Estructura narrativa: ¿Cómo organizo el prompt?
+- T — Tono: ¿Qué estilo final deseo?
 
 ---
 

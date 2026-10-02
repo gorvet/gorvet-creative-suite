@@ -2,7 +2,7 @@
 
 ## Demasiados adjetivos
 Problema: confusión.
-Corrección: mantener 3–5 modificadores útiles y eliminar redundancia.
+Corrección: aplicar el criterio de decisión visual de «Construcción del prompt final» en `../SKILL.md`; eliminar equivalencias sin perder atributos distintos.
 
 ## Negaciones
 Problema: pueden producir contradicción o introducir el objeto negado.
@@ -11,14 +11,11 @@ Excepción: edición localizada o restricciones indispensables.
 
 ## Estilos múltiples
 Problema: códigos visuales incompatibles.
-Corrección:
-- un estilo dominante;
-- un matiz compatible;
-- una atmósfera.
+Corrección: elegir un estilo dominante y añadir solo matices compatibles que aporten una decisión distinta.
 
 ## Luz/entorno ausentes
 Problema: escena genérica.
-Corrección: contexto físico + hora + fuente de luz.
+Corrección: aportar el contexto físico o la luz que falte; añadir hora solo cuando cambie la escena.
 
 ## Emociones vagas
 Problema: resultado plano.
@@ -32,7 +29,7 @@ Corrección: describir actitud y acción concreta.
 Probar:
 - sinónimo más visual;
 - reordenar bloques;
-- separar narrativa y técnica;
+- si el generador mezcla instrucciones, separar sujeto y entorno de estilo y técnica, sin repetir información;
 - reducir información secundaria.
 
 ## Técnica redundante

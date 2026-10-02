@@ -48,7 +48,9 @@ El libro recomienda:
 - varios estilos → mezcla;
 - cambiar luz/paleta → ruptura;
 - demasiadas referencias → competencia;
-- emociones contradictorias → expresión incoherente.
+- emociones contradictorias dentro de una misma escena → expresión incoherente.
+
+En una serie narrativa, la emoción puede evolucionar con la historia mientras se conservan identidad y continuidad visual. Las anclas se repiten entre prompts autónomos; no se reformulan varias veces dentro del mismo prompt.
 
 ## Plantillas
 Guardar prompts exitosos como bases de series o campañas.

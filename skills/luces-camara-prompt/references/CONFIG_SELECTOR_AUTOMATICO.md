@@ -65,6 +65,7 @@ Según necesidad:
 - estilos → módulos `STYLES_*`;
 - referencias → módulos `REFERENCES_*`;
 - nichos → módulos `USE_CASES_*`;
+- secuencias o campañas narrativas → `references/USE_CASES_ARTE_CONCEPTUAL_STORYTELLING.md`;
 - refinamiento → `references/WORKFLOWS_ITERACION_DIAGNOSTICO.md`;
 - salida final → `references/WORKFLOWS_CONTROL_CALIDAD.md`;
 - sentencias reutilizables → `references/WORKFLOWS_PHRASE_BANK.md`;
@@ -77,7 +78,7 @@ Según necesidad:
 - 1 estilo + luz + plano si aportan.
 
 ### MEDIA
-Por defecto:
+Seleccionar según el encargo; no completar todos los elementos:
 - estilo;
 - iluminación;
 - plano;
@@ -104,4 +105,4 @@ Por defecto:
 8. técnica;
 9. microdetalle.
 
-La técnica no debe desplazar a la idea.
+La categoría indica qué recursos considerar, no cuántos añadir. Producto o publicidad no exige por sí solo un prompt avanzado. La técnica no debe desplazar a la idea; aplicar «Construcción del prompt final» de `../SKILL.md`.

@@ -9,7 +9,7 @@
 7. No mezclar estilos opuestos sin jerarquía.
 8. Para acercar/alejar, probar `zoom in` / `zoom out` cuando la plataforma responda a ello.
 9. Combinar emoción con luz o clima.
-10. Si se mezclan estilos, separar narrativa y técnica en dos párrafos; no usar más párrafos de los necesarios.
+10. Si se mezclan estilos, definir cuál gobierna. Separar párrafos solo cuando organicen instrucciones distintas, siguiendo «Construcción del prompt final» de `../SKILL.md`.
 11. Si el resultado falla, probar sinónimos visuales o cambiar orden de bloques.
 12. Apertura amplia → fondo más difuso; apertura cerrada → mayor profundidad.
 13. En retrato, foco en ojos + separación de fondo puede reforzar profesionalidad.
