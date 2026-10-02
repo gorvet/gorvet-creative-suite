@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "gorvet-creative-suite",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Suite of GORVET creative skills for visual direction, image prompting, editing workflows, consistency, and AI-assisted creative production.",
   "author": {
     "name": "Gorvet Estudios",

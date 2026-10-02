@@ -1,6 +1,6 @@
 # GORVET Creative Suite
 
-GORVET Creative Suite es una colección de skills de **Gorvet Estudios** para convertir ideas visuales en prompts de imagen claros y corregir fallos concretos en prompts existentes. Está basada en el **Método G.O.R.V.E.T.** y reúne bibliotecas operativas para dirigir escenas, referencias, estilos, iluminación y composición.
+GORVET Creative Suite es una colección de skills de **Gorvet Estudios** en el formato abierto [Agent Skills](https://agentskills.io/specification), para convertir ideas visuales en prompts de imagen claros y corregir fallos concretos en prompts existentes. Está basada en el **Método G.O.R.V.E.T.** y reúne bibliotecas operativas para dirigir escenas, referencias, estilos, iluminación y composición.
 
 Ayuda a resolver la falta de dirección en peticiones visuales, las instrucciones contradictorias y la pérdida de consistencia al ajustar un prompt.
 
@@ -43,26 +43,38 @@ gorvet-creative-suite/
         └── references/     # 28 bibliotecas operativas
 ```
 
-`plugin.json` describe el complemento. Cada `SKILL.md` es el punto de entrada de su skill. La carpeta `references/` forma parte de la funcionalidad y debe conservarse completa.
+Cada carpeta de `skills/` es una unidad independiente en formato Agent Skills: contiene un `SKILL.md` con metadatos YAML e instrucciones Markdown, además de sus recursos cuando corresponda. La carpeta `references/` forma parte de la funcionalidad y debe conservarse completa.
+
+`plugin.json` aporta metadatos de empaquetado para interfaces que admitan ese manifiesto. No forma parte del formato básico Agent Skills ni es necesario para instalar las carpetas de skills directamente.
 
 ## Requisitos
 
-- Un asistente compatible con skills basados en archivos `SKILL.md`, como Codex.
-- Acceso del asistente a las carpetas instaladas y a sus referencias.
+- Una aplicación o agente que implemente el estándar Agent Skills y pueda cargar `SKILL.md` junto con sus recursos.
+- Acceso del asistente a las carpetas instaladas y a sus referencias. Para analizar imágenes adjuntas, también necesita capacidad de visión.
 - Git, si se descarga mediante clonación; también puede descargarse el repositorio desde GitHub.
 - Una herramienta de imágenes, únicamente si se desea ejecutar el prompt obtenido.
 
-Este paquete no requiere un servidor MCP, claves de API ni dependencias de ejecución propias. Los requisitos y el acceso a servicios del asistente utilizado se gestionan por separado.
+Los skills no dependen de un proveedor o modelo concreto y no requieren un servidor MCP, claves de API ni código ejecutable propio. La aplicación anfitriona gestiona la carga de instrucciones, las referencias y el acceso al modelo; la calidad de seguimiento depende de ese modelo. El script de distribución del repositorio solo sirve para preparar las Releases.
 
 ## Descarga rápida
 
-Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.2.0.zip` contiene el manifiesto, los dos skills completos, sus referencias, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad.
+Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.2.1.zip` contiene el manifiesto, los dos skills completos, sus referencias, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad.
 
-Utiliza este paquete para importar el complemento en una interfaz compatible con este formato. Si la interfaz requiere instalar cada skill por separado, extrae el ZIP y utiliza la carpeta correspondiente de `skills/`. No necesitas Git para esta descarga. El ZIP del complemento y el ZIP de código fuente que ofrece GitHub tienen finalidades distintas.
+El ZIP reúne toda la suite. Impórtalo directamente solo si la aplicación admite este formato de complemento. Para aplicaciones que instalan Agent Skills individuales, extrae el paquete y utiliza cada carpeta de `skills/`, siguiendo los pasos siguientes. No necesitas Git para descargarlo.
 
-Para Codex, extrae el paquete y sigue la instalación manual indicada abajo. Para estudiar o modificar el producto, utiliza el repositorio. El paquete se genera desde el mismo código publicado.
+Para estudiar o modificar el producto, utiliza el repositorio. El paquete se genera desde el mismo código publicado.
 
-## Instalación en Codex
+## Instalación en una aplicación compatible con Agent Skills
+
+1. Descarga y extrae el paquete de la Release.
+2. Elige `skills/luces-camara-prompt`, `skills/image-prompt-qa` o ambas carpetas. Pueden instalarse y utilizarse por separado.
+3. Utiliza el mecanismo de instalación de la aplicación: copiar al directorio de skills, importar una carpeta o subir un ZIP individual, según indique su documentación.
+4. Conserva `SKILL.md` en la raíz de cada carpeta de skill y todas sus referencias junto a él. Si la aplicación exige un ZIP individual, empaqueta esa unidad completa con la estructura de archivo que la aplicación indique; el ZIP de toda la suite no equivale a un skill individual.
+5. Actualiza la lista de skills o abre una nueva sesión, según la aplicación, y comprueba que reconozca el nombre instalado.
+
+El estándar define cómo se organiza un skill; cada aplicación decide dónde instalarlo, cómo activarlo y qué empaquetado acepta. No existe una ruta de instalación ni una sintaxis de invocación universal. Un chat que únicamente permite adjuntar documentos no necesariamente implementa Agent Skills.
+
+### Ejemplo de instalación manual en Codex
 
 1. Descarga o clona este repositorio y abre su carpeta.
 2. Copia las carpetas completas `skills/luces-camara-prompt` y `skills/image-prompt-qa` al directorio de skills de Codex: `$CODEX_HOME/skills` si está configurado, o `~/.codex/skills` en caso contrario.
@@ -88,11 +100,11 @@ foreach ($skillName in $skillNames) {
 }
 ```
 
-En otros asistentes compatibles, instala las carpetas completas siguiendo las instrucciones del producto. La instalación manual anterior utiliza los skills directamente; no registra el manifiesto como complemento en una tienda.
+Este ejemplo es específico de Codex. En otras aplicaciones, utiliza su ubicación y mecanismo de instalación. Copiar las carpetas de skills no registra `plugin.json` como complemento en una tienda.
 
 ## Uso
 
-Invoca el skill por su nombre e indica tu objetivo visual, el uso de la imagen y cualquier referencia o restricción relevante.
+Activa el skill mediante el selector, comando o mecanismo de tu aplicación e indica tu objetivo visual, el uso de la imagen y cualquier referencia o restricción relevante. También puedes pedirlo por su nombre cuando la aplicación permita activación mediante lenguaje natural. La sintaxis `$nombre-del-skill` que admite Codex no es un requisito del estándar.
 
 Con `luces-camara-prompt`, primero recibirás una propuesta de escena, estilo, iluminación y composición. Solicita ajustes o apruébala para recibir el prompt final. Puedes pedir una entrega en un solo idioma o el desglose en la plantilla G.O.R.V.E.T.
 
@@ -103,7 +115,7 @@ Con `image-prompt-qa`, proporciona el prompt original y describe exactamente qu�
 **Preparar una imagen de producto**
 
 ```text
-Usa $luces-camara-prompt para preparar una fotografía publicitaria
+Usa el skill luces-camara-prompt para preparar una fotografía publicitaria
 de una taza de café artesanal sobre una mesa de madera.
 Busco una sensación cálida y un formato vertical para redes sociales.
 ```
@@ -117,7 +129,7 @@ Apruebo la dirección creativa. Entrega el prompt final en español e inglés.
 **Corregir un fallo concreto**
 
 ```text
-Usa $image-prompt-qa. En este prompt, el rostro de la persona de referencia
+Usa el skill image-prompt-qa. En este prompt, el rostro de la persona de referencia
 parece pegado al cuerpo. Corrige únicamente su integración con la escena.
 Prompt original: [pega aquí el prompt completo].
 ```
