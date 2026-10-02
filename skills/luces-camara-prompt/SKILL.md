@@ -1,9 +1,15 @@
 ---
 name: luces-camara-prompt
-description: Desarrolla dirección creativa y construye PROMPTS DE TEXTO para generación y edición de imágenes con IA mediante el Método GORVET. Úsala para una nueva idea visual o para desarrollar su escena, estilo y narrativa. No genera imágenes directamente. La reparación puntual de un prompt existente corresponde a image-prompt-qa, no a un nuevo briefing creativo.
+description: Desarrolla dirección creativa y construye PROMPTS DE TEXTO para generación y edición de imágenes con IA mediante el Método GORVET. Úsala para una nueva idea visual o para desarrollar su escena, estilo y narrativa. No genera imágenes directamente. Las piezas promocionales con texto y layout corresponden a poster-promotional-design; la reparación puntual de un prompt existente, a image-prompt-qa.
 ---
 
 # GORVET — Luces, Cámara, ¡Prompt!
+
+## Selección del skill antes de aplicar los flujos
+
+Al recibir una solicitud para GORVET Creative Suite, consultar primero «Selección entre skills de la suite» en `references/CONFIG_SELECTOR_AUTOMATICO.md`. Una pieza promocional con contenido, jerarquía y layout corresponde a `../poster-promotional-design/SKILL.md`; una reparación puntual de un prompt existente, a `../image-prompt-qa/SKILL.md`. Leer y aplicar el skill elegido antes de preparar una respuesta o llamar a una herramienta. Si corresponde otro skill, no iniciar los flujos de este.
+
+Los gates, la salida solo de texto y los dos flujos siguientes se aplican únicamente a las tareas atendidas por `luces-camara-prompt`, no al complemento entero.
 
 ## Propósito
 Skill agnóstico a plataforma especializado en dirección creativa y arquitectura de prompts para generación y edición de imágenes con IA mediante el Método GORVET.
@@ -30,7 +36,7 @@ Una aprobación del Flujo 1 nunca autoriza generación de imagen.
 
 ## GATE OBLIGATORIO ENTRE FLUJOS
 
-Toda solicitud visual nueva comienza SIEMPRE en Flujo 1, sin importar si la idea está abierta, semidefinida o completamente cerrada.
+Toda solicitud visual nueva asignada a esta skill comienza en Flujo 1, sin importar si la idea está abierta, semidefinida o completamente cerrada.
 
 Reglas no negociables:
 - NUNCA entregar el prompt final en el primer turno de una nueva solicitud visual.

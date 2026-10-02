@@ -10,6 +10,8 @@ Ayuda a resolver la falta de dirección en peticiones visuales, las instruccione
 - **`image-prompt-qa`**: diagnostica el problema indicado por el usuario y corrige el prompt con el mínimo cambio necesario. Corrige identidad y selección de referencias, proporciones, producto, iluminación, composición, integración y repetición innecesaria. Conserva las convenciones de photobook cuando correspondan.
 - **`poster-promotional-design`**: selecciona y jerarquiza el contenido de pósters, posts, stories, flyers y otras piezas promocionales estáticas. Define composición, tipografía y tratamiento visual, preservando los datos obligatorios y evitando decoración sin función. Incluye tres bibliotecas locales.
 
+Cuando se invoca la suite, el asistente debe seleccionar el skill por el resultado solicitado: diseño de piezas con texto y layout, reparación de un prompt existente o dirección de escena y creación de prompts. No necesitas indicar el nombre interno para pedir un póster o un estado de WhatsApp. La selección depende de que la aplicación cargue las instrucciones actualizadas.
+
 Los tres skills funcionan de forma independiente. `image-prompt-qa` se utiliza cuando se solicita una corrección; no es un paso obligatorio después de `luces-camara-prompt`.
 
 Los skills de prompts trabajan con texto. `poster-promotional-design` procesa el brief y prepara un encargo de diseño antes de ejecutarlo, si el usuario pide un arte y el asistente dispone de una herramienta de imagen o diseño. La suite no incluye un generador propio.
@@ -62,7 +64,7 @@ Los skills no dependen de un proveedor o modelo concreto y no requieren un servi
 
 ## Descarga rápida
 
-Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.3.3.zip` contiene el manifiesto, los tres skills completos, sus referencias, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad.
+Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.3.4.zip` contiene el manifiesto, los tres skills completos, sus referencias, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad.
 
 El ZIP reúne toda la suite. Impórtalo directamente solo si la aplicación admite este formato de complemento. Para aplicaciones que instalan Agent Skills individuales, extrae el paquete y utiliza cada carpeta de `skills/`, siguiendo los pasos siguientes. No necesitas Git para descargarlo.
 

@@ -2,6 +2,28 @@
 
 Aplicar el selector a las solicitudes visuales sin añadir detalles de implementación innecesarios. Su contenido es público y puede explicarse cuando el usuario lo solicite.
 
+## Selección entre skills de la suite
+
+Seleccionar por el resultado solicitado antes de clasificar tema, estilo o estado de la idea. Invocar el complemento no equivale a elegir `luces-camara-prompt`. El usuario no necesita conocer los nombres internos.
+
+| Resultado solicitado | Skill responsable | Acción |
+| --- | --- | --- |
+| Corregir un fallo concreto o reducir repetición en un prompt existente | `image-prompt-qa` | Leer `../../image-prompt-qa/SKILL.md` y reparar el prompt; no iniciar un briefing ni generar imágenes. |
+| Crear, dirigir o revisar una pieza promocional estática con texto y layout, incluidos carteles, posts, stories, estados de WhatsApp, flyers, anuncios y banners | `poster-promotional-design` | Leer `../../poster-promotional-design/SKILL.md`; seleccionar contenido y resolver diseño antes de ejecutar o entregar el encargo. |
+| Desarrollar una escena o construir un prompt de imagen sin resolver una pieza gráfica promocional | `luces-camara-prompt` | Aplicar el selector interno y sus dos flujos de dirección creativa y prompt. |
+
+La reparación explícita de un prompt ya existente tiene prioridad aunque el prompt describa un póster. Revisar o rediseñar el arte de un póster pertenece al skill de diseño gráfico; la existencia de una imagen de resultado no convierte la tarea automáticamente en reparación de prompts.
+
+El tema no decide la ruta: fotografía de un producto o comida y publicidad de ese producto con precio, horarios y contacto son tareas diferentes. Un canal social tampoco implica por sí solo diseño gráfico si se pide únicamente una fotografía. Si el resultado esperado es ambiguo y cambia el flujo, hacer una pregunta breve; no pedir al usuario que elija un skill.
+
+Cargar solo el skill responsable y sus referencias necesarias. Consultar una biblioteca compartida no activa los flujos del skill que la contiene. No encadenar dirección creativa, QA y diseño como fases obligatorias. Respetar una elección explícita del usuario y, al cambiar de tarea, seleccionar de nuevo; una iteración del mismo arte conserva su skill y encargo.
+
+Si el skill elegido no está disponible en la instalación, indicar qué falta; no afirmar que se aplicó ni reemplazarlo silenciosamente por una generación directa.
+
+## Selector interno de luces-camara-prompt
+
+Aplicar los apartados siguientes solo después de asignar la tarea a este skill.
+
 ## A. Estado de la solicitud
 ### IDEA_ABIERTA
 El usuario no sabe exactamente qué imagen quiere.

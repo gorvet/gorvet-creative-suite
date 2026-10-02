@@ -7,6 +7,10 @@ description: Diagnose and repair an existing image prompt for the exact failure 
 
 Repair an existing image prompt when the user asks for a correction. This skill works independently with prompts from GORVET, photobook templates, or any other source. It does not require a prior creative-direction approval, run after every prompt, generate images, or rebuild the creative brief.
 
+## Routing within Creative Suite
+
+Select this skill for an explicitly requested repair of an existing prompt, including prompts for promotional designs. Do not select it merely because the user shows a poster and wants its content, layout, or hierarchy redesigned: read `../poster-promotional-design/SKILL.md` for that task when available. New scene direction and image-prompt development belong to `../luces-camara-prompt/SKILL.md`. Do not chain these skills automatically or claim a missing sibling skill was applied.
+
 ## Repair contract
 
 Use the original prompt as the base. Identify the reported failure and change only the instructions responsible for it. Preserve all working decisions, wording, paragraph order, and template blocks unless changing them is necessary to solve that failure.

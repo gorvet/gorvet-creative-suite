@@ -5,6 +5,12 @@ description: Procesa briefs para pósters y piezas promocionales estáticas: sel
 
 # GORVET — Poster & Promotional Design
 
+## Selección dentro del complemento
+
+Cuando el usuario invoca GORVET Creative Suite para una pieza promocional estática con texto y layout, esta skill dirige la tarea aunque no se mencione su nombre interno. Incluye stories y estados de WhatsApp. No iniciar los dos flujos de `luces-camara-prompt` ni generar directamente desde la solicitud: aplicar el flujo operativo de esta skill.
+
+Si se pide reparar un prompt existente por un fallo concreto, leer `../image-prompt-qa/SKILL.md` cuando esté disponible. Si se pide únicamente dirección de escena o un prompt de imagen sin diseño promocional, usar `../luces-camara-prompt/SKILL.md`. Una revisión del arte o su jerarquía permanece en esta skill. Las consultas de bibliotecas compartidas no cambian estas responsabilidades.
+
 ## Propósito
 
 Skill especializado en **pósters y piezas promocionales estáticas**. Convierte una idea, un texto, una promoción o un brief parcial en una dirección gráfica clara, legible y visualmente intencional.
