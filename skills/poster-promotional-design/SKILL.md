@@ -37,6 +37,8 @@ Usa las referencias para ampliar el criterio. Extrae relaciones aplicables; no i
 
 Lee [EXECUTION_BRIEF.md](references/EXECUTION_BRIEF.md). Construye un encargo autónomo que describa la solución elegida y enumere exclusivamente los textos visibles seleccionados, con sus funciones y tratamientos. Incluye la composición y el papel preciso de las imágenes de referencia.
 
+Antes de entregar o ejecutar un prompt, aplicar `../luces-camara-prompt/references/WORKFLOWS_OPTIMIZACION_PROMPT.md` si está disponible, sin activar los flujos de ese skill. Si no está disponible, depurar aquí por significado: una formulación por decisión, sin resumen repetido ni adjetivos equivalentes, conservando íntegros el copy literal, sus tratamientos y las relaciones del diseño. La longitud depende de esas instrucciones, no de una cuota.
+
 La herramienta de imagen no recibe el brief bruto ni la clasificación editorial completa. Tampoco recibe los textos destinados al complemento o descartados, ni siquiera como ejemplos negativos. El skill resuelve selección y diseño; la herramienta ejecuta esa dirección.
 
 ### 4. Ejecutar y revisar

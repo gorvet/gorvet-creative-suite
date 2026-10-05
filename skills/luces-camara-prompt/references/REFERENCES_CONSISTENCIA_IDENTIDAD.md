@@ -54,3 +54,5 @@ En una serie narrativa, la emoción puede evolucionar con la historia mientras s
 
 ## Plantillas
 Guardar prompts exitosos como bases de series o campañas.
+
+Para fijar un entorno de serie, aplicar «Fondos de series» en `WORKFLOWS_OPTIMIZACION_PROMPT.md`: definir anclas espaciales concretas o una referencia del escenario, en vez de duplicar su descripción con una orden genérica de mantenerlo igual.

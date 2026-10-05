@@ -43,7 +43,7 @@ gorvet-creative-suite/
     │   └── SKILL.md
     ├── luces-camara-prompt/
     │   ├── SKILL.md
-    │   └── references/     # 28 bibliotecas operativas
+    │   └── references/     # Bibliotecas operativas
     └── poster-promotional-design/
         ├── SKILL.md
         ├── assets/         # Esquemas visuales originales
@@ -65,7 +65,7 @@ Los skills no dependen de un proveedor o modelo concreto y no requieren un servi
 
 ## Descarga rápida
 
-Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.4.0.zip` contiene el manifiesto, los tres skills completos, sus referencias, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad.
+Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.4.1.zip` contiene el manifiesto, los tres skills completos, sus referencias, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad.
 
 El ZIP reúne toda la suite. Impórtalo directamente solo si la aplicación admite este formato de complemento. Para aplicaciones que instalan Agent Skills individuales, extrae el paquete y utiliza cada carpeta de `skills/`, siguiendo los pasos siguientes. No necesitas Git para descargarlo.
 

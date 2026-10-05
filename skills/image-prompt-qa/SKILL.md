@@ -17,6 +17,10 @@ Use the original prompt as the base. Identify the reported failure and change on
 
 A repair may add, replace, or remove a phrase or block. Prefer replacing an ambiguous instruction to appending several synonyms. Do not polish or expand unrelated content. If the user asks to shorten or deduplicate the prompt, removing repetition and joining blocks are permitted; preserve every distinct visual decision and constraint.
 
+For every repaired prompt, read and apply `../luces-camara-prompt/references/WORKFLOWS_OPTIMIZACION_PROMPT.md` when available. This is a shared editing reference, not an activation of the sibling skill's creative flows. If unavailable, apply the repair contract and final review here: one formulation per decision, no repeated summary, and no loss of distinct constraints.
+
+If a new-scene request explicitly asks to borrow QA restrictions, provide the relevant identity, selection, count, or product rules as support for `luces-camara-prompt`; do not import template-preservation rules into a new prompt. A supplied example is not a required template unless the user says to retain its structure.
+
 ## Inputs and diagnosis
 
 1. Read the original prompt and the user's stated problem. If the prompt is missing, request it. Ask for a missing detail only when it changes the repair.
@@ -57,6 +61,8 @@ For a GORVET prompt, its story, environment, technique, emotion, narrative struc
 ## Template preservation
 
 Keep the opening, `If male:` / `If female:` blocks, wardrobe, pose, environment, and restrictions unless they cause the reported failure. If multiple lines encode the same conflicting instruction, correct those lines together; one-line changes must not leave the contradiction elsewhere.
+
+When repetition, length, or language mixing is the reported failure, template preservation must not protect the offending redundancy. Consolidate equivalent decisions; combine conditional wardrobe blocks if they prescribe the same treatment, unless the user explicitly requires those blocks. Keep genuinely distinct wardrobe choices and required parser labels. For a new prompt inspired by an example, these template-preservation rules do not apply.
 
 Do not add a creative-direction phase, a marketing closing, a GORVET attribution, or image-generation instructions to the repaired prompt. Keep existing material outside the prompt separate from the text intended for the generator.
 

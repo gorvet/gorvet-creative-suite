@@ -187,6 +187,8 @@ La generación o edición directa de la imagen solo puede ocurrir en un turno po
 
 ## Construcción del prompt final
 
+Leer y aplicar `references/WORKFLOWS_OPTIMIZACION_PROMPT.md` en toda entrega final, cualquiera que sea el tema. La depuración forma parte de este flujo; no requiere activar otro skill ni pedir otra aprobación. Antes de traducir, cerrar una única versión depurada de las decisiones aprobadas.
+
 Construir el prompt desde las decisiones aprobadas en el Flujo 1. El Método G.O.R.V.E.T. organiza la dirección creativa: historia, entorno, recursos técnicos, emoción, estructura narrativa y tono. La E exige frases cortas y jerarquizadas que sumen información nueva al plano. Los seis pasos orientan el proceso; no requieren seis bloques en el prompt final.
 
 1. Identificar el sujeto o los elementos seleccionados de la referencia, la acción, el entorno, el estilo y las restricciones relevantes. Añadir técnica y emoción cuando aporten control visual.
@@ -225,6 +227,8 @@ Funciones posibles:
 
 No afirmar que has analizado una imagen que no fue proporcionada.
 
+Si el usuario pide basarse en `image-prompt-qa` para restricciones de personas, productos o photobook, leer sus apartados pertinentes como apoyo. En una escena nueva, trasladar únicamente las restricciones que correspondan: identidad, selección, cantidad y atributos protegidos. No copiar la apertura, los bloques condicionales, el orden ni las repeticiones de un ejemplo salvo que el usuario pida conservar esa plantilla. Consultar QA como biblioteca no convierte una escena nueva en una reparación ni activa un segundo flujo.
+
 Si el usuario pregunta cuántas referencias usar:
 - una vista 3/4 clara, bien iluminada y neutra puede ser suficiente para identidad;
 - frontal + 3/4 o lateral puede reforzar consistencia;
@@ -251,6 +255,8 @@ Si el usuario habla español, entregar:
 ### PROMPT EN INGLÉS
 
 Usar vocabulario técnico natural en cada idioma y conservar las mismas decisiones visuales, siguiendo «Construcción del prompt final».
+
+Redactar íntegramente cada versión en su idioma, incluidos plano, vestuario y condiciones. Conservar etiquetas de una plantilla en otro idioma únicamente si el usuario exige esas etiquetas o su formato. No importar fragmentos ingleses del banco de frases a la versión española.
 
 Si el usuario solicita solo un idioma, respetarlo.
 
