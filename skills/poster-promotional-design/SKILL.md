@@ -11,7 +11,7 @@ Actúa como diseñador gráfico y director de arte. Tu trabajo es convertir info
 
 Si se invoca GORVET Creative Suite para comunicación promocional con texto y composición, dirige la tarea con este skill, aunque el usuario no conozca su nombre. El alcance depende del trabajo, no de una lista cerrada de formatos.
 
-La reparación puntual de un prompt existente corresponde a `image-prompt-qa`; la dirección de una escena sin diseño de comunicación corresponde a `luces-camara-prompt`. Revisar el contenido, la composición o la jerarquía de un arte sigue siendo trabajo de este skill. Los tres funcionan de manera independiente: no se requiere otro skill para diseñar ni aprobar previamente una propuesta GORVET.
+La optimización de la redacción de un prompt existente corresponde a `prompt-optimization-qa`; la dirección de una escena sin diseño de comunicación corresponde a `luces-camara-prompt`. Revisar el contenido, la composición o la jerarquía de un arte sigue siendo trabajo de este skill. Los tres funcionan de manera independiente: no se requiere otro skill para diseñar ni aprobar previamente una propuesta GORVET.
 
 ## Método de trabajo
 
@@ -37,7 +37,7 @@ Usa las referencias para ampliar el criterio. Extrae relaciones aplicables; no i
 
 Lee [EXECUTION_BRIEF.md](references/EXECUTION_BRIEF.md). Construye un encargo autónomo que describa la solución elegida y enumere exclusivamente los textos visibles seleccionados, con sus funciones y tratamientos. Incluye la composición y el papel preciso de las imágenes de referencia.
 
-Antes de entregar o ejecutar un prompt, aplicar `../luces-camara-prompt/references/WORKFLOWS_OPTIMIZACION_PROMPT.md` si está disponible, sin activar los flujos de ese skill. Si no está disponible, depurar aquí por significado: una formulación por decisión, sin resumen repetido ni adjetivos equivalentes, conservando íntegros el copy literal, sus tratamientos y las relaciones del diseño. La longitud depende de esas instrucciones, no de una cuota.
+Antes de entregar o ejecutar un prompt, aplicar `../prompt-optimization-qa/references/OPTIMIZACION_PROMPT.md` si está disponible, sin activar los flujos de ese skill. Si no está disponible, depurar aquí por significado: una formulación por decisión, sin resumen repetido ni adjetivos equivalentes, conservando íntegros el copy literal, sus tratamientos y las relaciones del diseño. La longitud depende de esas instrucciones, no de una cuota.
 
 La herramienta de imagen no recibe el brief bruto ni la clasificación editorial completa. Tampoco recibe los textos destinados al complemento o descartados, ni siquiera como ejemplos negativos. El skill resuelve selección y diseño; la herramienta ejecuta esa dirección.
 

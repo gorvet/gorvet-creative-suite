@@ -6,6 +6,23 @@ Revisa el resultado contra el encargo, no contra una estética preferida. Una pi
 
 Confirma que existe una propuesta reconocible, que los textos seleccionados tienen funciones distintas y que la composición expresa ese orden. El encargo debe contener únicamente contenido de PIEZA y las instrucciones necesarias para ejecutarlo. Comprueba que la comunicación completa conserva las condiciones materiales.
 
+## QA del encargo y del post
+
+La revisión tiene dos objetos distintos. Antes de ejecutar, revisar el encargo textual; después, revisar el arte solo si puede verse. Si el usuario pide un prompt, cerrar la revisión textual sin afirmar que el diseño generado está validado.
+
+Comparar con el brief en este orden:
+
+1. **Fidelidad:** copy seleccionado, nombres, cifras, fechas y condiciones son correctos; el literal se mantiene idéntico. Todo dato necesario tiene un destino real en el arte o en el texto complementario que se entrega. Nada depende de un caption inexistente.
+2. **Comunicación:** se reconoce una propuesta y una acción cuando hace falta. El contenido secundario añade información; no reformula el titular ni compite por el foco.
+3. **Ejecución:** las instrucciones fijan posición, escala, alineación y relación entre texto e imagen donde sean necesarias. La lista cerrada de copy se escribe una vez y se distingue de los nombres de roles. No sustituir decisiones por «premium», «impactante» o «con buena jerarquía».
+4. **Resultado visible:** comparar lo observado con esas decisiones; buscar texto inventado o ausente, cifras alteradas, condiciones ocultas, competencia de niveles, recortes y legibilidad al tamaño de uso. No dar por válido un criterio que no puede observarse.
+
+Ante un fallo textual, corregir el encargo antes de enviarlo; añadir al final «respetar la jerarquía» no arregla relaciones sin definir. Ante un fallo visual, sustituir las instrucciones responsables y solicitar una corrección localizada cuando proceda. Si el resultado sigue fallando, informar lo pendiente; no encadenar regeneraciones sin un diagnóstico nuevo.
+
+Integrar escala, posición y agrupación en el tratamiento del elemento correspondiente. Si ya están definidos allí, eliminar la frase final que vuelve a resumir esas mismas relaciones. No añadir copy a una lista expresamente cerrada para resolver el diseño.
+
+La optimización de palabras no sustituye este QA: un prompt corto puede describir un mal post. Una composición cargada puede ser necesaria si sus niveles son claros y los datos siguen legibles.
+
 ## Al observar el arte
 
 Primero mira el conjunto reducido al tamaño de uso: identifica qué atrae la atención y en qué orden. Después examina lectura, ortografía, cifras, integridad de la referencia y detalles de composición. No confundas haber leído el prompt con haber inspeccionado el arte.

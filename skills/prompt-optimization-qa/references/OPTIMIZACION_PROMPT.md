@@ -14,6 +14,16 @@ Aplicar a cualquier tema en la construcción y reparación de prompts. El objeti
 
 Por defecto, un párrafo. Separar bloques cuando organizan controles independientes, referencias diferentes, zonas de edición o una plantilla expresamente solicitada. La separación no permite repetir decisiones.
 
+## Compresión de la redacción y control de expansión
+
+Eliminar duplicados no basta. Usar frases directas y compactas: «cheerful expressions» puede resolver una dirección alegre sin añadir «happy, celebratory, full of life, as if enjoying a party». Preferir una condición ejecutable a explicarla y después negar su opuesto: «fangs visible only in naturally open mouths» ya excluye los colmillos con la boca cerrada.
+
+Separar requisitos del usuario y decisiones aprobadas de desarrollos opcionales del asistente. Preservar los primeros; eliminar los segundos cuando no resuelvan una ambigüedad necesaria. «Vestuario vampírico elegante en negro y burdeos» no necesita expandirse en una lista de chaquetas, cuellos, camisas, vestidos, cinco colores y adjetivos textiles si esos detalles no fueron pedidos ni aprobados. Si se necesita una prenda concreta, elegirla en vez de enumerar alternativas.
+
+Cuando el usuario aporte un ejemplo breve como referencia de densidad, aproximarse a su concisión. Crecer solo por requisitos distintos añadidos al encargo, no por explicaciones o énfasis. No copiar sus redundancias ni imponer su longitud a tareas diferentes.
+
+Revisar cada frase restante: ¿puede expresar el mismo control con menos palabras? Compactarla sin sustituir una condición precisa por un adjetivo vago. No ampliar de nuevo el texto al traducir o al realizar la revisión final.
+
 ## Personas y referencias
 
 Consolidar la conservación de identidad en una instrucción que cubra los atributos protegidos. No encadenar «mismo rostro», «no alterar facciones», «no reinterpretar», «apariencia reconocible» y otras equivalencias. Añadir una prohibición específica solo si corrige un fallo diferente o es un requisito expreso.
@@ -35,6 +45,6 @@ Si existe una imagen base del escenario, indicar que gobierna fondo, geometría 
 - «Conservar identidad y facciones. Mantener el mismo rostro. No reinterpretar su estructura facial» → una instrucción de conservación de identidad y facciones.
 - «Estilo cinematográfico, elegante y oscuro» seguido de «fotografía premium, sofisticada, de vampiro clásico, elegante y oscura» → un acabado dominante y los atributos distintos que realmente definen vestuario o escena.
 - Una descripción de castillo, luna, calabazas y niebla seguida de la misma lista bajo «mantener constantes» → una única descripción con posiciones y anclas concretas.
-- `If male: dark vampire costume` y `If female: dark vampire costume` → vestuario vampírico oscuro para cada persona, salvo exigencia explícita de esos bloques.
+- Dos condiciones de vestuario equivalentes → una descripción común, salvo que el formato condicional sea un requisito expreso.
 
 Los ejemplos muestran operaciones de edición; no son frases que deban añadirse a todos los prompts.

@@ -8,15 +8,17 @@ Seleccionar por el resultado solicitado antes de clasificar tema, estilo o estad
 
 | Resultado solicitado | Skill responsable | Acción |
 | --- | --- | --- |
-| Corregir un fallo concreto o reducir repetición en un prompt existente | `image-prompt-qa` | Leer `../../image-prompt-qa/SKILL.md` y reparar el prompt; no iniciar un briefing ni generar imágenes. |
+| Optimizar la redacción, reducir extensión o repetición, o resolver contradicciones de un prompt existente | `prompt-optimization-qa` | Leer `../../prompt-optimization-qa/SKILL.md` y depurar una única versión; no iniciar un briefing ni generar imágenes. |
 | Crear, dirigir o revisar una pieza promocional estática con texto y layout, incluidos carteles, posts, stories, estados de WhatsApp, flyers, anuncios y banners | `poster-promotional-design` | Leer `../../poster-promotional-design/SKILL.md`; seleccionar contenido y resolver diseño antes de ejecutar o entregar el encargo. |
 | Desarrollar una escena o construir un prompt de imagen sin resolver una pieza gráfica promocional | `luces-camara-prompt` | Aplicar el selector interno y sus dos flujos de dirección creativa y prompt. |
 
-La reparación explícita de un prompt ya existente tiene prioridad aunque el prompt describa un póster. Revisar o rediseñar el arte de un póster pertenece al skill de diseño gráfico; la existencia de una imagen de resultado no convierte la tarea automáticamente en reparación de prompts.
+La depuración explícita de un prompt ya existente tiene prioridad aunque el prompt describa un póster. Revisar o rediseñar el arte de un póster pertenece al skill de diseño gráfico; la existencia de una imagen de resultado no convierte la tarea automáticamente en optimización de redacción.
 
 El tema no decide la ruta: fotografía de un producto o comida y publicidad de ese producto con precio, horarios y contacto son tareas diferentes. Un canal social tampoco implica por sí solo diseño gráfico si se pide únicamente una fotografía. Si el resultado esperado es ambiguo y cambia el flujo, hacer una pregunta breve; no pedir al usuario que elija un skill.
 
 Cargar solo el skill responsable y sus referencias necesarias. Consultar una biblioteca compartida no activa los flujos del skill que la contiene. No encadenar dirección creativa, QA y diseño como fases obligatorias. Respetar una elección explícita del usuario y, al cambiar de tarea, seleccionar de nuevo; una iteración del mismo arte conserva su skill y encargo.
+
+Crear un tema nuevo usando un ejemplo sigue siendo creación de escena: `luces-camara-prompt` redacta. Las restricciones de un perfil externo solicitado se incorporan al encargo si están disponibles; no activar automáticamente ese perfil por el tema ni importar el contrato de conservación de una reparación. Al iterar, reemplazar decisiones modificadas sin concatenar las versiones anteriores.
 
 Si el skill elegido no está disponible en la instalación, indicar qué falta; no afirmar que se aplicó ni reemplazarlo silenciosamente por una generación directa.
 
@@ -127,4 +129,4 @@ Seleccionar según el encargo; no completar todos los elementos:
 8. técnica;
 9. microdetalle.
 
-La categoría indica qué recursos considerar, no cuántos añadir. Producto o publicidad no exige por sí solo un prompt avanzado. La técnica no debe desplazar a la idea; aplicar «Construcción del prompt final» de `../SKILL.md`.
+La categoría indica qué recursos considerar, no cuántos añadir. Producto, publicidad o continuidad no exige por sí solo un prompt largo ni completar todos los campos técnicos. Para continuidad puede bastar reutilizar las anclas ya fijadas, una vez por prompt. La técnica no debe desplazar a la idea; aplicar «Construcción del prompt final» de `../SKILL.md`.

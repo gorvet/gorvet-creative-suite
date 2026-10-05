@@ -3,7 +3,7 @@
 ## Tipos
 Una referencia puede ser:
 - imagen cargada;
-- descripción exacta repetida;
+- descripción fija reutilizada entre prompts autónomos;
 - estilo visual constante.
 
 El mayor control aparece al definir claramente su propósito.
@@ -12,7 +12,7 @@ El mayor control aparece al definir claramente su propósito.
 `[CONTEXTO GENERAL] + [PROPÓSITO DE LA REFERENCIA] + [RESTO DE INSTRUCCIONES]`
 
 ## Identidad
-Formulaciones útiles:
+Formulaciones alternativas: elegir una que cubra el encargo, no concatenarlas ni añadirlas a una instrucción equivalente ya presente:
 - `use the facial identity and hairstyle from the provided reference image`
 - `preserve the same face and facial proportions`
 - `consistent appearance`

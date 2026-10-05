@@ -15,12 +15,12 @@ Tipos:
 Las imágenes no solo deben parecerse: deben comunicar el mismo universo.
 
 ## Rostro
-- conservar bloque descriptivo base;
+- reutilizar la instrucción de identidad base una vez en cada prompt autónomo;
 - no cambiar sinónimos de rasgos esenciales entre versiones;
-- usar `same face`, `same proportions`, `consistent appearance` cuando aporte.
+- elegir una formulación de conservación de identidad que cubra los atributos protegidos; no sumar `same face` y `consistent appearance` como refuerzos equivalentes.
 
 ## Anclas
-Repetir aproximadamente tres anclas clave:
+Reutilizar entre imágenes las anclas necesarias de la serie, una vez por prompt. No repetirlas en varios bloques del mismo texto ni completar una cuota de anclas:
 - identidad;
 - estilo/luz;
 - paleta/encuadre.
@@ -55,4 +55,4 @@ En una serie narrativa, la emoción puede evolucionar con la historia mientras s
 ## Plantillas
 Guardar prompts exitosos como bases de series o campañas.
 
-Para fijar un entorno de serie, aplicar «Fondos de series» en `WORKFLOWS_OPTIMIZACION_PROMPT.md`: definir anclas espaciales concretas o una referencia del escenario, en vez de duplicar su descripción con una orden genérica de mantenerlo igual.
+Para fijar un entorno de serie, definir anclas espaciales concretas o una referencia del escenario, en vez de duplicar su descripción con una orden genérica de mantenerlo igual. Si está disponible, consultar «Fondos de series» en `../../prompt-optimization-qa/references/OPTIMIZACION_PROMPT.md`.

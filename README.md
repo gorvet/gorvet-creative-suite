@@ -7,12 +7,12 @@ Ayuda a resolver la falta de dirección en peticiones visuales, las instruccione
 ## Skills incluidos
 
 - **`luces-camara-prompt`**: desarrolla una dirección creativa y, después de que el usuario la apruebe, entrega el prompt en español e inglés. Incluye recursos para retrato, producto, publicidad, ilustración, interiores, retoque y restauración.
-- **`image-prompt-qa`**: diagnostica el problema indicado por el usuario y corrige el prompt con el mínimo cambio necesario. Corrige identidad y selección de referencias, proporciones, producto, iluminación, composición, integración y repetición innecesaria. Conserva las convenciones de photobook cuando correspondan.
+- **`prompt-optimization-qa`**: depura la redacción de prompts, especialmente los de Luces, Cámara, ¡Prompt! Elimina redundancia, expansión innecesaria y contradicciones sin perder decisiones, restricciones ni textos literales. No incluye convenciones de Storyface.
 - **`poster-promotional-design`**: selecciona y jerarquiza el contenido de pósters, posts, stories, flyers y otras piezas promocionales estáticas. Define composición, tipografía y tratamiento visual, preservando los datos obligatorios y evitando decoración sin función. Incluye bibliotecas de criterio editorial, sistema visual, referencias comentadas, encargo de ejecución y revisión, además de cuatro esquemas visuales originales.
 
-Cuando se invoca la suite, el asistente debe seleccionar el skill por el resultado solicitado: diseño de piezas con texto y layout, reparación de un prompt existente o dirección de escena y creación de prompts. No necesitas indicar el nombre interno para pedir un póster o un estado de WhatsApp. La selección depende de que la aplicación cargue las instrucciones actualizadas.
+Cuando se invoca la suite, el asistente debe seleccionar el skill por el resultado solicitado: diseño de piezas con texto y layout, optimización de un prompt existente o dirección de escena y creación de prompts. No necesitas indicar el nombre interno para pedir un póster o un estado de WhatsApp. La selección depende de que la aplicación cargue las instrucciones actualizadas.
 
-Los tres skills funcionan de forma independiente. `image-prompt-qa` se utiliza cuando se solicita una corrección; no es un paso obligatorio después de `luces-camara-prompt`.
+Los tres skills funcionan de forma independiente. Luces consulta las reglas de optimización al redactar; el skill `prompt-optimization-qa` atiende revisiones explícitas de prompts existentes, sin una segunda fase creativa. El QA de posts pertenece a `poster-promotional-design` y revisa comunicación y fidelidad, además de la redacción. Storyface queda fuera de este paquete; sus reglas pueden aportarse como un contrato externo cuando se soliciten.
 
 Los skills de prompts trabajan con texto. `poster-promotional-design` procesa el brief y prepara un encargo de diseño antes de ejecutarlo, si el usuario pide un arte y el asistente dispone de una herramienta de imagen o diseño. La suite no incluye un generador propio.
 
@@ -39,8 +39,9 @@ gorvet-creative-suite/
 ├── plugin.json
 ├── scripts/                # Generación del paquete desde un commit
 └── skills/
-    ├── image-prompt-qa/
-    │   └── SKILL.md
+    ├── prompt-optimization-qa/
+    │   ├── SKILL.md
+    │   └── references/     # Optimización compartida del prompt
     ├── luces-camara-prompt/
     │   ├── SKILL.md
     │   └── references/     # Bibliotecas operativas
@@ -65,7 +66,7 @@ Los skills no dependen de un proveedor o modelo concreto y no requieren un servi
 
 ## Descarga rápida
 
-Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.4.1.zip` contiene el manifiesto, los tres skills completos, sus referencias, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad.
+Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.5.0.zip` contiene el manifiesto, los tres skills completos, sus referencias, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad.
 
 El ZIP reúne toda la suite. Impórtalo directamente solo si la aplicación admite este formato de complemento. Para aplicaciones que instalan Agent Skills individuales, extrae el paquete y utiliza cada carpeta de `skills/`, siguiendo los pasos siguientes. No necesitas Git para descargarlo.
 
@@ -74,7 +75,7 @@ Para estudiar o modificar el producto, utiliza el repositorio. El paquete se gen
 ## Instalación en una aplicación compatible con Agent Skills
 
 1. Descarga y extrae el paquete de la Release.
-2. Elige una o varias carpetas: `skills/luces-camara-prompt`, `skills/image-prompt-qa` y `skills/poster-promotional-design`. Pueden instalarse y utilizarse por separado.
+2. Elige una o varias carpetas: `skills/luces-camara-prompt`, `skills/prompt-optimization-qa` y `skills/poster-promotional-design`. Pueden instalarse y utilizarse por separado.
 3. Utiliza el mecanismo de instalación de la aplicación: copiar al directorio de skills, importar una carpeta o subir un ZIP individual, según indique su documentación.
 4. Conserva `SKILL.md` en la raíz de cada carpeta de skill y todas sus referencias junto a él. Si la aplicación exige un ZIP individual, empaqueta esa unidad completa con la estructura de archivo que la aplicación indique; el ZIP de toda la suite no equivale a un skill individual.
 5. Actualiza la lista de skills o abre una nueva sesión, según la aplicación, y comprueba que reconozca el nombre instalado.
@@ -95,7 +96,7 @@ $skillDirectory = if ($env:CODEX_HOME) {
 } else {
     Join-Path ([Environment]::GetFolderPath('UserProfile')) '.codex/skills'
 }
-$skillNames = @('luces-camara-prompt', 'image-prompt-qa', 'poster-promotional-design')
+$skillNames = @('luces-camara-prompt', 'prompt-optimization-qa', 'poster-promotional-design')
 foreach ($skillName in $skillNames) {
     if (Test-Path -LiteralPath (Join-Path $skillDirectory $skillName)) {
         throw "El skill $skillName ya está instalado. Revisa la instalación antes de actualizarlo."
@@ -115,7 +116,7 @@ Activa el skill mediante el selector, comando o mecanismo de tu aplicación e in
 
 Con `luces-camara-prompt`, primero recibirás una propuesta de escena, estilo, iluminación y composición. Solicita ajustes o apruébala para recibir el prompt final. Puedes pedir una entrega en un solo idioma o el desglose en la plantilla G.O.R.V.E.T.
 
-Con `image-prompt-qa`, proporciona el prompt original y describe exactamente qué salió mal. Adjunta las imágenes de referencia o del resultado cuando estén disponibles y el asistente pueda analizarlas.
+Con `prompt-optimization-qa`, proporciona el prompt original y el objetivo de depuración: eliminar repetición, reducir expansión o resolver contradicciones sin cambiar la dirección visual.
 
 Con `poster-promotional-design`, aporta el objetivo, el contenido y el formato de la pieza. El skill selecciona el contenido, resuelve jerarquía, layout y tipografía, y prepara un encargo para el generador. Si pides una imagen y hay una herramienta disponible, ejecuta ese encargo y revisa el resultado cuando pueda verlo. Cuando corresponda, entrega el arte y un texto complementario listo para publicar con la información necesaria que quedó fuera de la imagen. También puedes pedir solo copy, estructura, crítica o un prompt. Funciona por separado; sus referencias a `luces-camara-prompt` son apoyos opcionales.
 
@@ -138,8 +139,8 @@ Apruebo la dirección creativa. Entrega el prompt final en español e inglés.
 **Corregir un fallo concreto**
 
 ```text
-Usa el skill image-prompt-qa. En este prompt, el rostro de la persona de referencia
-parece pegado al cuerpo. Corrige únicamente su integración con la escena.
+Usa el skill prompt-optimization-qa. Este prompt repite la iluminación y el estilo.
+Depúralo sin perder las decisiones visuales ni las restricciones.
 Prompt original: [pega aquí el prompt completo].
 ```
 
@@ -185,7 +186,7 @@ La entrega del skill también incluye la mención al Método GORVET, el enlace a
 
 - **El skill no aparece:** comprueba que la carpeta instalada contiene directamente `SKILL.md` y abre una nueva sesión del asistente.
 - **En `luces-camara-prompt`, no recibes todavía el prompt final:** revisa y aprueba la propuesta de dirección creativa; la entrega ocurre en el segundo flujo.
-- **Quieres corregir un resultado:** aporta el prompt original, el fallo concreto y, si es posible, la imagen. Utiliza `image-prompt-qa` para corregirlo con cambios mínimos.
+- **Quieres depurar un prompt:** aporta el texto original y qué debe conservarse. Utiliza `prompt-optimization-qa` para optimizarlo; para revisar un post o su arte, utiliza `poster-promotional-design`.
 - **Utilizas referencias:** indica qué debe conservar cada una, como identidad, producto, pose o composición.
 - **Quieres otro idioma:** solicítalo expresamente al pedir el prompt.
 - **Necesitas reportar un problema:** abre una [Issue](https://github.com/gorvet/gorvet-creative-suite/issues) con la versión, el asistente utilizado y un ejemplo que no incluya datos privados.

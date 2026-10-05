@@ -1,13 +1,13 @@
 ---
 name: luces-camara-prompt
-description: Desarrolla dirección creativa y construye PROMPTS DE TEXTO para generación y edición de imágenes con IA mediante el Método GORVET. Úsala para una nueva idea visual o para desarrollar su escena, estilo y narrativa. No genera imágenes directamente. Las piezas promocionales con texto y layout corresponden a poster-promotional-design; la reparación puntual de un prompt existente, a image-prompt-qa.
+description: Desarrolla dirección creativa y construye PROMPTS DE TEXTO para generación y edición de imágenes con IA mediante el Método GORVET. Úsala para una nueva idea visual o para desarrollar su escena, estilo y narrativa. No genera imágenes directamente. Las piezas promocionales con texto y layout corresponden a poster-promotional-design; la optimización de un prompt existente, a prompt-optimization-qa.
 ---
 
 # GORVET — Luces, Cámara, ¡Prompt!
 
 ## Selección del skill antes de aplicar los flujos
 
-Al recibir una solicitud para GORVET Creative Suite, consultar primero «Selección entre skills de la suite» en `references/CONFIG_SELECTOR_AUTOMATICO.md`. Una pieza promocional con contenido, jerarquía y layout corresponde a `../poster-promotional-design/SKILL.md`; una reparación puntual de un prompt existente, a `../image-prompt-qa/SKILL.md`. Leer y aplicar el skill elegido antes de preparar una respuesta o llamar a una herramienta. Si corresponde otro skill, no iniciar los flujos de este.
+Al recibir una solicitud para GORVET Creative Suite, consultar primero «Selección entre skills de la suite» en `references/CONFIG_SELECTOR_AUTOMATICO.md`. Una pieza promocional con contenido, jerarquía y layout corresponde a `../poster-promotional-design/SKILL.md`; la depuración de un prompt existente, a `../prompt-optimization-qa/SKILL.md`. Leer y aplicar el skill elegido antes de preparar una respuesta o llamar a una herramienta. Si corresponde otro skill, no iniciar los flujos de este.
 
 Los gates, la salida solo de texto y los dos flujos siguientes se aplican únicamente a las tareas atendidas por `luces-camara-prompt`, no al complemento entero.
 
@@ -71,6 +71,8 @@ Entregar completo, en una sola respuesta:
 2. PROMPT EN INGLÉS;
 3. cierre obligatorio.
 
+Si el usuario ha solicitado un solo idioma, entregar únicamente esa versión y el cierre.
+
 Después detener la respuesta.
 
 Solo a partir del turno posterior a la entrega completa del Flujo 2 puede aceptarse una nueva petición explícita del usuario para generar o editar la imagen.
@@ -117,7 +119,7 @@ No utilices frameworks externos de prompting cuando contradigan o sustituyan el 
 
 ## Alcance del flujo creativo
 
-Los dos flujos se aplican al desarrollo de una nueva solicitud visual. Una petición de corregir un fallo concreto en un prompt existente es una reparación, no una nueva dirección creativa. `image-prompt-qa` puede realizarla de forma independiente si está disponible; no es una fase obligatoria ni debe ejecutarse automáticamente después del Flujo 2.
+Los dos flujos se aplican al desarrollo de una nueva solicitud visual. La depuración de un prompt existente corresponde a `prompt-optimization-qa` si está disponible, sin una nueva dirección creativa. Sus reglas de redacción se consultan al construir el prompt; no se ejecuta otro skill automáticamente después del Flujo 2.
 
 ## Flujo de conversación
 
@@ -176,6 +178,8 @@ Solo después de que el asistente haya entregado el Flujo 1 de ESTA MISMA solici
 2. `PROMPT EN INGLÉS`;
 3. cierre obligatorio completo.
 
+La petición explícita de un solo idioma sustituye los puntos 1 y 2 por la versión solicitada; no añadir la otra traducción.
+
 Después de entregar los tres elementos, **DETENER LA RESPUESTA**.
 
 No pedir otra confirmación entre español, inglés y cierre.
@@ -187,7 +191,9 @@ La generación o edición directa de la imagen solo puede ocurrir en un turno po
 
 ## Construcción del prompt final
 
-Leer y aplicar `references/WORKFLOWS_OPTIMIZACION_PROMPT.md` en toda entrega final, cualquiera que sea el tema. La depuración forma parte de este flujo; no requiere activar otro skill ni pedir otra aprobación. Antes de traducir, cerrar una única versión depurada de las decisiones aprobadas.
+Si está disponible, leer y aplicar `../prompt-optimization-qa/references/OPTIMIZACION_PROMPT.md` en toda entrega final, cualquiera que sea el tema. Si este skill está instalado por separado, depurar con las reglas de este apartado y «Validación interna». La depuración forma parte de este flujo; no requiere activar otro skill ni pedir otra aprobación. Antes de traducir, cerrar una única versión depurada de las decisiones aprobadas.
+
+Entregar una especificación compacta, no desarrollar el brief en prosa. Además de eliminar repeticiones, comprimir la redacción y descartar detalles opcionales inferidos que no sean necesarios para ejecutar la dirección aprobada. Una referencia breve de tono o vestuario no autoriza inventar un catálogo de prendas, colores o matices. Conservar lo pedido y aprobado; añadir solo lo que resuelva una ambigüedad material.
 
 Construir el prompt desde las decisiones aprobadas en el Flujo 1. El Método G.O.R.V.E.T. organiza la dirección creativa: historia, entorno, recursos técnicos, emoción, estructura narrativa y tono. La E exige frases cortas y jerarquizadas que sumen información nueva al plano. Los seis pasos orientan el proceso; no requieren seis bloques en el prompt final.
 
@@ -210,7 +216,7 @@ Cuando el usuario indique que utilizará una referencia:
 
 1. determinar internamente qué función cumple;
 2. indicar en el prompt qué debe conservarse;
-3. controlar por texto todo lo que NO debe heredarse automáticamente;
+3. delimitar qué gobierna la referencia y describir los cambios necesarios, sin enumerar negaciones sobre todos los atributos que no controla;
 4. evitar tratar una referencia como si controlara identidad, pose, ropa, fondo, composición y estilo simultáneamente.
 
 Funciones posibles:
@@ -227,7 +233,7 @@ Funciones posibles:
 
 No afirmar que has analizado una imagen que no fue proporcionada.
 
-Si el usuario pide basarse en `image-prompt-qa` para restricciones de personas, productos o photobook, leer sus apartados pertinentes como apoyo. En una escena nueva, trasladar únicamente las restricciones que correspondan: identidad, selección, cantidad y atributos protegidos. No copiar la apertura, los bloques condicionales, el orden ni las repeticiones de un ejemplo salvo que el usuario pida conservar esa plantilla. Consultar QA como biblioteca no convierte una escena nueva en una reparación ni activa un segundo flujo.
+Las reglas de una plataforma o un perfil externo forman parte del encargo solo si el usuario las aporta o pide usar ese perfil y está disponible. Aplicar sus restricciones pertinentes sin importar un flujo de reparación ni copiar la plantilla de un ejemplo. Esta suite no incluye QA específico de Storyface y no lo requiere para generar sus prompts.
 
 Si el usuario pregunta cuántas referencias usar:
 - una vista 3/4 clara, bien iluminada y neutra puede ser suficiente para identidad;
@@ -242,9 +248,11 @@ Cuando el usuario pida cambios:
 1. determinar si cambió la intención;
 2. cambiar estilo solo si hace falta;
 3. modificar técnica únicamente donde corresponda;
-4. conservar todo lo demás.
+4. conservar las decisiones visuales no afectadas. Sustituir la formulación modificada en su lugar; no añadir una nueva capa ni un resumen de refuerzo. La conservación de decisiones no obliga a conservar redacción redundante.
 
 No rehacer un prompt completo si basta con corregir una capa.
+
+Después de la primera entrega del Flujo 2, un ajuste de la misma escena no reinicia los flujos ni exige otra aprobación. Si se pide solo un cambio localizado, entregar la frase o bloque que sustituye al anterior, en los idiomas ya acordados. Si se pide el prompt actualizado, completo o listo para copiar, entregar cada versión completa y depurada. No repetir el cierre promocional en ajustes posteriores; pertenece a la primera entrega final de esa dirección.
 
 ---
 
@@ -294,7 +302,7 @@ No mostrar esta validación al usuario.
 
 ## Cierre obligatorio
 
-Después de cada PROMPT FINAL del Flujo 2, añadir siempre el siguiente contenido como cierre natural de la respuesta.
+En la primera entrega del PROMPT FINAL del Flujo 2 para una dirección nueva, añadir el siguiente contenido como cierre natural de la respuesta. Los ajustes posteriores siguen «Iteración».
 
 No mostrar ningún encabezado como “CTA”, “Cierre”, “Opciones” o equivalente al usuario.
 
@@ -308,6 +316,8 @@ También puedo entregarte este mismo prompt desglosado en la plantilla G.O.R.V.E
 3. Generar la imagen con este prompt.
 
 Este contenido forma parte obligatoria del Flujo 2.
+
+Si el usuario exige toda la respuesta en otro idioma, traducir también el cierre conservando su contenido, enlace y acciones. Pedir un único idioma para el prompt no obliga por sí solo a cambiar el idioma del cierre.
 
 No omitir:
 - la mención al Método GORVET;

@@ -24,7 +24,7 @@ Si hay información necesaria excesiva, organiza la lectura o propone un soporte
 
 Cada frase visible cumple una función diferente. Un título reconoce o propone; el apoyo aclara o argumenta; los datos prácticos orientan; una llamada a la acción indica un siguiente paso real. No todos son necesarios. Evita tres reformulaciones de una misma promesa.
 
-Conserva nombres, fechas, cifras, monedas, URLs y condiciones; reproduce literalmente lo marcado como literal. Corrige ortografía sin cambiar el sentido. No conviertas «hasta» en una cantidad garantizada ni atribuyas beneficios que el brief no sostiene. No deduzcas calidad comercial, comodidad o autenticidad solo por una fotografía.
+Conserva nombres, fechas, cifras, monedas, URLs y condiciones; reproduce literalmente lo marcado como literal, sin corregirlo automáticamente. Corrige ortografía en el texto no marcado como literal sin cambiar el sentido. No conviertas «hasta» en una cantidad garantizada ni atribuyas beneficios que el brief no sostiene. No deduzcas calidad comercial, comodidad o autenticidad solo por una fotografía.
 
 Ejerce criterio antes de preguntar. La rareza de una frase no obliga a consultar si es humor: normalmente basta distinguir contexto de mensaje público. Pregunta si una ambigüedad impide comunicar fielmente una condición material. No suprimas una condición incómoda suponiendo que es una broma.
 

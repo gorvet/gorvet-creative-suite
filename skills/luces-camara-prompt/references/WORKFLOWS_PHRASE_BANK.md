@@ -95,6 +95,7 @@ Elegir solo la que gobierne el plano:
 - `top-view flat-lay composition`
 
 ## Referencia: identidad
+Elegir una alternativa, o integrar los atributos necesarios en una sola frase. No añadir un fragmento si la identidad ya está protegida en el prompt.
 - `use the facial identity and hairstyle from the provided reference image`
 - `preserve the same face and facial proportions`
 - `maintain consistent appearance`

@@ -4,7 +4,7 @@
 
 Aplicar «Construcción del prompt final» de `../SKILL.md` antes de entregar. Comprobar que cada frase añade una decisión y que la depuración conserva las restricciones del encargo. Estas comprobaciones revisan el contenido existente; no son una lista de elementos que deban añadirse al prompt.
 
-Ejecutar la depuración por significado de `WORKFLOWS_OPTIMIZACION_PROMPT.md` antes de traducir: sin restricciones equivalentes acumuladas, sin resumen final repetido, sin mezcla involuntaria de idiomas y sin anclas de continuidad cuyo referente no esté definido. Si falla una comprobación, corregir el texto antes de entregarlo; no añadir una frase que reafirme la regla incumplida.
+Si está disponible, consultar `../../prompt-optimization-qa/references/OPTIMIZACION_PROMPT.md`. Antes de traducir, comprobar en cualquier instalación: sin restricciones equivalentes acumuladas, sin resumen final repetido, sin mezcla involuntaria de idiomas y sin anclas de continuidad cuyo referente no esté definido. Si falla una comprobación, corregir el texto antes de entregarlo; no añadir una frase que reafirme la regla incumplida.
 
 ## Técnico
 - sujeto/objeto claro;
