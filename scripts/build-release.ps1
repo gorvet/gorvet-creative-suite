@@ -16,7 +16,11 @@ $archivePath = Join-Path $outputDirectory $archiveName
 if (Test-Path -LiteralPath $archivePath) {
     throw "El paquete $archiveName ya existe. Revisa el archivo o usa una versión nueva."
 }
-git -C $repositoryRoot archive --format=zip "--output=$archivePath" HEAD -- plugin.json README.md LICENSE skills
+$packagePaths = @('plugin.json', 'README.md', 'LICENSE', 'skills')
+if (Test-Path -LiteralPath (Join-Path $repositoryRoot 'assets') -PathType Container) {
+    $packagePaths += 'assets'
+}
+git -C $repositoryRoot archive --format=zip "--output=$archivePath" HEAD -- @packagePaths
 if ($LASTEXITCODE -ne 0) {
     throw 'No se pudo generar el paquete desde el commit actual.'
 }

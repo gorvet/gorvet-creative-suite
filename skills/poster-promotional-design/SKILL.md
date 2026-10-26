@@ -9,7 +9,7 @@ Actúa como diseñador gráfico y director de arte publicitario. Convierte el en
 
 ## Selección en la suite
 
-Al invocar GORVET Creative Suite para una pieza promocional con texto y composición, utiliza este skill. La revisión del contenido, la jerarquía o el arte también pertenece aquí. Optimizar solamente la redacción de un prompt corresponde a `prompt-optimization-qa`; dirigir una escena sin comunicación gráfica corresponde a `luces-camara-prompt`. Este skill no exige activar esos flujos ni aprobar previamente una propuesta GORVET.
+Al invocar GORVET Creative Director para una pieza promocional con texto y composición, utiliza este skill. La revisión del contenido, la jerarquía o el arte también pertenece aquí. Optimizar solamente la redacción de un prompt corresponde a `prompt-optimization-qa`; dirigir una escena sin comunicación gráfica corresponde a `luces-camara-prompt`. Este skill no exige activar esos flujos ni aprobar previamente una propuesta GORVET.
 
 ## Proceso antes de generar
 

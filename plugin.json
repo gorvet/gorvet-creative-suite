@@ -1,12 +1,13 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "gorvet-creative-suite",
-  "version": "1.6.0",
-  "description": "Suite of GORVET creative skills for visual direction, image prompting, editing workflows, consistency, and AI-assisted creative production.",
+  "version": "1.6.1",
+  "description": "GORVET Creative Director: creative direction, image prompting and promotional design skills by Juank de Gorvet.",
   "author": {
-    "name": "Gorvet Estudios",
+    "name": "Juank de Gorvet",
     "url": "https://gorvet.com"
   },
+  "homepage": "https://gorvet.com",
   "keywords": [
     "gorvet",
     "image prompting",
@@ -20,10 +21,10 @@
   "extensions": {
     "com.openai": {
       "interface": {
-        "displayName": "GORVET Creative Suite",
+        "displayName": "GORVET Creative Director",
         "shortDescription": "Dirección visual y prompts",
-        "longDescription": "Suite modular de GORVET para dirección creativa y producción visual con IA. Incluye Luces, Cámara, ¡Prompt! para dirección creativa y prompts de imagen, Prompt Optimization QA para depurar prompts y Poster & Promotional Design para jerarquía editorial y composición de piezas promocionales estáticas.",
-        "developerName": "Gorvet Estudios",
+        "longDescription": "Dirección creativa y producción visual con IA por Juank de Gorvet. Incluye Luces, Cámara, ¡Prompt! para desarrollar escenas y prompts de imagen, Prompt Optimization QA para depurarlos y Poster & Promotional Design para resolver contenido, jerarquía y composición de piezas promocionales estáticas.",
+        "developerName": "Juank de Gorvet",
         "category": "Productivity",
         "capabilities": [
           "image-prompting",
@@ -32,7 +33,7 @@
           "image-editing"
         ],
         "websiteURL": "https://gorvet.com",
-        "defaultPrompt": "Usa GORVET Creative Suite para esta tarea. Selecciona y lee el skill adecuado según el resultado solicitado: poster-promotional-design para piezas promocionales con texto y layout, prompt-optimization-qa para optimizar la redacción de un prompt existente y luces-camara-prompt para dirección de escena y prompts de imagen. Aplica su flujo antes de ejecutar herramientas."
+        "defaultPrompt": "Usa GORVET Creative Director para esta tarea. Selecciona y lee el skill adecuado según el resultado solicitado: poster-promotional-design para piezas promocionales con texto y layout, prompt-optimization-qa para optimizar la redacción de un prompt existente y luces-camara-prompt para dirección de escena y prompts de imagen. Aplica su flujo antes de ejecutar herramientas."
       }
     }
   }

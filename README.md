@@ -1,6 +1,6 @@
-# GORVET Creative Suite
+# GORVET Creative Director
 
-GORVET Creative Suite es una colección de skills de **Gorvet Estudios** en el formato abierto [Agent Skills](https://agentskills.io/specification), para convertir ideas visuales en prompts de imagen claros, corregir fallos concretos en prompts existentes y dirigir el diseño de piezas promocionales estáticas. Está basada en el **Método G.O.R.V.E.T.** y reúne bibliotecas operativas para dirigir escenas, referencias, estilos, iluminación y composición.
+GORVET Creative Director es un complemento de **Juank de Gorvet** en el formato abierto [Agent Skills](https://agentskills.io/specification), para convertir ideas visuales en prompts de imagen claros, corregir fallos concretos en prompts existentes y dirigir el diseño de piezas promocionales estáticas. Está basado en el **Método G.O.R.V.E.T.** y reúne bibliotecas operativas para dirigir escenas, referencias, estilos, iluminación y composición.
 
 Ayuda a resolver la falta de dirección en peticiones visuales, las instrucciones contradictorias y la pérdida de consistencia al ajustar un prompt.
 
@@ -66,7 +66,7 @@ Los skills no dependen de un proveedor o modelo concreto y no requieren un servi
 
 ## Descarga rápida
 
-Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.6.0.zip` contiene el manifiesto, los tres skills completos, sus referencias, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad.
+Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.6.1.zip` contiene el manifiesto, los tres skills completos, sus referencias, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad. El identificador técnico `gorvet-creative-suite` se conserva para mantener la continuidad de las instalaciones; el nombre visible es GORVET Creative Director.
 
 El ZIP reúne toda la suite. Impórtalo directamente solo si la aplicación admite este formato de complemento. Para aplicaciones que instalan Agent Skills individuales, extrae el paquete y utiliza cada carpeta de `skills/`, siguiendo los pasos siguientes. No necesitas Git para descargarlo.
 
@@ -195,7 +195,7 @@ La fidelidad de identidad, el texto dentro de la imagen y otros detalles depende
 
 ## Generación del paquete
 
-Para generar una distribución desde un commit confirmado, ejecuta `./scripts/build-release.ps1` en PowerShell. El ZIP y su suma SHA-256 se guardan en `dist/`, que está excluida de Git. El paquete incluye únicamente el manifiesto, README, licencia y skills del commit.
+Para generar una distribución desde un commit confirmado, ejecuta `./scripts/build-release.ps1` en PowerShell. El ZIP y su suma SHA-256 se guardan en `dist/`, que está excluida de Git. El paquete incluye el manifiesto, README, licencia y skills del commit, además de los recursos de `assets/` cuando exista esa carpeta.
 
 La publicación está automatizada mediante `.github/workflows/release.yml`. Un push normal actualiza el código. Al subir una etiqueta con formato `vMAYOR.MENOR.PARCHE`, GitHub Actions comprueba que coincida con `plugin.json`, ejecuta el script existente, verifica el ZIP y su checksum y crea una Release con ambos archivos y notas generadas desde GitHub. Utiliza el token integrado de Actions; no requiere un secreto adicional.
 
@@ -203,23 +203,27 @@ Para publicar una versión nueva:
 
 1. Actualiza `version` en `plugin.json` y el nombre del ZIP documentado en este README.
 2. Haz commit y push de los cambios.
-3. Crea y sube la etiqueta de esa versión. Por ejemplo, para `1.6.0`:
+3. Crea y sube la etiqueta de esa versión. Por ejemplo, para `1.6.1`:
 
 ```powershell
-git tag v1.6.0
-git push origin v1.6.0
+git tag v1.6.1
+git push origin v1.6.1
 ```
 
 Comprueba la ejecución en la pestaña Actions y descarga los archivos de la Release resultante. Las etiquetas deben ser nuevas: el workflow no sobrescribe releases existentes. Si la etiqueta no coincide con el manifiesto o falla la verificación del paquete, la ejecución termina sin publicar.
 
+También puedes iniciar `Publish plugin release` desde Actions mediante `Run workflow`, indicando una etiqueta existente. Esta vía empaqueta el commit de esa etiqueta y aplica las mismas comprobaciones; permite iniciar una publicación que no haya arrancado con el push.
+
 ## Relación con el libro
 
-GORVET Creative Suite es un complemento práctico del libro **“Luces, Cámara, ¡Prompt!”**. Aplica el Método G.O.R.V.E.T. mediante recursos operativos para trabajar con un asistente de IA. No es una edición del libro ni contiene su manuscrito o materiales editoriales fuente.
+GORVET Creative Director es un complemento práctico del libro **“Luces, Cámara, ¡Prompt!”**. Aplica el Método G.O.R.V.E.T. mediante recursos operativos para trabajar con un asistente de IA. No es una edición del libro ni contiene su manuscrito o materiales editoriales fuente.
 
 Puedes utilizar el skill sin comprar el libro. Para profundizar, consulta [Luces, Cámara, ¡Prompt! en Google Play Books](https://play.google.com/store/books/details?id=KcKTEQAAQBAJ) y los recursos de aprendizaje de [GoLab](https://golab.gorvet.com/).
 
 ## Autor y licencia
 
-**Autor: Gorvet Estudios** · [gorvet.com](https://gorvet.com/)
+**Autor y desarrollador: Juank de Gorvet** · [gorvet.com](https://gorvet.com/)
+
+El manifiesto declara la autoría en `author.name`, el desarrollador en `extensions.com.openai.interface.developerName` y la web en `homepage` y `websiteURL`. En el directorio de ChatGPT, el nombre público del desarrollador depende de la identidad verificada seleccionada al publicar, según la [documentación de publicación de OpenAI](https://developers.openai.com/plugins/deploy/submission). Esa identidad de la ficha se administra en ChatGPT y no se sustituye únicamente cambiando el JSON del paquete.
 
 Publicado bajo la [licencia MIT](LICENSE). Puedes usar, estudiar, modificar y distribuir el skill, incluso comercialmente, conservando el aviso de autoría y la licencia. La licencia se aplica al contenido de este repositorio; no incluye el libro ni sus materiales editoriales.

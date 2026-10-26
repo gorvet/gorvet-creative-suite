@@ -47,6 +47,7 @@ jobs:
           }
           "number=$($manifest.version)" >> $env:GITHUB_OUTPUT
           "archive=gorvet-creative-suite-$($manifest.version).zip" >> $env:GITHUB_OUTPUT
+          "title=$($manifest.extensions.'com.openai'.interface.displayName) $($manifest.version)" >> $env:GITHUB_OUTPUT
 
       - name: Build package from tagged commit
         shell: pwsh
@@ -64,11 +65,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
-          RELEASE_VERSION: ${{ steps.version.outputs.number }}
+          RELEASE_TITLE: ${{ steps.version.outputs.title }}
           PACKAGE_FILE: ${{ steps.version.outputs.archive }}
         run: |
           gh release create "$RELEASE_TAG" \
             "dist/$PACKAGE_FILE" dist/SHA256SUMS.txt \
             --verify-tag \
-            --title "GORVET Creative Suite $RELEASE_VERSION" \
+            --title "$RELEASE_TITLE" \
             --generate-notes
