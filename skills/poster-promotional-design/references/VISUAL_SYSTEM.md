@@ -1,55 +1,89 @@
-# Concepto y sistema visual
+# Concepto, jerarquía y sistema visual
 
-## Del mensaje a una idea
+## 1. Convertir el mensaje en un argumento visible
 
-Un concepto conecta lo que se quiere comunicar con una operación visual. Decide qué verá el público y qué relación descubrirá: proximidad, escala, contraste, transformación, ritmo, ausencia o asociación. Una paleta atractiva y una foto bonita pueden apoyar esa idea; no la sustituyen.
+Conecta lo que se quiere comunicar con algo que el público pueda ver: un rasgo del producto, una acción humana, una relación de escala, una situación o una operación tipográfica. Formula internamente qué se verá y por qué explica este encargo. «Una foto premium con texto elegante» no fija un argumento.
 
-Antes de elegir recursos, considera rutas distintas y selecciona la que mejor sirva al mensaje. No tienes que mostrarlas todas. La elección debe producir decisiones visibles: qué domina, cómo se relacionan texto e imagen y qué puede desaparecer sin perder sentido.
+Evalúa direcciones diferentes y elige una. No necesitas mostrarlas todas ni construir alternativas si el encargo ya tiene una dirección aprobada. Una campaña de reconocimiento puede trabajar con la identidad; una promoción puede necesitar hacer evidente la oferta; un evento puede partir de su tema. No conviertas cada dato práctico en un objeto o escena.
 
-| Operación | Valor comunicativo | Cuándo reconsiderarla |
+| Operación | Qué debe decidirse | Cuándo reconsiderarla |
 | --- | --- | --- |
-| Imagen protagonista y texto subordinado | Reconocimiento del objeto, persona o escena; la imagen sostiene el argumento. | La información parece añadida al final o el sujeto queda invadido por rótulos. |
-| Tipografía protagonista | El propio mensaje aporta la forma y el impacto. | Todas las palabras compiten o la forma impide entender el mensaje. |
-| Imagen conceptual | Una relación visual concentra una idea difícil de explicar literalmente. | La asociación requiere una explicación larga o inventa atributos de la oferta. |
-| Orden editorial | La estructura permite comparar o consultar contenido real. | La retícula produce cajas innecesarias o aplana la importancia. |
-| Ritmo expresivo | Repetición, contraste o cambios de escala traducen una intención de campaña. | La variación es aleatoria o destruye la lectura práctica. |
+| Imagen protagonista | Qué rasgo, identidad o acción sostiene la comunicación y dónde se lee el mensaje. | La foto podría anunciar cualquier cosa o el texto parece añadido después. |
+| Tipografía protagonista | Qué palabras construyen el foco y cómo su forma sirve al significado. | El acabado sustituye al mensaje o los saltos dificultan entenderlo. |
+| Relación conceptual | Qué asociación se reconoce y qué evidencia la conecta con la propuesta. | Necesita una explicación larga o inventa atributos comerciales. |
+| Orden editorial | Qué grupos se consultan y qué diferencias permiten orientarse. | La retícula multiplica cajas o vuelve equivalentes todos los niveles. |
+| Ritmo expresivo | Qué regla comparte el movimiento, repetición o contraste. | Cada bloque tiene un efecto distinto sin un recorrido común. |
 
-Este repertorio no asigna un estilo fijo por sector. Una comunicación institucional puede ser expresiva; una promoción comercial puede ser sobria. Parte de público, identidad, objetivo y soporte.
+La dirección no se asigna automáticamente por sector. Una pieza de producto puede ser tipográfica y una institucional puede ser expresiva. Conserva la identidad existente, las referencias elegidas y el alcance del encargo.
 
-## Componer relaciones
+## 2. Construir el esqueleto antes del acabado
 
-Establece el foco, el recorrido posterior y el anclaje de los datos. Usa una retícula como sistema de relaciones, aunque sea invisible. Elige bordes compartidos y agrupaciones; el espacio mayor separa ideas y el menor une contenidos relacionados. Distribuye densidad y vacío con intención.
+Trabaja con el contenido real. No diseñes usando titulares cortos ficticios si el literal aprobado es largo. Distribuye masas de imagen y texto como si fueran formas simples, conservando los textos para estimar su extensión. Si dispones de un medio adecuado, un boceto o maqueta facilita la comprobación; no es un entregable obligatorio ni permite afirmar que has observado un render inexistente.
 
-La simetría puede transmitir estabilidad; la asimetría puede dirigir movimiento y tensión. Ninguna funciona por etiqueta. Define dónde se concentra la masa visual y qué la equilibra. El espacio negativo permite reconocer el foco y respirar; no implica dejar el formato vacío.
+Resuelve estas relaciones para el layout elegido:
 
-Trabaja el encuadre de la imagen y el área del texto como un conjunto. Puede haber zonas separadas, integración o superposición cuando se conserva la lectura. Un contacto o dirección necesita un área tranquila, no competir con el punto más complejo de una foto. Recortar debe reforzar el sujeto sin alterar su identidad o eliminar información necesaria.
+- **Entrada:** qué unidad atrae primero y dónde se sitúa. Puede ser un sujeto, una frase o una relación entre ambos.
+- **Continuación:** dónde se entiende la propuesta después y qué proximidad, borde compartido o contraste conduce hacia ella.
+- **Consulta:** dónde se localizan precio, condiciones, fecha, lugar o acción cuando hacen falta.
+- **Anclajes:** qué bordes, ejes o líneas de base comparten los elementos y qué excepciones tienen una función.
+- **Equilibrio:** dónde se concentra la masa y qué la sostiene mediante texto, imagen o espacio.
+- **Respiración:** qué separaciones unen contenidos relacionados y cuáles distinguen grupos.
 
-Un dato práctico normalmente se resuelve mediante tipografía y agrupación. No necesita un objeto, escena o icono propio. Elige imágenes por su papel en el concepto; mencionar una circunstancia no la convierte en tema visual.
+No son seis bloques visibles. Son decisiones sobre los elementos necesarios. Evita repartirlos a distancias iguales para llenar el formato: el espacio tiene que expresar pertenencia y prioridad. La asimetría no equivale a dispersión; la simetría no exige centrar cada línea.
 
-## Oficio tipográfico
+Si la imagen domina, reserva y describe una zona real para el texto desde el encuadre. Si domina el mensaje, da a la imagen un papel y tamaño compatibles. No permitas que el generador improvise una fotografía a página completa y luego amontone el copy en el resto.
 
-Elige una voz tipográfica vinculada a identidad y mensaje. Contrasta por función: una familia con varios pesos puede bastar; combinar familias requiere un papel definido para cada una. Los nombres de fuentes solo son útiles si la herramienta puede utilizarlas; en otro caso describe rasgos observables.
+## 3. Hacer visible el orden de atención
 
-Resuelve longitud de línea, interlineado, espaciado y cortes de texto. Une precio y moneda, fecha y hora, o palabras de un nombre cuando separarlas dificulte interpretar. En encabezados, controla los saltos para conservar unidades de sentido. En datos prácticos, prioriza reconocimiento y lectura a escala final.
+Compara juntos imagen, titular, precio, marca, acción y recursos gráficos. Su peso depende de superficie, contraste, densidad, detalle, posición y aislamiento. Un rostro, un precio o un acento saturado pueden atraer antes que un titular mayor. Las palabras «principal» y «secundario» no anulan ese efecto.
 
-Una inclinación deliberada puede expresar movimiento. No inclines por rutina cada bloque ni mezcles ejes sin una relación compositiva. Usa caja, ancho y peso como parte del sistema, conservando la identidad cuando exista. La letra decorativa no es un sustituto de un concepto.
+Fija relaciones observables. Por ejemplo, en un layout concreto, un titular de varias líneas ocupa la parte superior izquierda; el retrato se concentra a la derecha, con el rostro separado del texto; los datos siguen el borde del titular en un grupo inferior de menor masa. Este ejemplo explica qué significa resolver relaciones; no prescribe una distribución para todas las piezas.
 
-## Color, textura y recursos
+Cuando dos elementos deban leerse juntos, trátalos como unidad. Para subordinar, reduce el peso combinado de los apoyos: tamaño, extensión, color y aislamiento. No les añadas después sellos, bandas o contornos que reviertan la decisión. Precio y condiciones deben mantener una relación que permita entender la oferta completa.
 
-Asigna funciones al color: fondo, contenido, acento o categoría. Decide qué recibe el contraste mayor. Muchos colores de acento, contornos y soportes saturados multiplican focos aunque cada elemento sea legible. El contraste también puede surgir de tamaño, vacío o imagen; no necesita siempre una banda de color.
+Comprueba mentalmente la silueta del conjunto antes de detallar. Si todo tiene una masa parecida y está aislado en su propio soporte, no hay recorrido aunque cada texto tenga un tamaño diferente. Si la primera atención contradice el objetivo, modifica escala, encuadre, densidad o contraste; no añadas una frase final exigiendo jerarquía.
 
-La textura, el collage, la ilustración, la fotografía, los sellos o los trazos pueden formar un lenguaje coherente. Elige ese lenguaje por la idea y el contexto, no por automatismo publicitario. Pregunta qué comunica el recurso en esta solución y si su presencia modifica favorablemente la lectura. «Da impacto» no identifica su función.
+## 4. Resolver el oficio tipográfico
 
-## Imagen y referencias
+Elige una voz tipográfica por identidad y mensaje. Una familia con variación de peso o ancho puede resolver la pieza; combinar familias requiere funciones distintas. Describe rasgos observables cuando la herramienta no pueda utilizar una fuente concreta. No prometas una fuente exacta sin poder fijarla.
 
-Distingue imagen de producto, identidad de personas, escena y referencia de estilo. Conserva las propiedades exigidas del producto y la identidad seleccionada. Mejorar luz, limpieza o encuadre no autoriza rediseñar el objeto ni inventar características.
+Define el tratamiento de cada texto seleccionado:
 
-Si una imagen de ejemplo contiene texto, usa solo el texto aprobado del encargo nuevo. Extrae relaciones compositivas, no slogans, adornos o datos del ejemplo. No reproduzcas por rutina cada rasgo de una referencia visual. Consulta las fichas en VISUAL_REFERENCES.md para estudiar mecanismos y contraindicaciones.
+| Control | Decisión útil | Fallo que evita |
+| --- | --- | --- |
+| Anchura y longitud | Ancho del bloque y cortes que conservan unidades de sentido. | Líneas comprimidas, palabras huérfanas o títulos partidos arbitrariamente. |
+| Escala y peso | Diferencia perceptible respecto a su apoyo y al sujeto. | Todos los textos parecen titulares o el título desaparece frente a la imagen. |
+| Interlineado | Ritmo compacto en titulares cuando procede y separación suficiente en lectura práctica. | Líneas que se tocan o se interpretan como bloques independientes. |
+| Caja y espaciado | Mayúsculas, caja de oración o espaciado según voz y función. | Toda la información grita o el espaciado rompe palabras cortas. |
+| Alineación | Eje que vincula el texto con su grupo y con el conjunto. | Bloques flotantes sin relación o alternancia accidental de ejes. |
+| Contraste | Fondo tranquilo o tratamiento que conserva la lectura. | Texto sobre ojos, manos, etiquetas o zonas fotográficas con demasiado detalle. |
 
-## Adaptar el sistema al soporte
+Une precio y moneda, fecha y hora o palabras de un nombre cuando separarlas dificulte interpretar. Un salto en un titular no puede cambiar el sentido. No inclines cada bloque para expresar dinamismo ni estires letras para rellenar ancho. La tipografía expresiva puede concentrarse donde comunica; los datos siguen siendo consultables.
 
-Define orientación, proporción, tamaño y modo de lectura. Piensa en distancia de observación, pantalla pequeña, impresión o circulación sin texto asociado. Ajusta agrupaciones y encuadre; no limites la adaptación a reducir toda la composición.
+Si un titular no cabe, revisa cortes, ancho, número de líneas y relación con la imagen. Edita solo cuando el texto lo permita. No resuelvas todo disminuyendo la letra ni ocultando condiciones. Una escala relativa bien descrita suele ser más útil que tamaños exactos que el generador no puede respetar.
 
-Mantén los datos dentro de un área segura respecto a recortes, interfaces y acabado. No inventes márgenes universales de una plataforma: usa especificaciones aportadas o verificadas cuando se necesiten medidas exactas. Para impresión, resolución, sangrado y color dependen del proceso y del proveedor. Una imagen generada no constituye por sí sola un archivo técnico listo para imprenta.
+## 5. Elegir color, textura y recursos por función
 
-En una serie, conserva relaciones reconocibles y varía donde cambie el mensaje. Al pedir alternativas, cambia el argumento visual o la organización; un cambio de paleta sobre la misma estructura es una variante del mismo diseño.
+Asigna fondo, contenido y acentos. El contraste mayor debe coincidir con la atención prevista. Un color tomado de una referencia puede servir a la identidad; no implica copiar su escena o aplicar una dominante sobre piel y producto.
+
+Define qué recurso existe y dónde actúa. No basta con prohibir neón, brochazos o estrellas si no has resuelto cómo destacar la oferta. Puede bastar un contraste tipográfico, una zona de color o un espacio mayor. Cada recurso adicional debe mejorar reconocimiento, relación o lectura.
+
+Textura, collage, ilustración, fotografía, sellos y trazos son válidos cuando comparten un lenguaje. No impongas minimalismo, fondos neutros ni ausencia de efectos como estética universal. Si la pieza pide lujo, expresa ese carácter mediante materiales, proporciones, tratamiento y luz concretos; la palabra «premium» no decide por sí sola esos controles.
+
+## 6. Coordinar imagen y texto
+
+Distingue sujeto, referencia de identidad, escena y lenguaje gráfico. Aplica SUBJECT_ART_DIRECTION.md al construir la imagen. El encuadre y la zona tipográfica se ajustan conjuntamente: un rostro o producto no debe taparse para recuperar espacio que no se reservó.
+
+Superponer texto puede ser pertinente si conserva lectura y atributos necesarios. Un solapamiento deliberado requiere saber qué se tapa y qué permanece visible. Un recorte refuerza la composición cuando conserva reconocimiento y acción; no lo uses para ocultar errores de identidad o quitar una característica necesaria.
+
+Si la referencia contiene copy, usa solo el aprobado para la nueva pieza. Adapta sus relaciones de escala, encuadre y lectura, no sus slogans o adornos. Los esquemas de VISUAL_REFERENCES.md enseñan relaciones; no obligan a copiar proporciones o etiquetas.
+
+## 7. Adaptar y comprobar al tamaño de uso
+
+Define orientación, proporción y modo de lectura. Una pieza de móvil, un cartel visto a distancia y una programación de consulta no requieren la misma densidad. Ajusta agrupaciones y encuadre al cambiar formato; no reduzcas todo por igual.
+
+Mantén información necesaria a salvo de recortes e interfaces. Usa las especificaciones aportadas o verificadas cuando se necesiten medidas exactas. Para imprenta, resolución, sangrado y color dependen del proceso y proveedor; la imagen generada no acredita esas condiciones.
+
+Antes de ejecutar, comprueba si el layout descrito permite reconocer la entrada, continuar la lectura y consultar los datos. Después de generar, evalúa esa misma secuencia viendo el arte a escala de uso. Amplía para revisar texto, identidad y detalles. Una composición que solo funciona ampliada requiere ajuste, aunque el archivo tenga mucha resolución.
+
+En una serie, conserva las relaciones reconocibles y cambia lo que corresponde al mensaje. Para otra dirección, cambia argumento u organización; retocar luz o paleta no basta.

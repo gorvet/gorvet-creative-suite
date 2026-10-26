@@ -1,50 +1,92 @@
-# OPTIMIZACIÓN DEL PROMPT
+# Optimización del prompt
 
-Aplicar a cualquier tema en la construcción y reparación de prompts. El objetivo es el texto mínimo suficiente para ejecutar todas las decisiones del encargo, no una longitud fija. Esta revisión es interna y no añade fases, explicaciones ni bloques a la entrega.
+El objetivo es la especificación mínima suficiente para ejecutar las decisiones del encargo. Una reducción de palabras no sirve si borra una relación de composición, una condición de edición o un rasgo protegido. Tampoco sirve cambiar sinónimos conservando las mismas repeticiones. Aplica esta revisión internamente antes de entregar; no crea otra fase de aprobación.
 
-## Redacción y depuración
+## 1. Extraer controles antes de reescribir
 
-1. Extraer las decisiones del encargo y de la dirección aprobada: sujeto y selección, acción, entorno, composición, acabado, luz y restricciones. Un ejemplo ilustra decisiones; no obliga a copiar su plantilla ni su redacción.
-2. Asignar una formulación a cada decisión. Integrar atributos compatibles en una misma frase. No crear un bloque narrativo, otro técnico y un resumen que describan de nuevo la misma escena.
-3. Comparar las frases por significado, no solo por palabras. Si dos protegen el mismo atributo o describen el mismo acabado, conservar una. Mantener requisitos diferentes aunque estén relacionados: identidad, cantidad de personas y exclusión de figuras adicionales cumplen funciones distintas.
-4. Eliminar énfasis sin control visual nuevo, cadenas de adjetivos equivalentes, explicaciones del efecto emocional y reafirmaciones finales. No rematar el prompt con un resumen de su estilo, luz, composición o elementos ya descritos.
-5. Resolver alternativas abiertas antes de redactar la versión final. La dirección puede proponer casa o castillo; el prompt aprobado fija uno. No usar «mismo ángulo» o «misma posición» sin un referente definido.
-6. Comprobar cobertura: todas las decisiones distintas siguen presentes, ninguna se contradice y cada frase añade un cambio observable o una restricción útil. Si al quitar una frase no se pierde ninguno de esos controles, quitarla.
-7. Traducir solo la versión depurada. Cada idioma contiene las mismas decisiones una sola vez y usa términos naturales en ese idioma. Las etiquetas exigidas por el usuario o una integración pueden conservarse; no inferir esa exigencia por verlas en un ejemplo.
+Identifica las decisiones existentes y las modificaciones autorizadas: sujeto y selección, acción, ubicación, referencias, atributos protegidos, cambios permitidos, composición, estilo, luz, materiales y restricciones pertinentes. No añadas un campo porque aparezca en esta enumeración.
 
-Por defecto, un párrafo. Separar bloques cuando organizan controles independientes, referencias diferentes, zonas de edición o una plantilla expresamente solicitada. La separación no permite repetir decisiones.
+Distingue su procedencia. Lo pedido por el usuario y lo aprobado se conserva; un desarrollo opcional del asistente puede retirarse si no resuelve una necesidad del encargo. Si no hay contexto que permita distinguirlos, conserva las decisiones concretas del prompt original. No supongas que un detalle específico es relleno por ser largo o poco habitual.
 
-## Compresión de la redacción y control de expansión
+Una exigencia literal de formato o texto permanece literal. Una instrucción visual puede compactarse conservando todo su alcance. Los ejemplos muestran operaciones de edición; no son frases que debas añadir al prompt actual.
 
-Eliminar duplicados no basta. Usar frases directas y compactas: «cheerful expressions» puede resolver una dirección alegre sin añadir «happy, celebratory, full of life, as if enjoying a party». Preferir una condición ejecutable a explicarla y después negar su opuesto: «fangs visible only in naturally open mouths» ya excluye los colmillos con la boca cerrada.
+## 2. Consolidar por significado y alcance
 
-Separar requisitos del usuario y decisiones aprobadas de desarrollos opcionales del asistente. Preservar los primeros; eliminar los segundos cuando no resuelvan una ambigüedad necesaria. «Vestuario vampírico elegante en negro y burdeos» no necesita expandirse en una lista de chaquetas, cuellos, camisas, vestidos, cinco colores y adjetivos textiles si esos detalles no fueron pedidos ni aprobados. Si se necesita una prenda concreta, elegirla en vez de enumerar alternativas.
+Busca instrucciones equivalentes aunque cambien palabras o estén en apartados distintos. Incluye también equivalencias entre afirmación y negación, título y cuerpo, escena y bloque técnico, apertura y resumen final.
 
-Cuando el usuario aporte un ejemplo breve como referencia de densidad, aproximarse a su concisión. Crecer solo por requisitos distintos añadidos al encargo, no por explicaciones o énfasis. No copiar sus redundancias ni imponer su longitud a tareas diferentes.
+| Caso | Operación |
+| --- | --- |
+| Dos frases protegen el mismo rasgo con igual alcance. | Conservar la formulación más precisa, salvo repetición literal expresamente exigida. |
+| Una frase repite un rasgo y añade una condición distinta. | Integrar la condición nueva en la formulación conservada. |
+| Varias expresiones describen el mismo efecto técnico. | Elegir el control suficiente para la herramienta y la dirección solicitadas. |
+| Dos instrucciones se parecen pero gobiernan aspectos distintos. | Conservar ambas, compactándolas si comparten una frase sin perder alcance. |
+| Dos instrucciones se contradicen. | Aplicar una corrección o prioridad explícita del usuario; si falta y afecta a la imagen, preguntar sin inventar una resolución. |
 
-Revisar cada frase restante: ¿puede expresar el mismo control con menos palabras? Compactarla sin sustituir una condición precisa por un adjetivo vago. No ampliar de nuevo el texto al traducir o al realizar la revisión final.
+Identidad, cantidad de personas, selección y exclusión de figuras adicionales pueden ser requisitos distintos: no reducirlos a «mantener la referencia». Tampoco son equivalentes conservar geometría, proteger marca y fijar el agarre de una mano.
 
-## Personas y referencias
+No acumules dos controles equivalentes por supuesto refuerzo. Si la herramienta falló, la corrección sustituye la formulación insuficiente; no se añade como un eco. Una repetición técnica exigida por una integración específica se conserva solo cuando ese contrato se haya aportado.
 
-Consolidar la conservación de identidad en una instrucción que cubra los atributos protegidos. No encadenar «mismo rostro», «no alterar facciones», «no reinterpretar», «apariencia reconocible» y otras equivalencias. Añadir una prohibición específica solo si corrige un fallo diferente o es un requisito expreso.
+## 3. Revisar el aporte de cada cláusula
 
-Conservar la cantidad exacta cuando deban aparecer todas las personas de la referencia; si se solicita una selección, delimitarla. Excluir personas adicionales cuando corresponda. No confundir estas restricciones con repetir identidad.
+Para cada fragmento, comprueba qué cambiaría si desapareciera. Conserva el que fija una decisión o restricción necesaria. Retira el que solo vuelve a nombrar el efecto ya definido, explica su intención al lector o enfatiza calidad sin control nuevo. Hazlo dentro de las frases, no solo entre párrafos.
 
-Describir la transformación mediante los cambios permitidos: vestuario, maquillaje y accesorios. Separar esos cambios de los atributos protegidos. No repetir la protección del rostro en el bloque de caracterización.
+- «Expresión alegre, feliz, llena de alegría» puede resolverse como «expresión alegre».
+- «Luz suave lateral de ventana que ilumina desde un costado» conserva fuente y dirección como «luz suave de ventana desde la izquierda» solo si ese lado ya estaba decidido; si no lo estaba, no lo inventes al optimizar.
+- «Poros naturales, textura de piel realista, piel sin apariencia plástica» se consolida en una instrucción de textura cuando las tres cumplen el mismo propósito. Un requisito independiente de tono de piel debe conservarse.
+- «Fondo desenfocado, bokeh suave, poca profundidad de campo» puede expresar un solo control de profundidad. «Ojos enfocados y manos legibles» añade una condición de foco distinta y no debe desaparecer.
+- «Cada elemento cuenta una historia y crea una experiencia visual inolvidable» se elimina si no añade una decisión visual solicitada.
 
-Si dos condiciones de vestuario solo repiten un tratamiento común, describir ese tratamiento una vez. Mantener condiciones que aporten diferencias reales o que el usuario exija como plantilla.
+Un tono como melancólico, lúdico o solemne puede ser una intención real; no lo elimines por ser abstracto si no está expresado por otros controles equivalentes. Evita desarrollarlo después mediante explicaciones repetidas. No conviertas esta revisión en una prohibición general de adjetivos.
 
-## Fondos de series
+## 4. Contener la expansión del asistente
 
-Para fondos próximos entre generaciones, fijar anclas concretas en la dirección creativa: tipo de construcción, posición en el encuadre, ubicación de luna y decoración, punto de vista, paleta y luz. Describir cada ancla una sola vez por prompt autónomo. No añadir después otra lista para exigir que todo «se mantenga igual».
+No amplíes una dirección breve mediante catálogos de prendas, materiales, accesorios, cámaras o efectos que nadie pidió o aprobó. Completa solamente una ambigüedad necesaria dentro del alcance autorizado. En una optimización, no rediseñes una escena cerrada para hacerla más cinematográfica.
 
-Si existe una imagen base del escenario, indicar que gobierna fondo, geometría y distribución; delimitar por separado la referencia de identidad. Si no existe, usar una descripción espacial fija como base de la serie. Explicar la limitación del texto solo cuando el usuario pida garantías de continuidad exacta; no prometer que repetir palabras produce fondos idénticos.
+Una indicación de vestuario elegante en negro y burdeos no exige inventar chaqueta, chaleco, cuello, bordados, joyas y cinco texturas. Una dirección de luz no necesita siempre relleno, contraluz y partículas. Un retrato no exige por defecto lente de 85 mm, bokeh, poros y mirada a cámara.
 
-## Ejemplos de depuración por significado
+Si un dato técnico fue solicitado, consérvalo. Si fue añadido como explicación del mismo efecto ya fijado y no aporta otro control, consolídalo. No elimines todos los números por sistema ni añadas números para que el texto parezca preciso.
 
-- «Conservar identidad y facciones. Mantener el mismo rostro. No reinterpretar su estructura facial» → una instrucción de conservación de identidad y facciones.
-- «Estilo cinematográfico, elegante y oscuro» seguido de «fotografía premium, sofisticada, de vampiro clásico, elegante y oscura» → un acabado dominante y los atributos distintos que realmente definen vestuario o escena.
-- Una descripción de castillo, luna, calabazas y niebla seguida de la misma lista bajo «mantener constantes» → una única descripción con posiciones y anclas concretas.
-- Dos condiciones de vestuario equivalentes → una descripción común, salvo que el formato condicional sea un requisito expreso.
+## 5. Redactar desde la versión vigente
 
-Los ejemplos muestran operaciones de edición; no son frases que deban añadirse a todos los prompts.
+Reúne las decisiones finales y redacta una única versión. Cada control tiene un lugar; no construyas un bloque narrativo, otro técnico y un cierre que vuelvan a describir la misma imagen. Mantén las relaciones entre sujetos, zonas, apoyos, luz y texto que definen el resultado.
+
+En una edición, sustituye la condición modificada donde corresponde y conserva las demás. Si se pide el prompt completo, entrega la versión consolidada; si se pide solo la frase de reemplazo, entrega esa unidad sin un segundo prompt de refuerzo.
+
+Usa párrafos o bloques cuando separen instrucciones independientes, referencias, zonas de edición o copy literal. Su cantidad no demuestra optimización. No fuerces una frase única si vuelve ambiguo qué referencia o restricción gobierna cada elemento.
+
+No finalices con un resumen de estilo, emoción, iluminación, fidelidad o composición ya fijados. El material de entrega ajeno al prompt, como una explicación solicitada o el cierre propio de otro skill, queda fuera del texto destinado al generador.
+
+## 6. Referencias y continuidad
+
+Consolida la protección de identidad en una instrucción que cubra los atributos necesarios. Mantén por separado los cambios permitidos y las condiciones distintas de selección o cantidad. No extiendas una referencia facial a fondo, vestuario y pose por inercia.
+
+En una serie, reutilizar una misma ancla entre prompts autónomos es necesario para que cada uno se entienda por sí solo. Repetir esa ancla dentro de un mismo prompt con sinónimos es redundante. Depura cada prompt individualmente y conserva la base común de la serie.
+
+Para continuidad de fondo, usa una referencia de escenario realmente disponible o anclas espaciales concretas ya decididas: distribución, punto de vista, posición de elementos, paleta y luz. No añadas un segundo bloque que repita todo bajo «mantener constantes». Si el referente de «mismo ángulo» no está definido, identifícalo desde el contexto o señala lo que falta; no inventes el ángulo.
+
+No prometas que repetir palabras produce fondos o rostros idénticos. Una revisión textual no valida continuidad visual.
+
+## 7. Comparar cobertura y traducir sin expansión
+
+Antes de entregar, contrasta la versión con las decisiones de origen en ambas direcciones:
+
+- Cada requisito necesario sigue teniendo una instrucción suficiente, incluida su condición, referente y relación espacial cuando proceda.
+- Cada instrucción de salida procede del encargo, la dirección aprobada o un cambio autorizado; no se añadió solo para llenar un apartado.
+- No quedan formulaciones equivalentes, contradicciones ni un resumen que duplique controles.
+- Se conservan copy literal, cifras, nombres, etiquetas y formato exigidos. El texto destinado a aparecer en la imagen no se traduce si debe conservarse literal.
+
+Traduce después de cerrar esta versión. Compara decisiones, no número de palabras: un idioma puede necesitar más palabras sin añadir controles. No desarrolles una escena distinta al traducir ni vuelvas a expandirla en la revisión final. Cuando ya no haya un cambio que mejore precisión, cobertura o concisión, detente.
+
+## Ejemplo completo de consolidación
+
+**Contexto supuesto:** dos personas de una referencia deben conservar identidad y cantidad, con vestuario negro y burdeos; no se han aprobado accesorios concretos. Se solicita el prompt completo depurado.
+
+**Antes:**
+
+> Conserva la identidad de las dos personas de la imagen adjunta. Mantén sus mismos rostros y facciones reconocibles, sin reinterpretar sus rasgos. Ambas llevan vestuario elegante en negro y burdeos. Su ropa es refinada y sofisticada, con elegancia oscura. Están de pie ante un muro de piedra, miran a cámara y muestran expresiones alegres y felices. Luz lateral suave desde la izquierda, iluminación delicada y difusa que llega del lado izquierdo. Plano medio de las dos personas y fondo ligeramente desenfocado. No añadas otras personas. El resultado debe mantener sus rostros, una estética elegante, expresiones felices y una iluminación suave. Formato vertical 4:5.
+
+**Después:**
+
+> Plano medio de las dos personas de la imagen adjunta, conservando su identidad y facciones. Vestuario elegante en negro y burdeos; de pie ante un muro de piedra, mirando a cámara con expresión alegre. Luz lateral suave desde la izquierda y fondo ligeramente desenfocado. Sin personas adicionales. Formato vertical 4:5.
+
+Se conservaron selección, cantidad, identidad, vestuario, pose, fondo, expresión, luz, plano, profundidad, exclusión y formato. Se retiraron equivalencias y el cierre repetido sin añadir cámara, prendas, accesorios ni otra localización. Esta comparación textual no prueba el comportamiento de un generador.

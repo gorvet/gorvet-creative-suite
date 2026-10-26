@@ -1,30 +1,34 @@
 ---
 name: prompt-optimization-qa
-description: Optimiza prompts de imagen, especialmente los de Luces, Cámara, ¡Prompt!, eliminando redundancia, expansión innecesaria y contradicciones sin perder decisiones ni restricciones. Úsalo para acortar, depurar o revisar la redacción de un prompt existente. No dirige una escena nueva ni impone convenciones de Storyface.
+description: Depura prompts de imagen eliminando duplicados semánticos, relleno, expansión innecesaria y contradicciones, sin perder decisiones, restricciones ni textos literales. Úsalo para optimizar un prompt existente. No dirige una escena nueva ni impone convenciones de una plataforma.
 ---
 
 # QA de optimización de prompts
 
-Optimizar un prompt existente sin cambiar su dirección visual. Este QA pertenece a Creative Suite; no contiene reglas de una plataforma ni genera imágenes.
+Optimiza un prompt existente conservando su dirección visual. El resultado debe contener las instrucciones suficientes para reconstruir la misma escena y sus restricciones, con una formulación por control. No genera imágenes ni certifica su resultado.
 
-## Alcance
+## Alcance y fuente de verdad
 
-Leer el prompt y la petición de optimización. Distinguir decisiones pedidas o aprobadas, restricciones, texto literal y detalles opcionales añadidos por el asistente. Si falta el prompt, pedirlo; no abrir un nuevo briefing creativo.
+Lee el prompt, los cambios solicitados y el contexto disponible. Si falta el prompt, pídelo sin abrir un nuevo briefing. Distingue requisitos explícitos, decisiones aprobadas y desarrollos opcionales cuya procedencia puedas comprobar. Si solo recibes el prompt, trata sus decisiones visuales concretas como intencionales: no elimines un material, encuadre o atmósfera por preferencia propia.
 
-Una petición nueva de escena corresponde a `../luces-camara-prompt/SKILL.md`. El contenido, la composición y la legibilidad de un post corresponden a `../poster-promotional-design/SKILL.md`. Este QA puede depurar su prompt, pero no sustituye la revisión del diseño.
+Una escena nueva corresponde a `../luces-camara-prompt/SKILL.md`; el diseño o revisión de un cartel, a `../poster-promotional-design/SKILL.md`. Puedes depurar el prompt de un cartel conservando íntegros su copy y relaciones de composición, sin rediseñarlo. Consultar este QA desde otro skill no activa un segundo flujo.
 
-## Optimización
+## Procedimiento de depuración
 
-Leer `references/OPTIMIZACION_PROMPT.md`. Conservar una formulación por decisión; compactar frases, resolver contradicciones y eliminar desarrollo opcional sin control útil. No añadir cámara, listas de prendas, calificativos ni restricciones para justificar la revisión. No imponer una cuota de palabras ni reducirlo a una plantilla universal.
+Lee [OPTIMIZACION_PROMPT.md](references/OPTIMIZACION_PROMPT.md). Trabaja sobre una única versión mediante estas comprobaciones internas:
 
-Las restricciones aportadas por un perfil externo son parte del encargo. Conservar cantidad, selección, atributos protegidos, etiquetas o estructura expresamente exigidas. No importar convenciones por el nombre de una plataforma ni activar otro QA automáticamente. Si dos requisitos se contradicen y su resolución requiere una elección del usuario, preguntar solo por esa elección.
+1. **Inventario de controles:** identifica qué exige el encargo en sujeto, selección, acción, espacio, estilo, luz, composición, referencias y restricciones. No son campos que debas completar.
+2. **Duplicados por significado:** localiza formulaciones que controlan el mismo atributo. Conserva la más precisa e integra en ella cualquier detalle distinto de las demás. Una frase puede contener a la vez información repetida y una condición necesaria.
+3. **Aporte real:** elimina énfasis, explicaciones y detalles opcionales que no cambian el resultado pedido. Revisa también cláusulas dentro de cada frase; una frase puede aportar una decisión y arrastrar varias equivalencias.
+4. **Consolidación:** reemplaza las formulaciones corregidas en su lugar. No concatenes original, modificación y cierre de refuerzo. Si detectas una contradicción material sin resolución autorizada, pregunta solo por esa elección.
+5. **Cobertura y ausencia de expansión:** compara con el inventario. Cada control necesario debe seguir teniendo una instrucción ejecutable; ninguna instrucción nueva puede proceder solo de querer embellecer la revisión. Verifica también el texto y el formato exigidos.
 
-Para una petición combinada, trabajar sobre una única versión: integrar los cambios solicitados y depurar sin concatenar reescrituras. Traducir solo después de cerrar la redacción; no añadir información al traducir.
+No basta con sustituir palabras por sinónimos o afirmar que el prompt quedó optimizado. Si una parte ya es suficiente, consérvala. Un prompt que ya está depurado puede devolverse sin cambios; no fuerces una reescritura para demostrar actividad.
 
-## Entrega y revisión
+## Entrega
 
-Devolver el prompt completo optimizado en su idioma original, o en los idiomas solicitados. Mantener el copy literal y las etiquetas exigidas. Si el usuario pide solo el prompt, entregar solo el prompt; en otro caso basta un diagnóstico breve.
+Entrega el prompt optimizado completo en el idioma original o en los idiomas solicitados. Para una petición combinada, incorpora los cambios autorizados antes de depurar. Traduce únicamente la versión cerrada y comprueba que ambas versiones contienen las mismas decisiones, sin ampliaciones ni pérdidas.
 
-Comparar la salida con las decisiones y restricciones del encargo: no deben perderse selección, identidad, geometría, texto, exclusiones ni relaciones de composición necesarias. Cada frase restante debe añadir control. No añadir cierre promocional, aprobación creativa ni un segundo prompt de refuerzo.
+Mantén copy literal, atributos protegidos, selección, exclusiones y etiquetas o estructura exigidas por el usuario o un perfil externo aportado. No importes convenciones por el nombre de una plataforma. No impongas una cuota de palabras, un único párrafo o una plantilla universal.
 
-Una revisión textual no confirma fidelidad visual ni continuidad de un generador.
+Entrega solo el prompt salvo que se pida explicación o exista una ambigüedad que impida cerrarlo. No añadas cierre promocional, segundo prompt de refuerzo, lista de reglas aplicadas ni garantía de fidelidad visual.

@@ -32,6 +32,10 @@ Ejerce criterio antes de preguntar. La rareza de una frase no obliga a consultar
 
 Jerarquía es un orden de atención, no una colección de textos grandes. Decide qué se reconoce primero, qué se lee después y qué se consulta al necesitarlo. El foco puede ser una imagen, un concepto, un nombre, una oferta o una cifra según el objetivo.
 
+Antes de asignar tamaños, fija una secuencia concreta con el contenido elegido: por ejemplo, reconocer a la ponente, entender el tema y localizar fecha y lugar. En una oferta puede ser reconocer el producto, entender precio y condición, y encontrar dónde comprar. Son ejemplos de decisiones; no son un orden obligatorio. El resultado de este paso es una prioridad específica para este encargo, no etiquetas sin contenido.
+
+Si el texto permite edición, escribe el titular con una función clara: nombrar el acontecimiento, formular la propuesta o concentrar un argumento. Evita sustituir la información por frases intercambiables como «Descubre la excelencia». Un nombre de producto o un título literal puede bastar; no añadas un eslogan por obligación. El apoyo cubre lo que aún falta entender, no vuelve a prometer lo mismo.
+
 | Función | Relación visual a resolver |
 | --- | --- |
 | Dominante | Una diferencia inequívoca de escala, masa, posición o contraste respecto al resto. |
@@ -43,8 +47,14 @@ Son funciones, no cuatro bloques obligatorios. Dos mensajes equivalentes pueden 
 
 Tamaño, peso, color, posición, espacio y agrupación actúan conjuntamente. Un texto pequeño dentro de una estrella saturada puede dominar más que un título grande. Evalúa el peso combinado. Subordinar no significa ocultar ni bajar el contraste hasta perder legibilidad.
 
+Asigna la diferencia visual necesaria, no todos los mecanismos de énfasis a la vez. Si el precio tiene tamaño, color y una figura propia, reconsidera si acabará dominando aunque lo hayas llamado secundario. Si retrato y titular forman una unidad principal, define cómo se relacionan y cuál introduce al otro; no los trates como competidores independientes.
+
+Mantén cerca las unidades que se interpretan juntas: oferta y condición, actividad y horario, nombre y función. Separa grupos de significado mediante espacio antes de recurrir a marcos. Un pie no es un depósito de todo lo que no cabe. Distribuye los datos prácticos con su propio orden y suficiente superficie.
+
 Las mayúsculas son una elección de tono y lectura, no una medida de importancia. La caja de oración suele distinguir bien los datos prácticos; las mayúsculas pueden servir a un título corto o a una identidad existente. Mantén la caja si es literal. No asignes la misma combinación de mayúsculas, negrita, color y marco a todos los niveles.
 
 ## Comprobar antes de dibujar
 
-Lee el contenido seleccionado sin decoración: debe comunicar una propuesta comprensible y datos suficientes. Después mira únicamente el foco: debe identificar el tema o abrir una idea pertinente. Finalmente compara la comunicación completa con el brief para detectar pérdidas o afirmaciones inventadas. Esta revisión termina en textos concretos, no en una lista de todos los datos recibidos.
+Lee el contenido seleccionado sin decoración y comprueba que comunica una propuesta comprensible y datos suficientes. Después mira únicamente el foco, que debe identificar el tema o abrir una idea pertinente. Finalmente compara la comunicación completa con el brief para detectar pérdidas o afirmaciones inventadas. Esta revisión termina en textos concretos, no en una lista de todos los datos recibidos.
+
+Si al maquetar no cabe el contenido, vuelve a estas decisiones. Edita lo editable, agrupa lo relacionado y modifica el encuadre o la estructura. Traslada información solo cuando tenga un destino real y no cambie la oferta. No elimines condiciones ni añadas un caption imaginario para sostener una composición vacía.
