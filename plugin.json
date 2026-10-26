@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "gorvet-creative-suite",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "GORVET Creative Director: creative direction, image prompting and promotional design skills by Juank de Gorvet.",
   "author": {
     "name": "Juank de Gorvet",
@@ -37,7 +37,7 @@
           "image-editing"
         ],
         "websiteURL": "https://gorvet.com",
-        "defaultPrompt": "Usa GORVET Creative Director para esta tarea y aplica el flujo del skill correspondiente."
+        "defaultPrompt": "Anuncios y carteles: poster-promotional-design. Escenas: luces-camara-prompt. Depurar prompts: prompt-optimization-qa."
       }
     }
   }

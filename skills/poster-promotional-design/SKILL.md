@@ -1,6 +1,6 @@
 ---
 name: poster-promotional-design
-description: Dirige el arte publicitario de carteles, anuncios, flyers y publicaciones estáticas. Selecciona la dirección de productos, personas o promociones y resuelve concepto, imagen, contenido, jerarquía y ejecución. Úsalo para crear o revisar estas piezas, con fotografías, referencias o un brief de texto.
+description: Dirige carteles, anuncios, flyers y otras piezas publicitarias estáticas de productos, personas o promociones, con o sin texto externo y aunque solo se aporte una foto. Resuelve el diseño antes de generar y verifica la imagen para corregir fallos. También construye el prompt de estas piezas cuando se pide solo texto.
 ---
 
 # GORVET — Dirección de arte publicitario
@@ -23,47 +23,71 @@ Una promoción puede utilizar una fotografía y un anuncio de producto puede par
 
 Las instrucciones expresas y la identidad existente prevalecen sobre los valores por defecto de una biblioteca. Estas direcciones son familias de problemas; no contienen recetas por producto, sector o cliente.
 
+## Regla de ejecución: resolver antes de generar
+
+**Previsualización conceptual obligatoria.** Antes de invocar `image_gen` o cualquier herramienta equivalente, define internamente una representación visual concreta de la pieza final. Resuelve concepto, composición, jerarquía, relaciones espaciales y tratamiento gráfico; evalúa esa solución contra el objetivo, las referencias y el control anti-IA. Una intención genérica, una lista de reglas o el brief original no constituyen una dirección terminada. No delegues al generador la elección del concepto, la edición del contenido ni la organización principal.
+
+El recorrido es **interpretar → conceptualizar → diseñar → evaluar → generar → verificar**. Cada paso utiliza la solución del anterior. Si la evaluación falla, vuelve a diseñar antes de generar; si la imagen falla, corrige y vuelve a verificar antes de cerrar. Las bibliotecas aportan criterio a este recorrido, no lo sustituyen ni crean recorridos paralelos.
+
+Realiza este trabajo internamente, sin mostrar razonamientos ni pedir aprobaciones rutinarias. El usuario encarga una pieza y recibe el resultado. Pregunta únicamente por información material que no puedas resolver con fidelidad; respeta cualquier revisión previa que el usuario haya solicitado.
+
 ## Método de dirección
 
-### 1. Comprender antes de elegir una estética
+### 1. Interpretar
 
 Identifica qué se anuncia, a quién, con qué objetivo y en qué soporte. Examina las referencias que estén disponibles. Distingue hechos aportados, propiedades observables y decisiones creativas. No atribuyas prestaciones, identidades o resultados a partir de una apariencia.
 
 Determina qué tiene que reconocerse primero y qué necesita entender o hacer el público. Si una ambigüedad material impide comunicar con fidelidad, pregunta solo por ese punto y avanza con lo independiente. No pidas al usuario que resuelva todas las decisiones de arte.
 
-### 2. Seleccionar el mensaje
+Lee la biblioteca principal y [ANTI_AI_STYLE_QA.md](references/ANTI_AI_STYLE_QA.md) antes de desarrollar la solución. Así sus criterios intervienen en el diseño y no llegan solo al final.
+
+### 2. Conceptualizar y seleccionar el mensaje
 
 Lee [CONTENT_HIERARCHY.md](references/CONTENT_HIERARCHY.md) cuando haya contenido que editar. El brief informa al director; no obliga a reproducir cada frase. Distingue texto exigido, mensaje necesario, información consultable y contexto que no pertenece a la publicidad.
 
 Selecciona antes de maquetar. Conserva fielmente los datos elegidos y las condiciones que hacen verdadera la oferta anunciada. No conviertas información omitida en adornos, personajes, iconos o frases de fondo. Tampoco añadas eslogan, beneficios o llamada a la acción por completar una estructura publicitaria.
 
-### 3. Desarrollar una idea y construir la imagen
-
 Aplica el recorrido de la biblioteca elegida: comprender el sujeto o la propuesta, definir un argumento, resolver protagonismo y encuadre, preservar lo necesario y dirigir el entorno y el tratamiento. Elige una idea que pueda reconocerse sin una explicación larga.
 
 Una imagen de referencia tiene un papel concreto. Preservar un objeto no equivale a expandir toda su gráfica a la escena; preservar identidad no equivale a copiar también pose, vestuario y fondo. Distingue esas funciones antes de transformar la referencia.
 
-### 4. Diseñar la comunicación completa
+### 3. Diseñar la pieza completa
 
 Usa [VISUAL_SYSTEM.md](references/VISUAL_SYSTEM.md) para resolver la relación de imagen y tipografía: primera atención, lectura posterior, agrupación, contraste, espacio y legibilidad. La prioridad de la biblioteca elegida gobierna esas relaciones. No la neutralices después con varios recursos de mayor peso.
 
-No conviertas el oficio en un formulario de parámetros. Fija las relaciones que distinguen la solución; el detalle técnico se añade cuando cambia el resultado. Los recursos y ejemplos de [VISUAL_REFERENCES.md](references/VISUAL_REFERENCES.md) amplían criterio y son opcionales; no son layouts obligatorios.
+Construye una descripción de la imagen final, no instrucciones para que otro decida cómo diseñarla. Resuelve:
 
-### 5. Transmitir criterio al generador
+- Formato, encuadre y punto de vista; posición, escala relativa, orientación y recorte del sujeto principal.
+- Ubicación y extensión de cada bloque de texto seleccionado, alineación, orden de lectura, voz tipográfica y diferencia de peso entre niveles. Si no necesita copy externo, decide su ausencia.
+- Fondo, apoyos y espacios libres; qué se superpone, qué queda separado y qué zonas deben permanecer despejadas.
+- Colores con funciones concretas, tratamiento gráfico y recursos que realmente aparecen. En una escena fotográfica, dirección y carácter de luz e integración física.
+- Papel de cada referencia, atributos protegidos y transformaciones permitidas.
 
-Lee [EXECUTION_BRIEF.md](references/EXECUTION_BRIEF.md). El encargo debe contener tanto el criterio rector de la dirección elegida como las decisiones necesarias del trabajo: sujeto o proposición, protagonismo, medio, referencias, relación de imagen y texto y copy externo seleccionado.
+Son decisiones internas sobre los elementos necesarios, no bloques que haya que añadir al cartel. Usa relaciones espaciales inequívocas; añade proporciones aproximadas cuando aclaren el reparto. No hacen falta coordenadas exactas ni parámetros técnicos sin efecto visual. Los recursos de [VISUAL_REFERENCES.md](references/VISUAL_REFERENCES.md) son opcionales, no layouts obligatorios.
 
-No supongas que el generador conoce estas bibliotecas. No reduzcas la dirección a «bonito», «premium», «impactante» o «con jerarquía». Tampoco la conviertas en un inventario minucioso de objetos y efectos que nadie pidió. Preserva el margen creativo que no modifica la propuesta, la fidelidad o el orden de atención.
+### 4. Evaluar la previsualización y su traspaso
 
-Si está disponible, consulta `../prompt-optimization-qa/references/OPTIMIZACION_PROMPT.md` para eliminar duplicados por significado. Su función es depurar la expresión, no borrar los criterios publicitarios que hacen diferente esta dirección. La longitud depende del control necesario; no hay cuota de palabras ni formato único.
+Contrasta la solución con el objetivo, las referencias y [ANTI_AI_STYLE_QA.md](references/ANTI_AI_STYLE_QA.md). Comprueba el peso conjunto de imagen y textos, la viabilidad del copy real en las zonas asignadas, la fidelidad y la función de los apoyos. Si falla una relación, modifica la solución; añadir «con buena composición» no la repara.
 
-### 6. Ejecutar y comprobar
+Lee [EXECUTION_BRIEF.md](references/EXECUTION_BRIEF.md) y convierte esa solución en el encargo completo. Si está disponible, consulta `../prompt-optimization-qa/references/OPTIMIZACION_PROMPT.md` para eliminar duplicados por significado sin borrar decisiones visuales. La longitud depende del control necesario; no hay cuota de palabras ni formato único.
 
-Aplica [ANTI_AI_STYLE_QA.md](references/ANTI_AI_STYLE_QA.md). Si el usuario pide el arte y la herramienta está disponible, genera la solución resuelta. No impongas una fase de aprobación o un ritual de preguntas. Si pidió revisar antes la propuesta, respeta ese acuerdo. Si pidió ver el prompt, muestra el encargo real completo con las referencias previstas; no una síntesis distinta de lo ejecutado. Esa transparencia no obliga por sí sola a esperar confirmación.
+Comprueba después de esa depuración que cada decisión que gobierna el resultado tiene una instrucción ejecutable. **Si el prompt admite tanto la composición elegida como otra que contradice su jerarquía, todavía no está listo.** Resuelve el control espacial o gráfico ausente antes de llamar a la herramienta.
 
-Si faltan datos que cambian materialmente la propuesta, no los inventes para generar. Si faltan herramientas, entrega el encargo utilizable e indica la limitación. Si se pidió solo un prompt, crítica, copy o estructura, entrega ese alcance.
+### 5. Generar desde el diseño resuelto
 
-Inspecciona el arte cuando puedas verlo. Compara la prioridad anunciada, el contenido, la fidelidad y las relaciones del diseño con lo que efectivamente aparece. Si falla, identifica la causa y solicita una corrección concreta conservando lo que funciona. Distingue una dirección insuficiente de una dirección que el generador no siguió. No declares validada una imagen por haber revisado únicamente el texto del prompt.
+Si el usuario pide el arte y la herramienta está disponible, ejecuta el encargo evaluado con las referencias realmente adjuntas. El generador recibe las decisiones finales, los literales y los controles pertinentes; no el brief bruto, las alternativas descartadas ni todo el proceso de análisis.
+
+No supongas que conoce estas bibliotecas. Expresa posición, tamaño relativo, alineación, contraste y tratamiento en términos observables. Su margen de representación no incluye reorganizar la pieza, inventar mensajes o sustituir el lenguaje visual elegido.
+
+Si pidió ver el prompt, muestra el encargo real completo con las referencias previstas; no una síntesis distinta de lo ejecutado. Esa transparencia no exige esperar confirmación salvo acuerdo previo. Si se pidió solo un prompt, crítica, copy o estructura, entrega ese alcance sin generar.
+
+### 6. Verificar la imagen y corregir antes de entregar
+
+Inspecciona la imagen devuelta por la herramienta o ábrela con una herramienta de visión disponible. Compara el resultado real con el diseño resuelto: primera atención, posiciones y escalas, copy y legibilidad a tamaño de uso, fidelidad y coherencia física o gráfica. El éxito de la llamada no acredita el éxito del diseño.
+
+Un fallo material de objetivo, contenido, jerarquía, fidelidad o ejecución requiere corrección antes de cerrar como terminado. Identifica la discrepancia y ejecuta una edición localizada, conservando lo que funciona; si el problema está en la idea o estructura, replantea esa decisión. Inspecciona también la nueva salida. No traslades al usuario la detección rutinaria ni le pidas permiso para reparar el encargo autorizado.
+
+Realiza hasta dos rondas de corrección automática después de la primera generación, salvo que el usuario haya fijado otro alcance. Si el fallo persiste, cambia de estrategia disponible o informa brevemente de lo pendiente sin presentar el resultado como validado. Si la herramienta o el entorno no permiten inspección o corrección, declara esa limitación; no simules haber revisado ni prometas una entrega verificada. Si falta herramienta de generación, entrega el encargo utilizable e indica la limitación.
 
 ## Entrega y continuidad
 
@@ -72,5 +96,7 @@ Entrega el arte o documento solicitado y el texto complementario cuando tenga un
 ## Relación con la suite
 
 Este skill dirige piezas publicitarias con imagen, texto y composición. Depurar solamente la redacción de un prompt corresponde a `prompt-optimization-qa`; desarrollar una escena sin diseño de comunicación corresponde a `luces-camara-prompt`. Consultar bibliotecas compartidas no activa sus flujos ni sus aprobaciones. Este skill funciona de forma independiente.
+
+Mantén la responsabilidad de principio a fin cuando el entregable siga siendo el anuncio o su diseño. Redactar y depurar su encargo son operaciones de este recorrido, no razones para transferirlo a Luces o terminar entregando solo un prompt cuando se pidió el arte. Si consultas un recurso externo que remite a su propio `SKILL.md`, toma el conocimiento pertinente sin importar su flujo, aprobaciones, idiomas o cierre promocional. Las decisiones de arte resueltas dentro del encargo autorizado son la base vigente de la depuración; no requieren aprobación adicional para conservarlas.
 
 Las bibliotecas de productos, personas y promociones contienen las diferencias de dirección; contenido, sistema visual, traspaso y QA contienen el criterio compartido. No añadas una regla permanente por cada producto o fallo observado. Corrige la decisión general que explica el problema y comprueba que siga sirviendo a las otras familias.

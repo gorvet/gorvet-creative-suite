@@ -1,6 +1,6 @@
-# Del criterio publicitario al encargo de ejecución
+# Del diseño resuelto al encargo de ejecución
 
-El generador no conoce automáticamente el análisis ni las bibliotecas del skill. Recibe una dirección de arte que permita construir la pieza, con sus prioridades y límites. El trabajo se pierde tanto al enviar un brief bruto como al reducirlo a «un diseño bonito y profesional».
+El generador no conoce el análisis ni las bibliotecas del skill. Recibe la descripción ejecutable de una pieza que el asistente ya ha diseñado y evaluado. No debe tener que decidir el argumento publicitario, seleccionar el contenido ni inventar la composición principal.
 
 ## Transmitir la prioridad elegida
 
@@ -8,7 +8,7 @@ Abre el encargo con el resultado publicitario que gobierna el trabajo: qué se a
 
 La prioridad debe ser ejecutable. Si el sujeto protagoniza, su presentación, escala y separación tienen que sostenerlo. Si lidera la propuesta, la distribución y el peso de los apoyos tienen que permitir entenderla. No llames secundario a un elemento al que después asignas todos los recursos de atención.
 
-El encargo transmite principios de dirección además de decisiones concretas. El generador puede resolver detalles de representación dentro de ese marco. No hace falta fijar cada coordenada, accesorio o parámetro técnico cuando no define el resultado solicitado.
+Después de esa orientación, describe directamente la imagen final. El argumento explica la elección; las posiciones, escalas y tratamientos hacen que se ejecute. El generador puede resolver detalles de representación que no alteren ese diseño. No puede elegir otro reparto de masas o contenido por falta de instrucciones.
 
 ## Contenido necesario del encargo
 
@@ -16,17 +16,21 @@ El encargo transmite principios de dirección además de decisiones concretas. E
 | --- | --- |
 | Propósito | Sujeto o proposición, público y función publicitaria pertinentes. |
 | Argumento | Qué idea organiza la pieza y por qué la imagen o el mensaje la hacen visible. |
-| Protagonismo | Qué recibe la primera atención y cómo se subordinan los apoyos. |
-| Medio y escena | Tratamiento, contexto, acción o presencia y condiciones físicas o gráficas que necesita la idea. |
+| Protagonismo | Posición, escala relativa, orientación y recorte del foco; tamaño, contraste y separación que subordinan los apoyos. |
+| Medio y escena | Tratamiento, encuadre, perspectiva, contexto y acción; dirección y carácter de luz cuando corresponde. |
 | Referencias | Archivos realmente suministrados, función de cada uno, atributos protegidos y cambios permitidos. |
-| Diseño | Relaciones importantes de imagen, tipografía, agrupación, contraste y espacio de lectura. |
-| Copy | Cadenas externas seleccionadas, su función y su tratamiento; ninguna obligación de rellenar funciones ausentes. |
+| Diseño | Zonas y extensión de imagen y texto, alineaciones, espacios libres, superposiciones, color y soportes gráficos elegidos. |
+| Copy | Cada literal seleccionado con ubicación, anchura o extensión, cortes pertinentes, rasgos tipográficos y peso relativo. Si no hay copy externo, indícalo. |
 
-La tabla comprueba cobertura, no obliga a rellenar todos los campos ni a escribir un bloque por fila. Una orden corta puede ser suficiente; una dirección más exigente puede necesitar más texto. No elimines el criterio rector para cumplir una preferencia de longitud.
+La tabla comprueba cobertura de los componentes presentes; no obliga a añadirlos ni a escribir un bloque por fila. La longitud depende de las decisiones necesarias. Una versión más corta solo sirve si permite reconstruir el mismo diseño; no elimines relaciones concretas por considerarlas exceso de detalle.
 
 ## Resolver sin sobreespecificar
 
 Fija las relaciones que diferencian esta solución. Describir dónde se concentra la masa principal y dónde se lee el apoyo aporta más que exigir «buena jerarquía». Definir contacto y luz compartida aporta más que «integración perfecta». No reemplaces requisitos distintos por calificativos generales.
+
+Usa instrucciones de colocación y tratamiento: qué ocupa cada zona, cuánto pesa respecto al resto, con qué se alinea y sobre qué fondo se lee. Elige los lados y proporciones según el encargo, no desde una plantilla universal. Si un bloque debe ir abajo, dilo; si va directamente sobre el fondo, describe ese tratamiento en lugar de dejar que la herramienta elija una cartela.
+
+Formula primero la solución positiva: tipografía, contraste y espacio que destacan el texto. Añade una exclusión solo cuando protege esa decisión frente a una desviación relevante o responde a una petición expresa. «Sin brochazos» no especifica por sí solo cómo va compuesto el titular. No copies una lista anti-IA completa en todos los prompts.
 
 Selecciona una dirección, sin menús de escenas o estilos incompatibles. Si hay una decisión material sin resolver, aclárala desde el contexto o pregunta por ella antes de inventarla. Mantén libres los detalles que no cambian intención, orden de atención o fidelidad.
 
@@ -42,7 +46,7 @@ No envíes TEXTO COMPLEMENTARIO ni descartes al generador, tampoco como ejemplos
 
 ## Comprobar el traspaso
 
-Lee el encargo por sí solo y comprueba si permite reconstruir sujeto o proposición, argumento, prioridad, relaciones importantes y copy seleccionado. Si una salida opuesta a la dirección seguiría cumpliendo esas frases, identifica qué control falta o se contradice.
+Lee el encargo por sí solo y reconstruye la pieza: localiza sujeto, bloques, escala relativa, recorrido, tratamiento y espacios libres sin consultar tu análisis. Compara esa reconstrucción con la previsualización elegida. Si todavía debes inventar dónde poner un elemento principal, qué texto conservar o cómo distinguir los niveles, completa el diseño antes de ejecutar. Si una salida opuesta a la dirección seguiría cumpliendo esas frases, identifica qué control falta o se contradice.
 
 No confundas revisión textual con resultado visual. Esta lectura detecta un encargo insuficiente, pero no prueba que el generador lo seguirá. La salida requiere inspección contra esas mismas prioridades.
 
@@ -52,4 +56,6 @@ Si el usuario pidió ver la instrucción, muestra este encargo completo y las re
 
 Adjunta referencias que la herramienta pueda utilizar. Mencionar un archivo o un enlace inaccesible no equivale a suministrarlo. Si se trabaja con una imagen base, delimita la transformación en lugar de redescribirla con versiones contradictorias.
 
-Después de observar el arte, corrige el control responsable y conserva lo que funciona. Un error de texto no exige reinterpretar la campaña; un argumento fallido no se resuelve solo cambiando color o luz. Si se necesitan exactitud tipográfica o conservación de imagen que el generador no consigue, utiliza composición o maquetación cuando las herramientas disponibles permitan ejecutarlas.
+Inspecciona la salida y contrástala con la distribución y tratamiento enviados, además de con el objetivo. Para corregir, identifica el elemento afectado, el cambio visible requerido y las relaciones que se conservan. Usa la imagen generada como referencia de edición cuando la herramienta lo permita; adjunta también la referencia de identidad si se necesita recuperar fidelidad.
+
+Un error de texto no exige reinterpretar la campaña; un argumento fallido no se resuelve solo cambiando color o luz. Cada nueva salida vuelve a verificarse. Aplica el límite de correcciones y la gestión de impedimentos definidos en `SKILL.md`. Si se necesitan exactitud tipográfica o conservación de imagen que el generador no consigue, utiliza composición o maquetación cuando las herramientas disponibles permitan ejecutarlas y su uso esté autorizado.

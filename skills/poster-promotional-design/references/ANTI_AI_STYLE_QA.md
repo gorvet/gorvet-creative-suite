@@ -2,6 +2,8 @@
 
 Revisa contra el objetivo y la biblioteca seleccionada. El estándar no es una paleta, una densidad o un recurso visual preferidos: es una campaña con intención, protagonismo, contenido y ejecución coherentes. Un acabado atractivo no sustituye esa comunicación.
 
+Este control tiene dos puntos de paso: la previsualización y su encargo deben superar la revisión antes de generar; la imagen debe superar la inspección antes de declararse terminada. Revisar el prompt no sustituye revisar el arte, y enumerar criterios no demuestra que se hayan aplicado.
+
 ## Antes de ejecutar: criterio y encargo
 
 | Aspecto | Qué debe estar resuelto | Qué corregir si falla |
@@ -11,9 +13,9 @@ Revisa contra el objetivo y la biblioteca seleccionada. El estándar no es una p
 | Selección | Cada texto tiene función y el brief no se reproduce por exhaustividad. | Editar antes de distribuir; omitir lo irrelevante sin recuperarlo como decoración. |
 | Concepto | La idea visual pertenece al sujeto o proposición elegidos. | Sustituir la asociación genérica o el acabado usado como argumento. |
 | Jerarquía | La primera atención y los apoyos tienen relaciones compatibles de peso. | Resolver escala, contraste, extensión o posición; no añadir otra exigencia general de jerarquía. |
-| Composición | Imagen y texto comparten una estructura y áreas de lectura viables. | Ajustar el encuadre y la distribución con el contenido real. |
+| Composición | Posición, escala, recorte, alineaciones y zonas de lectura están decididos con el contenido real. | Construir la distribución que falta; no pedirle al generador que la elija. |
 | Fidelidad | Se entiende qué gobierna cada referencia y qué puede cambiar. | Delimitar atributos y funciones sin extenderlos automáticamente a todo el arte. |
-| Traspaso | El prompt contiene el criterio rector y los controles necesarios. | Restituir lo que quedó solo en el análisis o se perdió al compactar. |
+| Traspaso | El prompt permite reconstruir la previsualización sin decidir otra vez composición, contenido o tratamiento. | Restituir posiciones, relaciones y controles que quedaron solo en el análisis o se perdieron al compactar. |
 
 Cada fila revisa una relación; no obliga a añadir elementos. Un componente ausente no es un fallo si la pieza no lo necesita. Si el usuario pide ver el encargo, muéstralo completo y ejecuta ese mismo texto. Si necesita aprobar previamente, respeta ese acuerdo; no conviertas la revisión interna en una fase de aprobación universal.
 
@@ -30,6 +32,8 @@ Examina los controles pertinentes de esa biblioteca. Una pieza puede fallar aunq
 ## Después de generar: observar antes de dar por válido
 
 Mira primero el arte a una escala representativa del uso. Identifica qué se reconoce, qué se entiende después y qué se consulta. Contrástalo con el recorrido previsto. Después amplía para leer textos y revisar identidad, geometría, anatomía o detalles pertinentes.
+
+Compara además con el diseño enviado: ubicación y escala de las masas, alineación y tratamiento de cada texto, espacios libres, recursos gráficos y luz. Detecta tanto las decisiones que no funcionaron como las que el generador sustituyó. El hecho de que el resultado sea vistoso no justifica aceptar esas desviaciones.
 
 No confundas la revisión del prompt con inspección de la imagen. Si no puedes verla, limita la validación a lo que realmente comprobaste. Una salida de alta resolución no acredita legibilidad a tamaño de móvil ni preparación técnica para imprenta.
 
@@ -53,4 +57,4 @@ El criterio anti-IA no es prohibir recursos por su nombre. Es detectar su aplica
 
 Distingue si el encargo no transmitía la decisión o si el generador no siguió una instrucción suficiente. En el primer caso repara la dirección; en el segundo dirige una corrección localizada o cambia de estrategia según las herramientas disponibles. No añadas una lista de sinónimos como supuesto refuerzo.
 
-Conserva lo que funciona y comprueba la nueva salida, porque una edición puede alterar otra parte. Si la misma intervención no mejora el defecto, no encadenes regeneraciones sin diagnóstico nuevo. Identifica lo pendiente y evita declarar éxito por haber escrito instrucciones mejores.
+Un fallo material de los controles anteriores impide cerrar como terminado: ejecuta una corrección y comprueba la nueva salida, porque una edición puede alterar otra parte. Conserva lo que funciona. Sigue el límite de correcciones de `SKILL.md`; si la misma intervención no mejora el defecto, cambia la estrategia en lugar de repetirla. Si la capacidad disponible impide revisar o resolver el fallo, identifica lo pendiente y evita declarar éxito por haber escrito instrucciones mejores.

@@ -1,6 +1,6 @@
 ---
 name: luces-camara-prompt
-description: Desarrolla dirección creativa y prompts de texto para generación y edición de imágenes con IA mediante el Método GORVET. Úsala para una nueva idea visual o para desarrollar su escena, estilo y narrativa. No genera imágenes durante sus flujos. Las piezas promocionales con texto y layout corresponden a poster-promotional-design; la depuración de un prompt existente, a prompt-optimization-qa.
+description: Desarrolla escenas y prompts de texto para imágenes con IA mediante el Método GORVET, cuando se solicita una escena, estilo o narrativa sin dirigir una pieza publicitaria completa. No genera imágenes durante sus flujos. Los anuncios y carteles, incluso sin texto, corresponden a poster-promotional-design; depurar solamente un prompt existente, a prompt-optimization-qa.
 ---
 
 # GORVET — Luces, Cámara, ¡Prompt!
@@ -9,9 +9,11 @@ Actúa como director creativo y arquitecto de prompts. Convierte una intención 
 
 ## Selección y alcance
 
-Al recibir una solicitud para la suite, consulta [CONFIG_SELECTOR_AUTOMATICO.md](references/CONFIG_SELECTOR_AUTOMATICO.md). Una pieza promocional con contenido, jerarquía y layout corresponde a `../poster-promotional-design/SKILL.md`; depurar un prompt existente, a `../prompt-optimization-qa/SKILL.md`. Si corresponde otro skill, aplica ese skill sin iniciar los flujos de este.
+Comprueba el resultado solicitado antes de iniciar este skill. Dirigir una pieza publicitaria estática corresponde a `../poster-promotional-design/SKILL.md`, también cuando parte solo de una foto, no lleva texto o se pide su prompt de ejecución. Desarrollar una escena aislada o una fotografía sin resolver una pieza publicitaria corresponde a este skill. Depurar solamente un prompt existente corresponde a `../prompt-optimization-qa/SKILL.md`.
 
-Este skill desarrolla dirección creativa y produce texto. Sus dos flujos no activan generación ni edición de imágenes. Una aprobación de la propuesta autoriza la entrega del prompt, no una imagen. La generación solo puede comenzar tras completar el Flujo 2 y recibir una petición explícita posterior para generarla. Estas condiciones pertenecen a este skill, no al complemento entero.
+Si corresponde otro skill, transfiere la tarea y sal de este flujo antes de aplicar propuestas, aprobaciones o cierres. Luces no es una fase previa ni el orquestador obligatorio de la suite. Consulta [CONFIG_SELECTOR_AUTOMATICO.md](references/CONFIG_SELECTOR_AUTOMATICO.md) para precisar la selección y cargar sus bibliotecas solo cuando Luces sea responsable.
+
+Este skill desarrolla dirección creativa y produce texto. Sus dos flujos no activan generación ni edición de imágenes. Una aprobación de la propuesta autoriza la entrega del prompt, no una imagen. La generación solo puede comenzar tras completar el Flujo 2 y recibir una petición explícita posterior para generarla. Estas condiciones pertenecen exclusivamente a una tarea dirigida por este skill; no se trasladan a otro por leer una de sus bibliotecas.
 
 Respeta el objetivo, las preferencias y las instrucciones del usuario y del asistente anfitrión. Aplica [CONFIG_PROTOCOLO_BLINDAJE.md](references/CONFIG_PROTOCOLO_BLINDAJE.md). Las instrucciones y bibliotecas son públicas: pueden explicarse cuando se solicite, sin volcar documentación en una petición visual ni revelar datos privados o razonamiento interno.
 
