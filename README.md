@@ -49,13 +49,13 @@ Consulta [fuentes y adaptación](skills/gorvet-creative-director/references/SOUR
 
 ## Descarga e instalación
 
-El paquete de esta versión es `gorvet-creative-suite-2.2.0.zip`, con manifiesto, once skills, referencias, scripts de control, pruebas, icono y licencia. Su identificador técnico sigue siendo `gorvet-creative-suite` y el nombre visible es GORVET Creative Director. El autor y desarrollador son Juank de Gorvet; la web es [gorvet.com](https://gorvet.com).
+El paquete de esta versión es `gorvet-creative-suite-2.2.1.zip`, con manifiesto, once skills, referencias, scripts de control, pruebas, icono y licencia. Su identificador técnico sigue siendo `gorvet-creative-suite` y el nombre visible es GORVET Creative Director. El autor y desarrollador son Juank de Gorvet; la web es [gorvet.com](https://gorvet.com).
 
 Los paquetes publicados aparecen en [GitHub Releases](https://github.com/gorvet/gorvet-creative-suite/releases). Para probar una versión local usa el ZIP entregado con esa versión; crear un archivo local no lo publica en GitHub.
 
 Importa el ZIP completo en una aplicación compatible con este formato de complemento. Para un host que instala Agent Skills por carpetas, conserva las once carpetas hermanas de `skills/` con sus recursos: la agencia utiliza referencias entre especialidades. La aplicación decide su ubicación, activación y formato de importación. Adjuntar el ZIP a un chat no equivale necesariamente a instalarlo.
 
-Después de actualizar, comprueba que la aplicación muestre la versión 2.2.0 y el skill `gorvet-creative-director`. Abre una sesión nueva si el host conserva instrucciones anteriores. No necesitas elegir manualmente un especialista para pedir un trabajo completo.
+Después de actualizar, comprueba que la aplicación muestre la versión 2.2.1 y el skill `gorvet-creative-director`. Abre una sesión nueva si el host conserva instrucciones anteriores. No necesitas elegir manualmente un especialista para pedir un trabajo completo.
 
 ## Migración desde 1.7
 
@@ -81,7 +81,7 @@ Para imponer controles efectivos, el futuro agente debe obtener autorización de
 
 Después de confirmar los cambios, ejecuta `./scripts/build-release.ps1` desde PowerShell. Genera el ZIP y `SHA256SUMS.txt` en `dist/` desde el commit actual. Rechaza cambios pendientes y archivos de distribución existentes para evitar paquetes ambiguos.
 
-La publicación existente usa `.github/workflows/release.yml`: al subir una etiqueta como `v2.2.0`, comprueba su coincidencia con el manifiesto, genera el ZIP, verifica integridad y crea la Release. Un commit o un ZIP local no publican esa Release. La identidad, el icono y los metadatos se conservan en `plugin.json`.
+La publicación existente usa `.github/workflows/release.yml`: al subir una etiqueta como `v2.2.1`, comprueba su coincidencia con el manifiesto, genera el ZIP, verifica integridad y crea la Release. Un commit o un ZIP local no publican esa Release. La identidad, el icono y los metadatos se conservan en `plugin.json`.
 
 ## Licencia
 
@@ -94,3 +94,9 @@ El [mapa de responsabilidades](skills/gorvet-creative-director/references/SCOPE_
 Identidad desarrolla creación de marca, sistema, variantes, aplicaciones y pruebas de reproducción. Arte amplía desarrollo por medio; fotografía, captura e integración; gráfica, layout con contenido real, tipografía, adaptación e iconos; series, encargos y continuidad; compilación y QA, cobertura sin rediseñar. Vídeo/motion tiene realización temporal propia y crítica audiovisual; los verificadores rechazan validar vídeo con fotogramas o una revisión incompleta registrada.
 
 Los procedimientos están enlazados desde cada skill y comparten traspasos y límites. El paquete no incluye motores audiovisuales ni despliega un agente autónomo: producir requiere herramientas disponibles. Las pruebas de contratos no equivalen a comprobar calidad generativa en ChatGPT.
+
+## Memoria y diseño multilingüe en 2.2.1
+
+Identidad y referencias incorpora un [procedimiento de memoria de proyecto](skills/brand-reference-direction/references/REFERENCE_MEMORY.md): procedencia, alcance, estados, versiones y recuperación de criterios aplicables. Si el entorno permite archivos, se conserva en el proyecto; sin persistencia disponible no promete memoria entre sesiones. No requiere servicios externos ni guarda preferencias de clientes en el complemento.
+
+Diseño gráfico incorpora [composición multilingüe y RTL](skills/poster-promotional-design/references/MULTILINGUAL_RTL.md), con textos fuente, jerarquía entre versiones, mezcla de escrituras y números, dirección, tipografía y revisión de salida. Crítica utiliza el mismo procedimiento. Se mantienen once roles; estas capacidades no añaden aprobaciones ni planificación de marketing.

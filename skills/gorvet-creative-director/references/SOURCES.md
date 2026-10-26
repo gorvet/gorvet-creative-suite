@@ -19,3 +19,7 @@ Fecha de consulta: 26 de octubre de 2026. Las fuentes describen métodos y capac
 
 - [Designly — dirección de vídeo](https://github.com/imMamdouhaboammar/designly/blob/main/skills/video-director/SKILL.md). Su módulo declara procedencia de [Visual Skills de Serge Shima](https://github.com/smixs/visual-skills), licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Se reconocen esas fuentes para la separación conceptual de realización audiovisual y compilación; el texto y control temporal de GORVET son una adaptación propia, sin importar sus adaptadores ni biblioteca.
 - [Marketing Design — Logo Design](https://github.com/vanducng/skills/blob/main/skills/marketing-design/references/logo-design.md) y [Corporate Identity Program](https://github.com/vanducng/skills/blob/main/skills/marketing-design/references/cip-design.md), de vanducng. Revisados como referencia de relación entre marca, variantes y aplicaciones; no se incluyen scripts, datos ni modelos externos.
+
+## Composición multilingüe y bidireccional
+
+[Arabic & Persian Layout Requirements del W3C](https://www.w3.org/International/alreq/) se consulta para recorrido, escritura y necesidades de composición árabe/persa. [How to use Unicode controls for bidi text del W3C](https://www.w3.org/International/questions/qa-bidi-unicode-controls) respalda la distinción entre orden lógico, dirección e aislamiento de fragmentos. Se aplican por necesidad del contenido; no equivalen a una certificación lingüística ni se extrapolan todas sus reglas a otras escrituras.

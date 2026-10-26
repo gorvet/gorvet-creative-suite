@@ -25,3 +25,7 @@ No son once llamadas obligatorias. El director selecciona el recorrido por decis
 Antes de incorporarlo a una ruta debe tener entrada reconocible, procedimiento pertinente, salida utilizable, límites, criterios de aceptación y retorno de fallos. Las referencias enlazadas desarrollan los modos que lo requieren; no son tareas para completar después. No confundir integridad de instrucciones con obediencia garantizada del modelo: la producción se valida mediante una salida real observada.
 
 Las bibliotecas históricas conservan vocabulario de campañas y marketing del libro y fuentes externas. Se consultan únicamente por sus técnicas de diseño aplicables; no amplían este alcance ni activan un plan comercial.
+
+## Memoria y lenguas dentro de los roles existentes
+
+Identidad/referencias mantiene la [memoria de proyecto](../../brand-reference-direction/references/REFERENCE_MEMORY.md), con evidencia y preferencias por alcance. El director selecciona criterios vigentes; compilación conserva solo los aplicables al encargo. Gráfica resuelve [diseño multilingüe y RTL](../../poster-promotional-design/references/MULTILINGUAL_RTL.md); crítica verifica la salida y declara cualquier límite lingüístico. No son roles adicionales ni integraciones externas.

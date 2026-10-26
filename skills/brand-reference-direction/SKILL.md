@@ -42,6 +42,8 @@ Define anclas que puedan observarse entre piezas: identidad, geometría, paleta,
 
 Conserva la referencia aprobada como fuente de identidad. Una edición fallida no debe sustituirla. Si hay memoria de proyecto disponible, guarda los materiales y decisiones con identificadores estables; sin persistencia real no prometas recordarlos en otra sesión.
 
+Aplica [REFERENCE_MEMORY.md](references/REFERENCE_MEMORY.md) para guardar o recuperar referencias y preferencias del proyecto: procedencia, alcance, estado, revisión y reglas de sustitución. Recupera solo criterios pertinentes; una elección puntual no se convierte en preferencia global. La memoria no suministra al generador archivos que ya no están disponibles.
+
 ## Bibliotecas y traspaso
 
 Consulta [referencias visuales](../luces-camara-prompt/references/REFERENCES_REFERENCIAS_VISUALES.md), [consistencia](../luces-camara-prompt/references/REFERENCES_CONSISTENCIA_IDENTIDAD.md) y [producto y branding](../luces-camara-prompt/references/REFERENCES_PRODUCTO_BRANDING.md) según la tarea. Las sugerencias del libro se subordinan al encargo y a los materiales disponibles.

@@ -63,3 +63,5 @@ Al iterar, reemplaza la decisión responsable; no acumules refuerzos ni reglas p
 ## Procedimiento de desarrollo
 
 Para construir layout, tipografía y adaptaciones con contenido real aplica [GRAPHIC_CONSTRUCTION.md](references/GRAPHIC_CONSTRUCTION.md). Consulta solo el modo pertinente.
+
+Para varias lenguas, escrituras mixtas o recorrido RTL aplica [MULTILINGUAL_RTL.md](references/MULTILINGUAL_RTL.md): literales fuente, dirección de bloques, jerarquía entre versiones, tipografía y verificación. No refleja automáticamente toda la pieza ni altera el orden lógico del texto para simular su lectura.

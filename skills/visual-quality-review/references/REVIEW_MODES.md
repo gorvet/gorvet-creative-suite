@@ -10,6 +10,8 @@ Contrasta contenido seleccionado y literales, protagonista, recorrido, proporcio
 
 ## Identidad
 
+En piezas multilingües o RTL aplica los controles de [MULTILINGUAL_RTL.md](../../poster-promotional-design/references/MULTILINGUAL_RTL.md). Verifica literales, dirección, mezcla de números/escrituras y formas; una limitación de revisión lingüística permanece explícita. Una memoria de preferencias aporta contexto, no aprobación automática de la salida actual.
+
 Observa marca plana, variantes y aplicaciones reales. Comprueba reconocimiento, contraformas, balance, tamaño pequeño, fondos, monocromo cuando forma parte del alcance y consistencia de sistema. Un mockup atractivo no valida un maestro defectuoso. No confirma vectorización, licencia de fuentes o registrabilidad por el aspecto de un PNG. Usa perfil visual para los resultados observables y registra verificaciones técnicas aparte.
 
 ## Edición y restauración
