@@ -66,7 +66,7 @@ Los skills no dependen de un proveedor o modelo concreto y no requieren un servi
 
 ## Descarga rápida
 
-Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.6.1.zip` contiene el manifiesto, los tres skills completos, sus referencias, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad. El identificador técnico `gorvet-creative-suite` se conserva para mantener la continuidad de las instalaciones; el nombre visible es GORVET Creative Director.
+Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.6.2.zip` contiene el manifiesto, los tres skills completos, sus referencias, el icono, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad. El identificador técnico `gorvet-creative-suite` se conserva para mantener la continuidad de las instalaciones; el nombre visible es GORVET Creative Director.
 
 El ZIP reúne toda la suite. Impórtalo directamente solo si la aplicación admite este formato de complemento. Para aplicaciones que instalan Agent Skills individuales, extrae el paquete y utiliza cada carpeta de `skills/`, siguiendo los pasos siguientes. No necesitas Git para descargarlo.
 
@@ -203,11 +203,11 @@ Para publicar una versión nueva:
 
 1. Actualiza `version` en `plugin.json` y el nombre del ZIP documentado en este README.
 2. Haz commit y push de los cambios.
-3. Crea y sube la etiqueta de esa versión. Por ejemplo, para `1.6.1`:
+3. Crea y sube la etiqueta de esa versión. Por ejemplo, para `1.6.2`:
 
 ```powershell
-git tag v1.6.1
-git push origin v1.6.1
+git tag v1.6.2
+git push origin v1.6.2
 ```
 
 Comprueba la ejecución en la pestaña Actions y descarga los archivos de la Release resultante. Las etiquetas deben ser nuevas: el workflow no sobrescribe releases existentes. Si la etiqueta no coincide con el manifiesto o falla la verificación del paquete, la ejecución termina sin publicar.
@@ -225,5 +225,7 @@ Puedes utilizar el skill sin comprar el libro. Para profundizar, consulta [Luces
 **Autor y desarrollador: Juank de Gorvet** · [gorvet.com](https://gorvet.com/)
 
 El manifiesto declara la autoría en `author.name`, el desarrollador en `extensions.com.openai.interface.developerName` y la web en `homepage` y `websiteURL`. En el directorio de ChatGPT, el nombre público del desarrollador depende de la identidad verificada seleccionada al publicar, según la [documentación de publicación de OpenAI](https://developers.openai.com/plugins/deploy/submission). Esa identidad de la ficha se administra en ChatGPT y no se sustituye únicamente cambiando el JSON del paquete.
+
+El logo y el icono se incluyen en `assets/icon.png`. Los campos `logo`, `logoDark`, `composerIcon` y `composerIconDark` apuntan a ese mismo archivo para conservar la identidad gráfica en ambos temas, sin depender de una imagen externa.
 
 Publicado bajo la [licencia MIT](LICENSE). Puedes usar, estudiar, modificar y distribuir el skill, incluso comercialmente, conservando el aviso de autoría y la licencia. La licencia se aplica al contenido de este repositorio; no incluye el libro ni sus materiales editoriales.
