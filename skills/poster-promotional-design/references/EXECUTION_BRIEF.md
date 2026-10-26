@@ -50,12 +50,16 @@ Lee el encargo por sí solo y reconstruye la pieza: localiza sujeto, bloques, es
 
 No confundas revisión textual con resultado visual. Esta lectura detecta un encargo insuficiente, pero no prueba que el generador lo seguirá. La salida requiere inspección contra esas mismas prioridades.
 
-Si el usuario pidió ver la instrucción, muestra este encargo completo y las referencias previstas. Debe coincidir con lo que se ejecuta. Esa visibilidad no añade una aprobación obligatoria: respeta el flujo de entrega solicitado y pregunta únicamente por decisiones que no puedas resolver con fidelidad.
+Antes de la primera generación, muestra la dirección visual resuelta, el copy seleccionado y este encargo completo como texto copiable, con las referencias previstas y los parámetros aplicables identificados por separado. Espera la aprobación de ese conjunto según `../SKILL.md`; no basta haber anunciado que vas a generar. Si el usuario ha pedido expresamente ejecución directa, aplica esa excepción sin ocultar el prompt salvo petición expresa de omitirlo.
+
+El texto enviado en el campo de prompt de la herramienta debe coincidir con el mostrado. Completa la depuración y cualquier traducción antes de presentarlo; no añadas instrucciones ocultas después. Las referencias y parámetros documentados deben corresponder a los que realmente suministras. No afirmes conocer reescrituras internas del servicio de generación.
 
 ## Ejecución e iteración
 
 Adjunta referencias que la herramienta pueda utilizar. Mencionar un archivo o un enlace inaccesible no equivale a suministrarlo. Si se trabaja con una imagen base, delimita la transformación en lugar de redescribirla con versiones contradictorias.
 
 Inspecciona la salida y contrástala con la distribución y tratamiento enviados, además de con el objetivo. Para corregir, identifica el elemento afectado, el cambio visible requerido y las relaciones que se conservan. Usa la imagen generada como referencia de edición cuando la herramienta lo permita; adjunta también la referencia de identidad si se necesita recuperar fidelidad.
+
+Cada intento debe tener su instrucción visible antes de la llamada, también las correcciones automáticas. Muestra el prompt completo utilizado en ese intento, no solo «voy a simplificarlo» ni un resumen del cambio. Si la herramienta recibe únicamente una instrucción de edición, muestra esa instrucción completa e identifica la imagen base. No reconstruyas a posteriori un supuesto prompt distinto del enviado.
 
 Un error de texto no exige reinterpretar la campaña; un argumento fallido no se resuelve solo cambiando color o luz. Cada nueva salida vuelve a verificarse. Aplica el límite de correcciones y la gestión de impedimentos definidos en `SKILL.md`. Si se necesitan exactitud tipográfica o conservación de imagen que el generador no consigue, utiliza composición o maquetación cuando las herramientas disponibles permitan ejecutarlas y su uso esté autorizado.

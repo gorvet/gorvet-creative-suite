@@ -27,9 +27,9 @@ Las instrucciones expresas y la identidad existente prevalecen sobre los valores
 
 **Previsualización conceptual obligatoria.** Antes de invocar `image_gen` o cualquier herramienta equivalente, define internamente una representación visual concreta de la pieza final. Resuelve concepto, composición, jerarquía, relaciones espaciales y tratamiento gráfico; evalúa esa solución contra el objetivo, las referencias y el control anti-IA. Una intención genérica, una lista de reglas o el brief original no constituyen una dirección terminada. No delegues al generador la elección del concepto, la edición del contenido ni la organización principal.
 
-El recorrido es **interpretar → conceptualizar → diseñar → evaluar → generar → verificar**. Cada paso utiliza la solución del anterior. Si la evaluación falla, vuelve a diseñar antes de generar; si la imagen falla, corrige y vuelve a verificar antes de cerrar. Las bibliotecas aportan criterio a este recorrido, no lo sustituyen ni crean recorridos paralelos.
+El recorrido es **interpretar → conceptualizar → diseñar → evaluar → presentar dirección y prompt → aprobar → generar → verificar**. Cada paso utiliza la solución del anterior. Si la evaluación falla, vuelve a diseñar antes de presentar; si la imagen falla, corrige y vuelve a verificar antes de cerrar. Las bibliotecas aportan criterio a este recorrido, no lo sustituyen ni crean recorridos paralelos.
 
-Realiza este trabajo internamente, sin mostrar razonamientos ni pedir aprobaciones rutinarias. El usuario encarga una pieza y recibe el resultado. Pregunta únicamente por información material que no puedas resolver con fidelidad; respeta cualquier revisión previa que el usuario haya solicitado.
+Desarrolla y evalúa internamente; muestra las decisiones finales y el prompt, sin exponer razonamiento privado. Antes de la primera generación, presenta una dirección visual breve y concreta, el texto exacto seleccionado para la pieza y el prompt completo que enviarás, junto con las referencias y parámetros aplicables. Pide aprobar ese conjunto y termina el turno sin generar. Una petición inicial de un cartel no sustituye esta aprobación de la propuesta ya visible. Si el usuario solicita expresamente ejecución directa sin revisión previa, respeta esa excepción; la instrucción se muestra antes de ejecutar salvo que también pida omitirla.
 
 ## Método de dirección
 
@@ -75,17 +75,19 @@ Comprueba después de esa depuración que cada decisión que gobierna el resulta
 
 ### 5. Generar desde el diseño resuelto
 
-Si el usuario pide el arte y la herramienta está disponible, ejecuta el encargo evaluado con las referencias realmente adjuntas. El generador recibe las decisiones finales, los literales y los controles pertinentes; no el brief bruto, las alternativas descartadas ni todo el proceso de análisis.
+Presenta el conjunto definido en la regla de ejecución y espera su aprobación. Si el usuario pide cambios, actualiza dirección, selección de texto y prompt antes de volver a presentarlos. Si se pidió solo un prompt, crítica, copy o estructura, entrega ese alcance sin generar ni pedir autorización para una imagen no solicitada.
+
+Cuando el usuario apruebe generar la propuesta visible y la herramienta esté disponible, envía exactamente el prompt mostrado con las referencias indicadas. No lo reescribas, traduzcas, amplíes ni optimices después de mostrarlo. Si necesitas cambiarlo, publica la nueva versión antes de ejecutarla; un cambio de concepto, contenido o composición requiere renovar la aprobación. El generador recibe las decisiones finales, los literales y los controles pertinentes; no el brief bruto, las alternativas descartadas ni todo el proceso de análisis.
 
 No supongas que conoce estas bibliotecas. Expresa posición, tamaño relativo, alineación, contraste y tratamiento en términos observables. Su margen de representación no incluye reorganizar la pieza, inventar mensajes o sustituir el lenguaje visual elegido.
 
-Si pidió ver el prompt, muestra el encargo real completo con las referencias previstas; no una síntesis distinta de lo ejecutado. Esa transparencia no exige esperar confirmación salvo acuerdo previo. Si se pidió solo un prompt, crítica, copy o estructura, entrega ese alcance sin generar.
+Muestra el prompt como texto completo copiable, separado de la explicación y de la lista de referencias. Identifica las imágenes realmente adjuntas y su función; indica los parámetros de ejecución que afecten al resultado cuando la herramienta los exponga. Lo mostrado documenta lo que envía el asistente; no atribuyas al generador procesos internos que no puedas observar.
 
 ### 6. Verificar la imagen y corregir antes de entregar
 
 Inspecciona la imagen devuelta por la herramienta o ábrela con una herramienta de visión disponible. Compara el resultado real con el diseño resuelto: primera atención, posiciones y escalas, copy y legibilidad a tamaño de uso, fidelidad y coherencia física o gráfica. El éxito de la llamada no acredita el éxito del diseño.
 
-Un fallo material de objetivo, contenido, jerarquía, fidelidad o ejecución requiere corrección antes de cerrar como terminado. Identifica la discrepancia y ejecuta una edición localizada, conservando lo que funciona; si el problema está en la idea o estructura, replantea esa decisión. Inspecciona también la nueva salida. No traslades al usuario la detección rutinaria ni le pidas permiso para reparar el encargo autorizado.
+Un fallo material de objetivo, contenido, jerarquía, fidelidad o ejecución requiere corrección antes de cerrar como terminado. Identifica la discrepancia y ejecuta una edición localizada, conservando lo que funciona; si el problema está en la idea o estructura, replantea esa decisión. Inspecciona también la nueva salida. Las correcciones que restablecen el diseño aprobado son automáticas dentro del límite siguiente: muestra antes de cada llamada el prompt completo de corrección y las referencias utilizadas, sin pedir otra aprobación. Si la solución cambia concepto, contenido o composición aprobados, presenta la nueva dirección y su prompt y espera aprobación.
 
 Realiza hasta dos rondas de corrección automática después de la primera generación, salvo que el usuario haya fijado otro alcance. Si el fallo persiste, cambia de estrategia disponible o informa brevemente de lo pendiente sin presentar el resultado como validado. Si la herramienta o el entorno no permiten inspección o corrección, declara esa limitación; no simules haber revisado ni prometas una entrega verificada. Si falta herramienta de generación, entrega el encargo utilizable e indica la limitación.
 

@@ -17,7 +17,7 @@ Este control tiene dos puntos de paso: la previsualización y su encargo deben s
 | Fidelidad | Se entiende qué gobierna cada referencia y qué puede cambiar. | Delimitar atributos y funciones sin extenderlos automáticamente a todo el arte. |
 | Traspaso | El prompt permite reconstruir la previsualización sin decidir otra vez composición, contenido o tratamiento. | Restituir posiciones, relaciones y controles que quedaron solo en el análisis o se perdieron al compactar. |
 
-Cada fila revisa una relación; no obliga a añadir elementos. Un componente ausente no es un fallo si la pieza no lo necesita. Si el usuario pide ver el encargo, muéstralo completo y ejecuta ese mismo texto. Si necesita aprobar previamente, respeta ese acuerdo; no conviertas la revisión interna en una fase de aprobación universal.
+Cada fila revisa una relación; no obliga a añadir elementos. Un componente ausente no es un fallo si la pieza no lo necesita. Antes de ejecutar, comprueba también que el prompt completo, las referencias y los parámetros aplicables están visibles y que existe la aprobación requerida por `../SKILL.md` o la excepción expresa de ejecución directa. El prompt de cada corrección también debe mostrarse antes de la llamada. La aprobación del usuario no sustituye la evaluación interna ni valida por adelantado la imagen.
 
 ## Comprobar la prioridad de la familia elegida
 
