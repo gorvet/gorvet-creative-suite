@@ -8,13 +8,13 @@ Ayuda a resolver la falta de dirección en peticiones visuales, las instruccione
 
 - **`luces-camara-prompt`**: desarrolla una dirección creativa y, después de que el usuario la apruebe, entrega el prompt en español e inglés. Incluye recursos para retrato, producto, publicidad, ilustración, interiores, retoque y restauración.
 - **`prompt-optimization-qa`**: depura la redacción de prompts, especialmente los de Luces, Cámara, ¡Prompt! Elimina redundancia, expansión innecesaria y contradicciones sin perder decisiones, restricciones ni textos literales. No incluye convenciones de Storyface.
-- **`poster-promotional-design`**: resuelve contenido, sujeto, concepto, escena, jerarquía, composición y tipografía antes de generar pósters, posts, stories, flyers y otras piezas promocionales estáticas. Incluye dirección de productos, personas y uso de productos, comprobación del traspaso de decisiones al generador y revisión del arte. Sus bibliotecas incorporan criterio editorial, sistema visual, casos completos de ejecución y cuatro esquemas visuales originales.
+- **`poster-promotional-design`**: actúa como director de arte publicitario de pósters, posts, stories, flyers y otras piezas estáticas. Selecciona una de tres bibliotecas de dirección: productos, personas o promociones. Comparte reglas de contenido, concepto, jerarquía, composición, traspaso al generador y revisión del arte, además de cuatro esquemas visuales originales.
 
 Cuando se invoca la suite, el asistente debe seleccionar el skill por el resultado solicitado: diseño de piezas con texto y layout, optimización de un prompt existente o dirección de escena y creación de prompts. No necesitas indicar el nombre interno para pedir un póster o un estado de WhatsApp. La selección depende de que la aplicación cargue las instrucciones actualizadas.
 
 Los tres skills funcionan de forma independiente. Luces consulta las reglas de optimización al redactar; el skill `prompt-optimization-qa` atiende revisiones explícitas de prompts existentes, sin una segunda fase creativa. El QA de posts pertenece a `poster-promotional-design` y revisa comunicación y fidelidad, además de la redacción. Storyface queda fuera de este paquete; sus reglas pueden aportarse como un contrato externo cuando se soliciten.
 
-Los skills de prompts trabajan con texto. `poster-promotional-design` procesa el brief y prepara un encargo de diseño antes de ejecutarlo, si el usuario pide un arte y el asistente dispone de una herramienta de imagen o diseño. La suite no incluye un generador propio.
+Los skills de prompts trabajan con texto. `poster-promotional-design` dirige y ejecuta el arte cuando se solicita una imagen y hay una herramienta disponible. Puede entregar o mostrar el encargo completo cuando se pida, sin añadir una aprobación obligatoria al proceso. La suite no incluye un generador propio.
 
 ## Método G.O.R.V.E.T.
 
@@ -66,7 +66,7 @@ Los skills no dependen de un proveedor o modelo concreto y no requieren un servi
 
 ## Descarga rápida
 
-Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.6.2.zip` contiene el manifiesto, los tres skills completos, sus referencias, el icono, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad. El identificador técnico `gorvet-creative-suite` se conserva para mantener la continuidad de las instalaciones; el nombre visible es GORVET Creative Director.
+Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.7.0.zip` contiene el manifiesto, los tres skills completos, sus referencias, el icono, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad. El identificador técnico `gorvet-creative-suite` se conserva para mantener la continuidad de las instalaciones; el nombre visible es GORVET Creative Director.
 
 El ZIP reúne toda la suite. Impórtalo directamente solo si la aplicación admite este formato de complemento. Para aplicaciones que instalan Agent Skills individuales, extrae el paquete y utiliza cada carpeta de `skills/`, siguiendo los pasos siguientes. No necesitas Git para descargarlo.
 
@@ -118,7 +118,7 @@ Con `luces-camara-prompt`, primero recibirás una propuesta de escena, estilo, i
 
 Con `prompt-optimization-qa`, proporciona el prompt original y el objetivo de depuración: eliminar repetición, reducir expansión o resolver contradicciones sin cambiar la dirección visual.
 
-Con `poster-promotional-design`, aporta el objetivo, el contenido, el formato y las referencias disponibles. El skill resuelve internamente siete pasos: contenido, análisis del sujeto, argumento visual, escena, layout y tipografía, encargo de ejecución y revisión del arte. Antes de generar comprueba que cada decisión necesaria se ha transferido a una instrucción ejecutable; no basta con haberla considerado internamente. Los pasos no requieren aprobaciones sucesivas. Si pides una imagen y hay una herramienta disponible, ejecuta el encargo y revisa el resultado cuando pueda verlo. Cuando corresponda, entrega el arte y un texto complementario listo para publicar. También puedes pedir solo copy, estructura, crítica o un prompt. Funciona por separado y conserva una vía propia para piezas tipográficas o ilustradas.
+Con `poster-promotional-design`, aporta el objetivo, el contenido, el formato y las referencias disponibles. El skill selecciona la dirección de productos, personas o promociones por lo que se anuncia y su función, no por recibir una foto o un texto. Esa biblioteca gobierna el protagonismo, el argumento y el tratamiento; las reglas comunes resuelven selección, jerarquía, composición y ejecución. Pregunta por datos materiales que no pueda resolver con fidelidad. Si pides el arte, lo ejecuta y revisa lo que pueda observar. Si pides ver el prompt o aprobar previamente la propuesta, respeta esa forma de trabajo. También puedes solicitar solo copy, estructura o crítica. Funciona de forma independiente y no asigna una plantilla por producto o sector.
 
 ### Ejemplos
 
@@ -203,11 +203,11 @@ Para publicar una versión nueva:
 
 1. Actualiza `version` en `plugin.json` y el nombre del ZIP documentado en este README.
 2. Haz commit y push de los cambios.
-3. Crea y sube la etiqueta de esa versión. Por ejemplo, para `1.6.2`:
+3. Crea y sube la etiqueta de esa versión. Por ejemplo, para `1.7.0`:
 
 ```powershell
-git tag v1.6.2
-git push origin v1.6.2
+git tag v1.7.0
+git push origin v1.7.0
 ```
 
 Comprueba la ejecución en la pestaña Actions y descarga los archivos de la Release resultante. Las etiquetas deben ser nuevas: el workflow no sobrescribe releases existentes. Si la etiqueta no coincide con el manifiesto o falla la verificación del paquete, la ejecución termina sin publicar.

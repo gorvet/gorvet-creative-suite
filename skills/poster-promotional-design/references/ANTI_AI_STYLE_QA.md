@@ -1,71 +1,56 @@
-# Revisar el encargo, el diseño y la imagen
+# Revisión de dirección de arte y resultado
 
-Evalúa contra el encargo y las decisiones elegidas, no contra una estética preferida. «Parece IA» necesita un diagnóstico observable: composición intercambiable, elementos sin función, tipografía automática, identidad alterada, materiales falsos o integración incoherente. Sobriedad y fotorealismo no son requisitos universales.
+Revisa contra el objetivo y la biblioteca seleccionada. El estándar no es una paleta, una densidad o un recurso visual preferidos: es una campaña con intención, protagonismo, contenido y ejecución coherentes. Un acabado atractivo no sustituye esa comunicación.
 
-## Antes de generar: comprobar las decisiones
+## Antes de ejecutar: criterio y encargo
 
-Revisa en orden. Si falla una decisión de base, vuelve al paso que la resuelve antes de llamar a la herramienta; no intentes compensarla añadiendo efectos o prohibiciones al final.
-
-| Aspecto | Evidencia necesaria en el encargo | Volver atrás si… |
+| Aspecto | Qué debe estar resuelto | Qué corregir si falla |
 | --- | --- | --- |
-| Contenido | Copy seleccionado, hechos y condiciones fieles, complemento con destino real cuando exista. | Falta algo que cambia la propuesta, aparece un beneficio inventado o se depende de un caption inexistente. |
-| Sujeto | Tema o sujeto definido desde lo aportado y observado; referencias con papel preciso. | Se presupone un modelo, identidad o atributo no visible, o no se protege un rasgo necesario. |
-| Concepto | Relación visual ligada a lo que se anuncia. | Solo se eligieron un acabado y un fondo que servirían a cualquier encargo. |
-| Escena | Acción o presencia, encuadre, escala y tratamiento pertinentes al medio. | El entorno es decorativo, la pose no tiene función o el ángulo obliga a inventar detalles protegidos. |
-| Jerarquía | Entrada, continuación y consulta traducidas a pesos y posiciones. | Todo reclama atención o las instrucciones contradicen el foco elegido. |
-| Composición | Distribución conjunta de imagen y texto, alineaciones, agrupaciones y espacio de lectura. | Imagen y texto ocupan el mismo espacio sin resolverlo, o el layout depende de huecos improvisados. |
-| Tipografía | Voz, escalas relativas, bloques y cortes pertinentes al copy real. | Se pide «premium» sin tratamientos, el título no cabe o los datos se relegan a letra ilegible. |
-| Ejecución | Solución elegida, copy literal una vez y referencias realmente suministradas. | Quedan alternativas, se envían descartes o se perdió precisión al acortar. |
-| Traspaso | Cada decisión de diseño tiene una instrucción ejecutable y un efecto observable. | El criterio solo existe en el razonamiento, o un resultado contrario al layout todavía cumpliría el prompt. |
+| Dirección | Se ha elegido qué se anuncia y qué prioridad gobierna la pieza. | Recuperar la intención; no mezclar las prioridades de las tres bibliotecas. |
+| Evidencia | Se distinguen datos aportados, propiedades observables y decisiones creativas. | Retirar atributos inventados o aclarar el dato material que falta. |
+| Selección | Cada texto tiene función y el brief no se reproduce por exhaustividad. | Editar antes de distribuir; omitir lo irrelevante sin recuperarlo como decoración. |
+| Concepto | La idea visual pertenece al sujeto o proposición elegidos. | Sustituir la asociación genérica o el acabado usado como argumento. |
+| Jerarquía | La primera atención y los apoyos tienen relaciones compatibles de peso. | Resolver escala, contraste, extensión o posición; no añadir otra exigencia general de jerarquía. |
+| Composición | Imagen y texto comparten una estructura y áreas de lectura viables. | Ajustar el encuadre y la distribución con el contenido real. |
+| Fidelidad | Se entiende qué gobierna cada referencia y qué puede cambiar. | Delimitar atributos y funciones sin extenderlos automáticamente a todo el arte. |
+| Traspaso | El prompt contiene el criterio rector y los controles necesarios. | Restituir lo que quedó solo en el análisis o se perdió al compactar. |
 
-Esto revisa instrucciones; no acredita que la herramienta vaya a obedecerlas. Si el usuario pide solo un prompt, entrega el encargo depurado sin afirmar que has validado una imagen.
+Cada fila revisa una relación; no obliga a añadir elementos. Un componente ausente no es un fallo si la pieza no lo necesita. Si el usuario pide ver el encargo, muéstralo completo y ejecuta ese mismo texto. Si necesita aprobar previamente, respeta ese acuerdo; no conviertas la revisión interna en una fase de aprobación universal.
 
-## Después de generar: observar el arte
+## Comprobar la prioridad de la familia elegida
 
-Mira primero el conjunto reducido a una escala representativa del uso. Identifica qué atrae primero, qué se entiende después y dónde se consulta la información. Compáralo con la secuencia prevista. Una imagen atractiva no aprueba el cartel si cuesta reconocer qué se anuncia.
+| Dirección | Pregunta que decide si funciona |
+| --- | --- |
+| Productos | ¿Se reconoce el objeto y su argumento antes de perderse en el entorno o los mensajes añadidos? |
+| Personas | ¿La identidad o acción humana sigue siendo reconocible y explica su papel en el anuncio? |
+| Promociones | ¿Se entiende la proposición seleccionada y se localiza lo necesario para utilizarla? |
 
-Después examina el arte ampliado y las referencias. Lee todas las cadenas, cifras, condiciones y datos de acción. Revisa integridad del sujeto y detalles de imagen. La vista ampliada no sustituye la comprobación de lectura a tamaño de uso. Si no puedes ver la salida, limita el resultado a revisión textual y señala esa limitación.
+Examina los controles pertinentes de esa biblioteca. Una pieza puede fallar aunque cada elemento aislado sea atractivo y legible: el conjunto puede anunciar otra cosa o repartir la atención sin prioridad.
 
-Compara lo observado con las relaciones explícitas del encargo. Si el resultado falla, distingue dos causas: la instrucción no transmitía la decisión, o sí la transmitía y el generador no la siguió. En el primer caso repara el encargo; en el segundo dirige una edición localizada o cambia de estrategia. Añadir reglas al skill sin identificar cuál de las dos ocurrió puede mantener el mismo problema.
+## Después de generar: observar antes de dar por válido
 
-### Comunicación, jerarquía y composición
+Mira primero el arte a una escala representativa del uso. Identifica qué se reconoce, qué se entiende después y qué se consulta. Contrástalo con el recorrido previsto. Después amplía para leer textos y revisar identidad, geometría, anatomía o detalles pertinentes.
 
-| Hallazgo visible | Qué investigar | Corrección dirigida |
+No confundas la revisión del prompt con inspección de la imagen. Si no puedes verla, limita la validación a lo que realmente comprobaste. Una salida de alta resolución no acredita legibilidad a tamaño de móvil ni preparación técnica para imprenta.
+
+## Diagnosticar por relaciones
+
+| Fallo observado | Relación que revisar | Intervención |
 | --- | --- | --- |
-| No se entiende qué se anuncia | El titular es genérico o la imagen no sostiene la propuesta. | Recuperar el mensaje y el argumento; no intentar salvarlo con más contraste. |
-| Imagen bonita con texto añadido | La escena se resolvió sin área tipográfica ni recorrido. | Reencuadrar y redistribuir las masas con el copy real. |
-| Todo parece principal | Coinciden escala, saturación, aislamiento y soportes llamativos. | Reducir el peso combinado de los apoyos y reservar el contraste elegido para la entrada. |
-| Un precio o sello secundario roba el foco | Su forma o color contradice el nivel asignado. | Cambiar masa, contraste o soporte; no repetir «secundario». |
-| Bloques flotantes o lectura entrecortada | No hay bordes comunes ni agrupación semántica. | Reconstruir ejes y proximidades; retirar separadores redundantes. |
-| Cada dato tiene una caja, foto o icono | Se ilustró el brief como inventario. | Recuperar un argumento y agrupar tipográficamente los datos necesarios. |
-| Titular partido o comprimido | No se consideraron su extensión y unidades de sentido. | Corregir ancho, cortes y escala; editar solo si el literal lo permite. |
-| Contacto o condición ilegibles | Se confundió menor prioridad con tamaño o contraste insuficientes. | Crear superficie de lectura y reagrupar la información relacionada. |
-| Copy añadido, alterado o ausente | La herramienta improvisó o recibió contenido de otros destinos. | Corregir las cadenas usando la lista cerrada y revisar la nueva salida. |
-| Adornos, ejes o estilos sin relación | No se fijó un lenguaje o el generador introdujo recursos automáticos. | Restituir los tratamientos decididos y retirar los elementos ajenos. |
+| Hay atractivo visual pero no se entiende qué se anuncia. | Sujeto o proposición frente al argumento. | Recuperar el concepto y el mensaje antes de refinar el acabado. |
+| La pieza parece un inventario de datos. | Selección frente a información recibida. | Editar y agrupar lo necesario; no reducir todo para conservarlo. |
+| Todo reclama atención. | Peso combinado de focos, apoyos y recursos. | Restablecer una prioridad mediante masa, contraste, espacio y extensión. |
+| La foto y el texto parecen añadidos por separado. | Encuadre frente a estructura de lectura. | Resolverlos conjuntamente y conservar áreas de lectura. |
+| Aparecen mensajes o elementos no elegidos. | Contexto de referencia frente a contenido de campaña. | Recuperar su función original y restituir el conjunto seleccionado. |
+| Se pierde reconocimiento del sujeto. | Transformación frente a atributos protegidos. | Corregir identidad o geometría desde la referencia sin rediseñar lo aprobado. |
+| La escena fotográfica resulta artificial. | Perspectiva, escala, materialidad, luz, contacto y oclusión. | Reparar la relación física responsable; no cubrirla con efectos. |
+| Un dato necesario desaparece o se interpreta mal. | Copy, condición, agrupación y legibilidad. | Recuperar el significado y ajustar su relación de lectura. |
+| Las alternativas repiten la misma solución. | Idea y organización frente a acabado. | Cambiar el argumento o la estructura, no solo el color o la luz. |
 
-### Sujeto, realismo e integración
+El criterio anti-IA no es prohibir recursos por su nombre. Es detectar su aplicación automática, la acumulación sin función y el acabado que sustituye a una dirección. Una pieza expresiva o densa puede ser correcta si responde a la intención y conserva sus relaciones.
 
-Aplica solo lo correspondiente al medio y a la variante. Un collage deliberado o una ilustración no tiene que parecer una fotografía.
+## Corregir y cerrar
 
-| Hallazgo visible | Qué investigar | Corrección dirigida |
-| --- | --- | --- |
-| Producto parecido pero distinto | Cambió silueta, proporción, color, marca o detalle distintivo. | Restaurar el atributo desde la referencia; conservar el original mediante composición cuando sea viable. |
-| Rostro genérico, rejuvenecido o modificado | La estilización sustituyó la referencia de identidad. | Recuperar rasgos protegidos y acotar los cambios permitidos. |
-| Piel plástica o materiales uniformemente brillantes | Retoque, suavizado o reflejos sustituyen la respuesta material. | Recuperar textura y variación tonal; ajustar la luz al material concreto. |
-| Persona en pose intercambiable | Gesto, vestuario o mirada no responden al papel publicitario. | Dirigir una conducta o presencia vinculada al mensaje. |
-| Sujeto pegado al fondo | No coinciden perspectiva, luz, temperatura, bordes o apoyos. | Corregir la relación física responsable, no añadir un halo para separarlo. |
-| Flotación o apoyo incoherente | Falta contacto o la sombra no corresponde al peso y posición. | Restaurar apoyo, oclusión y sombra, salvo recurso conceptual deliberado. |
-| Manos, agarres o escala incorrectos | Acción y relación entre cuerpo y objeto no están resueltas. | Corregir interacción y proporciones sin alterar identidad ni producto. |
-| Personas duplicadas o ajenas | Falló la selección o cantidad solicitada. | Restituir el grupo definido y sus diferencias individuales. |
-| Fondo vistoso que compite o no viene al caso | Se priorizó acabado sobre argumento y lectura. | Sustituirlo o simplificarlo por su función concreta en la campaña. |
-| Niebla, brillo o desenfoque ocultan lo necesario | El efecto desplazó la función del sujeto o del texto. | Controlar el efecto y recuperar detalle en las zonas necesarias. |
+Distingue si el encargo no transmitía la decisión o si el generador no siguió una instrucción suficiente. En el primer caso repara la dirección; en el segundo dirige una corrección localizada o cambia de estrategia según las herramientas disponibles. No añadas una lista de sinónimos como supuesto refuerzo.
 
-## Elegir la corrección y cerrar con honestidad
-
-Prioriza hechos, reconocimiento y legibilidad antes del refinamiento. Identifica el fallo, su causa probable y una intervención verificable. Si una palabra está mal, corrige esa palabra y conserva el layout. Si falla el reparto de atención, cambia las relaciones de masa y contraste. Si falla el concepto, vuelve a dirección creativa; seguir puliendo el acabado no lo arregla.
-
-Al pedir una corrección, indica qué cambia y qué permanece de la versión aprobada. Comprueba la nueva salida: una edición puede arreglar el defecto y alterar otro elemento. No declares éxito por haber enviado una instrucción mejor.
-
-Si la misma intervención no mejora el resultado, cambia de estrategia cuando las herramientas lo permitan: conservar la foto original, corregir por zonas o maquetar texto aparte. No inventes capacidades ni presentes un fondo sin copy como cartel final. Si el defecto persiste y no hay una vía viable, entrega el resultado identificando lo pendiente sin afirmar que está aprobado.
-
-No conviertas esta revisión en una prohibición de densidad, collage, lujo, expresividad o tipografía grande. El criterio es que las decisiones respondan al encargo, se ejecuten con coherencia y permitan entender la pieza.
+Conserva lo que funciona y comprueba la nueva salida, porque una edición puede alterar otra parte. Si la misma intervención no mejora el defecto, no encadenes regeneraciones sin diagnóstico nuevo. Identifica lo pendiente y evita declarar éxito por haber escrito instrucciones mejores.

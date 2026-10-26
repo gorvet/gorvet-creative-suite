@@ -14,7 +14,7 @@ Evalúa direcciones diferentes y elige una. No necesitas mostrarlas todas ni con
 | Orden editorial | Qué grupos se consultan y qué diferencias permiten orientarse. | La retícula multiplica cajas o vuelve equivalentes todos los niveles. |
 | Ritmo expresivo | Qué regla comparte el movimiento, repetición o contraste. | Cada bloque tiene un efecto distinto sin un recorrido común. |
 
-La dirección no se asigna automáticamente por sector. Una pieza de producto puede ser tipográfica y una institucional puede ser expresiva. Conserva la identidad existente, las referencias elegidas y el alcance del encargo.
+La dirección no se asigna automáticamente por sector. La prioridad procede del encargo y de la biblioteca de productos, personas o promociones seleccionada. Un recurso alternativo no debe deshacer esa prioridad por inercia. Una dirección explícita del usuario puede cambiar el protagonismo o el medio; conserva esa intención y la identidad existente.
 
 ## 2. Construir el esqueleto antes del acabado
 
@@ -72,7 +72,7 @@ Textura, collage, ilustración, fotografía, sellos y trazos son válidos cuando
 
 ## 6. Coordinar imagen y texto
 
-Distingue sujeto, referencia de identidad, escena y lenguaje gráfico. Aplica SUBJECT_ART_DIRECTION.md al construir la imagen. El encuadre y la zona tipográfica se ajustan conjuntamente: un rostro o producto no debe taparse para recuperar espacio que no se reservó.
+Distingue sujeto, referencia de identidad, escena y lenguaje gráfico. Aplica la biblioteca de dirección seleccionada al construir la imagen. El encuadre y la zona tipográfica se ajustan conjuntamente: un rostro o producto no debe taparse para recuperar espacio que no se reservó.
 
 Superponer texto puede ser pertinente si conserva lectura y atributos necesarios. Un solapamiento deliberado requiere saber qué se tapa y qué permanece visible. Un recorte refuerza la composición cuando conserva reconocimiento y acción; no lo uses para ocultar errores de identidad o quitar una característica necesaria.
 

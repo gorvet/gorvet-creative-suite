@@ -1,79 +1,55 @@
-# Traducir las decisiones a un encargo ejecutable
+# Del criterio publicitario al encargo de ejecución
 
-La herramienta recibe una especificación del resultado, no comparte el razonamiento del diseñador ni lee automáticamente estas bibliotecas. Resuelve antes de redactar. No envíes «analiza el producto y crea un concepto apropiado» cuando el skill todavía no ha elegido el concepto.
+El generador no conoce automáticamente el análisis ni las bibliotecas del skill. Recibe una dirección de arte que permita construir la pieza, con sus prioridades y límites. El trabajo se pierde tanto al enviar un brief bruto como al reducirlo a «un diseño bonito y profesional».
 
-## Orden y cobertura del encargo
+## Transmitir la prioridad elegida
 
-Organiza las instrucciones para que la herramienta entienda el conjunto y sus relaciones. Esta estructura admite bloques independientes; no es una cuota de palabras ni obliga a rellenar controles irrelevantes.
+Abre el encargo con el resultado publicitario que gobierna el trabajo: qué se anuncia, mediante qué argumento y qué debe reconocerse primero. Incluye el medio elegido y la relación de imagen y mensaje. Usa el criterio de la biblioteca principal; no encadenes todas las bibliotecas en un mismo prompt.
 
-| Componente | Decisiones que deben llegar resueltas |
+La prioridad debe ser ejecutable. Si el sujeto protagoniza, su presentación, escala y separación tienen que sostenerlo. Si lidera la propuesta, la distribución y el peso de los apoyos tienen que permitir entenderla. No llames secundario a un elemento al que después asignas todos los recursos de atención.
+
+El encargo transmite principios de dirección además de decisiones concretas. El generador puede resolver detalles de representación dentro de ese marco. No hace falta fijar cada coordenada, accesorio o parámetro técnico cuando no define el resultado solicitado.
+
+## Contenido necesario del encargo
+
+| Control | Qué debe quedar claro |
 | --- | --- |
-| Pieza y argumento | Formato, uso y relación visual que comunica la propuesta. |
-| Sujeto y referencias | Qué aparece, qué hace o cómo se presenta, y qué archivo gobierna cada aspecto. |
-| Escena y tratamiento | Encuadre, escala, entorno, luz, materiales y acabado pertinentes al medio. |
-| Layout y recorrido | Qué se reconoce primero, dónde continúa la lectura y dónde se consulta la información práctica. |
-| Copy literal y tratamiento | Cada cadena visible una vez, con su posición, escala relativa, alineación y voz tipográfica. |
-| Fidelidad y exclusiones específicas | Atributos protegidos o cambios permitidos que no quedaron fijados en los componentes anteriores. |
+| Propósito | Sujeto o proposición, público y función publicitaria pertinentes. |
+| Argumento | Qué idea organiza la pieza y por qué la imagen o el mensaje la hacen visible. |
+| Protagonismo | Qué recibe la primera atención y cómo se subordinan los apoyos. |
+| Medio y escena | Tratamiento, contexto, acción o presencia y condiciones físicas o gráficas que necesita la idea. |
+| Referencias | Archivos realmente suministrados, función de cada uno, atributos protegidos y cambios permitidos. |
+| Diseño | Relaciones importantes de imagen, tipografía, agrupación, contraste y espacio de lectura. |
+| Copy | Cadenas externas seleccionadas, su función y su tratamiento; ninguna obligación de rellenar funciones ausentes. |
 
-Empieza por lo que organiza la pieza. Describe afirmativamente lo que debe existir; usa exclusiones para requisitos distintos o fallos concretos, no como sustituto de una dirección. Un inventario de cosas prohibidas deja abierta la solución.
+La tabla comprueba cobertura, no obliga a rellenar todos los campos ni a escribir un bloque por fila. Una orden corta puede ser suficiente; una dirección más exigente puede necesitar más texto. No elimines el criterio rector para cumplir una preferencia de longitud.
 
-## Concretar la imagen
+## Resolver sin sobreespecificar
 
-Fija una escena y un encuadre, no «estudio o arquitectura, cálido o cinematográfico». La dirección del sujeto debe especificar los controles relevantes de SUBJECT_ART_DIRECTION.md. Para producto, los detalles que identifican el objeto y su presencia física. Para personas, papel, identidad si hay referencia, conducta, expresión y encuadre. En uso de producto, añade escala y contacto entre ambos.
+Fija las relaciones que diferencian esta solución. Describir dónde se concentra la masa principal y dónde se lee el apoyo aporta más que exigir «buena jerarquía». Definir contacto y luz compartida aporta más que «integración perfecta». No reemplaces requisitos distintos por calificativos generales.
 
-Describe luz y materiales cuando afecten al resultado. «Luz difusa lateral que conserva la textura de piel y genera una sombra suave en el lado opuesto» aporta un control distinto de «fotografía de alta calidad». No repitas la misma decisión como sinónimos o como un resumen final.
+Selecciona una dirección, sin menús de escenas o estilos incompatibles. Si hay una decisión material sin resolver, aclárala desde el contexto o pregunta por ella antes de inventarla. Mantén libres los detalles que no cambian intención, orden de atención o fidelidad.
 
-Si se conserva una foto original, delimita qué zona o atributo puede transformarse. Adjunta las referencias pertinentes mediante la herramienta: un archivo mencionado pero no suministrado, un enlace inaccesible o una ficha Markdown no equivalen a una referencia visual.
+No añadas componentes para demostrar que aplicaste una biblioteca. Si una instrucción solo repite otra con sinónimos, consolídala. Si añade un control diferente, consérvala aunque esté relacionado con otro. La fidelidad de una referencia, su cantidad de sujetos y su relación con el entorno no son una sola decisión.
 
-## Concretar jerarquía y composición
+## Distinguir el copy de la dirección
 
-Vincula el orden de atención con posiciones y pesos observables. «Título dominante» requiere especificar masa y relación con la imagen; «datos secundarios», una ubicación y un tratamiento legible. Define qué bordes comparten los bloques y qué área del encuadre permite leerlos. Evita pedir al generador que «encuentre el mejor layout» después de haber elegido la dirección.
+Escribe cada cadena externa una sola vez, como literal del arte, con su función y tratamiento. No la repitas en la descripción de escena ni confundas nombres de roles con palabras que deben dibujarse. Conserva unidades de sentido y saltos pertinentes.
 
-Incluye suficiente relación de escala para distinguir las funciones sin imponer coordenadas que la herramienta no puede cumplir. Si el rostro ocupa casi todo el formato, no describas también un titular de varias líneas a gran escala en ese mismo espacio. Resuelve el conflicto moviendo, recortando o redimensionando antes de ejecutar.
+Los textos integrados en objetos de referencia siguen formando parte de ellos. No se transcriben automáticamente como copy externo. Si la presentación del sujeto y su gráfica existente bastan, el encargo puede comunicar esa intención sin inventar slogans o beneficios.
 
-Precio, marca o llamada a la acción pueden dominar si ese es el objetivo. Si se eligieron como secundarios, no les asignes después colores, soportes o efectos que los conviertan en entradas rivales. La palabra «secundario» no compensa una instrucción visual contradictoria.
+No envíes TEXTO COMPLEMENTARIO ni descartes al generador, tampoco como ejemplos negativos. La herramienta no tiene que volver a editar el inventario original del brief. Tampoco debe completar la pieza con contenido comercial propio.
 
-## Transferir el criterio a controles visibles
+## Comprobar el traspaso
 
-Antes de cerrar el encargo, contrasta internamente el plano de arte con las instrucciones. Para cada decisión relevante, identifica una instrucción que la haga ejecutable y el resultado que debería poder observarse. No muestres esa matriz salvo petición ni la añadas completa al prompt: su función es detectar pérdida de diseño durante el traspaso.
+Lee el encargo por sí solo y comprueba si permite reconstruir sujeto o proposición, argumento, prioridad, relaciones importantes y copy seleccionado. Si una salida opuesta a la dirección seguiría cumpliendo esas frases, identifica qué control falta o se contradice.
 
-| Decisión interna | Traspaso insuficiente | Control que sí transfiere la decisión |
-| --- | --- | --- |
-| El tema del taller introduce la lectura antes que la ponente. | «Jerarquía clara, retrato y título protagonistas». | Titular en un bloque de mayor masa tipográfica a la izquierda; retrato contenido en el área derecha sin invadirlo; nombre junto al retrato con peso menor que el titular. |
-| La mano demuestra el uso sin ocultar el producto. | «Persona natural usando el producto, mantener fidelidad». | Fijar qué mano lo sostiene, el punto de agarre, la cara visible del objeto y el encuadre que incluye el contacto. |
-| La condición se entiende al leer el precio. | «Precio destacado y condición legible». | Condición inmediatamente debajo del precio, en el mismo grupo y sobre fondo tranquilo; el espacio la vincula al precio y la separa del contacto. |
-| El acabado mate sigue siendo reconocible. | «Iluminación profesional, materiales realistas». | Luz amplia lateral con reflejo suave y contenido, textura visible y sombras que revelan el volumen sin convertir la superficie en metal pulido. |
+No confundas revisión textual con resultado visual. Esta lectura detecta un encargo insuficiente, pero no prueba que el generador lo seguirá. La salida requiere inspección contra esas mismas prioridades.
 
-Los controles se adaptan a la solución elegida; no copies el contenido de la tabla a todos los encargos. Observa que cada relación se expresa con elementos y posiciones, no con una explicación de por qué sería buena.
+Si el usuario pidió ver la instrucción, muestra este encargo completo y las referencias previstas. Debe coincidir con lo que se ejecuta. Esa visibilidad no añade una aprobación obligatoria: respeta el flujo de entrega solicitado y pregunta únicamente por decisiones que no puedas resolver con fidelidad.
 
-Delimita también lo que podría deshacer el diseño: qué zona queda disponible para el texto, qué rasgo debe mantenerse visible y qué elementos comparten un grupo. Si un titular largo entra en conflicto con el rostro, resuelve el ancho, el recorte o la distribución antes de enviar el encargo. No delegues la solución con «ajusta lo necesario sin perder calidad».
+## Ejecución e iteración
 
-### Prueba de lectura aislada
+Adjunta referencias que la herramienta pueda utilizar. Mencionar un archivo o un enlace inaccesible no equivale a suministrarlo. Si se trabaja con una imagen base, delimita la transformación en lugar de redescribirla con versiones contradictorias.
 
-Lee únicamente el encargo final. Intenta reconstruir sujeto, escena, distribución de masas y recorrido usando solo sus frases. Pregúntate qué resultado distinto seguiría cumpliéndolas: por ejemplo, una foto que llena todo el formato y comprime los textos abajo, o un precio que domina pese a estar llamado secundario. Si ese resultado contradice la dirección, falta un control o existe una contradicción. Corrige eso, no añadas más énfasis general.
-
-No hace falta eliminar toda libertad de ejecución: conserva la variación que no altera el concepto, las relaciones de composición o la fidelidad. La prueba revisa la suficiencia del traspaso, no garantiza obediencia del generador. El resultado todavía requiere inspección.
-
-## Copy cerrado con tratamiento
-
-Enumera cada texto literal una sola vez y acompáñalo de su función y tratamiento. Los nombres de roles son instrucciones y no deben dibujarse. No repitas las cadenas en la descripción de escena. Si necesitas fijar saltos de línea, indícalos en esa misma entrada, conservando el literal y sus unidades de sentido.
-
-No inventes un slogan para completar la estructura ni añadas datos por convención publicitaria. Incluye precio y condición como unidades relacionadas cuando hagan falta. No envíes TEXTO COMPLEMENTARIO o descartes, tampoco como ejemplos de lo que no debe aparecer.
-
-Si el generador falla repetidamente con tipografía exacta y las herramientas disponibles permiten componer el texto aparte, conserva una imagen base adecuada y aplica el copy mediante maquetación. Utiliza ese recurso solo si puedes ejecutarlo; no entregues una imagen sin textos como si fuera el cartel terminado.
-
-## Depuración sin pérdida de diseño
-
-Aplica la referencia opcional de optimización después de cerrar las decisiones. Elimina repeticiones, adjetivos sin control y explicaciones de intención ya expresadas visualmente. Conserva requisitos independientes: identidad, cantidad de personas, acción y zona de texto no son duplicados. Tampoco son equivalentes una luz coherente y una sombra de contacto.
-
-Un párrafo sirve si mantiene claras las relaciones. Separa escena, composición y textos cuando esa organización evita confusiones. No comprimas todos los controles hasta obtener «persona fiel, fondo apropiado, tipografía premium». La longitud la determina la especificación necesaria, no una preferencia por prompts cortos o extensos.
-
-## Revisión previa y traspaso
-
-Reconstruye mentalmente la pieza desde el encargo sin acudir al brief: debe permitir saber qué aparece, dónde, con qué papel y qué se lee. Comprueba cobertura de las decisiones de contenido, sujeto, concepto, escena y layout. Si quedan alternativas, falta zona de lectura o hay contradicciones de peso, corrige antes de generar.
-
-Si al depurar desapareció una relación que distinguía la solución, restáurala. Una versión más corta que permite un diseño diferente no es una optimización equivalente.
-
-Aplica la revisión previa de ANTI_AI_STYLE_QA.md. La llamada a la herramienta debe recibir el encargo depurado y las referencias necesarias, sin notas internas, razonamientos o contenido de otros destinos.
-
-Después, una corrección debe señalar el fallo observable y el cambio que lo resuelve, conservando lo logrado. No reescribas toda la campaña por una palabra incorrecta. Si falla el argumento o la distribución completa, vuelve al paso correspondiente del skill antes de generar otra versión.
+Después de observar el arte, corrige el control responsable y conserva lo que funciona. Un error de texto no exige reinterpretar la campaña; un argumento fallido no se resuelve solo cambiando color o luz. Si se necesitan exactitud tipográfica o conservación de imagen que el generador no consigue, utiliza composición o maquetación cuando las herramientas disponibles permitan ejecutarlas.
