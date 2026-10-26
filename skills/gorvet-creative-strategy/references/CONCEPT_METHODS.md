@@ -1,19 +1,77 @@
-# Métodos para resolver una idea creativa
+# Procedimientos de ideación y selección
 
-Utiliza estas operaciones cuando resuelvan un bloqueo concreto. Una receta orienta decisiones; no asigna la misma imagen a una categoría ni obliga a producir un número fijo de alternativas.
+Elige un procedimiento por la decisión que falta. Los métodos se apoyan en principios generales de creatividad y en la revisión atribuida de Serge Shima; se adaptan al alcance visual de GORVET. No se aplican todos ni se exige un volumen fijo de ideas. La [revisión de fuentes](../../gorvet-creative-director/references/SOURCE_ADAPTATION.md) explica qué se conserva y qué cambia.
 
-| Problema | Operación | Qué debe aparecer en la propuesta | Qué comprobar |
-| --- | --- | --- | --- |
-| Hay atributos, pero ninguna idea | Demostración | Un rasgo o uso se vuelve evidente mediante una situación visible. | La demostración está respaldada; no atribuye una prestación inventada. |
-| Todo parece intercambiable | Especificidad | Una forma, comportamiento, contexto o identidad propia gobierna la idea. | Sigue teniendo sentido por algo más que cambiar el logotipo. |
-| La asociación es demasiado obvia | Inversión | Se cambia una relación esperada para revelar el mensaje. | La inversión comunica sin una explicación larga ni falsificar el producto. |
-| La idea es abstracta | Metáfora concreta | Una relación visual hace perceptible el concepto. | La metáfora pertenece al público y no añade símbolos por rellenar. |
-| La escena contiene demasiadas cosas | Sustracción | Se retira un componente y otro asume su función. | Se conserva comprensión y fidelidad; la ausencia produce sentido. |
-| El argumento correcto resulta previsible | Conexión entre dominios | Una propiedad pertinente de otro contexto ilumina el sujeto. | La relación es comprensible y no depende de copiar una campaña. |
-| La imagen necesita una emoción específica | Instante narrativo | Acción, gesto o relación espacial sitúan un momento significativo. | La emoción se percibe en decisiones visibles, no solo en adjetivos. |
+## Selección de método
 
-Antes de conservar una idea, formula qué se verá y qué entenderá el destinatario. Comprueba si sería igualmente válida para casi cualquier encargo. Si es así, identifica la decisión que la vuelve específica o cambia de argumento. No confundas simplicidad con ausencia de idea ni complejidad con profundidad.
+| Bloqueo | Procedimiento que puede resolverlo |
+| --- | --- |
+| Hay rasgos reales pero ninguna idea | Transformación dentro del mundo del sujeto. |
+| La solución repite la categoría | Conexión estructural o cuestionamiento de una convención. |
+| La idea es abstracta o depende de explicar mucho | Demostración o metáfora concreta. |
+| La primera propuesta resulta previsible | Inversión de una relación o del problema de comunicación. |
+| La imagen contiene demasiados mensajes o efectos | Sustracción con conservación de función. |
+| La idea funciona pero cuesta desarrollarla | Matriz de constantes y variaciones para narrativa o campaña. |
 
-Si una propuesta no funciona, identifica qué falla: mensaje, asociación, claridad, evidencia o ejecución. Cambia la decisión responsable. No acumules métodos ni puntúes con decimales una impresión subjetiva. Puede haber más de una dirección viable; elige por este encargo y explicita el intercambio que decide la recomendación.
+Si un procedimiento solo produce cambios superficiales, identifica qué premisa lo limita antes de pasar a otro. No cambies de método por cumplir una rotación administrativa.
 
-Estas operaciones se apoyan en principios generales de ideación y en las referencias acreditadas en [SOURCES.md](../../gorvet-creative-director/references/SOURCES.md). No constituyen una copia de sus escalas de premios ni de sus campañas.
+## Transformación dentro del mundo del sujeto
+
+**Entrada:** propiedades visibles o documentadas, uso, componentes y contexto pertinente.
+
+1. Identifica qué propiedad puede sostener el argumento sin inventar prestaciones.
+2. Modifica una relación: retirar un componente no protegido, reorganizar una relación, asignar otra función conceptual a un elemento o contrastar dos estados.
+3. Describe qué se verá y qué hace comprensible el mensaje.
+4. Comprueba que el recurso no altera la identidad ni convierte la ficción visual en una promesa comercial falsa.
+
+**Salida:** una proposición visual específica. Abandona la transformación si exige explicar una mecánica más compleja que el mensaje o si solo añade objetos.
+
+## Conexión estructural
+
+**Entrada:** la propiedad que se quiere comunicar y un contexto distinto que pueda hacerla visible.
+
+1. Describe la lógica del sujeto y la del contexto propuesto.
+2. Encuentra una relación compartida de forma, comportamiento, escala, función o experiencia.
+3. Construye la imagen sobre esa relación, sin importar todo el segundo contexto.
+4. Verifica que se entiende y que pertenece al objetivo y al público pertinente.
+
+**Salida:** una asociación inesperada con fundamento. Si solo hay dos mundos colocados juntos, falta conexión. No compenses con más símbolos ni una explicación extensa.
+
+## Demostración y metáfora
+
+**Entrada:** una afirmación respaldada o una intención abstracta.
+
+1. Determina qué evidencia o experiencia permitiría percibirla.
+2. Decide si se muestra directamente o mediante una relación simbólica.
+3. Conserva un foco reconocible y elimina apoyos que expliquen otra cosa.
+4. Verifica la diferencia entre un efecto visual conceptual y una característica real del producto.
+
+**Salida:** una relación que comunica aun antes de añadir copy. No es obligatorio construir una metáfora cuando la presentación directa resuelve mejor el encargo.
+
+## Inversión y cuestionamiento de convenciones
+
+**Entrada:** la propuesta obvia o una regla habitual de la categoría.
+
+1. Separa un hecho necesario de una convención visual.
+2. Formula qué relación podría invertirse: presencia y ausencia, expectativa y resultado, escala o punto de vista.
+3. Construye una alternativa que conserve el objetivo y los hechos protegidos.
+4. Evalúa si la inversión aporta claridad e interés o solo sorpresa sin función.
+
+**Salida:** una dirección distinta con una razón. Una inversión que ridiculiza al sujeto, cambia el tono solicitado o depende de atributos inventados no sirve por ser original.
+
+## Sustracción
+
+**Entrada:** la idea y sus componentes actuales.
+
+1. Identifica qué función cumple cada componente.
+2. Retira uno que duplique otra función o compita con el argumento.
+3. Comprueba si una relación existente puede comunicar lo que antes exigía varias explicaciones.
+4. Evalúa reconocimiento, sentido y fidelidad después de retirar.
+
+**Salida:** una idea más concentrada. No se trata de imponer fondos vacíos, quitar condiciones necesarias ni borrar la personalidad del encargo.
+
+## Elegir y desarrollar
+
+Compara opciones que cambien el argumento o la relación visual. Evalúa adecuación, especificidad, interés, claridad y viabilidad mediante la [rúbrica común](../../gorvet-creative-director/references/SCORING_RUBRIC.md). Cada nota necesita evidencia en la propuesta; una hipótesis sobre el público no es un efecto demostrado.
+
+Conserva la mejor dirección y formula qué decisión la hace preferible. Si ninguna funciona, vuelve al fundamento: puede fallar el mensaje, la premisa o la evidencia, no la cantidad de ideas. Usa narrativa y campaña solo cuando haya un conjunto que desarrollar; no penalices una ejecución puntual por no escalar a una plataforma de marca.

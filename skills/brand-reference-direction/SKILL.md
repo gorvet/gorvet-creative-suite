@@ -7,6 +7,11 @@ description: Analiza referencias, identidad visual, personas y productos para de
 
 Convierte las referencias disponibles en decisiones utilizables. Mira los materiales antes de afirmar que los analizaste. Distingue conservar un sujeto, transferir relaciones de diseño y transformar una imagen base. No atribuyas a una referencia autoridad sobre todos los aspectos del trabajo.
 
+## Trabajo en cadena y método
+
+Aplica el [contrato común](../gorvet-creative-director/references/SPECIALIST_CONTRACT.md) y [REFERENCE_TRANSLATION.md](references/REFERENCE_TRANSLATION.md). Recibe fuentes disponibles y el trabajo que debe resolver cada una. Devuelve evidencia, atributos protegidos y relaciones transferibles. O examina las fuentes; T y R describen relaciones útiles. G y V se conservan si ya están definidos: no se inventa una intención del autor ni una nueva historia de marca al analizar una referencia.
+
+
 ## Asignar funciones
 
 Para cada referencia, identifica su función: identidad de persona, diseño de producto, marca, pose, composición, luz, color, acabado, entorno, geometría o base de edición. Una misma imagen puede aportar varias funciones, pero deben estar delimitadas.

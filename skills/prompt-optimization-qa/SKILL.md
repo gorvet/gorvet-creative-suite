@@ -7,6 +7,11 @@ description: Depura prompts de imagen eliminando duplicados semánticos, relleno
 
 Optimiza un prompt existente conservando su dirección visual. El resultado debe contener las instrucciones suficientes para reconstruir la misma escena y sus restricciones, con una formulación por control. No genera imágenes ni certifica su resultado.
 
+## Trabajo en cadena y método
+
+Aplica el [contrato común](../gorvet-creative-director/references/SPECIALIST_CONTRACT.md). Recibe un prompt existente y los controles que debe conservar; aporta una redacción consolidada. Su intervención en GORVET es principalmente E: verifica que la expresión no pierda G/O/R/V/T vigentes. No reinicia el método como ideación ni añade contexto o emoción a una dirección cerrada.
+
+
 ## Alcance y fuente de verdad
 
 Lee el prompt, los cambios solicitados y el contexto disponible. Si falta el prompt, pídelo sin abrir un nuevo briefing. Distingue requisitos explícitos, decisiones aprobadas y desarrollos opcionales cuya procedencia puedas comprobar. Si solo recibes el prompt, trata sus decisiones visuales concretas como intencionales: no elimines un material, encuadre o atmósfera por preferencia propia.

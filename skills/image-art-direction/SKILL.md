@@ -1,44 +1,42 @@
 ---
 name: image-art-direction
-description: Construye la dirección visual de escenas, ilustraciones, arte conceptual, renders, mockups y montajes. Resuelve medio, sujeto, acción, espacio y tratamiento desde un concepto, con o sin referencias. Úsalo para decidir qué se verá; la óptica y luz fotográficas corresponden a photography-direction y la maquetación a poster-promotional-design.
+description: Dirige el arte y el sistema visual de una pieza o campaña desde el concepto y contenido elegidos. Define proposición visual, medio, escena, color, acabado y esquema global; integra fotografía y diseño gráfico antes de compilar. Úsalo para desarrollar o corregir la solución visual completa, no para sustituir estrategia ni captura técnica.
 ---
 
-# GORVET — Dirección de imagen
+# GORVET — Dirección de arte
 
-Convierte el concepto en una escena o construcción visual suficientemente concreta para ejecutarse. El lenguaje puede ser fotográfico, ilustrativo, pictórico, geométrico, conceptual, tridimensional o mixto. Selecciona el medio por lo que debe comunicar, las referencias y el uso; no asumas que toda imagen debe parecer una fotografía.
+Integra el concepto en una solución visual completa que otros especialistas puedan desarrollar sin inventar otra campaña. Conserva el identificador `image-art-direction` por compatibilidad. Su responsabilidad es el sistema de arte, no un segundo trabajo de fotografía ni la redacción del prompt.
 
-## Construir la imagen
+## Trabajo en cadena
 
-1. Identifica sujeto, acción o relación que sostiene el concepto. Resuelve cantidad, atributos necesarios y qué se reconoce primero. Un argumento no consiste en reunir objetos que representen cada frase del brief.
-2. Elige medio y tratamiento. Distingue la estética de una referencia de su identidad o contenido. Conserva la identidad existente cuando gobierne el encargo. El análisis especializado de referencias corresponde a [identidad y referencias](../brand-reference-direction/SKILL.md).
-3. Construye el espacio: posición, orientación, escala relativa, punto de vista, recorte, superposiciones, apoyos y profundidad pertinente. Reserva la zona gráfica desde el encuadre si la pieza llevará texto. Coordina con diseño publicitario antes de cerrar la imagen.
-4. Dirige color, materiales, bordes, textura, gesto y acabado. Cada uno tiene una función visible. En ilustración, especifica técnica, geometría o lenguaje de marcas; en render, forma, material, cámara y luz; en fotomontaje, relaciones físicas y gráficas compartidas.
-5. Evalúa interés y legibilidad del concepto sin depender de slogans inventados. Una imagen correcta puede seguir siendo intercambiable. Si falla, cambia una relación de escena o tratamiento, no solo la intensidad de efectos.
+Aplica el [contrato común](../gorvet-creative-director/references/SPECIALIST_CONTRACT.md). Recibe propósito, mensaje, concepto, contenido seleccionado y restricciones. Devuelve proposición visual, medio, escena, sistema visual y esquema global de masas. No cambia el mensaje para justificar un efecto ni vuelve a editar en silencio los literales seleccionados.
 
-Consulta [SCENE_OPERATIONS.md](references/SCENE_OPERATIONS.md) para operaciones de composición. Para fotografía, incorpora el trabajo de [dirección fotográfica](../photography-direction/SKILL.md). Esa consulta concreta la captura; no autoriza a cambiar concepto o contenido.
+Hereda G y V como intención; desarrolla O, R y T en decisiones de arte; entrega relaciones suficientes para E. Si el concepto sigue abierto, devuelve esa necesidad a estrategia. Si ya existe una dirección aprobada, conserva su marco y resuelve solo el ámbito solicitado.
 
-## Modos que requieren otros controles
+## Resolver el arte
 
-**Boceto y visualización:** identifica qué geometría y relaciones gobierna la base; desarrolla materialidad y acabado sin rediseñar lo protegido. Un render conceptual no acredita dimensiones, construcción ni propiedades técnicas reales.
+Lee [ART_DIRECTION_SPEC.md](references/ART_DIRECTION_SPEC.md). Define una proposición visible: sujeto o forma, acción o relación, campo o entorno y significado. Elige fotografía, ilustración, lenguaje pictórico, geometría, render o mezcla desde el propósito y las referencias. El medio no se decide automáticamente por el sector.
 
-**Texturas:** define uso, escala y continuidad requerida. Distingue una imagen con aspecto de material de un mapa técnico utilizable. No prometas mapas PBR calibrados, repetición sin costuras o precisión física sin poder producirlos y verificarlos.
+Construye un sistema de color, forma, superficie y personalidad gráfica. El recurso que sostiene el interés debe pertenecer a la idea. Distribuye masas, protagonista y zonas de lectura; conserva gesto, atributos protegidos y necesidades del texto real. Una estética y una lista de controles no bastan como propuesta.
 
-**Edición y restauración:** parte de la base aprobada. Define el elemento o zona que cambia, la mutación exacta y lo que se conserva. Conserva estilo, composición y luz salvo transformación solicitada. No conviertas restaurar en modernizar o embellecer automáticamente. Verifica después tanto el cambio como el daño colateral.
+## Encargar desarrollo e integrar
 
-**Logos y símbolos:** desarrolla exploración visual desde significado, forma y reproducción, sin presentar un raster generado como archivo vectorial ni como identidad profesional terminada. Las reglas y activos de marca aportados prevalecen.
+A [fotografía](../photography-direction/SKILL.md) le entrega la escena, su función y lo que debe permanecer visible. Fotografía resuelve cómo capturarla: perspectiva, luz, foco, exposición y materiales. No necesita recibir una lente arbitraria ni puede reorganizar el mensaje para utilizar su técnica preferida.
 
-## Bibliotecas del libro
+A [diseño gráfico](../poster-promotional-design/SKILL.md) le entrega el sistema, el esquema y los literales. Gráfica resuelve la construcción tipográfica y espacial con el texto real. No necesita inventar otro concepto ni conservar un esquema que resulte inviable.
 
-Carga solo lo pertinente:
+Recibe ambas contribuciones y resuelve incompatibilidades antes de cerrar el arte. Si un cambio necesita otra selección de contenido, vuelve a estrategia. El director creativo mantiene la responsabilidad y presenta una única propuesta integrada; los especialistas no abren aprobaciones separadas.
 
-- [Estilos artísticos y digitales](../luces-camara-prompt/references/STYLES_ESTILOS_ARTISTICOS_DIGITALES.md).
-- [Arte conceptual](../luces-camara-prompt/references/USE_CASES_ARTE_CONCEPTUAL_STORYTELLING.md).
-- [Renders, interiores y materiales](../luces-camara-prompt/references/USE_CASES_RENDER_INTERIORES_PBR_PROTO.md).
-- [Retoque y restauración](../luces-camara-prompt/references/USE_CASES_RETOQUE_RESTAURACION.md).
-- [Editorial, mockups y logos](../luces-camara-prompt/references/USE_CASES_DISENO_EDITORIAL_MOCKUPS_LOGOS.md).
+## Modos específicos
 
-Sus ejemplos son repertorio de posibilidades; no campos obligatorios. Las referencias a flujos de Luces en esos recursos no transfieren la tarea.
+Para bocetos y visualización, conserva la geometría gobernada por la base y desarrolla materialidad y acabado. Un render no acredita dimensiones ni viabilidad constructiva. Para texturas, distingue una imagen de material de un mapa técnico utilizable y verifica continuidad cuando se requiera.
 
-## Traspaso
+Para una edición acotada aplica [EDIT_SCOPE.md](references/EDIT_SCOPE.md): base, objetivo, cambio, protección e inspección comparada. No reinicia concepto ni moderniza una restauración por defecto. Un cambio fuera del alcance vuelve al director.
 
-Entrega escena resuelta, atributos protegidos, cambios permitidos, decisiones espaciales, tratamiento y controles de aceptación. Mantén separadas las dudas materiales. No compiles otro prompt si solo se te consultó arte, ni ejecutes imágenes por tu cuenta. Para una petición autónoma, el [director creativo](../gorvet-creative-director/SKILL.md) integra la propuesta y aplica el protocolo de ejecución.
+Para logos y símbolos puede explorar significado, forma y reproducción; no presenta un raster como vector ni una exploración como identidad profesional acabada. En mockups distingue el diseño aplicado de la escena que muestra su soporte.
+
+## Recursos y evaluación
+
+Consulta las [operaciones de escena](references/SCENE_OPERATIONS.md) y solo las bibliotecas pertinentes del libro: [estilos artísticos](../luces-camara-prompt/references/STYLES_ESTILOS_ARTISTICOS_DIGITALES.md), [conceptual y narrativa](../luces-camara-prompt/references/USE_CASES_ARTE_CONCEPTUAL_STORYTELLING.md), [visualización](../luces-camara-prompt/references/USE_CASES_RENDER_INTERIORES_PBR_PROTO.md), [restauración](../luces-camara-prompt/references/USE_CASES_RETOQUE_RESTAURACION.md) o [editorial y mockups](../luces-camara-prompt/references/USE_CASES_DISENO_EDITORIAL_MOCKUPS_LOGOS.md). Sus asociaciones no son plantillas obligatorias.
+
+Pasa el preflight de la especificación y utiliza la [rúbrica](../gorvet-creative-director/references/SCORING_RUBRIC.md) para evaluar el concepto o comparar propuestas. La revisión visual posterior exige una imagen observada. Devuelve decisiones, conservación, conflictos y controles de aceptación al mismo encargo; no compila ni genera durante una consulta.

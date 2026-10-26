@@ -6,6 +6,15 @@ import json
 from pathlib import Path
 import sys
 
+try:
+    from score_review import evaluate as evaluate_scorecard
+except ModuleNotFoundError:
+    import importlib.util
+    score_spec = importlib.util.spec_from_file_location("gorvet_score_review", Path(__file__).with_name("score_review.py"))
+    score_module = importlib.util.module_from_spec(score_spec)
+    score_spec.loader.exec_module(score_module)
+    evaluate_scorecard = score_module.evaluate
+
 
 def digest(value):
     data = json.dumps(value, ensure_ascii=False, sort_keys=True,
@@ -18,7 +27,8 @@ def fingerprints(job):
     if not isinstance(execution, dict):
         execution = {}
     direction = job.get("direction", {})
-    scope = {"job_id": job.get("job_id"), "deliverable": job.get("deliverable"),
+    scope = {"job_id": job.get("job_id"), "brief": job.get("brief"), "deliverable": job.get("deliverable"),
+             "task_mode": job.get("task_mode", "create"),
              "direction": direction}
     return {
         "direction": digest(scope),
@@ -44,18 +54,25 @@ def validate(job, stage):
     errors = []
     if not isinstance(job, dict):
         return ["El registro debe ser un objeto JSON."]
-    if job.get("schema_version") != "1.0":
+    if job.get("schema_version") != "1.1":
         errors.append("Versión de contrato desconocida.")
     if not nonempty(job.get("job_id")):
         errors.append("Falta job_id.")
     if job.get("deliverable") not in ("image", "series"):
         errors.append("Este control es para imágenes; un encargo textual no autoriza generación.")
+    brief = job.get("brief")
+    if (not isinstance(brief, dict) or brief.get("status") != "ready"
+            or brief.get("material_questions") != []):
+        errors.append("El brief no está preparado o conserva preguntas materiales pendientes.")
     direction = job.get("direction")
     if not isinstance(direction, dict):
         return errors + ["Falta la dirección resuelta."]
     for key in ("message", "concept", "medium", "composition"):
         if not nonempty(direction.get(key)):
             errors.append(f"Falta direction.{key}.")
+    gorvet = direction.get("gorvet")
+    if not isinstance(gorvet, dict) or not all(nonempty(gorvet.get(key)) for key in "GORVET"):
+        errors.append("Falta el contexto GORVET vigente; no se exige reiniciarlo en cada especialista.")
     if not string_list(direction.get("image_text")):
         errors.append("direction.image_text debe ser una lista de literales, vacía si no hay copy.")
     sources = direction.get("references")
@@ -90,11 +107,32 @@ def validate(job, stage):
             errors.append("La salida no tiene veredicto visual apto.")
         if not string_list(review.get("evidence")) or not review.get("evidence"):
             errors.append("Falta evidencia de la revisión visual.")
+        scorecard = review.get("scorecard")
+        result = evaluate_scorecard(scorecard)
+        if not isinstance(scorecard, dict) or scorecard.get("kind") != "visual" or result["verdict"] != "pass":
+            errors.append("La rúbrica visual no está completa o contiene criterios o bloqueos pendientes.")
         return errors
 
     execution = job.get("execution")
     if not isinstance(execution, dict):
         return errors + ["Falta el encargo de ejecución."]
+    preflight = job.get("preflight")
+    task_mode = job.get("task_mode", "create")
+    if task_mode == "edit":
+        if not isinstance(preflight, dict) or preflight.get("kind") != "edit_scope":
+            errors.append("Una edición necesita su contrato de alcance, no otra ideación.")
+        elif (not all(nonempty(preflight.get(key)) for key in ("source_output_id", "target", "mutation", "acceptance"))
+              or not string_list(preflight.get("protected")) or not preflight["protected"]
+              or preflight.get("ready") is not True):
+            errors.append("El alcance de edición no está resuelto.")
+        elif preflight["source_output_id"] not in source_ids:
+            errors.append("La base de edición no está entre las fuentes de dirección.")
+    elif task_mode == "create":
+        result = evaluate_scorecard(preflight)
+        if not isinstance(preflight, dict) or preflight.get("kind") != "concept" or result["verdict"] != "pass":
+            errors.append("El concepto y preflight necesitan una evaluación apta antes de generar.")
+    else:
+        errors.append("Modo de trabajo desconocido.")
     prompt = execution.get("prompt")
     if not nonempty(prompt):
         errors.append("Falta el prompt de ejecución.")

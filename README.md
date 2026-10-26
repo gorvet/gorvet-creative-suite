@@ -8,7 +8,7 @@ Agencia creativa visual de **Juank de Gorvet**, basada en el Método G.O.R.V.E.T
 | --- | --- |
 | `gorvet-creative-director` | Coordinar el encargo y conservar decisiones, autorización, ejecución y cierre. |
 | `gorvet-creative-strategy` | Resolver propósito, concepto, mensaje y selección de contenido. |
-| `image-art-direction` | Construir escenas y tratamientos fotográficos, ilustrados, conceptuales o tridimensionales. |
+| `image-art-direction` | Definir el sistema de arte y el esquema global, e integrar fotografía y diseño gráfico. |
 | `photography-direction` | Dirigir captura, acción, óptica, luz, foco, materiales e integración fotográfica. |
 | `poster-promotional-design` | Resolver composición gráfica, tipografía, jerarquía y relación imagen-mensaje. |
 | `brand-reference-direction` | Delimitar referencias, identidad, atributos protegidos y transformaciones. |
@@ -17,9 +17,12 @@ Agencia creativa visual de **Juank de Gorvet**, basada en el Método G.O.R.V.E.T
 | `prompt-optimization-qa` | Depurar prompts existentes sin perder controles. |
 | `visual-quality-review` | Juzgar el resultado observado y dirigir correcciones con evidencia. |
 
-Fotografía es una especialidad propia. Dirección de imagen decide qué se verá y con qué medio; fotografía decide cómo capturar esa solución cuando sea fotográfica. Diseño publicitario integra la escena con tipografía y contenido. El director resuelve conflictos y conserva la responsabilidad; una consulta no reinicia el trabajo ni abre otra aprobación.
+Fotografía es una especialidad propia. Dirección de arte integra la solución visual y su esquema; fotografía desarrolla la captura de esa solución cuando sea fotográfica. Diseño publicitario integra la escena con tipografía y contenido. El director resuelve conflictos y conserva la responsabilidad; una consulta no reinicia el trabajo ni abre otra aprobación.
 
 ## Cómo trabaja
+
+El director [prepara el brief con el usuario](skills/gorvet-creative-director/references/BRIEF_INTAKE.md): extrae lo disponible, separa hechos y supuestos y pregunta por incertidumbres materiales. Estrategia convierte ese encargo en argumento y selección; arte desarrolla el sistema visual. El equipo propone decisiones de diseño sin pedir al usuario que haga ese trabajo. No hay un cuestionario completo obligatorio ni una aprobación adicional rutinaria del brief.
+
 
 El recorrido se adapta al entregable. Una crítica puede empezar por la imagen existente, un prompt resuelto puede ir directamente a depuración y una campaña necesita relaciones entre piezas. No se activan los diez skills para cada petición.
 
@@ -28,6 +31,12 @@ Antes de producir una imagen nueva, el director resuelve la idea y el diseño. S
 La herramienta recibe el prompt mostrado. Tras generar, el asistente inspecciona la imagen y compara propósito, contenido, atractivo, composición y fidelidad. Las correcciones para restablecer la dirección aprobada muestran su instrucción antes de ejecutarse y no abren otra aprobación. Un cambio de concepto, contenido o composición requiere renovar la propuesta. El límite estándar es una generación y dos correcciones.
 
 Una revisión textual no valida el arte. Si faltan herramientas de generación, inspección o edición, el asistente informa del alcance pendiente. La suite aporta skills y recursos; no incorpora su propio motor de generación ni garantiza obediencia del modelo anfitrión.
+
+## Workflows adaptados y puntuaciones
+
+La [revisión de fuentes](skills/gorvet-creative-director/references/SOURCE_ADAPTATION.md) compara los workflows y skills estudiados y documenta qué se incorpora, qué se adapta y qué se descarta. Las [cadenas](skills/gorvet-creative-director/references/WORKFLOW_CHAINS.md) separan creación gráfica, fotografía definida, ilustración, campaña, edición acotada, crítica y depuración. El [contrato común](skills/gorvet-creative-director/references/SPECIALIST_CONTRACT.md) delimita entradas, autoridad y salidas para conservar las decisiones del trabajo anterior.
+
+La [rúbrica](skills/gorvet-creative-director/references/SCORING_RUBRIC.md) evalúa concepto y resultado visual con anclas, pesos y evidencia. Los fallos bloqueantes o un criterio pendiente impiden cerrar aunque el índice total sea alto. Una edición localizada verifica alcance y protección; no necesita inventar otra idea creativa.
 
 ## Bibliotecas y recetas
 
@@ -39,23 +48,23 @@ Consulta [fuentes y adaptación](skills/gorvet-creative-director/references/SOUR
 
 ## Descarga e instalación
 
-El paquete de esta versión es `gorvet-creative-suite-2.0.0.zip`, con manifiesto, diez skills, referencias, scripts de control, pruebas, icono y licencia. Su identificador técnico sigue siendo `gorvet-creative-suite` y el nombre visible es GORVET Creative Director. El autor y desarrollador son Juank de Gorvet; la web es [gorvet.com](https://gorvet.com).
+El paquete de esta versión es `gorvet-creative-suite-2.1.0.zip`, con manifiesto, diez skills, referencias, scripts de control, pruebas, icono y licencia. Su identificador técnico sigue siendo `gorvet-creative-suite` y el nombre visible es GORVET Creative Director. El autor y desarrollador son Juank de Gorvet; la web es [gorvet.com](https://gorvet.com).
 
 Los paquetes publicados aparecen en [GitHub Releases](https://github.com/gorvet/gorvet-creative-suite/releases). Para probar una versión local usa el ZIP entregado con esa versión; crear un archivo local no lo publica en GitHub.
 
 Importa el ZIP completo en una aplicación compatible con este formato de complemento. Para un host que instala Agent Skills por carpetas, conserva las diez carpetas hermanas de `skills/` con sus recursos: la agencia utiliza referencias entre especialidades. La aplicación decide su ubicación, activación y formato de importación. Adjuntar el ZIP a un chat no equivale necesariamente a instalarlo.
 
-Después de actualizar, comprueba que la aplicación muestre la versión 2.0.0 y el skill `gorvet-creative-director`. Abre una sesión nueva si el host conserva instrucciones anteriores. No necesitas elegir manualmente un especialista para pedir un trabajo completo.
+Después de actualizar, comprueba que la aplicación muestre la versión 2.1.0 y el skill `gorvet-creative-director`. Abre una sesión nueva si el host conserva instrucciones anteriores. No necesitas elegir manualmente un especialista para pedir un trabajo completo.
 
 ## Migración desde 1.7
 
-Se conservan los identificadores de los tres skills originales. El skill de pósters pasa a especializarse en diseño gráfico dentro de la agencia. Luces conserva el Método GORVET y todas sus bibliotecas, y concentra la compilación de prompts; sus antiguas decisiones de escena y fotografía tienen responsables propios. El director coordina una sola propuesta y aprobación. QA de prompts mantiene su uso independiente para depuración textual.
+Se conservan los identificadores de los tres skills originales. El skill de pósters pasa a especializarse en diseño gráfico dentro de la agencia. Luces conserva el Método GORVET y todas sus bibliotecas, y concentra la compilación de prompts; sus decisiones de arte y fotografía tienen responsabilidades y entregables delimitados. El director coordina una sola propuesta y aprobación. QA de prompts mantiene su uso independiente para depuración textual.
 
 La versión 2.0 cambia el recorrido: una escena ya resuelta que solo necesita un prompt no exige volver a aprobar una dirección nueva. Los idiomas son los solicitados o, por defecto, el de la conversación. El desglose del método se entrega cuando se pide; las consultas entre especialistas no añaden cierres promocionales.
 
 ## Base para un agente
 
-[Arquitectura y contrato](skills/gorvet-creative-director/references/AGENT_ARCHITECTURE.md) documenta responsabilidades, traspasos, autorización, huellas de propuestas y estados de revisión. El [verificador de traspasos](skills/gorvet-creative-director/scripts/check_handoff.py) permite comprobar antes de producir y antes de declarar una entrega validada que el registro está completo y corresponde a la versión vigente.
+[Arquitectura y contrato](skills/gorvet-creative-director/references/AGENT_ARCHITECTURE.md) documenta el contrato 1.1, responsabilidades, contribuciones en cadena, puntuación, autorización, huellas y revisión. El [verificador de traspasos](skills/gorvet-creative-director/scripts/check_handoff.py) permite comprobar antes de producir y antes de declarar una entrega validada que el registro está completo y corresponde a la versión vigente.
 
 ```text
 python -m unittest discover -s skills/gorvet-creative-director/scripts/tests -v
@@ -63,7 +72,7 @@ python skills/gorvet-creative-director/scripts/check_handoff.py registro.json --
 python skills/gorvet-creative-director/scripts/check_handoff.py registro.json --stage deliver
 ```
 
-El script usa solo la biblioteca estándar de Python. El [ejemplo sin aprobar](skills/gorvet-creative-director/examples/handoff.json) debe ser rechazado antes de generar. Los controles verifican información del registro; no prueban que la estética sea buena o que una aprobación declarada sea auténtica.
+Los scripts de traspaso, puntuación y autorización usan solo la biblioteca estándar de Python. El [ejemplo sin aprobar](skills/gorvet-creative-director/examples/handoff.json) debe ser rechazado antes de generar. Los controles verifican ámbitos de decisión, versiones, estructura y cálculo de las notas e información de autorización; no asignan el juicio visual ni prueban que una aprobación declarada sea auténtica.
 
 Para imponer controles efectivos, el futuro agente debe obtener autorización de mensajes reales, registrar llamadas y archivos reales, invocar el verificador en sus transiciones y disponer de visión para juzgar el resultado. El paquete no intercepta herramientas automáticamente ni despliega todavía ese agente.
 
@@ -71,7 +80,7 @@ Para imponer controles efectivos, el futuro agente debe obtener autorización de
 
 Después de confirmar los cambios, ejecuta `./scripts/build-release.ps1` desde PowerShell. Genera el ZIP y `SHA256SUMS.txt` en `dist/` desde el commit actual. Rechaza cambios pendientes y archivos de distribución existentes para evitar paquetes ambiguos.
 
-La publicación existente usa `.github/workflows/release.yml`: al subir una etiqueta como `v2.0.0`, comprueba su coincidencia con el manifiesto, genera el ZIP, verifica integridad y crea la Release. Un commit o un ZIP local no publican esa Release. La identidad, el icono y los metadatos se conservan en `plugin.json`.
+La publicación existente usa `.github/workflows/release.yml`: al subir una etiqueta como `v2.1.0`, comprueba su coincidencia con el manifiesto, genera el ZIP, verifica integridad y crea la Release. Un commit o un ZIP local no publican esa Release. La identidad, el icono y los metadatos se conservan en `plugin.json`.
 
 ## Licencia
 

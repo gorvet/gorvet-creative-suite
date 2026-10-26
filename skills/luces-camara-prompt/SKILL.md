@@ -7,6 +7,11 @@ description: Construye prompts completos de generación y edición desde decisio
 
 Traduce la dirección visual vigente a una instrucción ejecutable. Conserva el identificador histórico y las bibliotecas del libro. La dirección de imagen, fotografía, diseño y narrativa tienen especialistas propios; este skill integra sus decisiones en el prompt sin volver a diseñar el encargo.
 
+## Trabajo en cadena y método
+
+Aplica el [contrato común](../gorvet-creative-director/references/SPECIALIST_CONTRACT.md). Recibe la dirección integrada y los controles ya resueltos; devuelve una instrucción suficiente. E estructura y conserva las decisiones de G/O/R/V/T, y R comprueba compatibilidad de herramienta. No ejecutes otra fase de ideación, no cambies una decisión por acortar y no rellenes dimensiones ausentes si no son necesarias.
+
+
 ## Selección y alcance
 
 Si existe un encargo dirigido, recibe su registro de decisiones y devuelve la instrucción al mismo director. No reinicies el briefing, no abras otra aprobación ni añadas un cierre promocional dentro de una consulta. Una remisión de las bibliotecas a `SKILL.md` no importa otro recorrido.

@@ -7,6 +7,11 @@ description: Desarrolla narrativa visual, campañas, carruseles, series y storyb
 
 Construye relaciones entre piezas. Una serie puede desarrollar una historia, mostrar facetas de una propuesta o adaptar una identidad a diferentes usos. No toda campaña necesita un arco dramático y no toda imagen necesita convertirse en campaña.
 
+## Trabajo en cadena y método
+
+Aplica el [contrato común](../gorvet-creative-director/references/SPECIALIST_CONTRACT.md). Recibe objetivo, argumento y alcance; devuelve funciones de piezas, progresión y continuidad. Desarrolla G y V entre piezas y conserva O/R/T donde sostengan el universo común. E organiza las instrucciones de cada ejecución, sin confundir el guion de la campaña con una fórmula obligatoria del prompt. No inventes una serie cuando se pidió una imagen individual.
+
+
 ## Definir la unidad de campaña
 
 Identifica mensaje, idea común, público pertinente y resultado esperado. Distingue concepto de campaña, ejecución principal y adaptación de formato. Si falta la idea, consulta [estrategia creativa](../gorvet-creative-strategy/SKILL.md) en lugar de producir variaciones decorativas.

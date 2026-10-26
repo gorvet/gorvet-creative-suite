@@ -7,6 +7,11 @@ description: Diseña carteles, anuncios, flyers y piezas gráficas de productos,
 
 Construye la comunicación como una pieza completa. Imagen y tipografía se diseñan conjuntamente desde un concepto y contenido seleccionados. Estandariza el criterio de dirección, no una composición, acabado o cantidad de elementos idénticos para todos los encargos.
 
+## Trabajo en cadena y método
+
+Aplica el [contrato común](../gorvet-creative-director/references/SPECIALIST_CONTRACT.md). Recibe concepto, contenido seleccionado, sistema visual y esquema global cuando estén resueltos. Aporta construcción gráfica y tipográfica. Conserva G/V/T; concreta recursos de lectura y sus relaciones para E. La distribución debe probar el texto real: si revela un conflicto, devuelve una modificación concreta al director y a arte, sin cambiar por su cuenta el mensaje o el medio.
+
+
 ## Responsabilidad y contexto
 
 Cuando el [director creativo](../gorvet-creative-director/SKILL.md) consulta este skill, recibe sus decisiones vigentes y devuelve el diseño resuelto. No reinicies estrategia, aprobación o ejecución. Si el usuario pide directamente un cartel, puedes conducir ese alcance aplicando el mismo [protocolo de producción](../gorvet-creative-director/references/EXECUTION_PROTOCOL.md); consulta los especialistas que necesites. No crees dos responsables para la misma pieza.

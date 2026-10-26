@@ -16,6 +16,10 @@ Pide aprobar ese conjunto y termina el turno sin generar. Un brief inicial detal
 
 Si el usuario pide expresamente ejecución directa, no esperes aprobación. Mantén visible el prompt antes de cada llamada salvo que también pida omitirlo. No conviertas una petición corriente de imagen en una excepción de ejecución directa por inferencia.
 
+## Evaluación antes de ejecutar
+
+En creación, utiliza la [rúbrica de concepto](SCORING_RUBRIC.md) para comprobar adecuación, especificidad, interés, claridad y viabilidad. Una nota baja debe llevar a una corrección del responsable antes de producir, no a subir el promedio. En edición acotada, verifica base, objetivo, cambio, conservación y aceptación; no abras otra ideación. Las puntuaciones se acompañan de evidencia y se muestran si ayudan a decidir o el usuario las solicita.
+
 ## Ejecutar lo mostrado
 
 El campo de prompt enviado debe coincidir con el publicado para ese intento. Referencias y parámetros también deben corresponder a los anunciados. No añadas instrucciones ocultas, expandas el copy, cambies idioma ni recompongas la escena entre aprobación y ejecución. Si cambia la propuesta, muestra la versión actualizada y renueva la aprobación cuando afecte a concepto, contenido o composición.
@@ -24,7 +28,7 @@ Adjunta materiales utilizables por la herramienta. Una ruta mencionada en el tex
 
 ## Observar antes de cerrar
 
-Inspecciona la salida devuelta o ábrela mediante visión disponible. Compara con el registro de decisiones y las referencias. Evalúa a escala de uso y después los detalles pertinentes. El éxito de la llamada, la resolución y una buena redacción del prompt no acreditan calidad visual.
+Inspecciona la salida devuelta o ábrela mediante visión disponible. Compara con el registro de decisiones y las referencias. Completa la rúbrica visual de esa salida: bloqueos y criterios pendientes impiden declararla apta, aunque el índice sea alto. Evalúa a escala de uso y después los detalles pertinentes. El éxito de la llamada, la resolución y una buena redacción del prompt no acreditan calidad visual.
 
 Ante un fallo, registra el elemento afectado, la evidencia, el cambio visible necesario y lo que se conserva. Las correcciones para restablecer la dirección aprobada son automáticas: muestra la instrucción completa antes de llamar, sin pedir otra aprobación. Si el remedio modifica la dirección aprobada, presenta la nueva propuesta antes de generar.
 

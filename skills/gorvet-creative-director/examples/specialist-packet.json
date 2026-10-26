@@ -1,0 +1,13 @@
+{
+  "job_id": "example-unapproved",
+  "base_revision": 0,
+  "role": "image-art-direction",
+  "updates": {
+    "direction.visual_system": {
+      "palette": "Azul y naranja sobre campo claro",
+      "principle": "El encuentro se expresa mediante la superposición de dos formas",
+      "finish": "Gráfica plana con bordes definidos"
+    },
+    "direction.layout_blueprint": "Masa de imagen a la izquierda; zona de lectura inferior derecha"
+  }
+}

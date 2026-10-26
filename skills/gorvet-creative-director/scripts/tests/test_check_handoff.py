@@ -13,12 +13,24 @@ gate = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(gate)
 
 
+def scorecard(kind):
+    profiles = {"concept": ("fit", "specificity", "interest", "clarity", "feasibility"),
+                "visual": ("communication", "character", "structure", "typography", "fidelity", "craft")}
+    return {"kind": kind, "observed": kind == "visual", "blockers": [],
+            "criteria": {key: {"grade": 3, "evidence": ["Evidencia sintética para probar el contrato."]}
+                         for key in profiles[kind]}}
+
+
 def proposal():
     job = {
-        "schema_version": "1.0", "job_id": "test", "deliverable": "image",
+        "schema_version": "1.1", "job_id": "test", "deliverable": "image",
+        "brief": {"status": "ready", "material_questions": []},
         "direction": {"message": "Identidad", "concept": "Forma y contraste",
                       "medium": "Ilustración", "composition": "Sujeto a la izquierda",
-                      "image_text": ["ALFA"], "references": [{"id": "source", "role": "identity"}]},
+                      "image_text": ["ALFA"], "references": [{"id": "source", "role": "identity"}],
+                      "gorvet": {"G": "Identificación", "O": "Campo gráfico", "R": "Contraste y formas",
+                                 "V": "Encuentro", "E": "Sujeto y literal", "T": "Geométrico"}},
+        "preflight": scorecard("concept"),
         "execution": {"prompt": "ALFA abajo; sujeto a la izquierda.",
                       "reference_ids": ["source"], "parameters": {"transparent_background": False},
                       "attempt": 1, "authorization": {"mode": "approval"}},
@@ -124,7 +136,8 @@ class HandoffTests(unittest.TestCase):
         job["output"] = {"id": "generated-1"}
         job["review"] = {"observed": True, "output_id": "generated-1", "verdict": "pass",
                          "direction_fingerprint": gate.fingerprints(job)["direction"],
-                         "evidence": ["Se reconoce el sujeto y se lee ALFA en la zona prevista."]}
+                         "evidence": ["Se reconoce el sujeto y se lee ALFA en la zona prevista."],
+                         "scorecard": scorecard("visual")}
         self.assertEqual(gate.validate(job, "deliver"), [])
         for field, value in (("observed", False), ("output_id", "other"), ("verdict", "revise"),
                              ("evidence", []), ("direction_fingerprint", "old")):
@@ -132,6 +145,41 @@ class HandoffTests(unittest.TestCase):
                 changed = copy.deepcopy(job)
                 changed["review"][field] = value
                 self.assertTrue(gate.validate(changed, "deliver"))
+
+    def test_declared_pass_cannot_override_a_failed_scorecard(self):
+        job = proposal()
+        job["output"] = {"id": "generated-1"}
+        job["review"] = {"observed": True, "output_id": "generated-1", "verdict": "pass",
+                         "direction_fingerprint": gate.fingerprints(job)["direction"],
+                         "evidence": ["El literal no coincide."], "scorecard": scorecard("visual")}
+        job["review"]["scorecard"]["blockers"] = ["Literal incorrecto."]
+        self.assertTrue(gate.validate(job, "deliver"))
+
+    def test_generation_rejects_unresolved_preflight(self):
+        job = proposal()
+        job["preflight"]["criteria"]["clarity"]["grade"] = 2
+        self.assertTrue(gate.validate(job, "generate"))
+
+    def test_material_brief_question_blocks_production(self):
+        job = proposal()
+        job["brief"]["material_questions"] = ["Confirmar una condición material."]
+        self.assertTrue(gate.validate(job, "generate"))
+
+    def test_method_context_is_required_before_execution(self):
+        job = proposal()
+        del job["direction"]["gorvet"]
+        self.assertTrue(gate.validate(job, "generate"))
+
+    def test_bounded_edit_uses_scope_without_inventing_a_new_concept(self):
+        job = proposal()
+        job["task_mode"] = "edit"
+        job["preflight"] = {"kind": "edit_scope", "source_output_id": "source",
+                            "target": "Literal", "mutation": "Restituir ALFA", "protected": ["Identidad", "Composición"],
+                            "acceptance": "Texto correcto y resto conservado", "ready": True}
+        job["execution"]["authorization"]["approved_fingerprint"] = gate.fingerprints(job)["proposal"]
+        self.assertEqual(gate.validate(job, "generate"), [])
+        job["preflight"]["source_output_id"] = "unknown"
+        self.assertTrue(gate.validate(job, "generate"))
 
     def test_malformed_inputs_fail_without_crashing(self):
         for value in (None, [], {}, {"direction": []}, {"direction": {"references": [None]}},

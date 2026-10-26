@@ -7,11 +7,16 @@ description: Resuelve objetivo, idea creativa, mensaje y selección de contenido
 
 Define qué debe lograr la comunicación y por qué una idea concreta puede lograrlo. No conviertas todo trabajo en una campaña de marca: distingue entre una ejecución puntual, una serie y una plataforma de campaña. Tampoco conviertas una intención artística en una oferta comercial si no se pidió.
 
+## Trabajo en cadena y método
+
+Aplica el [contrato común](../gorvet-creative-director/references/SPECIALIST_CONTRACT.md). Recibe el encargo y su evidencia; aporta argumento, mensaje, destino del contenido y dudas materiales. Trabaja principalmente G y V, apoyado por O cuando exista información de contexto; no inventa R ni T detallados para sustituir a arte. Utiliza la [rúbrica de concepto](../gorvet-creative-director/references/SCORING_RUBRIC.md) al comparar direcciones. No puntúa resultados visuales todavía inexistentes.
+
+
 ## Comprender y seleccionar
 
 Identifica resultado, destinatario, mensaje, contexto y evidencia disponible. Distingue un hecho aportado, una observación visual y una hipótesis creativa. No inventes estudios de audiencia, beneficios, testimonios o estadísticas. Un supuesto útil se identifica como tal.
 
-Para contenido abundante, aplica [selección y jerarquía](../poster-promotional-design/references/CONTENT_HIERARCHY.md). Decide antes de componer: qué sostiene la imagen, qué se consulta después y qué no comunica nada necesario. El usuario aporta contexto; el especialista recomienda una selección ya resuelta. Un dato práctico no pertenece automáticamente al cartel por ser verdadero.
+Para contenido abundante o un argumento incierto, aplica [INSIGHT_AND_SELECTION.md](references/INSIGHT_AND_SELECTION.md) y [selección y jerarquía](../poster-promotional-design/references/CONTENT_HIERARCHY.md). Decide antes de componer: qué sostiene la imagen, qué se consulta después y qué no comunica nada necesario. El usuario aporta contexto; el especialista recomienda una selección ya resuelta. Un dato práctico no pertenece automáticamente al cartel por ser verdadero.
 
 Propón los literales para la imagen y redacta el apoyo cuando tenga destino real. Un estado o historia no asegura un caption asociado; propone un mensaje acompañante o una secuencia si es pertinente, sin dar ese soporte por existente. Conserva condiciones que hagan verdadera la oferta y datos marcados como literales. No alteres nombres o lugares por parecer erratas.
 

@@ -1,66 +1,63 @@
-# Arquitectura de la agencia y contrato para un agente
+# Arquitectura de la agencia y contrato 1.1
 
-GORVET Creative Director 2.0 organiza diez skills con un director y nueve especialidades. Las consultas son roles de trabajo del asistente: no implican diez modelos, procesos paralelos ni agentes externos. El director selecciona solo las decisiones que necesita el encargo.
+GORVET Creative Director 2.1 encadena responsabilidades sobre un solo encargo. Las consultas son roles del asistente, no diez procesos paralelos ni agentes externos. El director elige el recorrido por entregable y conserva autorización, versiones y cierre.
 
-## Responsabilidades
+## Cadena y responsabilidad
 
-| Responsable | Posee | No decide por los demás |
-| --- | --- | --- |
-| Director creativo | Encargo, recorrido, integración, autorización, ejecución y cierre. | No inventa capacidades de herramientas ni pruebas. |
-| Estrategia | Objetivo, proposición, concepto y selección editorial. | No fija cámara o layout para ocultar un mensaje pendiente. |
-| Dirección de imagen | Escena, medio y relaciones visuales que expresan el concepto. | No reemplaza datos o identidades protegidas. |
-| Fotografía | Captura, gesto, perspectiva, luz, foco y materialidad fotográfica. | No reabre concepto, copy ni organización gráfica aprobados. |
-| Diseño publicitario | Composición gráfica, tipografía y relación imagen-mensaje. | No devuelve al arte todo el brief por encontrarle espacio. |
-| Identidad y referencias | Función de las fuentes y atributos protegidos. | No convierte preferencias inferidas en reglas oficiales. |
-| Narrativa y campañas | Función de cada pieza, progresión, continuidad y adaptación. | No expande una imagen individual a campaña sin encargo. |
-| Luces | Compilación de decisiones en prompt y parámetros. | No añade otra dirección ni genera durante una consulta. |
-| QA de prompts | Redacción, cobertura y ausencia de contradicciones. | No certifica la imagen ni sustituye el diseño. |
-| Crítica visual | Resultado observado, evidencia, veredicto y corrección. | No aprueba un render que no ha inspeccionado. |
+[WORKFLOW_CHAINS.md](WORKFLOW_CHAINS.md) define los recorridos y retornos. [SPECIALIST_CONTRACT.md](SPECIALIST_CONTRACT.md) define entradas, autoridad y salidas. Estrategia entrega argumento y contenido; arte, sistema visual y esquema; fotografía, captura; gráfica, construcción tipográfica y espacial. Arte integra las incompatibilidades antes de compilar. Crítica visual devuelve el defecto al ámbito menor que lo explica.
 
-Dirección de imagen decide qué se verá y con qué lenguaje. Fotografía decide cómo capturar esa solución cuando el medio es fotográfico. Diseño publicitario coordina sus masas con los textos; el director resuelve un conflicto entre ellos antes de compilar.
+No se ejecuta toda la cadena para depurar un prompt, criticar una imagen o corregir una palabra. El marco GORVET se hereda y se aplica donde aporta decisiones; los controles de autorización, archivos o exportación no necesitan una nueva ideación.
 
-## Flujo y autoridad
+## Registro y contribuciones
 
-El encargo pasa por interpretación, decisiones, propuesta visible, aprobación cuando corresponde, ejecución, observación y corrección o cierre. Una consulta a otro skill no reinicia ese estado. La solicitud puede terminar antes si se pidió solo estrategia, prompt o crítica.
+El registro contiene `job_id`, `revision`, dirección vigente, referencias, autorización, ejecución y revisión. Una contribución contiene `job_id`, `base_revision`, `role` y un objeto `updates` con campos concretos. El [ejemplo](../examples/specialist-packet.json) aporta arte al [registro sin aprobar](../examples/handoff.json).
 
-El registro conserva decisiones y evidencia. Cada corrección identifica su fuente y el atributo que cambia; las fuentes de identidad aprobadas no se sustituyen por una salida fallida. Mantén un registro por pieza producida y una dirección común cuando haya una serie.
-
-## Contrato JSON 1.0
-
-El [ejemplo de registro](../examples/handoff.json) muestra un encargo aún sin aprobar. Los campos obligatorios para los controles de producción son:
-
-- `schema_version`: `1.0`; `job_id`: identificador estable del encargo o pieza.
-- `deliverable`: `image` o `series` para este verificador. Los entregables textuales siguen el flujo del skill correspondiente y no autorizan imágenes.
-- `direction`: `message`, `concept`, `medium`, `composition`, `image_text` como lista de literales y `references` como lista de objetos con `id` y `role`. Puede contener más decisiones, incluidos color, tipografía, restricciones, apoyo y atributos protegidos; todas entran en su huella.
-- `execution`: `prompt`, `reference_ids`, `parameters`, `attempt`, `authorization` y, salvo omisión expresa, `published_prompt`, `published_reference_ids`, `published_parameters`.
-- `authorization.mode`: `approval` con huella aprobada o `direct` con `direct_instruction` que documente la petición expresa. Ocultar el encargo usa `visibility: omit_on_request` y `visibility_instruction` expresa; el valor normal es `shown`.
-- Para una corrección: `execution.correction` contiene `restore_approved`, `direction_fingerprint`, `source_output_id` y `diagnosis`. En modo aprobado, `authorization.approved_direction_fingerprint` conserva la dirección autorizada. Las referencias de ejecución incluyen las fuentes de dirección y la salida base declarada.
-- Para validar entrega: `output.id` identifica la imagen; `review` contiene `observed`, `output_id`, `direction_fingerprint`, `verdict` y `evidence` como lista de observaciones. Solo `pass` permite declarar una entrega validada.
-
-La huella de propuesta cubre encargo, dirección, prompt, referencias y parámetros. La huella de dirección cubre encargo y decisiones. Calcula las huellas para saber qué se presentó; registra aprobación solo después de recibirla. Calcular una huella no aprueba nada.
-
-## Verificador opcional
-
-El script estándar de Python [check_handoff.py](../scripts/check_handoff.py) no necesita red ni paquetes externos:
+[chain_handoff.py](../scripts/chain_handoff.py) comprueba encargo y versión, rechaza escrituras fuera de la autoridad del rol y campos protegidos, aplica una copia de las decisiones y registra la cadena. No modifica los archivos de entrada. Su mapa `OWNERS` especifica campos autorizados. La composición consolidada y el contexto GORVET pertenecen a la integración del director, que conserva la procedencia de fotografía y gráfica; no son otro encargo independiente.
 
 ```text
+python skills/gorvet-creative-director/scripts/chain_handoff.py registro.json contribucion.json
+```
+
+El verificador controla ámbitos de escritura, no el significado del contenido ni la bondad de una decisión. Que un campo pertenezca al especialista no le permite contradecir el objetivo: preflight y crítica deben detectar esa incoherencia.
+
+## Contrato de producción 1.1
+
+- `schema_version`: `1.1`; `job_id`: identificador estable de la pieza.
+- `brief`: encargo organizado con `status: ready` y `material_questions: []` antes de producir. Los datos confirmados, propuestas y supuestos se conservan separados; la preparación del brief no sustituye la aprobación de la dirección.
+- `deliverable`: `image` o `series` para este control. Un entregable textual no autoriza producir una imagen.
+- `task_mode`: `create` o `edit`; si se omite, se interpreta como creación.
+- `direction`: `message`, `concept`, `medium`, `composition`, `image_text` como lista de literales y `references` como objetos con `id` y `role`. Incluye el contexto `gorvet` con G/O/R/V/E/T ya resueltos o conservados; no exige que cada especialista vuelva a desarrollarlos.
+- Los demás campos de dirección pueden registrar escena, sistema, captura, layout, tipografía, apoyo, omisiones, reglas de referencia y serie. Todos entran en la huella de dirección.
+- `preflight`: para creación, una rúbrica `concept` apta. Para edición, un objeto `kind: edit_scope`, `source_output_id`, `target`, `mutation`, `protected` como lista, `acceptance` y `ready: true`. La base debe estar declarada entre las fuentes. No se exige inventar otro concepto al editar.
+- `execution`: `prompt`, `reference_ids`, `parameters`, `attempt`, `authorization` y, salvo omisión expresa, `published_prompt`, `published_reference_ids`, `published_parameters`.
+- `authorization.mode`: `approval` con `approved_fingerprint`, o `direct` con `direct_instruction` expresa. Ocultar el prompt exige `visibility: omit_on_request` y `authorization.visibility_instruction`; el modo normal es `shown`.
+- Una corrección registra `restore_approved`, `direction_fingerprint`, `source_output_id` y `diagnosis` en `execution.correction`. En modo aprobado conserva `authorization.approved_direction_fingerprint`. Sus referencias incluyen fuentes de dirección y salida base declarada.
+- Para entrega validada: `output.id`; `review.observed`, `output_id`, `direction_fingerprint`, `verdict`, `evidence` y `scorecard` visual apta de esa salida.
+
+La huella de propuesta cubre encargo y brief, tipo de trabajo, dirección, prompt, referencias y parámetros. La de dirección cubre el mismo encargo, brief y decisiones. Calcular una huella no obtiene aprobación; el host registra esa aprobación solo desde la interacción auténtica del usuario.
+
+## Puntuación y evidencia
+
+[SCORING_RUBRIC.md](SCORING_RUBRIC.md) define dos perfiles y anclas 0–4. Un criterio contiene `grade` y `evidence` como lista. Solo los criterios expresamente opcionales permiten `applicable: false` con `reason`, sin nota. Cada tarjeta contiene `kind`, `criteria` y `blockers`; la visual añade `observed: true`.
+
+El perfil `concept` contiene `fit`, `specificity`, `interest`, `clarity`, `feasibility`. El perfil `visual` contiene `communication`, `character`, `structure`, `typography`, `fidelity`, `craft`. La suma se normaliza por los pesos aplicables. Un bloqueo o una nota menor de 3 impiden cerrar aunque la media sea alta.
+
+[score_review.py](../scripts/score_review.py) comprueba estructura, evidencia registrada, cálculo y decisión. No observa imágenes ni asigna notas. Una rúbrica incompleta no produce un índice supuesto.
+
+```text
+python skills/gorvet-creative-director/scripts/score_review.py evaluacion.json
 python skills/gorvet-creative-director/scripts/check_handoff.py registro.json --fingerprints
 python skills/gorvet-creative-director/scripts/check_handoff.py registro.json --stage generate
 python skills/gorvet-creative-director/scripts/check_handoff.py registro.json --stage deliver
-```
-
-Devuelve JSON con `allowed` y `errors`, y código de salida 1 si falla. Bloquea registros sin dirección, prompt diferente del mostrado, aprobación obsoleta, referencias incoherentes, literales ausentes, correcciones sin diagnóstico o entrega validada sin revisión de esa salida. El límite estándar comprobado es una generación y dos correcciones. Si un futuro agente permite otro alcance expresamente autorizado, debe adaptar su política y pruebas de límite; no basta alterar la propuesta en silencio.
-
-Pruebas reproducibles:
-
-```text
 python -m unittest discover -s skills/gorvet-creative-director/scripts/tests -v
 ```
 
-## Qué necesita implementar el futuro agente
+Los scripts usan Python estándar y no llaman a modelos ni redes. El código de salida 1 indica transición rechazada. El ejemplo distribuido está incompleto y sin aprobar: debe ser rechazado antes de generar.
 
-El paquete no intercepta llamadas a herramientas por sí mismo. Para un control real, el agente debe mantener el registro, obtener la autorización desde la interacción auténtica del usuario y llamar al verificador antes de producir y de declarar una entrega validada. Una salida de control negativa impide esa transición y vuelve a la decisión pendiente.
+## Integración del futuro agente
 
-El verificador confía en los datos del host: no puede saber si una aprobación registrada ocurrió, si se adjuntó realmente un archivo ni si una observación visual es verdadera. El host debe aportar esos hechos desde llamadas y mensajes reales; no debe delegar su fabricación al modelo. La evaluación estética requiere visión y criterio, no se demuestra por pasar un esquema ni por declarar `observed: true`.
+El paquete no intercepta herramientas por sí mismo. Para imponer los controles, el agente mantiene el registro, encadena contribuciones, obtiene autorización de mensajes reales, registra archivos y llamadas reales y ejecuta el control antes de producir y de declarar una entrega validada. Si el control falla, vuelve a la decisión pendiente, sin saltarla.
 
-Conecta generación, archivos, visión y persistencia según herramientas reales. Si falta una capacidad, informa del alcance que no se ejecutó. Esta versión deja instrucciones, responsabilidades y controles comprobables; no afirma haber creado o desplegado todavía ese agente.
+Los verificadores confían en los hechos del host. No pueden saber si una aprobación declarada ocurrió ni si la evidencia visual es verdadera. El host debe aportar esas señales desde interacción y herramientas auténticas; el modelo no debe fabricarlas. Las pruebas de ámbitos, puntuación y autorización son distintas de comprobar la calidad creativa del resultado.
+
+El límite estándar comprobado es una generación y dos correcciones. Otro alcance autorizado requiere una política explícita del agente y pruebas correspondientes; no basta alterar una nota o un dato del registro. Si faltan herramientas o visión, informa del alcance que no se ejecutó.

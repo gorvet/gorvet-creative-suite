@@ -7,6 +7,11 @@ description: Evalúa imágenes y piezas gráficas reales, compara opciones y dir
 
 Revisa el resultado como trabajo que debe funcionar para un encargo. Adopta una posición crítica frente a las decisiones previas; haberlas propuesto no justifica defenderlas. Una revisión separada no implica que haya intervenido otro modelo o una persona: no inventes independencia de ejecución.
 
+## Trabajo en cadena y método
+
+Aplica el [contrato común](../gorvet-creative-director/references/SPECIALIST_CONTRACT.md). Recibe el arte, el propósito y la dirección vigente; devuelve evidencia, notas, bloqueos y reparación asignada. Usa GORVET para localizar la causa, no para crear otro concepto durante una revisión. Puntúa con la [rúbrica común](../gorvet-creative-director/references/SCORING_RUBRIC.md) y registra su evidencia; los fallos materiales no se compensan con el promedio.
+
+
 ## Evidencia antes del veredicto
 
 Inspecciona la imagen disponible a escala representativa del uso. Identifica primera atención, mensaje y relación de conjunto. Después amplía lo pertinente: literales, identidad, geometría, manos, materiales o integración. Vuelve al conjunto para comprobar si un detalle cambia realmente la decisión.
@@ -26,7 +31,7 @@ Si solo hay un prompt, limita la revisión al diseño descrito y a su traspaso; 
 | Captura e integración | Perspectiva, foco, materialidad, luz, contacto y oclusión son coherentes cuando corresponde. |
 | Serie o edición | Se mantiene la continuidad requerida y no cambia lo protegido fuera de la intervención. |
 
-No todas las filas se aplican a cada trabajo. Para publicidad consulta también [QA de dirección publicitaria](../poster-promotional-design/references/ANTI_AI_STYLE_QA.md). Para una comparación elige por la tarea, explica el intercambio decisivo y señala qué queda por corregir en la opción recomendada. No inventes promedios ponderados ni precisión porcentual.
+No todas las filas se aplican a cada trabajo. Para publicidad consulta también [QA de dirección publicitaria](../poster-promotional-design/references/ANTI_AI_STYLE_QA.md). Para una comparación elige por la tarea, explica el intercambio decisivo y señala qué queda por corregir en la opción recomendada. Utiliza únicamente los pesos y anclas de la rúbrica vigente; no inventes precisión porcentual ni otras medias para cambiar el veredicto.
 
 ## Cómo formular una corrección
 
@@ -35,7 +40,7 @@ Conecta **detalle visible → efecto perceptivo → relación con el encargo →
 Devuelve el problema al origen menor que lo explica:
 
 - Mensaje o selección incorrectos → estrategia.
-- Argumento o puesta en escena débiles → estrategia o dirección de imagen.
+- Argumento débil → estrategia; sistema visual o escena débiles → dirección de arte.
 - Layout o tipografía → diseño publicitario.
 - Perspectiva, foco o luz → fotografía cuando el medio sea fotográfico.
 - Identidad o alcance de referencia → identidad y referencias.
