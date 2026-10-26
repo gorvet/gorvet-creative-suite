@@ -1,0 +1,68 @@
+name: Publish plugin release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Check out tagged commit
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Validate release version
+        id: version
+        shell: pwsh
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $manifest = Get-Content -LiteralPath 'plugin.json' -Raw -Encoding utf8 | ConvertFrom-Json
+          if ($manifest.version -notmatch '^\d+\.\d+\.\d+$') {
+              throw 'La versión del complemento debe tener el formato mayor.menor.parche.'
+          }
+          if ($env:RELEASE_TAG -cne "v$($manifest.version)") {
+              throw "La etiqueta $env:RELEASE_TAG no coincide con la versión $($manifest.version)."
+          }
+          "number=$($manifest.version)" >> $env:GITHUB_OUTPUT
+          "archive=gorvet-creative-suite-$($manifest.version).zip" >> $env:GITHUB_OUTPUT
+
+      - name: Build package from tagged commit
+        shell: pwsh
+        run: ./scripts/build-release.ps1
+
+      - name: Verify archive and checksum
+        working-directory: dist
+        env:
+          PACKAGE_FILE: ${{ steps.version.outputs.archive }}
+        run: |
+          sha256sum --check SHA256SUMS.txt
+          unzip -t "$PACKAGE_FILE"
+
+      - name: Publish release with package
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+          RELEASE_VERSION: ${{ steps.version.outputs.number }}
+          PACKAGE_FILE: ${{ steps.version.outputs.archive }}
+        run: |
+          gh release create "$RELEASE_TAG" \
+            "dist/$PACKAGE_FILE" dist/SHA256SUMS.txt \
+            --verify-tag \
+            --title "GORVET Creative Suite $RELEASE_VERSION" \
+            --generate-notes
