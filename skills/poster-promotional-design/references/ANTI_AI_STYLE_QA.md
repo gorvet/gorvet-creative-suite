@@ -11,7 +11,9 @@ Este control tiene dos puntos de paso: la previsualización y su encargo deben s
 | Dirección | Se ha elegido qué se anuncia y qué prioridad gobierna la pieza. | Recuperar la intención; no mezclar las prioridades de las tres bibliotecas. |
 | Evidencia | Se distinguen datos aportados, propiedades observables y decisiones creativas. | Retirar atributos inventados o aclarar el dato material que falta. |
 | Selección | Cada texto tiene función y el brief no se reproduce por exhaustividad. | Editar antes de distribuir; omitir lo irrelevante sin recuperarlo como decoración. |
+| Recomendación editorial | La propuesta distingue los literales de la imagen del apoyo útil y recomienda esa distribución al usuario. | Resolver la selección antes de aprobar; no trasladar todo al arte por ser información verdadera. |
 | Concepto | La idea visual pertenece al sujeto o proposición elegidos. | Sustituir la asociación genérica o el acabado usado como argumento. |
+| Atractivo | Una decisión visible de encuadre, escala, relación, luz o tipografía sostiene interés y valor publicitario. | Replantear la imagen y su relación con el mensaje; un diseño ordenado puede seguir sin fuerza. |
 | Jerarquía | La primera atención y los apoyos tienen relaciones compatibles de peso. | Resolver escala, contraste, extensión o posición; no añadir otra exigencia general de jerarquía. |
 | Composición | Posición, escala, recorte, alineaciones y zonas de lectura están decididos con el contenido real. | Construir la distribución que falta; no pedirle al generador que la elija. |
 | Fidelidad | Se entiende qué gobierna cada referencia y qué puede cambiar. | Delimitar atributos y funciones sin extenderlos automáticamente a todo el arte. |

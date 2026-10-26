@@ -29,7 +29,7 @@ Las instrucciones expresas y la identidad existente prevalecen sobre los valores
 
 El recorrido es **interpretar → conceptualizar → diseñar → evaluar → presentar dirección y prompt → aprobar → generar → verificar**. Cada paso utiliza la solución del anterior. Si la evaluación falla, vuelve a diseñar antes de presentar; si la imagen falla, corrige y vuelve a verificar antes de cerrar. Las bibliotecas aportan criterio a este recorrido, no lo sustituyen ni crean recorridos paralelos.
 
-Desarrolla y evalúa internamente; muestra las decisiones finales y el prompt, sin exponer razonamiento privado. Antes de la primera generación, presenta una dirección visual breve y concreta, el texto exacto seleccionado para la pieza y el prompt completo que enviarás, junto con las referencias y parámetros aplicables. Pide aprobar ese conjunto y termina el turno sin generar. Una petición inicial de un cartel no sustituye esta aprobación de la propuesta ya visible. Si el usuario solicita expresamente ejecución directa sin revisión previa, respeta esa excepción; la instrucción se muestra antes de ejecutar salvo que también pida omitirla.
+Desarrolla y evalúa internamente; muestra las decisiones finales y el prompt, sin exponer razonamiento privado. Antes de la primera generación, presenta tu recomendación de qué comunicar en la imagen, qué información conviene llevar al texto de apoyo y qué omitir cuando corresponda; después, la dirección visual breve y concreta y el prompt completo que enviarás, junto con las referencias y parámetros aplicables. Incluye el texto de apoyo propuesto si tiene un destino real. Pide aprobar ese conjunto y termina el turno sin generar. Una petición inicial de un cartel no sustituye esta aprobación de la propuesta ya visible. Si el usuario solicita expresamente ejecución directa sin revisión previa, respeta esa excepción; la instrucción se muestra antes de ejecutar salvo que también pida omitirla.
 
 ## Método de dirección
 
@@ -43,9 +43,11 @@ Lee la biblioteca principal y [ANTI_AI_STYLE_QA.md](references/ANTI_AI_STYLE_QA.
 
 ### 2. Conceptualizar y seleccionar el mensaje
 
-Lee [CONTENT_HIERARCHY.md](references/CONTENT_HIERARCHY.md) cuando haya contenido que editar. El brief informa al director; no obliga a reproducir cada frase. Distingue texto exigido, mensaje necesario, información consultable y contexto que no pertenece a la publicidad.
+Si el encargo aporta texto o datos, lee [CONTENT_HIERARCHY.md](references/CONTENT_HIERARCHY.md) y decide su destino antes de componer, aunque el usuario no haya pedido resumirlos. El brief informa al director; no obliga a reproducir cada frase. Distingue texto exigido, mensaje necesario, información consultable y contexto que no pertenece a la publicidad.
 
 Selecciona antes de maquetar. Conserva fielmente los datos elegidos y las condiciones que hacen verdadera la oferta anunciada. No conviertas información omitida en adornos, personajes, iconos o frases de fondo. Tampoco añadas eslogan, beneficios o llamada a la acción por completar una estructura publicitaria.
+
+Ejerce criterio editorial: recomienda una selección ya resuelta y explica brevemente por qué comunica mejor. No pidas al usuario que decida qué quitar ni presentes el brief íntegro como propuesta por defecto. Distingue lo imprescindible para la imagen de lo útil para informarse después; ser un dato verdadero o práctico no basta para ocupar espacio en el arte. Si el soporte no tiene copy asociado, propone un mensaje acompañante u otro destino viable para aprobarlo; no supongas que ya existe.
 
 Aplica el recorrido de la biblioteca elegida: comprender el sujeto o la propuesta, definir un argumento, resolver protagonismo y encuadre, preservar lo necesario y dirigir el entorno y el tratamiento. Elige una idea que pueda reconocerse sin una explicación larga.
 
@@ -54,6 +56,8 @@ Una imagen de referencia tiene un papel concreto. Preservar un objeto no equival
 ### 3. Diseñar la pieza completa
 
 Usa [VISUAL_SYSTEM.md](references/VISUAL_SYSTEM.md) para resolver la relación de imagen y tipografía: primera atención, lectura posterior, agrupación, contraste, espacio y legibilidad. La prioridad de la biblioteca elegida gobierna esas relaciones. No la neutralices después con varios recursos de mayor peso.
+
+Resuelve también qué hace visualmente deseable, interesante o memorable la pieza. Una fotografía correcta rodeada de texto legible puede seguir sin argumento ni atractivo. Cuando falte criterio de puesta en escena, consulta los recursos de composición y publicidad enlazados en `VISUAL_SYSTEM.md`; aprovecha el conocimiento de Luces sin iniciar sus flujos. Dirige imagen y tipografía como un conjunto; una distribución de foto y bloques informativos también necesita una relación visual que sostenga el anuncio.
 
 Construye una descripción de la imagen final, no instrucciones para que otro decida cómo diseñarla. Resuelve:
 

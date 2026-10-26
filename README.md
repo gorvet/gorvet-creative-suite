@@ -14,7 +14,7 @@ Cuando se invoca la suite, el asistente debe seleccionar el skill por el resulta
 
 Los tres skills funcionan de forma independiente. Luces consulta las reglas de optimización al redactar; el skill `prompt-optimization-qa` atiende revisiones explícitas de prompts existentes, sin una segunda fase creativa. Consultar una biblioteca no importa el flujo ni las aprobaciones de su skill de origen. La dirección publicitaria conserva la responsabilidad desde interpretar hasta verificar y corregir la imagen; construir o depurar su prompt son operaciones internas. Storyface queda fuera de este paquete; sus reglas pueden aportarse como un contrato externo cuando se soliciten.
 
-Los skills de prompts trabajan con texto. `poster-promotional-design` dirige y ejecuta el arte cuando se solicita una imagen y hay una herramienta disponible. Antes de la primera generación muestra la dirección visual, el texto seleccionado y el prompt completo con sus referencias, y espera aprobación. Cada corrección automática muestra también su instrucción antes de ejecutarse. Una petición expresa de ejecución directa permite omitir la espera. La suite no incluye un generador propio.
+Los skills de prompts trabajan con texto. `poster-promotional-design` dirige y ejecuta el arte cuando se solicita una imagen y hay una herramienta disponible. Antes de la primera generación recomienda qué texto debe aparecer en la imagen, qué conviene llevar a un apoyo viable y qué omitir; muestra la dirección visual y el prompt completo con sus referencias, y espera aprobación. Cada corrección automática muestra también su instrucción antes de ejecutarse. Una petición expresa de ejecución directa permite omitir la espera. La suite no incluye un generador propio.
 
 ## Método G.O.R.V.E.T.
 
@@ -66,7 +66,7 @@ Los skills no dependen de un proveedor o modelo concreto y no requieren un servi
 
 ## Descarga rápida
 
-Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.7.2.zip` contiene el manifiesto, los tres skills completos, sus referencias, el icono, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad. El identificador técnico `gorvet-creative-suite` se conserva para mantener la continuidad de las instalaciones; el nombre visible es GORVET Creative Director.
+Descarga el [paquete instalable de la última Release](https://github.com/gorvet/gorvet-creative-suite/releases/latest). El archivo `gorvet-creative-suite-1.7.3.zip` contiene el manifiesto, los tres skills completos, sus referencias, el icono, el README y la licencia. `SHA256SUMS.txt` permite comprobar su integridad. El identificador técnico `gorvet-creative-suite` se conserva para mantener la continuidad de las instalaciones; el nombre visible es GORVET Creative Director.
 
 El ZIP reúne toda la suite. Impórtalo directamente solo si la aplicación admite este formato de complemento. Para aplicaciones que instalan Agent Skills individuales, extrae el paquete y utiliza cada carpeta de `skills/`, siguiendo los pasos siguientes. No necesitas Git para descargarlo.
 
@@ -203,11 +203,11 @@ Para publicar una versión nueva:
 
 1. Actualiza `version` en `plugin.json` y el nombre del ZIP documentado en este README.
 2. Haz commit y push de los cambios.
-3. Crea y sube la etiqueta de esa versión. Por ejemplo, para `1.7.2`:
+3. Crea y sube la etiqueta de esa versión. Por ejemplo, para `1.7.3`:
 
 ```powershell
-git tag v1.7.2
-git push origin v1.7.2
+git tag v1.7.3
+git push origin v1.7.3
 ```
 
 Comprueba la ejecución en la pestaña Actions y descarga los archivos de la Release resultante. Las etiquetas deben ser nuevas: el workflow no sobrescribe releases existentes. Si la etiqueta no coincide con el manifiesto o falla la verificación del paquete, la ejecución termina sin publicar.

@@ -16,6 +16,20 @@ Evalúa direcciones diferentes y elige una. No necesitas mostrarlas todas ni con
 
 La dirección no se asigna automáticamente por sector. La prioridad procede del encargo y de la biblioteca de productos, personas o promociones seleccionada. Un recurso alternativo no debe deshacer esa prioridad por inercia. Una dirección explícita del usuario puede cambiar el protagonismo o el medio; conserva esa intención y la identidad existente.
 
+## Recursos de puesta en escena y atractivo publicitario
+
+Cuando necesites resolver la imagen que sostiene la campaña, consulta las bibliotecas pertinentes de Luces disponibles en la suite:
+
+- [Principios de dirección creativa](../../luces-camara-prompt/references/CORE_PRINCIPIOS_DIRECCION_CREATIVA.md): construir una escena que comunique una intención visible.
+- [Encuadre y composición](../../luces-camara-prompt/references/TECHNICAL_ENCUADRE_COMPOSICION_RATIO.md): elegir punto de vista, recorte, diagonales, profundidad y espacio para el mensaje.
+- [Publicidad y campaña](../../luces-camara-prompt/references/USE_CASES_MODA_PUBLICIDAD.md): foco, curiosidad, contraste y relación comercial entre sujeto y entorno.
+
+Son recursos de conocimiento; sus fórmulas, etiquetas de estilo y remisiones no activan el flujo de Luces ni obligan a añadir técnica o escenografía. Si el skill está instalado por separado y no dispone de estas bibliotecas, aplica el criterio de esta referencia sin bloquear el trabajo.
+
+Elige la operación visual por el efecto necesario: un acercamiento revela materialidad; un recorte puede crear presencia; una diagonal puede aportar tensión; la profundidad puede hacer legible una relación; un contraste de escala puede reforzar el argumento. No acumules operaciones ni conviertas ninguna en receta fija. Una composición centrada también puede funcionar si escala, espacio, luz y tipografía producen una relación deliberada.
+
+Evalúa la pieza primero sin leer: ¿qué hace detenerse y qué rasgo, acción o relación sostiene el deseo, reconocimiento o interés? Evalúala después con el mensaje: ¿imagen y texto refuerzan la misma idea? Si solo hay una imagen ilustrativa y bloques de información, reconsidera el punto de vista, el reparto de masas o la relación conceptual. Limpiar adornos no termina por sí solo el diseño.
+
 ## 2. Construir el esqueleto antes del acabado
 
 Trabaja con el contenido real. No diseñes usando titulares cortos ficticios si el literal aprobado es largo. Distribuye masas de imagen y texto como si fueran formas simples, conservando los textos para estimar su extensión. Si dispones de un medio adecuado, un boceto o maqueta facilita la comprobación; no es un entregable obligatorio ni permite afirmar que has observado un render inexistente.
