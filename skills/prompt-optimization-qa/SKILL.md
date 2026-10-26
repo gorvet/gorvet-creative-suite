@@ -1,6 +1,6 @@
 ---
 name: prompt-optimization-qa
-description: Depura prompts de imagen eliminando duplicados semánticos, relleno, expansión innecesaria y contradicciones, sin perder decisiones, restricciones ni textos literales. Úsalo para optimizar un prompt existente. No dirige una escena nueva ni impone convenciones de una plataforma.
+description: Depura prompts visuales y audiovisuales existentes eliminando duplicados semánticos, relleno, expansión innecesaria y contradicciones, sin perder decisiones, restricciones ni textos literales. Úsalo para optimizar un prompt existente. No dirige una escena nueva ni impone convenciones de una plataforma.
 ---
 
 # QA de optimización de prompts
@@ -27,8 +27,9 @@ Lee [OPTIMIZACION_PROMPT.md](references/OPTIMIZACION_PROMPT.md). Trabaja sobre u
 1. **Inventario de controles:** identifica qué exige el encargo en sujeto, selección, acción, espacio, estilo, luz, composición, referencias y restricciones. No son campos que debas completar.
 2. **Duplicados por significado:** localiza formulaciones que controlan el mismo atributo. Conserva la más precisa e integra en ella cualquier detalle distinto de las demás. Una frase puede contener a la vez información repetida y una condición necesaria.
 3. **Aporte real:** elimina énfasis, explicaciones y detalles opcionales que no cambian el resultado pedido. Revisa también cláusulas dentro de cada frase; una frase puede aportar una decisión y arrastrar varias equivalencias.
-4. **Consolidación:** reemplaza las formulaciones corregidas en su lugar. No concatenes original, modificación y cierre de refuerzo. Si detectas una contradicción material sin resolución autorizada, pregunta solo por esa elección.
-5. **Cobertura y ausencia de expansión:** compara con el inventario. Cada control necesario debe seguir teniendo una instrucción ejecutable; ninguna instrucción nueva puede proceder solo de querer embellecer la revisión. Verifica también el texto y el formato exigidos.
+4. **Consolidación:** reemplaza las formulaciones corregidas en su lugar. No concatenes original, modificación y cierre de refuerzo. Si detectas una contradicción material sin resolución autorizada, devuelve esa decisión al director; en una tarea independiente pregunta solo por esa elección.
+5. **Continuidad temporal cuando corresponda:** conserva orden, duraciones, estados de entrada y salida, cámara y canales de audio. No confunde anclas repetidas entre clips autónomos con duplicados dentro de un prompt. Una contradicción entre planos vuelve a vídeo, sin reescribir la historia.
+6. **Cobertura y ausencia de expansión:** compara con el inventario. Cada control necesario debe seguir teniendo una instrucción ejecutable; ninguna instrucción nueva puede proceder solo de querer embellecer la revisión. Verifica también el texto y el formato exigidos.
 
 No basta con sustituir palabras por sinónimos o afirmar que el prompt quedó optimizado. Si una parte ya es suficiente, consérvala. Un prompt que ya está depurado puede devolverse sin cambios; no fuerces una reescritura para demostrar actividad.
 

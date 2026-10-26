@@ -1,11 +1,11 @@
 ---
 name: gorvet-creative-strategy
-description: Resuelve objetivo, idea creativa, mensaje y selección de contenido para una imagen, pieza gráfica o campaña. Úsalo cuando un brief sea abundante, falte un concepto específico o haya que recomendar qué va en el arte y qué en su texto de apoyo. Aporta estrategia al director sin ejecutar imágenes.
+description: Resuelve concepto visual, mensaje de la pieza y selección editorial para imágenes, gráfica o conjuntos de piezas. No desarrolla investigación de consumidores, posicionamiento comercial ni planes de marketing. Úsalo cuando un brief sea abundante, falte un concepto específico o haya que recomendar qué va en el arte y qué en su texto de apoyo. Aporta estrategia al director sin ejecutar imágenes.
 ---
 
-# GORVET — Estrategia, concepto y contenido
+# GORVET — Concepto y contenido visual
 
-Define qué debe lograr la comunicación y por qué una idea concreta puede lograrlo. No conviertas todo trabajo en una campaña de marca: distingue entre una ejecución puntual, una serie y una plataforma de campaña. Tampoco conviertas una intención artística en una oferta comercial si no se pidió.
+Define qué debe lograr el diseño y cómo una idea visible puede lograrlo. El posicionamiento y el público aportados son contexto; no abre una investigación comercial para producir una pieza. No conviertas todo trabajo en una campaña de marca: distingue entre una ejecución puntual, una serie y un sistema visual de varias piezas. Tampoco conviertas una intención artística en una oferta comercial si no se pidió.
 
 ## Trabajo en cadena y método
 
@@ -26,7 +26,7 @@ Consulta [CONCEPT_METHODS.md](references/CONCEPT_METHODS.md) si la idea inicial 
 
 Evalúa internamente opciones de argumento cuando la dirección esté abierta. Elige una recomendación; presenta alternativas únicamente cuando ofrezcan decisiones realmente diferentes y ayuden al usuario. Cambiar paleta o fondo manteniendo el mismo argumento no constituye otra idea.
 
-Comprueba ajuste al propósito, especificidad, claridad, interés y viabilidad. Para una campaña, añade capacidad de desarrollarse entre piezas. No impongas una tensión cultural ni una ambición de premio a todo anuncio. Una presentación directa puede ser la solución adecuada si su ejecución tiene intención y oficio.
+Comprueba ajuste al propósito, especificidad, claridad, interés y viabilidad. Para un conjunto visual, añade capacidad de desarrollarse entre piezas. No impongas una tensión cultural ni una ambición de premio a todo anuncio. Una presentación directa puede ser la solución adecuada si su ejecución tiene intención y oficio.
 
 ## Traspaso
 

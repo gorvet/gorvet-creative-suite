@@ -14,8 +14,9 @@ Recibe propósito, entregable, alcance de la consulta, decisiones vigentes, refe
 | Dirección de arte | Proposición visual, medio, sistema de color y acabado, escena y esquema global de masas. | Cambio del mensaje o de una identidad protegida. |
 | Fotografía | Captura y comportamiento fotográfico dentro del esquema acordado: perspectiva, luz, foco, acción y materiales. | Un ángulo o recorte que exige cambiar zonas gráficas o perder un atributo protegido. |
 | Diseño gráfico | Construcción final de masas, tipografía, agrupación, alineación, cortes y legibilidad desde el esquema. | Un cambio del concepto, medio o mensaje para hacer caber texto. |
-| Identidad y referencias | Función de cada fuente, evidencia, protección y relaciones transferibles. | Elevar una preferencia inferida a regla oficial o cambiar la identidad. |
+| Identidad y referencias | Creación autorizada del sistema estable; función de fuentes, evidencia, protección y transferencia. | Elevar una preferencia inferida a regla oficial o cambiar la identidad. |
 | Narrativa | Función de piezas, progresión y variaciones dentro de la idea común. | Añadir entregables o modificar la promesa de campaña. |
+| Vídeo y motion | Acciones temporales, puesta en escena, duraciones, cámara en movimiento, montaje y sonido. | Cambiar el mensaje, identidad o función de una pieza de campaña para justificar un plano. |
 | Compilación | Formulación suficiente, referencias y parámetros compatibles. | Cualquier decisión visual que falte: no la inventa durante la redacción. |
 | QA textual | Consolidación de expresión y diagnóstico de contradicciones. | Rediseñar o suprimir controles independientes por acortar. |
 | Crítica visual | Evidencia, efecto perceptivo, prioridad y menor ámbito de reparación. | Cambiar el concepto como si fuera una edición local. |
@@ -39,6 +40,7 @@ El marco es común, pero no todos los roles ejecutan las seis operaciones creati
 | Diseño gráfico | Hereda el argumento y tono; resuelve recursos de composición y lectura para expresarlos. | Tratar cada letra como un bloque visible o cada dato como un icono. |
 | Referencias e identidad | O examina evidencia; T y R identifican relaciones transferibles; las demás decisiones se conservan si ya existen. | Inventar una intención del autor de la referencia o una nueva historia de marca. |
 | Series | G y V desarrollan el argumento y su progresión; O/R/T mantienen las constantes pertinentes; E organiza cada instrucción autónoma. | Congelar todas las escenas o cambiar de estilo por variedad automática. |
+| Vídeo y motion | G/V se realizan en acción y ritmo; O/R/T conservan espacio, recursos y lenguaje; E organiza planos ejecutables. | Reinventar la campaña o la identidad al decidir movimientos y cortes. |
 | Compilación y QA textual | E estructura y conserva G/O/R/V/T resueltos; R comprueba compatibilidad de controles. | Abrir otra fase creativa, añadir emoción o embellecer una dirección cerrada. |
 | Edición localizada | Conserva el marco de la imagen y precisa intervención y protección. | Reinventar guion, entorno, emoción o tono cuando solo cambia un detalle. |
 | Crítica visual | Usa las letras para localizar la causa cuando ayuden y contrasta con evidencia real. | Afirmar que las seis letras están completas como prueba de calidad. |

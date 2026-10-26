@@ -15,6 +15,11 @@ except ModuleNotFoundError:
     score_spec.loader.exec_module(score_module)
     evaluate_scorecard = score_module.evaluate
 
+import importlib.util
+motion_spec = importlib.util.spec_from_file_location("gorvet_check_motion", Path(__file__).with_name("check_motion.py"))
+motion_module = importlib.util.module_from_spec(motion_spec)
+motion_spec.loader.exec_module(motion_module)
+
 
 def digest(value):
     data = json.dumps(value, ensure_ascii=False, sort_keys=True,
@@ -54,12 +59,16 @@ def validate(job, stage):
     errors = []
     if not isinstance(job, dict):
         return ["El registro debe ser un objeto JSON."]
-    if job.get("schema_version") != "1.1":
+    if job.get("schema_version") not in ("1.1", "1.2"):
         errors.append("Versión de contrato desconocida.")
     if not nonempty(job.get("job_id")):
         errors.append("Falta job_id.")
-    if job.get("deliverable") not in ("image", "series"):
-        errors.append("Este control es para imágenes; un encargo textual no autoriza generación.")
+    if job.get("deliverable") not in ("image", "series", "video"):
+        errors.append("Este control es para medios visuales; un encargo textual no autoriza generación.")
+    if job.get("deliverable") == "video":
+        if job.get("schema_version") != "1.2":
+            errors.append("La producción audiovisual requiere contrato 1.2.")
+        errors.extend(motion_module.validate_motion(job, stage))
     brief = job.get("brief")
     if (not isinstance(brief, dict) or brief.get("status") != "ready"
             or brief.get("material_questions") != []):
@@ -109,7 +118,8 @@ def validate(job, stage):
             errors.append("Falta evidencia de la revisión visual.")
         scorecard = review.get("scorecard")
         result = evaluate_scorecard(scorecard)
-        if not isinstance(scorecard, dict) or scorecard.get("kind") != "visual" or result["verdict"] != "pass":
+        profile = "motion" if job.get("deliverable") == "video" else "visual"
+        if not isinstance(scorecard, dict) or scorecard.get("kind") != profile or result["verdict"] != "pass":
             errors.append("La rúbrica visual no está completa o contiene criterios o bloqueos pendientes.")
         return errors
 

@@ -1,6 +1,6 @@
-# Arquitectura de la agencia y contrato 1.1
+# Arquitectura de la agencia y contratos 1.1 / 1.2
 
-GORVET Creative Director 2.1 encadena responsabilidades sobre un solo encargo. Las consultas son roles del asistente, no diez procesos paralelos ni agentes externos. El director elige el recorrido por entregable y conserva autorización, versiones y cierre.
+GORVET Creative Director 2.2 encadena responsabilidades sobre un solo encargo. Las consultas son roles del asistente, no once procesos paralelos ni agentes externos. El director elige el recorrido por entregable y conserva autorización, versiones y cierre.
 
 ## Cadena y responsabilidad
 
@@ -38,7 +38,7 @@ La huella de propuesta cubre encargo y brief, tipo de trabajo, dirección, promp
 
 ## Puntuación y evidencia
 
-[SCORING_RUBRIC.md](SCORING_RUBRIC.md) define dos perfiles y anclas 0–4. Un criterio contiene `grade` y `evidence` como lista. Solo los criterios expresamente opcionales permiten `applicable: false` con `reason`, sin nota. Cada tarjeta contiene `kind`, `criteria` y `blockers`; la visual añade `observed: true`.
+[SCORING_RUBRIC.md](SCORING_RUBRIC.md) define perfiles de concepto, imagen y audiovisual y anclas 0–4. Un criterio contiene `grade` y `evidence` como lista. Solo los criterios expresamente opcionales permiten `applicable: false` con `reason`, sin nota. Cada tarjeta contiene `kind`, `criteria` y `blockers`; la visual añade `observed: true`.
 
 El perfil `concept` contiene `fit`, `specificity`, `interest`, `clarity`, `feasibility`. El perfil `visual` contiene `communication`, `character`, `structure`, `typography`, `fidelity`, `craft`. La suma se normaliza por los pesos aplicables. Un bloqueo o una nota menor de 3 impiden cerrar aunque la media sea alta.
 
@@ -61,3 +61,13 @@ El paquete no intercepta herramientas por sí mismo. Para imponer los controles,
 Los verificadores confían en los hechos del host. No pueden saber si una aprobación declarada ocurrió ni si la evidencia visual es verdadera. El host debe aportar esas señales desde interacción y herramientas auténticas; el modelo no debe fabricarlas. Las pruebas de ámbitos, puntuación y autorización son distintas de comprobar la calidad creativa del resultado.
 
 El límite estándar comprobado es una generación y dos correcciones. Otro alcance autorizado requiere una política explícita del agente y pruebas correspondientes; no basta alterar una nota o un dato del registro. Si faltan herramientas o visión, informa del alcance que no se ejecutó.
+
+## Extensión audiovisual 1.2 y responsabilidad de identidad
+
+La versión 2.2 mantiene los registros de imagen 1.1 y añade contrato 1.2 para `deliverable: video`. Son once roles: el nuevo `video-motion-direction` posee únicamente `direction.motion`; identidad incorpora `direction.identity` para el sistema estable. [SCOPE_AND_ROUTING.md](SCOPE_AND_ROUTING.md) delimita entradas, autoridad, aceptación y exclusión de planificación de marketing.
+
+En vídeo, `direction.motion` contiene `duration` positiva en segundos, `shots` consecutivos con `id` único, `start`, `end`, `function`, `action`, `camera`, `transition`, `continuity`; `audio` con `mode: silent|sound` y `spec`; y `delivery` con `aspect_ratio` y `format`. Se registra el montaje final sin huecos; los solapes de fuentes se describen dentro de la transición. Los parámetros solo usan capacidades comprobadas en la herramienta real.
+
+`check_handoff.py` aplica el control temporal integrado antes de generar y al entregar, además de brief, dirección, aprobación y coincidencia de prompt/fuentes/parámetros. Para vídeo la salida requiere `output.media_type: video`, `output.duration` observada concordante (tolerancia de registro de 0,05 s), inspección `review.playback` completa y tarjeta `motion` apta. Esta tarjeta lleva también su alcance de reproducción. El audio previsto no admite marcarse como no aplicable. Los campos son declaraciones del host; los scripts no observan ni escuchan archivos.
+
+`check_motion.py registro.json --stage generate|deliver` permite comprobar el plan temporal por separado. No reemplaza el control completo de autorización ni el veredicto. Un plan maestro puede organizar múltiples clips; cada llamada necesita su registro y autorización vinculada al alcance mostrado. No permite declarar vídeo con una salida de imagen o storyboard.

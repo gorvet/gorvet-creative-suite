@@ -42,3 +42,7 @@ Consulta estilos fotográficos o editorial íntimo solo si pertenecen al encargo
 Comprueba si punto de vista, gesto, luz y foco hacen visible el propósito. Evalúa tanto credibilidad como fuerza fotográfica. Un esquema técnicamente plausible puede seguir sin carácter ni interés. No uses imperfecciones ficticias, grano, gotas o humo como prueba automática de realismo.
 
 Entrega al director el tratamiento fotográfico resuelto y los controles que deberán verse en la imagen. Para una revisión, localiza el defecto y propone la intervención que conserve lo que funciona. No certifiques fidelidad sin comparar con las referencias ni declares un ensayo de iluminación que no hayas ejecutado. En consulta interna no generes ni abras otra aprobación; para un encargo autónomo integra el trabajo mediante el [director creativo](../gorvet-creative-director/SKILL.md).
+
+## Procedimiento de desarrollo
+
+Para resolver captura e integración y diagnosticar fallos aplica [CAPTURE_DEVELOPMENT.md](references/CAPTURE_DEVELOPMENT.md). Consulta solo el modo pertinente.

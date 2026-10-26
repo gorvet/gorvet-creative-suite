@@ -1,11 +1,11 @@
 ---
 name: image-art-direction
-description: Dirige el arte y el sistema visual de una pieza o campaña desde el concepto y contenido elegidos. Define proposición visual, medio, escena, color, acabado y esquema global; integra fotografía y diseño gráfico antes de compilar. Úsalo para desarrollar o corregir la solución visual completa, no para sustituir estrategia ni captura técnica.
+description: Dirige el arte y el sistema visual de una pieza o conjunto visual desde el concepto y contenido elegidos. Define proposición visual, medio, escena, color, acabado y esquema global; integra fotografía y diseño gráfico antes de compilar. Úsalo para desarrollar o corregir la solución visual completa, no para sustituir estrategia ni captura técnica.
 ---
 
 # GORVET — Dirección de arte
 
-Integra el concepto en una solución visual completa que otros especialistas puedan desarrollar sin inventar otra campaña. Conserva el identificador `image-art-direction` por compatibilidad. Su responsabilidad es el sistema de arte, no un segundo trabajo de fotografía ni la redacción del prompt.
+Integra el concepto en una solución visual completa que otros especialistas puedan desarrollar sin inventar otro concepto. Conserva el identificador `image-art-direction` por compatibilidad. Su responsabilidad es el sistema de arte, no un segundo trabajo de fotografía ni la redacción del prompt.
 
 ## Trabajo en cadena
 
@@ -33,10 +33,14 @@ Para bocetos y visualización, conserva la geometría gobernada por la base y de
 
 Para una edición acotada aplica [EDIT_SCOPE.md](references/EDIT_SCOPE.md): base, objetivo, cambio, protección e inspección comparada. No reinicia concepto ni moderniza una restauración por defecto. Un cambio fuera del alcance vuelve al director.
 
-Para logos y símbolos puede explorar significado, forma y reproducción; no presenta un raster como vector ni una exploración como identidad profesional acabada. En mockups distingue el diseño aplicado de la escena que muestra su soporte.
+La creación de logos, símbolos y su sistema estable corresponde a identidad; arte resuelve su expresión en el encargo y propone necesidades de aplicación sin rediseñar la marca. En mockups distingue el diseño aplicado de la escena que muestra su soporte.
 
 ## Recursos y evaluación
 
 Consulta las [operaciones de escena](references/SCENE_OPERATIONS.md) y solo las bibliotecas pertinentes del libro: [estilos artísticos](../luces-camara-prompt/references/STYLES_ESTILOS_ARTISTICOS_DIGITALES.md), [conceptual y narrativa](../luces-camara-prompt/references/USE_CASES_ARTE_CONCEPTUAL_STORYTELLING.md), [visualización](../luces-camara-prompt/references/USE_CASES_RENDER_INTERIORES_PBR_PROTO.md), [restauración](../luces-camara-prompt/references/USE_CASES_RETOQUE_RESTAURACION.md) o [editorial y mockups](../luces-camara-prompt/references/USE_CASES_DISENO_EDITORIAL_MOCKUPS_LOGOS.md). Sus asociaciones no son plantillas obligatorias.
 
 Pasa el preflight de la especificación y utiliza la [rúbrica](../gorvet-creative-director/references/SCORING_RUBRIC.md) para evaluar el concepto o comparar propuestas. La revisión visual posterior exige una imagen observada. Devuelve decisiones, conservación, conflictos y controles de aceptación al mismo encargo; no compila ni genera durante una consulta.
+
+## Procedimiento de desarrollo
+
+Para desarrollar ilustración, concept art, visualización o intervención aplica [MEDIUM_DEVELOPMENT.md](references/MEDIUM_DEVELOPMENT.md). Consulta solo el modo pertinente.

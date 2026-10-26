@@ -43,3 +43,7 @@ El [selector](references/CONFIG_SELECTOR_AUTOMATICO.md) distribuye las bibliotec
 ## Iteración
 
 Sustituye la decisión modificada donde corresponde; no concatenes versiones. Conserva las relaciones no afectadas. Si el usuario pide una frase de reemplazo, entrega ese alcance; si pide el prompt completo, entrega una versión consolidada. La revisión textual no acredita el resultado visual: una imagen producida requiere [crítica visual](../visual-quality-review/SKILL.md).
+
+## Procedimiento de desarrollo
+
+Para verificar cobertura por imagen, edición, vídeo o acabado determinista aplica [COMPILATION_CONTRACT.md](references/COMPILATION_CONTRACT.md). Consulta solo el modo pertinente.

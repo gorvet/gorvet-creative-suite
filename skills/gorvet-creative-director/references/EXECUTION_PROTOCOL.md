@@ -39,3 +39,9 @@ Realiza como máximo dos intentos de corrección después de la primera generaci
 Comprueba herramientas reales antes de comprometer una producción. Si faltan generación, inspección o edición, entrega el alcance posible y especifica lo pendiente. No simules llamadas, renders, pruebas ópticas ni conservación exacta.
 
 Entrega los archivos solicitados, el apoyo acordado y las limitaciones materiales. Evita informes rutinarios si todo funciona. Mantén disponibles los prompts visibles y la versión de dirección que produjo cada intento. Una entrega declarada no verificada puede ser útil como avance, pero no equivale a aprobación visual.
+
+## Vídeo, motion y conjuntos de diseño
+
+Este protocolo también gobierna producción audiovisual: dirección temporal, prompts por llamada, fuentes y parámetros visibles; autorización del alcance; salida real y reproducción completa. Aplica [producción audiovisual](../../video-motion-direction/references/PRODUCTION_AND_REVIEW.md). Un fotograma, animatic o storyboard no certifica un vídeo final. La corrección local conserva el concepto, contenido y plan aprobado; cambiar acción dominante, montaje o audio que alteren la dirección vuelve a propuesta.
+
+Diseñar varias piezas en conjunto no autoriza calendario, medios ni ejecución de marketing. Conserva el inventario y revisión individual; no oculta piezas fallidas en una puntuación media del conjunto.

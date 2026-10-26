@@ -50,3 +50,13 @@ La decisión es apta cuando no hay bloqueos, todos los criterios aplicables alca
 Si un criterio queda en 2 o menos, formula evidencia, consecuencia, responsable y cambio concreto. Corrige ese ámbito y vuelve a comparar, incluyendo posibles regresiones. Si el concepto falla, no lo maquilles mediante luz o tipografía. Si falla un literal, no reinicies estrategia.
 
 Por defecto usa esta rúbrica. Si el usuario aporta otra, registra cuál se aplica y conserva las verificaciones factuales y de alcance. Las fuentes y la diferencia respecto a las escalas de Designly y de Serge Shima están en [SOURCE_ADAPTATION.md](SOURCE_ADAPTATION.md). La evaluación automática del formato y cálculo está en [score_review.py](../scripts/score_review.py); el script no observa ni juzga imágenes.
+
+## Perfil audiovisual `motion`
+
+Se aplica a vídeo o motion reproducido, con las mismas anclas 0–4 y reglas de bloqueo. Pesos: comunicación 15, carácter 10, estructura visual 10, tipografía 10, fidelidad 10, acabado 10, acción/continuidad temporal 15, ritmo/montaje 10 y audio 10. En JSON: `communication`, `character`, `structure`, `typography`, `fidelity`, `craft`, `action`, `rhythm`, `audio`.
+
+`action` evalúa evolución legible, geometría e identidad a lo largo del tiempo, contacto y estados entre planos. `rhythm` evalúa duración, motivación de cortes/movimientos, permanencia de lectura y cierre. `audio` evalúa inteligibilidad, función y relación temporal de voz, ambiente, efectos o música. Un 3 exige que el criterio funcione durante la pieza; un 4 necesita una mejora específica documentada. Los defectos temporales no se esconden detrás del acabado de un fotograma.
+
+La tarjeta exige `observed: true` y `playback` con `full_duration: true`, `transitions_checked: true` y `audio_checked: true` si se puntúa audio. La evidencia identifica intervalos o instantes observados. Tipografía y fidelidad pueden ser no aplicables con razón explícita bajo las mismas condiciones del perfil visual; audio solo cuando la entrega acordada es silenciosa. Un audio que no se ha podido escuchar queda sin verificar, no como no aplicable. El control de entrega contrasta esa excepción con el plan.
+
+Una tarjeta visual de stills no valida un vídeo. Una revisión parcial no obtiene índice audiovisual supuesto. La puntuación no estima resultados comerciales ni rendimiento de una campaña.

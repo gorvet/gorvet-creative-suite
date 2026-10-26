@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "gorvet-creative-suite",
-  "version": "2.1.0",
-  "description": "GORVET Creative Director: a visual creative agency with coordinated strategy, art direction, photography, graphic design, campaigns and visual review.",
+  "version": "2.2.0",
+  "description": "GORVET Creative Director: coordinated visual concept, art direction, photography, graphic design, identity, visual series, video and motion review.",
   "author": {
     "name": "Juank de Gorvet",
     "url": "https://gorvet.com"
@@ -24,7 +24,7 @@
       "interface": {
         "displayName": "GORVET Creative Director",
         "shortDescription": "Agencia creativa visual",
-        "longDescription": "Agencia creativa visual de Juank de Gorvet basada en el Método GORVET. Un director coordina estrategia, dirección de arte, fotografía, diseño publicitario, identidad y referencias, narrativa y campañas, compilación de prompts y revisión visual. Resuelve el diseño antes de producir, muestra la dirección y el prompt para aprobarlos y conserva criterios de fidelidad, contenido y corrección. Encadena especialistas mediante responsabilidades y traspasos definidos. Incluye evaluación con puntuaciones justificadas, contratos y verificadores para su integración futura en un agente.",
+        "longDescription": "Agencia de diseño y dirección creativa visual de Juank de Gorvet basada en el Método GORVET. Un director coordina concepto y contenido, arte, fotografía, diseño gráfico, creación de identidad, referencias, series visuales, vídeo y motion, compilación de prompts y crítica. Define entradas, responsabilidades, entregables y traspasos entre especialistas. Resuelve el diseño antes de producir y verifica la salida real. Incluye puntuaciones con evidencia y contratos de producción para su integración futura en un agente. No planifica marketing ni campañas comerciales.",
         "developerName": "Juank de Gorvet",
         "logo": "./assets/icon.png",
         "logoDark": "./assets/icon.png",

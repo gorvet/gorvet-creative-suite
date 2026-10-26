@@ -1,6 +1,6 @@
 ---
 name: visual-quality-review
-description: Evalúa imágenes y piezas gráficas reales, compara opciones y dirige correcciones con evidencia visible. Revisa concepto, atractivo, contenido, composición, tipografía, fidelidad, fotografía y continuidad según el encargo. Úsalo tras producir o para criticar un resultado; revisar un prompt no equivale a revisar una imagen.
+description: Evalúa imágenes, identidades, piezas gráficas y vídeos reales, compara opciones y dirige correcciones con evidencia visible. Revisa concepto, atractivo, contenido, composición, tipografía, fidelidad, fotografía y continuidad según el encargo. Úsalo tras producir o para criticar un resultado; revisar un prompt no equivale a revisar una imagen.
 ---
 
 # GORVET — Crítica y revisión visual
@@ -44,7 +44,8 @@ Devuelve el problema al origen menor que lo explica:
 - Layout o tipografía → diseño publicitario.
 - Perspectiva, foco o luz → fotografía cuando el medio sea fotográfico.
 - Identidad o alcance de referencia → identidad y referencias.
-- Progresión o continuidad → narrativa y campañas.
+- Función y progresión entre piezas → series y narrativa visual.
+- Acción temporal, cámara en movimiento, montaje o sonido → vídeo y motion.
 - Decisión ausente o contradictoria en el prompt → compilación y QA textual.
 
 Un prompt suficiente que el generador incumplió requiere una corrección de ejecución; no inventes por eso una regla permanente para el producto. Una composición insuficiente no se corrige aumentando luz, textura o efectos.
@@ -54,3 +55,7 @@ Un prompt suficiente que el generador incumplió requiere una corrección de eje
 Entrega al director uno de estos estados: **apto**, **corregir** o **no verificable**, con evidencia decisiva y siguiente acción. Un dato obligatorio falso, una identidad protegida alterada o una lectura que impide utilizar la pieza no se compensan con buen acabado.
 
 Conserva lo que funciona y vuelve a revisar la nueva salida, incluida la posible regresión. El [protocolo común](../gorvet-creative-director/references/EXECUTION_PROTOCOL.md) fija autorización, prompts visibles y límite de intentos. La revisión no genera ni abre aprobaciones durante una consulta; el director ejecuta las correcciones.
+
+## Procedimiento de desarrollo
+
+Para identidad, edición, series o revisión audiovisual aplica [REVIEW_MODES.md](references/REVIEW_MODES.md). Consulta solo el modo pertinente.

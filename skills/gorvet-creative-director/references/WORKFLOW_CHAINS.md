@@ -22,11 +22,11 @@ Intención → estrategia si falta el argumento → arte → identidad o geometr
 
 Fotografía no interviene por defecto. Diseño gráfico solo interviene si existe una decisión tipográfica o de comunicación gráfica que resolver. Un render conceptual no acredita planos, medidas ni mapas técnicos.
 
-## Campaña, carrusel o serie
+## Conjunto de piezas, carrusel o serie
 
-Objetivo → estrategia y concepto común → narrativa y función de piezas → identidad y constantes → sistema de arte → ejecución de cada pieza con los especialistas pertinentes → compilación por pieza → aprobación del conjunto acordado → producción y revisión individual → revisión de continuidad.
+Objetivo de diseño → concepto visual común → narrativa y función de piezas → identidad y constantes → sistema de arte → ejecución de cada pieza con los especialistas pertinentes → compilación por pieza → aprobación del conjunto acordado → producción y revisión individual → revisión de continuidad.
 
-No se aleatoriza la jerarquía. Las variaciones responden a la función de cada pieza. Un cambio de formato obliga a revisar distribución y recortes; no a inventar otra campaña. El apoyo de publicación no se integra automáticamente en todas las imágenes.
+No se aleatoriza la jerarquía. Las variaciones responden a la función de cada pieza. No se planifican canales, calendarios ni acciones de marketing. Un cambio de formato obliga a revisar distribución y recortes; no a inventar otra campaña. El apoyo de publicación no se integra automáticamente en todas las imágenes.
 
 ## Edición acotada
 
@@ -49,3 +49,15 @@ No reinicia GORVET como ideación, no llama a fotografía para añadir técnica 
 ## Acabado determinista cuando importe la exactitud
 
 Si el generador no conserva tipografía, marca o geometría necesarias, el director evalúa producir la base visual y completar el acabado mediante herramientas de maquetación disponibles. Diseño gráfico define el layout; el entorno de producción construye y renderiza; crítica visual verifica el resultado. No se declara ese acabado realizado si no existen herramientas ni un render inspeccionable.
+
+## Identidad nueva o evolución autorizada
+
+Brief de diseño y usos → concepto visual si falta → identidad y sistema de marca → pruebas de forma y reproducción → gráfica para aplicaciones prioritarias y arte/fotografía para su contexto si hace falta → integración → compilación o construcción editable disponible → propuesta y autorización → producción → crítica de maestros, variantes y aplicaciones.
+
+Identidad conserva el sistema estable; arte desarrolla su expresión en una pieza. Una aplicación no autoriza a rediseñar el maestro. El procedimiento [IDENTITY_CREATION.md](../../brand-reference-direction/references/IDENTITY_CREATION.md) define territorios, marca base, sistema, pruebas y archivos. Una presentación en mockups no sustituye archivos maestros.
+
+## Vídeo y motion
+
+Brief visual → concepto si falta → series solo si hay varias piezas relacionadas → identidad y sistema de arte si hacen falta → vídeo/motion y plan temporal → fotografía para captura y gráfica para texto cuando corresponda → integración y preflight temporal → compilación por llamada compatible → propuesta y autorización → producción y montaje disponibles → reproducción completa y crítica audiovisual.
+
+Un vídeo individual no exige plan de campaña. Narrativa define el papel de cada pieza; vídeo define acción, tiempos, cámara móvil, cortes y audio. Compilación no inventa una realización pendiente. El [procedimiento audiovisual](../../video-motion-direction/references/PRODUCTION_AND_REVIEW.md) separa plan maestro, registros por clip, inspección y reparación. Si faltan herramientas, el alcance ejecutado es el tratamiento, storyboard o prompts solicitados, sin declarar vídeo producido.

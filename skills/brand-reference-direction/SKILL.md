@@ -1,6 +1,6 @@
 ---
 name: brand-reference-direction
-description: Analiza referencias, identidad visual, personas y productos para definir qué conservar, qué transformar y qué principios transferir. Úsalo con imágenes de referencia, activos o guías de marca, varias fuentes visuales, mockups o continuidad. Distingue evidencia de preferencias inferidas; no inventa un manual de marca.
+description: Crea y desarrolla identidades visuales, logotipos, sistemas de marca y aplicaciones; analiza referencias para delimitar identidad, protección y transferencia. Úsalo para branding nuevo, evolución, aplicación o continuidad de fuentes existentes. Distingue creación propuesta, reglas aprobadas y evidencia observada.
 ---
 
 # GORVET — Identidad y referencias visuales
@@ -9,7 +9,7 @@ Convierte las referencias disponibles en decisiones utilizables. Mira los materi
 
 ## Trabajo en cadena y método
 
-Aplica el [contrato común](../gorvet-creative-director/references/SPECIALIST_CONTRACT.md) y [REFERENCE_TRANSLATION.md](references/REFERENCE_TRANSLATION.md). Recibe fuentes disponibles y el trabajo que debe resolver cada una. Devuelve evidencia, atributos protegidos y relaciones transferibles. O examina las fuentes; T y R describen relaciones útiles. G y V se conservan si ya están definidos: no se inventa una intención del autor ni una nueva historia de marca al analizar una referencia.
+Aplica el [contrato común](../gorvet-creative-director/references/SPECIALIST_CONTRACT.md) y [REFERENCE_TRANSLATION.md](references/REFERENCE_TRANSLATION.md). Recibe fuentes disponibles y el trabajo que debe resolver cada una. Devuelve evidencia, atributos protegidos y relaciones transferibles; en creación o evolución autorizadas aporta el sistema estable en direction.identity. No cambia una marca protegida durante una simple aplicación. O examina las fuentes; T y R describen relaciones útiles. G y V se conservan si ya están definidos: no se inventa una intención del autor ni una nueva historia de marca al analizar una referencia.
 
 
 ## Asignar funciones
@@ -47,3 +47,7 @@ Conserva la referencia aprobada como fuente de identidad. Una edición fallida n
 Consulta [referencias visuales](../luces-camara-prompt/references/REFERENCES_REFERENCIAS_VISUALES.md), [consistencia](../luces-camara-prompt/references/REFERENCES_CONSISTENCIA_IDENTIDAD.md) y [producto y branding](../luces-camara-prompt/references/REFERENCES_PRODUCTO_BRANDING.md) según la tarea. Las sugerencias del libro se subordinan al encargo y a los materiales disponibles.
 
 Entrega al director la función de cada material, evidencia relevante, atributos protegidos, transformaciones y conflictos pendientes. No cambies el concepto ni ejecutes imágenes durante una consulta. La fidelidad final requiere comparar la salida con sus fuentes; este análisis previo no la certifica.
+
+## Procedimiento de desarrollo
+
+Para crear o evolucionar una identidad aplica [IDENTITY_CREATION.md](references/IDENTITY_CREATION.md). Consulta solo el modo pertinente.

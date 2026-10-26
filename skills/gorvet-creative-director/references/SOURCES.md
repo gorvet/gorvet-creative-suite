@@ -14,3 +14,8 @@ Las instrucciones nuevas de esta versión están redactadas para GORVET. Estas r
 - [Design Feedback Agent](https://www.figma.com/solutions/ai-design-feedback-agent/), de Figma: evaluar el diseño real en contexto. GORVET no presupone acceso a capas, componentes ni al agente de Figma.
 
 Fecha de consulta: 26 de octubre de 2026. Las fuentes describen métodos y capacidades propias; su documentación no prueba el comportamiento de GORVET. No se instalaron esos proyectos ni se ejecutaron sus scripts como parte de la revisión.
+
+## Referencias adicionales de la ampliación 2.2
+
+- [Designly — dirección de vídeo](https://github.com/imMamdouhaboammar/designly/blob/main/skills/video-director/SKILL.md). Su módulo declara procedencia de [Visual Skills de Serge Shima](https://github.com/smixs/visual-skills), licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Se reconocen esas fuentes para la separación conceptual de realización audiovisual y compilación; el texto y control temporal de GORVET son una adaptación propia, sin importar sus adaptadores ni biblioteca.
+- [Marketing Design — Logo Design](https://github.com/vanducng/skills/blob/main/skills/marketing-design/references/logo-design.md) y [Corporate Identity Program](https://github.com/vanducng/skills/blob/main/skills/marketing-design/references/cip-design.md), de vanducng. Revisados como referencia de relación entre marca, variantes y aplicaciones; no se incluyen scripts, datos ni modelos externos.

@@ -10,8 +10,12 @@ PROFILES = {
     "concept": {"fit": 25, "specificity": 20, "interest": 20, "clarity": 20, "feasibility": 15},
     "visual": {"communication": 20, "character": 20, "structure": 20,
                "typography": 15, "fidelity": 15, "craft": 10},
+    "motion": {"communication": 15, "character": 10, "structure": 10,
+               "typography": 10, "fidelity": 10, "craft": 10,
+               "action": 15, "rhythm": 10, "audio": 10},
 }
-OPTIONAL = {"concept": set(), "visual": {"typography", "fidelity"}}
+OPTIONAL = {"concept": set(), "visual": {"typography", "fidelity"},
+            "motion": {"typography", "fidelity", "audio"}}
 
 
 def evidence_list(value):
@@ -36,8 +40,16 @@ def evaluate(card):
     if not isinstance(blockers, list) or any(not isinstance(x, str) or not x.strip() for x in blockers):
         blockers = []
         errors.append("blockers debe ser una lista de hallazgos materiales.")
-    if kind == "visual" and card.get("observed") is not True:
-        errors.append("No se puntúa una imagen que no se ha observado.")
+    if kind in ("visual", "motion") and card.get("observed") is not True:
+        errors.append("No se puntúa un resultado que no se ha observado.")
+    if kind == "motion":
+        playback = card.get("playback")
+        if not isinstance(playback, dict) or playback.get("full_duration") is not True or playback.get("transitions_checked") is not True:
+            errors.append("La rúbrica audiovisual requiere reproducción completa y transiciones.")
+        audio_criterion = criteria.get("audio")
+        if isinstance(audio_criterion, dict) and audio_criterion.get("applicable", True) is not False:
+            if not isinstance(playback, dict) or playback.get("audio_checked") is not True:
+                errors.append("No se puntúa audio sin escucharlo.")
     points, weights = 0, 0
     for key, weight in PROFILES[kind].items():
         criterion = criteria.get(key)

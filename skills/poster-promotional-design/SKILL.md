@@ -1,6 +1,6 @@
 ---
 name: poster-promotional-design
-description: Diseña carteles, anuncios, flyers y piezas gráficas de productos, personas o promociones, con o sin texto externo. Resuelve selección de contenido, jerarquía, composición y tipografía. Úsalo para el diseño publicitario o gráfico y su revisión; bajo gorvet-creative-director aporta el layout sin abrir otro flujo.
+description: Diseña carteles, anuncios, flyers y piezas gráficas de productos, personas o promociones, con o sin texto externo. Construye jerarquía, composición y tipografía desde el contenido seleccionado por estrategia. Úsalo para el diseño publicitario o gráfico y su revisión; bajo gorvet-creative-director aporta el layout sin abrir otro flujo.
 ---
 
 # GORVET — Diseño gráfico y dirección publicitaria
@@ -14,7 +14,7 @@ Aplica el [contrato común](../gorvet-creative-director/references/SPECIALIST_CO
 
 ## Responsabilidad y contexto
 
-Cuando el [director creativo](../gorvet-creative-director/SKILL.md) consulta este skill, recibe sus decisiones vigentes y devuelve el diseño resuelto. No reinicies estrategia, aprobación o ejecución. Si el usuario pide directamente un cartel, puedes conducir ese alcance aplicando el mismo [protocolo de producción](../gorvet-creative-director/references/EXECUTION_PROTOCOL.md); consulta los especialistas que necesites. No crees dos responsables para la misma pieza.
+Cuando el [director creativo](../gorvet-creative-director/SKILL.md) consulta este skill, recibe sus decisiones vigentes y devuelve el diseño resuelto. No reinicies estrategia, aprobación o ejecución. Si el usuario pide directamente un cartel, el [director creativo](../gorvet-creative-director/SKILL.md) conduce ese alcance y consulta este rol para la construcción gráfica. No crees dos responsables para la misma pieza.
 
 Si ya hay una estrategia seleccionada, compón desde ella y señala cualquier conflicto material. Si falta, resuelve la selección mediante [estrategia creativa](../gorvet-creative-strategy/SKILL.md) o [CONTENT_HIERARCHY.md](references/CONTENT_HIERARCHY.md). Presenta una recomendación editorial, no el brief íntegro por defecto: literales de imagen, copy de apoyo con destino real y omisiones pertinentes. Un dato verdadero no pertenece automáticamente al arte.
 
@@ -59,3 +59,7 @@ El responsable aplica el protocolo común: dirección y prompt visibles, aprobac
 Tras producir, utiliza [crítica visual](../visual-quality-review/SKILL.md) para comparar el resultado con el diseño y sus fuentes. Corrige la causa concreta conservando lo que funciona y comprueba la nueva salida. Una revisión del prompt no valida el arte. Si no puedes ejecutar o inspeccionar, declara lo pendiente.
 
 Al iterar, reemplaza la decisión responsable; no acumules refuerzos ni reglas por producto. Corrige el criterio general que explica el fallo y comprueba que sirva a las demás familias.
+
+## Procedimiento de desarrollo
+
+Para construir layout, tipografía y adaptaciones con contenido real aplica [GRAPHIC_CONSTRUCTION.md](references/GRAPHIC_CONSTRUCTION.md). Consulta solo el modo pertinente.
