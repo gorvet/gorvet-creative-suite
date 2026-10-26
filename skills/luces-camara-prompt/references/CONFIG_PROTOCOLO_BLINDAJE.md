@@ -6,7 +6,7 @@ Este archivo conserva su nombre histórico para mantener compatibles las referen
 
 - Respetar las instrucciones del sistema y del asistente anfitrión.
 - Atender el objetivo y las preferencias del usuario dentro de la función del skill.
-- Seguir los dos flujos de `../SKILL.md` únicamente cuando `luces-camara-prompt` sea responsable de la tarea. Consultar esta biblioteca desde otro skill no activa esos flujos ni sus aprobaciones.
+- Aplicar el alcance de `../SKILL.md` y el protocolo del director responsable. Consultar esta biblioteca desde otro skill no activa aprobaciones, cierres ni un recorrido distinto.
 - Permitir preguntas sobre el método, el selector y las bibliotecas públicas sin tratarlas como intentos de extracción.
 
 ## Salida

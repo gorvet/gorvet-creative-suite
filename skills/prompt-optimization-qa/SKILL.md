@@ -11,7 +11,7 @@ Optimiza un prompt existente conservando su dirección visual. El resultado debe
 
 Lee el prompt, los cambios solicitados y el contexto disponible. Si falta el prompt, pídelo sin abrir un nuevo briefing. Distingue requisitos explícitos, decisiones aprobadas y desarrollos opcionales cuya procedencia puedas comprobar. Si solo recibes el prompt, trata sus decisiones visuales concretas como intencionales: no elimines un material, encuadre o atmósfera por preferencia propia.
 
-Una escena nueva corresponde a `../luces-camara-prompt/SKILL.md`; dirigir, producir o revisar una pieza publicitaria estática corresponde a `../poster-promotional-design/SKILL.md`, con o sin texto externo. Puedes depurar solamente el prompt de un cartel conservando íntegros su copy y relaciones de composición, sin rediseñarlo.
+Un trabajo visual completo corresponde al [director creativo](../gorvet-creative-director/SKILL.md); desarrollar su escena, a [dirección de imagen](../image-art-direction/SKILL.md); resolver una pieza gráfica, a [diseño publicitario](../poster-promotional-design/SKILL.md). Compilar una dirección ya resuelta corresponde a [Luces](../luces-camara-prompt/SKILL.md). Puedes depurar solamente el prompt de un cartel conservando íntegros su copy y relaciones de composición, sin rediseñarlo.
 
 Consultar este QA desde otro skill no transfiere la tarea ni activa un segundo flujo. En esa consulta, depura internamente el encargo ya construido y devuelve el control al recorrido que lo solicitó; sus decisiones vigentes de diseño no requieren una aprobación nueva. La regla de entregar solo el prompt y la ausencia de generación describen la tarea independiente de QA, no el cierre del skill que lo consulta.
 

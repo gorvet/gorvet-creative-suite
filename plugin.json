@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "gorvet-creative-suite",
-  "version": "1.7.3",
-  "description": "GORVET Creative Director: creative direction, image prompting and promotional design skills by Juank de Gorvet.",
+  "version": "2.0.0",
+  "description": "GORVET Creative Director: a visual creative agency with coordinated strategy, art direction, photography, graphic design, campaigns and visual review.",
   "author": {
     "name": "Juank de Gorvet",
     "url": "https://gorvet.com"
@@ -10,20 +10,21 @@
   "homepage": "https://gorvet.com",
   "keywords": [
     "gorvet",
-    "image prompting",
     "creative direction",
-    "visual consistency",
-    "image editing",
-    "generative ai",
+    "photography",
+    "art direction",
+    "image prompting",
+    "visual storytelling",
+    "brand identity",
     "poster design",
-    "promotional design"
+    "visual review"
   ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "GORVET Creative Director",
-        "shortDescription": "Dirección visual y prompts",
-        "longDescription": "Dirección creativa y producción visual con IA por Juank de Gorvet. Desarrolla escenas y prompts, depura instrucciones y dirige el arte publicitario de productos, personas y promociones con bibliotecas específicas y criterios comunes de contenido, composición, fidelidad y ejecución.",
+        "shortDescription": "Agencia creativa visual",
+        "longDescription": "Agencia creativa visual de Juank de Gorvet basada en el Método GORVET. Un director coordina estrategia, dirección de imagen, fotografía, diseño publicitario, identidad y referencias, narrativa y campañas, compilación de prompts y revisión visual. Resuelve el diseño antes de producir, muestra la dirección y el prompt para aprobarlos y conserva criterios de fidelidad, contenido y corrección. Incluye contratos y un verificador opcional para su integración futura en un agente.",
         "developerName": "Juank de Gorvet",
         "logo": "./assets/icon.png",
         "logoDark": "./assets/icon.png",
@@ -37,7 +38,7 @@
           "image-editing"
         ],
         "websiteURL": "https://gorvet.com",
-        "defaultPrompt": "Anuncios y carteles: poster-promotional-design. Escenas: luces-camara-prompt. Depurar prompts: prompt-optimization-qa."
+        "defaultPrompt": "Usa gorvet-creative-director para dirigir este encargo con los especialistas necesarios."
       }
     }
   }

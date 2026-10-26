@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "job_id": "example-unapproved",
+  "deliverable": "image",
+  "direction": {
+    "message": "Identificar una exposición",
+    "concept": "El contraste de dos formas expresa el encuentro",
+    "medium": "Ilustración geométrica",
+    "composition": "Formas superpuestas a la izquierda; titular alineado abajo a la derecha",
+    "image_text": ["ENCUENTRO"],
+    "support_copy": "Información ampliada para el mensaje acompañante acordado",
+    "references": []
+  },
+  "execution": {
+    "prompt": "Ilustración geométrica vertical: dos formas superpuestas ocupan la izquierda; a la derecha queda espacio libre. ENCUENTRO se lee abajo a la derecha, alineado a la derecha, en tipografía sans serif de peso medio. Paleta azul y naranja sobre fondo claro.",
+    "published_prompt": "Ilustración geométrica vertical: dos formas superpuestas ocupan la izquierda; a la derecha queda espacio libre. ENCUENTRO se lee abajo a la derecha, alineado a la derecha, en tipografía sans serif de peso medio. Paleta azul y naranja sobre fondo claro.",
+    "reference_ids": [],
+    "published_reference_ids": [],
+    "parameters": {},
+    "published_parameters": {},
+    "visibility": "shown",
+    "attempt": 1,
+    "authorization": {
+      "mode": "approval",
+      "approved_fingerprint": null,
+      "approved_direction_fingerprint": null
+    }
+  },
+  "output": {"id": null},
+  "review": {
+    "observed": false,
+    "output_id": null,
+    "direction_fingerprint": null,
+    "verdict": "unverified",
+    "evidence": []
+  }
+}
