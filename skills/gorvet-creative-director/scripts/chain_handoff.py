@@ -8,9 +8,9 @@ import sys
 
 
 OWNERS = {
-    "gorvet-creative-director": {"brief", "direction.composition", "direction.gorvet", "route"},
+    "gorvet-creative-director": {"brief", "direction.composition", "direction.gorvet", "direction.production_spec", "route"},
     "gorvet-creative-strategy": {"direction.message", "direction.concept", "direction.image_text",
-                                 "direction.support_copy", "direction.omitted_content"},
+                                 "direction.support_copy", "direction.omitted_content", "direction.content_decisions"},
     "image-art-direction": {"direction.medium", "direction.visual_proposition", "direction.scene",
                              "direction.visual_system", "direction.layout_blueprint"},
     "photography-direction": {"direction.capture"},
@@ -21,7 +21,7 @@ OWNERS = {
     "video-motion-direction": {"direction.motion"},
     "luces-camara-prompt": {"execution.prompt", "execution.reference_ids", "execution.parameters"},
     "prompt-optimization-qa": {"execution.prompt"},
-    "visual-quality-review": {"review"},
+    "visual-quality-review": {"review", "production_review"},
 }
 
 

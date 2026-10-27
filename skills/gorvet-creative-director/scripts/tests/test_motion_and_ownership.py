@@ -6,13 +6,13 @@ import sys
 import tempfile
 import unittest
 
-from test_check_handoff import gate, proposal, scorecard
+from test_check_handoff import gate, proposal, scorecard, finalize
 from test_chain_and_scoring import chain, packet, scoring
 
 
 def video():
     job = proposal()
-    job.update(schema_version="1.2", deliverable="video")
+    job.update(schema_version="1.3", deliverable="video")
     job["direction"]["motion"] = {
         "duration": 6,
         "shots": [
@@ -30,7 +30,7 @@ def video():
 
 
 def approve(job):
-    job["execution"]["authorization"]["approved_fingerprint"] = gate.fingerprints(job)["proposal"]
+    finalize(job)
 
 
 def delivered():
@@ -107,6 +107,7 @@ class MotionTests(unittest.TestCase):
     def test_silent_video_does_not_require_audio_review(self):
         job = delivered()
         job["direction"]["motion"]["audio"] = {"mode": "silent", "spec": "Entrega sin pista sonora"}
+        finalize(job)
         job["review"]["direction_fingerprint"] = gate.fingerprints(job)["direction"]
         job["review"]["playback"]["audio_checked"] = False
         job["review"]["scorecard"]["playback"]["audio_checked"] = False

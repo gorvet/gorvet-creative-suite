@@ -27,4 +27,4 @@ Antes de compilar, cada requisito material debe tener un control suficiente; cad
 
 Para una edición, añade la imagen base aprobada, la zona o elemento que cambia, la mutación solicitada y los atributos que se conservan. Una salida fallida no se convierte automáticamente en la nueva referencia de identidad.
 
-El contrato 1.1 legible por máquina del futuro agente está documentado en [AGENT_ARCHITECTURE.md](AGENT_ARCHITECTURE.md). El registro no garantiza obediencia del generador; permite identificar dónde se perdió una decisión y comparar versiones.
+El paquete de producción actual usa [contrato 1.3](PRODUCTION_SCHEMA.md); sus decisiones se cierran mediante [PRODUCTION_GATE.md](PRODUCTION_GATE.md). La historia de los contratos está documentada en [AGENT_ARCHITECTURE.md](AGENT_ARCHITECTURE.md). El registro no garantiza obediencia del generador; permite identificar dónde se perdió una decisión y comparar versiones.

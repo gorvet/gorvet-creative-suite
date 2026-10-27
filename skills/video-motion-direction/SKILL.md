@@ -7,6 +7,8 @@ description: Dirige vídeos, animaciones, motion graphics y secuencias audiovisu
 
 Convierte una intención en un acontecimiento legible en el tiempo. Una sucesión de imágenes atractivas no constituye por sí sola una realización audiovisual. Hereda mensaje, identidad y sistema de arte; no los sustituye por un estilo cinematográfico genérico.
 
+Antes de producir una salida visual, vuelve al director y aplica el [paso de producción](../gorvet-creative-director/references/PRODUCTION_GATE.md). Esta consulta aporta decisiones; no autoriza saltar selección, diseño integrado, compilación o revisión previa.
+
 ## Entrada y responsabilidad
 
 Aplica el [contrato común](../gorvet-creative-director/references/SPECIALIST_CONTRACT.md). Recibe propósito, duración o contexto de uso, concepto, guion si existe, fuentes y restricciones. Si el argumento está abierto, estrategia lo resuelve; narrativa decide qué comunica cada pieza de un conjunto visual. Este especialista decide cómo ocurre dentro del vídeo: puesta en escena, tiempos, movimiento, cortes y sonido. Una animación individual no necesita activar series.

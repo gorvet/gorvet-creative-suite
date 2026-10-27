@@ -20,6 +20,10 @@ motion_spec = importlib.util.spec_from_file_location("gorvet_check_motion", Path
 motion_module = importlib.util.module_from_spec(motion_spec)
 motion_spec.loader.exec_module(motion_module)
 
+production_spec = importlib.util.spec_from_file_location("gorvet_compile_production", Path(__file__).with_name("compile_production.py"))
+production_module = importlib.util.module_from_spec(production_spec)
+production_spec.loader.exec_module(production_module)
+
 
 def digest(value):
     data = json.dumps(value, ensure_ascii=False, sort_keys=True,
@@ -59,15 +63,13 @@ def validate(job, stage):
     errors = []
     if not isinstance(job, dict):
         return ["El registro debe ser un objeto JSON."]
-    if job.get("schema_version") not in ("1.1", "1.2"):
-        errors.append("Versión de contrato desconocida.")
+    if job.get("schema_version") != "1.3":
+        errors.append("La producción actual requiere contrato 1.3 y paquete de diseño resuelto.")
     if not nonempty(job.get("job_id")):
         errors.append("Falta job_id.")
     if job.get("deliverable") not in ("image", "series", "video"):
         errors.append("Este control es para medios visuales; un encargo textual no autoriza generación.")
     if job.get("deliverable") == "video":
-        if job.get("schema_version") != "1.2":
-            errors.append("La producción audiovisual requiere contrato 1.2.")
         errors.extend(motion_module.validate_motion(job, stage))
     brief = job.get("brief")
     if (not isinstance(brief, dict) or brief.get("status") != "ready"
@@ -99,6 +101,14 @@ def validate(job, stage):
     if stage not in ("generate", "deliver"):
         return errors + ["Etapa desconocida."]
     hashes = fingerprints(job)
+    try:
+        compiled = production_module.compile_prompt(job)
+        execution = job.get("execution")
+        if not isinstance(execution, dict) or execution.get("prompt") != compiled:
+            errors.append("El prompt no coincide con la compilación del diseño vigente.")
+        errors.extend(production_module.validate_review(job, compiled, hashes["direction"]))
+    except (ValueError, TypeError) as exc:
+        errors.append(str(exc))
     if stage == "deliver":
         output = job.get("output", {})
         review = job.get("review", {})
@@ -146,10 +156,6 @@ def validate(job, stage):
     prompt = execution.get("prompt")
     if not nonempty(prompt):
         errors.append("Falta el prompt de ejecución.")
-    elif string_list(direction.get("image_text")):
-        for literal in direction["image_text"]:
-            if literal not in prompt:
-                errors.append(f"Falta un literal seleccionado: {literal}")
     reference_ids = execution.get("reference_ids")
     if not string_list(reference_ids):
         errors.append("execution.reference_ids debe ser una lista.")

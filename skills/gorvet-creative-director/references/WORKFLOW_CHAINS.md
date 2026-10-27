@@ -1,6 +1,6 @@
 # Cadenas de trabajo y retorno
 
-Cada recorrido produce entradas concretas para el siguiente. El director puede omitir un trabajo que ya esté resuelto y documentado; no omite controles pendientes. Las consultas a identidad pueden adelantarse si sus restricciones condicionan la estrategia o el arte.
+Cada recorrido produce entradas concretas para el siguiente. Toda ruta que produzca medios termina en [PRODUCTION_GATE.md](PRODUCTION_GATE.md): no pasa del brief a un prompt libre. Las consultas conservan productos concretos y la revisión devuelve los fallos a su origen. El director puede omitir un trabajo que ya esté resuelto y documentado; no omite controles pendientes. Las consultas a identidad pueden adelantarse si sus restricciones condicionan la estrategia o el arte.
 
 La entrada común es [recepción del brief](BRIEF_INTAKE.md): el director conversa con el usuario cuando falten datos materiales, conserva hechos y restricciones y entrega a estrategia un encargo utilizable. El brief del cliente, la orientación estratégica y la especificación de arte son entregables sucesivos; no tres versiones que puedan contradecirse.
 

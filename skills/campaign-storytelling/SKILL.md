@@ -7,6 +7,8 @@ description: Diseña conjuntos de piezas, carruseles, series y storyboards desde
 
 Construye relaciones entre piezas. Conserva el identificador histórico campaign-storytelling; su alcance es diseño de conjuntos y narrativa visual, no planificación de marketing. Una serie puede desarrollar una historia, mostrar facetas de una propuesta o adaptar una identidad a diferentes usos. No todo conjunto necesita un arco dramático y no toda imagen necesita convertirse en serie.
 
+Antes de producir una salida visual, vuelve al director y aplica el [paso de producción](../gorvet-creative-director/references/PRODUCTION_GATE.md). Esta consulta aporta decisiones; no autoriza saltar selección, diseño integrado, compilación o revisión previa.
+
 ## Trabajo en cadena y método
 
 Aplica el [contrato común](../gorvet-creative-director/references/SPECIALIST_CONTRACT.md). Recibe objetivo, argumento y alcance; devuelve funciones de piezas, progresión y continuidad. Desarrolla G y V entre piezas y conserva O/R/T donde sostengan el universo común. E organiza las instrucciones de cada ejecución, sin confundir el guion del conjunto con una fórmula obligatoria del prompt. No inventes una serie cuando se pidió una imagen individual.

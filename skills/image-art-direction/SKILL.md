@@ -7,6 +7,8 @@ description: Dirige el arte y el sistema visual de una pieza o conjunto visual d
 
 Integra el concepto en una solución visual completa que otros especialistas puedan desarrollar sin inventar otro concepto. Conserva el identificador `image-art-direction` por compatibilidad. Su responsabilidad es el sistema de arte, no un segundo trabajo de fotografía ni la redacción del prompt.
 
+Antes de producir una salida visual, vuelve al director y aplica el [paso de producción](../gorvet-creative-director/references/PRODUCTION_GATE.md). Esta consulta aporta decisiones; no autoriza saltar selección, diseño integrado, compilación o revisión previa.
+
 ## Trabajo en cadena
 
 Aplica el [contrato común](../gorvet-creative-director/references/SPECIALIST_CONTRACT.md). Recibe propósito, mensaje, concepto, contenido seleccionado y restricciones. Devuelve proposición visual, medio, escena, sistema visual y esquema global de masas. No cambia el mensaje para justificar un efecto ni vuelve a editar en silencio los literales seleccionados.

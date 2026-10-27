@@ -32,6 +32,8 @@ En un encargo mixto elige qué lidera y aplica los requisitos pertinentes de las
 
 ## Diseñar antes de compilar
 
+La pieza solo pasa a generación mediante [PRODUCTION_GATE.md](../gorvet-creative-director/references/PRODUCTION_GATE.md). Entrega posiciones, escalas y construcción de cada literal; los recursos gráficos que se usarán deben estar descritos, no añadidos por el generador. No acepta «textos establecidos en la propuesta» como contenido de ejecución: incluye los textos reales. Una selección que conserve todo un brief abundante vuelve a evaluación editorial antes de repartirlo en bloques.
+
 Lee [VISUAL_SYSTEM.md](references/VISUAL_SYSTEM.md) y resuelve la pieza con el contenido real. Una intención genérica o un inventario de reglas no constituyen una dirección terminada. Antes de pasar a producción deben estar decididos:
 
 - Protagonista y argumento visual; relación entre lo que se ve y lo que se comunica.

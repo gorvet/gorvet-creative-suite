@@ -6,6 +6,8 @@ Este control tiene dos puntos de paso: la previsualización y su encargo deben s
 
 ## Antes de ejecutar: criterio y encargo
 
+Aplica [PRODUCTION_GATE.md](../../gorvet-creative-director/references/PRODUCTION_GATE.md). Cada riesgo detectado termina en una decisión de la representación final y en un control ejecutable: composición, recursos gráficos concretos, tratamiento tipográfico o captura. La frase «evitar estética IA» no es un sustituto. Comprueba procedencia del estilo y que se eligió por este encargo; no se hereda una estética entera del sector. El generador recibe los recursos elegidos y límites pertinentes, no esta biblioteca ni un catálogo de prohibiciones.
+
 | Aspecto | Qué debe estar resuelto | Qué corregir si falla |
 | --- | --- | --- |
 | Dirección | Se ha elegido qué se anuncia y qué prioridad gobierna la pieza. | Recuperar la intención; no mezclar las prioridades de las tres bibliotecas. |

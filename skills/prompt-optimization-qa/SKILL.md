@@ -33,6 +33,10 @@ Lee [OPTIMIZACION_PROMPT.md](references/OPTIMIZACION_PROMPT.md). Trabaja sobre u
 
 No basta con sustituir palabras por sinónimos o afirmar que el prompt quedó optimizado. Si una parte ya es suficiente, consérvala. Un prompt que ya está depurado puede devolverse sin cambios; no fuerces una reescritura para demostrar actividad.
 
+## Producción desde un paquete de diseño
+
+Si se consulta para generar, devuelve ajustes de redacción al paquete vigente y a Luces antes de recompilar conforme a [PRODUCTION_SCHEMA.md](../gorvet-creative-director/references/PRODUCTION_SCHEMA.md). No reemplaces el prompt compilado por otra versión libre ni borres controles distintos para acortarlo. Un trabajo independiente de optimización textual conserva la entrega siguiente y no activa generación.
+
 ## Entrega
 
 Entrega el prompt optimizado completo en el idioma original o en los idiomas solicitados. Para una petición combinada, incorpora los cambios autorizados antes de depurar. Traduce únicamente la versión cerrada y comprueba que ambas versiones contienen las mismas decisiones, sin ampliaciones ni pérdidas.

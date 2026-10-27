@@ -1,73 +1,51 @@
-# Arquitectura de la agencia y contratos 1.1 / 1.2
+# Arquitectura y contrato de producción 1.3
 
-GORVET Creative Director 2.2 encadena responsabilidades sobre un solo encargo. Las consultas son roles del asistente, no once procesos paralelos ni agentes externos. El director elige el recorrido por entregable y conserva autorización, versiones y cierre.
+GORVET Creative Director conserva un encargo vigente y once roles de diseño. Las consultas son responsabilidades del asistente; no equivalen a once agentes externos ni a once procesos ejecutados automáticamente. El director coordina la cadena por decisiones pendientes y aplica [PRODUCTION_GATE.md](PRODUCTION_GATE.md) antes de producir.
 
-## Cadena y responsabilidad
+## Productos y responsabilidades
 
-[WORKFLOW_CHAINS.md](WORKFLOW_CHAINS.md) define los recorridos y retornos. [SPECIALIST_CONTRACT.md](SPECIALIST_CONTRACT.md) define entradas, autoridad y salidas. Estrategia entrega argumento y contenido; arte, sistema visual y esquema; fotografía, captura; gráfica, construcción tipográfica y espacial. Arte integra las incompatibilidades antes de compilar. Crítica visual devuelve el defecto al ámbito menor que lo explica.
+[SCOPE_AND_ROUTING.md](SCOPE_AND_ROUTING.md) delimita el alcance de diseño; [SPECIALIST_CONTRACT.md](SPECIALIST_CONTRACT.md) define la autoridad y retorno; [WORKFLOW_CHAINS.md](WORKFLOW_CHAINS.md) selecciona recorridos. Concepto/contenido resuelve selección; arte, sistema y masas; fotografía, captura; gráfica, construcción tipográfica; identidad, fuentes y sistema estable; series, relaciones entre piezas; vídeo, realización temporal. El director integra; Luces compila; QA ajusta redacción de las decisiones sin rediseñar; crítica evalúa antes de generar y después de observar la salida.
 
-No se ejecuta toda la cadena para depurar un prompt, criticar una imagen o corregir una palabra. El marco GORVET se hereda y se aplica donde aporta decisiones; los controles de autorización, archivos o exportación no necesitan una nueva ideación.
+[chain_handoff.py](../scripts/chain_handoff.py) aplica contribuciones con `job_id`, `base_revision`, `role` y `updates`. Comprueba versión vigente, autoridad y campos protegidos; conserva las demás decisiones y añade la traza. Su mapa `OWNERS` permite a estrategia aportar `direction.content_decisions`, al director integrar `direction.production_spec` y a crítica aportar `production_review`. Compilación no tiene autoridad para cambiar diseño.
 
-## Registro y contribuciones
+## Registro vigente
 
-El registro contiene `job_id`, `revision`, dirección vigente, referencias, autorización, ejecución y revisión. Una contribución contiene `job_id`, `base_revision`, `role` y un objeto `updates` con campos concretos. El [ejemplo](../examples/specialist-packet.json) aporta arte al [registro sin aprobar](../examples/handoff.json).
+El formato actual es `schema_version: "1.3"`. Los contratos 1.1 y 1.2 son históricos; no pasan el control de producción actual. Para migrar, resuelve las decisiones y controles ausentes: no completa automáticamente una dirección a partir del prompt anterior.
 
-[chain_handoff.py](../scripts/chain_handoff.py) comprueba encargo y versión, rechaza escrituras fuera de la autoridad del rol y campos protegidos, aplica una copia de las decisiones y registra la cadena. No modifica los archivos de entrada. Su mapa `OWNERS` especifica campos autorizados. La composición consolidada y el contexto GORVET pertenecen a la integración del director, que conserva la procedencia de fotografía y gráfica; no son otro encargo independiente.
+El registro contiene `job_id`, `revision`, `brief`, `direction`, `task_mode`, `deliverable`, `execution`, `preflight`, `production_review`, `output` y `review`. `deliverable` puede ser `image`, `series` o `video`; un encargo textual no autoriza generación. `task_mode` distingue `create` y `edit`. El brief está `ready` y sin `material_questions` antes de producir; las hipótesis no materiales se conservan identificadas.
 
-```text
-python skills/gorvet-creative-director/scripts/chain_handoff.py registro.json contribucion.json
-```
+La dirección conserva `message`, `concept`, `medium`, `composition`, `image_text`, `references` y contexto `gorvet`. Las letras registran intención heredada o resuelta, no una nueva ideación en cada especialista. [PRODUCTION_SCHEMA.md](PRODUCTION_SCHEMA.md) especifica inventario, selección, representación del diseño y revisión previa vinculada. En edición se utiliza `preflight` de tipo `edit_scope` con base, objetivo, mutación, protección y aceptación; no se abre otro concepto.
 
-El verificador controla ámbitos de escritura, no el significado del contenido ni la bondad de una decisión. Que un campo pertenezca al especialista no le permite contradecir el objetivo: preflight y crítica deben detectar esa incoherencia.
+## Compilación y control
 
-## Contrato de producción 1.1
+[compile_production.py](../scripts/compile_production.py) ensambla una instrucción autosuficiente desde la representación final. No diseña ni llama a modelos. Devuelve `compiled`, `prompt` y `prompt_fingerprint`; no modifica el registro ni autoriza producción. El director incorpora la salida exacta, crítica comprueba selección, diseño, anti-IA y cobertura, y se presenta la propuesta según [EXECUTION_PROTOCOL.md](EXECUTION_PROTOCOL.md).
 
-- `schema_version`: `1.1`; `job_id`: identificador estable de la pieza.
-- `brief`: encargo organizado con `status: ready` y `material_questions: []` antes de producir. Los datos confirmados, propuestas y supuestos se conservan separados; la preparación del brief no sustituye la aprobación de la dirección.
-- `deliverable`: `image` o `series` para este control. Un entregable textual no autoriza producir una imagen.
-- `task_mode`: `create` o `edit`; si se omite, se interpreta como creación.
-- `direction`: `message`, `concept`, `medium`, `composition`, `image_text` como lista de literales y `references` como objetos con `id` y `role`. Incluye el contexto `gorvet` con G/O/R/V/E/T ya resueltos o conservados; no exige que cada especialista vuelva a desarrollarlos.
-- Los demás campos de dirección pueden registrar escena, sistema, captura, layout, tipografía, apoyo, omisiones, reglas de referencia y serie. Todos entran en la huella de dirección.
-- `preflight`: para creación, una rúbrica `concept` apta. Para edición, un objeto `kind: edit_scope`, `source_output_id`, `target`, `mutation`, `protected` como lista, `acceptance` y `ready: true`. La base debe estar declarada entre las fuentes. No se exige inventar otro concepto al editar.
-- `execution`: `prompt`, `reference_ids`, `parameters`, `attempt`, `authorization` y, salvo omisión expresa, `published_prompt`, `published_reference_ids`, `published_parameters`.
-- `authorization.mode`: `approval` con `approved_fingerprint`, o `direct` con `direct_instruction` expresa. Ocultar el prompt exige `visibility: omit_on_request` y `authorization.visibility_instruction`; el modo normal es `shown`.
-- Una corrección registra `restore_approved`, `direction_fingerprint`, `source_output_id` y `diagnosis` en `execution.correction`. En modo aprobado conserva `authorization.approved_direction_fingerprint`. Sus referencias incluyen fuentes de dirección y salida base declarada.
-- Para entrega validada: `output.id`; `review.observed`, `output_id`, `direction_fingerprint`, `verdict`, `evidence` y `scorecard` visual apta de esa salida.
+`execution` conserva prompt, fuentes, parámetros, intento, autorización y sus versiones publicadas. El modo `approval` necesita una huella aprobada desde la interacción real; `direct` necesita una instrucción expresa. Ocultar el prompt exige petición expresa. La huella de dirección cubre encargo, brief, alcance y decisiones; la de propuesta añade prompt, fuentes y parámetros. Las huellas no constituyen consentimiento.
 
-La huella de propuesta cubre encargo y brief, tipo de trabajo, dirección, prompt, referencias y parámetros. La de dirección cubre el mismo encargo, brief y decisiones. Calcular una huella no obtiene aprobación; el host registra esa aprobación solo desde la interacción auténtica del usuario.
+[check_handoff.py](../scripts/check_handoff.py) recompila la dirección, exige coincidencia exacta del prompt y revisión previa vigente, y comprueba concepto o alcance de edición, autorización, fuentes, parámetros y límite de intentos. Los valores enviados coinciden con los publicados. Las correcciones registran base, diagnóstico, conservación y huella de la dirección autorizada; un cambio de dirección necesita otra propuesta. El límite normal es una generación y dos correcciones.
 
-## Puntuación y evidencia
+Para entregar exige paquete íntegro, `output.id`, inspección de esa salida y dirección vigente, evidencia, veredicto apto y rúbrica visual o audiovisual sin bloqueos. [score_review.py](../scripts/score_review.py) comprueba estructura, cálculo y decisión de las rúbricas de concepto, visual y motion; no asigna notas ni observa medios.
 
-[SCORING_RUBRIC.md](SCORING_RUBRIC.md) define perfiles de concepto, imagen y audiovisual y anclas 0–4. Un criterio contiene `grade` y `evidence` como lista. Solo los criterios expresamente opcionales permiten `applicable: false` con `reason`, sin nota. Cada tarjeta contiene `kind`, `criteria` y `blockers`; la visual añade `observed: true`.
+## Vídeo
 
-El perfil `concept` contiene `fit`, `specificity`, `interest`, `clarity`, `feasibility`. El perfil `visual` contiene `communication`, `character`, `structure`, `typography`, `fidelity`, `craft`. La suma se normaliza por los pesos aplicables. Un bloqueo o una nota menor de 3 impiden cerrar aunque la media sea alta.
+`direction.motion` contiene duración positiva, planos consecutivos con id, inicio/fin, función, acción, cámara, transición y continuidad; audio con modo y especificación; entrega con proporción y formato. [check_motion.py](../scripts/check_motion.py) valida coherencia del plan y alcance registrado de inspección. El control principal lo invoca en vídeo.
 
-[score_review.py](../scripts/score_review.py) comprueba estructura, evidencia registrada, cálculo y decisión. No observa imágenes ni asigna notas. Una rúbrica incompleta no produce un índice supuesto.
+Una salida audiovisual necesita `output.media_type: video`, duración observada concordante con tolerancia de registro de 0,05 s, reproducción completa, transiciones revisadas y audio escuchado cuando esté previsto. La rúbrica es `motion`; un fotograma no valida vídeo. Cada llamada de clips separados corresponde a su registro y alcance mostrados. El plan y los parámetros usan capacidades comprobadas de la herramienta real.
+
+## Uso
 
 ```text
-python skills/gorvet-creative-director/scripts/score_review.py evaluacion.json
+python skills/gorvet-creative-director/scripts/compile_production.py registro.json
 python skills/gorvet-creative-director/scripts/check_handoff.py registro.json --fingerprints
 python skills/gorvet-creative-director/scripts/check_handoff.py registro.json --stage generate
 python skills/gorvet-creative-director/scripts/check_handoff.py registro.json --stage deliver
 python -m unittest discover -s skills/gorvet-creative-director/scripts/tests -v
 ```
 
-Los scripts usan Python estándar y no llaman a modelos ni redes. El código de salida 1 indica transición rechazada. El ejemplo distribuido está incompleto y sin aprobar: debe ser rechazado antes de generar.
+Los scripts usan Python estándar. El código de salida 1 rechaza la transición. El [ejemplo](../examples/handoff.json) tiene diseño compilable pero carece de evaluación y autorización: debe fallar antes de generar. El director usa el mismo [procedimiento manual](PRODUCTION_SCHEMA.md#compilación-manual) si el host no permite ejecutar Python; no inventa un resultado del verificador.
 
-## Integración del futuro agente
+## Límite de imposición
 
-El paquete no intercepta herramientas por sí mismo. Para imponer los controles, el agente mantiene el registro, encadena contribuciones, obtiene autorización de mensajes reales, registra archivos y llamadas reales y ejecuta el control antes de producir y de declarar una entrega validada. Si el control falla, vuelve a la decisión pendiente, sin saltarla.
+El paquete no intercepta herramientas del host. Las instrucciones exigen aplicar el paso; los scripts lo imponen cuando se invocan. Un futuro agente puede llamar obligatoriamente al control antes de sus herramientas de producción y entrega. Incluir los archivos en el ZIP no instala ese agente ni añade un hook en ChatGPT.
 
-Los verificadores confían en los hechos del host. No pueden saber si una aprobación declarada ocurrió ni si la evidencia visual es verdadera. El host debe aportar esas señales desde interacción y herramientas auténticas; el modelo no debe fabricarlas. Las pruebas de ámbitos, puntuación y autorización son distintas de comprobar la calidad creativa del resultado.
-
-El límite estándar comprobado es una generación y dos correcciones. Otro alcance autorizado requiere una política explícita del agente y pruebas correspondientes; no basta alterar una nota o un dato del registro. Si faltan herramientas o visión, informa del alcance que no se ejecutó.
-
-## Extensión audiovisual 1.2 y responsabilidad de identidad
-
-La versión 2.2 mantiene los registros de imagen 1.1 y añade contrato 1.2 para `deliverable: video`. Son once roles: el nuevo `video-motion-direction` posee únicamente `direction.motion`; identidad incorpora `direction.identity` para el sistema estable. [SCOPE_AND_ROUTING.md](SCOPE_AND_ROUTING.md) delimita entradas, autoridad, aceptación y exclusión de planificación de marketing.
-
-En vídeo, `direction.motion` contiene `duration` positiva en segundos, `shots` consecutivos con `id` único, `start`, `end`, `function`, `action`, `camera`, `transition`, `continuity`; `audio` con `mode: silent|sound` y `spec`; y `delivery` con `aspect_ratio` y `format`. Se registra el montaje final sin huecos; los solapes de fuentes se describen dentro de la transición. Los parámetros solo usan capacidades comprobadas en la herramienta real.
-
-`check_handoff.py` aplica el control temporal integrado antes de generar y al entregar, además de brief, dirección, aprobación y coincidencia de prompt/fuentes/parámetros. Para vídeo la salida requiere `output.media_type: video`, `output.duration` observada concordante (tolerancia de registro de 0,05 s), inspección `review.playback` completa y tarjeta `motion` apta. Esta tarjeta lleva también su alcance de reproducción. El audio previsto no admite marcarse como no aplicable. Los campos son declaraciones del host; los scripts no observan ni escuchan archivos.
-
-`check_motion.py registro.json --stage generate|deliver` permite comprobar el plan temporal por separado. No reemplaza el control completo de autorización ni el veredicto. Un plan maestro puede organizar múltiples clips; cada llamada necesita su registro y autorización vinculada al alcance mostrado. No permite declarar vídeo con una salida de imagen o storyboard.
+Los datos de autorización, inspección y evidencia deben provenir de interacción y herramientas reales. La estructura impide pérdida mecánica de decisiones, contenido sin seleccionar y sustitución libre del prompt; no determina por sí sola que la composición sea atractiva ni demuestra que se observó una imagen. Esas decisiones exigen revisión con evidencia y no se certifican rellenando campos o subiendo notas.

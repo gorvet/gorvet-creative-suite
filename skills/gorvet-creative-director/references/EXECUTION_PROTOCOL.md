@@ -4,12 +4,15 @@ Este protocolo pertenece al encargo completo. Se aplica una vez bajo su responsa
 
 ## Resolver y presentar
 
+El paso [PRODUCTION_GATE.md](PRODUCTION_GATE.md) es condición previa: selección, representación del diseño, compilación y revisión vinculada. Si Python está disponible, el verificador del contrato 1.3 debe aceptar el registro antes de llamar a generación; sin Python se aplica el mismo procedimiento manual y se muestra una síntesis de evidencia. No se declara una validación de código que no se ejecutó.
+
 Antes de generar, el diseño debe permitir describir la pieza sin volver a decidir qué comunicar, dónde situar sus elementos principales o qué tratamiento utilizar. Compila desde esas decisiones finales. Depura y traduce antes de presentar; una traducción posterior también puede modificar controles.
 
 Para una imagen nueva, muestra:
 
 - La recomendación editorial cuando haya contenido: literales de la imagen, apoyo útil con un destino viable y omisiones relevantes. Propón la selección; no pidas al usuario que haga esa edición.
 - Una dirección visual breve con concepto, composición y tratamiento concretos. Explica qué sostiene su interés, además de su legibilidad.
+- Una comprobación breve de selección, diseño, control anti-IA y cobertura, con decisiones verificadas, sin desplegar razonamientos privados.
 - El prompt completo y copiable que enviarás. Identifica por separado las referencias, su función y los parámetros que la herramienta exponga.
 
 Pide aprobar ese conjunto y termina el turno sin generar. Un brief inicial detallado no aprueba una propuesta que todavía no se ha mostrado. Si se pidió solo un concepto, un prompt, una crítica o un guion, entrega ese alcance sin exigir aprobar una generación que no se solicitó.

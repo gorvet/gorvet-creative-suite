@@ -23,6 +23,10 @@ Recibe propósito, entregable, alcance de la consulta, decisiones vigentes, refe
 
 El esquema global se resuelve antes del acabado, pero puede necesitar ajustes al probar el texto real o la captura. El especialista devuelve el conflicto y una solución concreta; el director integra con dirección de arte antes de cerrar la propuesta. No se impone un layout inviable ni se cambia en silencio. Tras aprobarse, los cambios de concepto, contenido o composición vuelven a propuesta.
 
+## Integración y paso de producción
+
+Concepto/contenido conserva `direction.content_decisions`; el director integra `direction.production_spec` desde arte, fotografía y gráfica, sin cambiar sus decisiones. Crítica entrega `production_review` antes de generar y `review` después de observar la salida. Compilación y QA no pueden reescribir ese diseño para crear un prompt distinto. Aplica [PRODUCTION_GATE.md](PRODUCTION_GATE.md) y el [contrato 1.3](PRODUCTION_SCHEMA.md); un traspaso pendiente vuelve al propietario del defecto antes de cualquier llamada.
+
 ## Salida de una consulta
 
 Devuelve **decisiones aportadas**, **decisiones recibidas que conservas**, **conflictos o entradas pendientes** y **cómo comprobar tu contribución**. No devuelvas otro briefing, otra aprobación ni un prompt competidor. Si la consulta no requiere una decisión nueva, confirma lo que se conserva sin rellenar apartados.

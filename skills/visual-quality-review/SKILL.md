@@ -12,6 +12,10 @@ Revisa el resultado como trabajo que debe funcionar para un encargo. Adopta una 
 Aplica el [contrato común](../gorvet-creative-director/references/SPECIALIST_CONTRACT.md). Recibe el arte, el propósito y la dirección vigente; devuelve evidencia, notas, bloqueos y reparación asignada. Usa GORVET para localizar la causa, no para crear otro concepto durante una revisión. Puntúa con la [rúbrica común](../gorvet-creative-director/references/SCORING_RUBRIC.md) y registra su evidencia; los fallos materiales no se compensan con el promedio.
 
 
+## Revisión previa de la dirección y el traspaso
+
+Antes de producir, revisa el [paquete de producción](../gorvet-creative-director/references/PRODUCTION_GATE.md) y aporta `production_review`: selección, diseño, anti-IA convertido en controles concretos y cobertura del prompt; en edición revisa alcance, protección y cobertura. Cada aprobación necesita evidencia de decisiones comprobadas sobre esa versión. Si el diseño delega otra elección al generador, o si la estética procede solo de un estereotipo de categoría, devuelve el defecto a su responsable. No genera, no valida por rellenar casillas ni compensa defectos con una puntuación alta. Este control conceptual no acredita una imagen todavía inexistente.
+
 ## Evidencia antes del veredicto
 
 Inspecciona la imagen disponible a escala representativa del uso. Identifica primera atención, mensaje y relación de conjunto. Después amplía lo pertinente: literales, identidad, geometría, manos, materiales o integración. Vuelve al conjunto para comprobar si un detalle cambia realmente la decisión.

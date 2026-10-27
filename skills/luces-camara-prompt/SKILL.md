@@ -18,13 +18,17 @@ Si existe un encargo dirigido, recibe su registro de decisiones y devuelve la in
 
 Si el usuario invoca Luces con una idea todavía abierta, el [director creativo](../gorvet-creative-director/SKILL.md) coordina los especialistas necesarios antes de compilar. Si entrega una escena completamente definida y pide solo su prompt, compila directamente y aclara únicamente una contradicción material. Si pide optimizar exclusivamente un prompt existente, aplica [QA de prompts](../prompt-optimization-qa/SKILL.md). Pedir texto no autoriza generar una imagen.
 
+## Condición de entrada a generación
+
+Para producción recibe el paquete cerrado de [PRODUCTION_GATE.md](../gorvet-creative-director/references/PRODUCTION_GATE.md). Si faltan literales, posiciones, escala, tratamiento o selección, devuelve esa decisión al responsable; no la completa al redactar. Usa el [compilador 1.3](../gorvet-creative-director/scripts/compile_production.py) cuando haya Python, o la [compilación manual](../gorvet-creative-director/references/PRODUCTION_SCHEMA.md#compilación-manual) con los mismos productos. No sustituye esa compilación por un texto libre más evocador. Los encargos exclusivamente textuales conservan su alcance sin pedir autorización para imágenes.
+
 ## Construcción del prompt final
 
 1. **Reunir la versión vigente.** Lee concepto, escena, composición, tratamiento, literales, referencias, cambios permitidos y atributos protegidos. Distingue hechos, decisiones y dudas; no compiles una dirección genérica para que el generador la resuelva.
 2. **Organizar la instrucción.** Expresa primero el control que gobierna el resultado; después las relaciones necesarias. Fija quién o qué aparece, dónde, a qué escala, mediante qué tratamiento y con qué relación entre imagen y texto. No hay un orden universal ni un número obligatorio de bloques.
 3. **Delimitar referencias.** Identifica los archivos que realmente se suministrarán y su función. Conservar identidad no equivale a copiar pose, fondo y gráfica. En edición, define base, mutación y conservación.
 4. **Seleccionar el copy.** Incluye únicamente las cadenas destinadas al arte, una vez con su colocación y tratamiento. El caption, el material descartado y las notas de producción no van al generador ni como ejemplos negativos.
-5. **Depurar.** Aplica [OPTIMIZACION_PROMPT.md](../prompt-optimization-qa/references/OPTIMIZACION_PROMPT.md). Conserva relaciones y restricciones distintas; consolida equivalencias. La brevedad no justifica borrar diseño, y una lista técnica no compensa una escena pendiente.
+5. **Depurar.** En producción modifica las cláusulas de la representación vigente y recompila; no altera después el prompt compilado. Aplica [OPTIMIZACION_PROMPT.md](../prompt-optimization-qa/references/OPTIMIZACION_PROMPT.md). Conserva relaciones y restricciones distintas; consolida equivalencias. La brevedad no justifica borrar diseño, y una lista técnica no compensa una escena pendiente.
 6. **Adaptar a la herramienta.** Usa únicamente controles disponibles. Un número de cámara puede orientar el aspecto, pero no garantiza óptica real; si hace falta, expresa el resultado visible. No inventes modelos, formatos, referencias admitidas, máscaras o semillas. No importes convenciones por el nombre de una plataforma.
 7. **Comparar cobertura.** Reconstruye la pieza desde la instrucción sin consultar el análisis. Si todavía debes decidir su concepto o reparto principal, devuelve esa carencia al director. Cada requisito material debe sobrevivir; cada añadido debe tener una función autorizada.
 

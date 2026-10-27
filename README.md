@@ -20,6 +20,14 @@ Agencia creativa visual de **Juank de Gorvet**, basada en el Método G.O.R.V.E.T
 
 Fotografía es una especialidad propia. Dirección de arte integra la solución visual y su esquema; fotografía desarrolla la captura de esa solución cuando sea fotográfica. Diseño publicitario integra la escena con tipografía y contenido. El director resuelve conflictos y conserva la responsabilidad; una consulta no reinicia el trabajo ni abre otra aprobación.
 
+## Paso de producción de la versión 2.3
+
+Antes de generar, el director aplica [PRODUCTION_GATE.md](skills/gorvet-creative-director/references/PRODUCTION_GATE.md). La selección de contenido y el diseño son productos concretos: cada dato tiene un destino y cada literal una construcción, posición y escala. La estética tiene procedencia y criterio; los recursos gráficos se eligen antes de producir.
+
+El [compilador](skills/gorvet-creative-director/scripts/compile_production.py) construye el prompt desde la representación final; el verificador recompila y rechaza diferencias, etapas previas pendientes o revisiones de otra versión. Los textos de apoyo y descartes no se envían. No acepta remisiones como «los textos establecidos en la propuesta» en las instrucciones de ejecución. Los contratos anteriores ya no permiten eludir este control.
+
+Si no hay Python, el asistente aplica el mismo recorrido manual y muestra decisiones y una comprobación breve antes de producir. El paquete exige ese comportamiento mediante instrucciones; no intercepta herramientas de ChatGPT ni garantiza obediencia del host. La estructura, compilación y pruebas se distinguen de verificar la calidad de una imagen real.
+
 ## Cómo trabaja
 
 El director [prepara el brief con el usuario](skills/gorvet-creative-director/references/BRIEF_INTAKE.md): extrae lo disponible, separa hechos y supuestos y pregunta por incertidumbres materiales. Estrategia convierte ese encargo en argumento y selección; arte desarrolla el sistema visual. El equipo propone decisiones de diseño sin pedir al usuario que haga ese trabajo. No hay un cuestionario completo obligatorio ni una aprobación adicional rutinaria del brief.
@@ -49,13 +57,13 @@ Consulta [fuentes y adaptación](skills/gorvet-creative-director/references/SOUR
 
 ## Descarga e instalación
 
-El paquete de esta versión es `gorvet-creative-suite-2.2.1.zip`, con manifiesto, once skills, referencias, scripts de control, pruebas, icono y licencia. Su identificador técnico sigue siendo `gorvet-creative-suite` y el nombre visible es GORVET Creative Director. El autor y desarrollador son Juank de Gorvet; la web es [gorvet.com](https://gorvet.com).
+El paquete de esta versión es `gorvet-creative-suite-2.3.0.zip`, con manifiesto, once skills, referencias, scripts de control, pruebas, icono y licencia. Su identificador técnico sigue siendo `gorvet-creative-suite` y el nombre visible es GORVET Creative Director. El autor y desarrollador son Juank de Gorvet; la web es [gorvet.com](https://gorvet.com).
 
 Los paquetes publicados aparecen en [GitHub Releases](https://github.com/gorvet/gorvet-creative-suite/releases). Para probar una versión local usa el ZIP entregado con esa versión; crear un archivo local no lo publica en GitHub.
 
 Importa el ZIP completo en una aplicación compatible con este formato de complemento. Para un host que instala Agent Skills por carpetas, conserva las once carpetas hermanas de `skills/` con sus recursos: la agencia utiliza referencias entre especialidades. La aplicación decide su ubicación, activación y formato de importación. Adjuntar el ZIP a un chat no equivale necesariamente a instalarlo.
 
-Después de actualizar, comprueba que la aplicación muestre la versión 2.2.1 y el skill `gorvet-creative-director`. Abre una sesión nueva si el host conserva instrucciones anteriores. No necesitas elegir manualmente un especialista para pedir un trabajo completo.
+Después de actualizar, comprueba que la aplicación muestre la versión 2.3.0 y el skill `gorvet-creative-director`. Abre una sesión nueva si el host conserva instrucciones anteriores. No necesitas elegir manualmente un especialista para pedir un trabajo completo.
 
 ## Migración desde 1.7
 
@@ -65,7 +73,7 @@ La versión 2.0 cambia el recorrido: una escena ya resuelta que solo necesita un
 
 ## Base para un agente
 
-[Arquitectura y contrato](skills/gorvet-creative-director/references/AGENT_ARCHITECTURE.md) documenta el contratos 1.1 y 1.2, responsabilidades, contribuciones en cadena, puntuación, autorización, huellas y revisión. El [verificador de traspasos](skills/gorvet-creative-director/scripts/check_handoff.py) permite comprobar antes de producir y antes de declarar una entrega validada que el registro está completo y corresponde a la versión vigente.
+[Arquitectura y contrato](skills/gorvet-creative-director/references/AGENT_ARCHITECTURE.md) documenta el contrato 1.3, responsabilidades, contribuciones en cadena, puntuación, autorización, huellas y revisión. El [verificador de traspasos](skills/gorvet-creative-director/scripts/check_handoff.py) permite comprobar antes de producir y antes de declarar una entrega validada que el registro está completo y corresponde a la versión vigente.
 
 ```text
 python -m unittest discover -s skills/gorvet-creative-director/scripts/tests -v
@@ -81,7 +89,7 @@ Para imponer controles efectivos, el futuro agente debe obtener autorización de
 
 Después de confirmar los cambios, ejecuta `./scripts/build-release.ps1` desde PowerShell. Genera el ZIP y `SHA256SUMS.txt` en `dist/` desde el commit actual. Rechaza cambios pendientes y archivos de distribución existentes para evitar paquetes ambiguos.
 
-La publicación existente usa `.github/workflows/release.yml`: al subir una etiqueta como `v2.2.1`, comprueba su coincidencia con el manifiesto, genera el ZIP, verifica integridad y crea la Release. Un commit o un ZIP local no publican esa Release. La identidad, el icono y los metadatos se conservan en `plugin.json`.
+La publicación existente usa `.github/workflows/release.yml`: al subir una etiqueta como `v2.3.0`, comprueba su coincidencia con el manifiesto, genera el ZIP, verifica integridad y crea la Release. Un commit o un ZIP local no publican esa Release. La identidad, el icono y los metadatos se conservan en `plugin.json`.
 
 ## Licencia
 
@@ -95,7 +103,7 @@ Identidad desarrolla creación de marca, sistema, variantes, aplicaciones y prue
 
 Los procedimientos están enlazados desde cada skill y comparten traspasos y límites. El paquete no incluye motores audiovisuales ni despliega un agente autónomo: producir requiere herramientas disponibles. Las pruebas de contratos no equivalen a comprobar calidad generativa en ChatGPT.
 
-## Memoria y diseño multilingüe en 2.2.1
+## Memoria y diseño multilingüe
 
 Identidad y referencias incorpora un [procedimiento de memoria de proyecto](skills/brand-reference-direction/references/REFERENCE_MEMORY.md): procedencia, alcance, estados, versiones y recuperación de criterios aplicables. Si el entorno permite archivos, se conserva en el proyecto; sin persistencia disponible no promete memoria entre sesiones. No requiere servicios externos ni guarda preferencias de clientes en el complemento.
 

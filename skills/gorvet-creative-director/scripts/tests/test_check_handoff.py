@@ -23,8 +23,9 @@ def scorecard(kind):
 
 def proposal():
     job = {
-        "schema_version": "1.1", "job_id": "test", "deliverable": "image",
-        "brief": {"status": "ready", "material_questions": []},
+        "schema_version": "1.3", "job_id": "test", "deliverable": "image",
+        "brief": {"status": "ready", "material_questions": [],
+                  "content_items": [{"id": "name", "text": "ALFA", "protected_literals": ["ALFA"], "required_in_image": True}]},
         "direction": {"message": "Identidad", "concept": "Forma y contraste",
                       "medium": "Ilustración", "composition": "Sujeto a la izquierda",
                       "image_text": ["ALFA"], "references": [{"id": "source", "role": "identity"}],
@@ -35,9 +36,31 @@ def proposal():
                       "reference_ids": ["source"], "parameters": {"transparent_background": False},
                       "attempt": 1, "authorization": {"mode": "approval"}},
     }
+    job["direction"]["content_decisions"] = [{"id": "name", "destination": "image", "reason": "Identificar el sujeto", "literals": ["ALFA"]}]
+    job["direction"]["production_spec"] = {
+        "canvas": "Ilustración cuadrada.", "intent": "Identificar ALFA por el contraste de dos formas.",
+        "composition": "Formas superpuestas a la izquierda y literal abajo a la derecha.",
+        "treatment": "Formas planas azul y naranja sobre un campo claro uniforme.",
+        "style_basis": {"origin": "proposal", "evidence": "El encargo pide contraste de formas", "reason": "La superposición hace visible el encuentro"},
+        "elements": [
+            {"id": "subject", "kind": "subject", "instruction": "Dos discos planos se superponen parcialmente", "placement": "Mitad izquierda", "scale": "Masa principal, dos tercios de la altura"},
+            {"id": "name", "kind": "text", "literal": "ALFA", "instruction": "Sans serif de peso medio sobre el fondo, sin soporte gráfico", "placement": "Abajo a la derecha con margen exterior", "scale": "Una línea, menor que los discos"}],
+        "graphic_devices": [], "constraints": ["Bordes nítidos y colores uniformes."]}
+    job["direction"]["composition"] = job["direction"]["production_spec"]["composition"]
+    finalize(job)
+    return job
+
+
+def finalize(job):
     execution = job["execution"]
+    execution["prompt"] = gate.production_module.compile_prompt(job)
     for field in ("prompt", "reference_ids", "parameters"):
         execution["published_" + field] = copy.deepcopy(execution[field])
+    checks = ("scope", "preservation", "coverage") if job.get("task_mode") == "edit" else ("selection", "design", "anti_ai", "coverage")
+    job["production_review"] = {
+        "direction_fingerprint": gate.fingerprints(job)["direction"],
+        "prompt_fingerprint": gate.production_module.fingerprint(execution["prompt"]), "blockers": [],
+        "checks": {k: {"status": "pass", "evidence": ["Fixture sintética: control de la versión vigente."]} for k in checks}}
     execution["authorization"]["approved_fingerprint"] = gate.fingerprints(job)["proposal"]
     execution["authorization"]["approved_direction_fingerprint"] = gate.fingerprints(job)["direction"]
     return job
@@ -121,7 +144,7 @@ class HandoffTests(unittest.TestCase):
                                    "direction_fingerprint": gate.fingerprints(job)["direction"]}
         execution["reference_ids"].append("generated-1")
         execution["published_reference_ids"] = list(execution["reference_ids"])
-        execution["prompt"] = execution["published_prompt"] = "Conserva ALFA; mueve el sujeto a la izquierda."
+        finalize(job)
         self.assertEqual(gate.validate(job, "generate"), [])
         job["direction"]["composition"] = "Otra composición"
         self.assertTrue(gate.validate(job, "generate"))
@@ -176,7 +199,7 @@ class HandoffTests(unittest.TestCase):
         job["preflight"] = {"kind": "edit_scope", "source_output_id": "source",
                             "target": "Literal", "mutation": "Restituir ALFA", "protected": ["Identidad", "Composición"],
                             "acceptance": "Texto correcto y resto conservado", "ready": True}
-        job["execution"]["authorization"]["approved_fingerprint"] = gate.fingerprints(job)["proposal"]
+        finalize(job)
         self.assertEqual(gate.validate(job, "generate"), [])
         job["preflight"]["source_output_id"] = "unknown"
         self.assertTrue(gate.validate(job, "generate"))

@@ -7,6 +7,8 @@ description: Crea y desarrolla identidades visuales, logotipos, sistemas de marc
 
 Convierte las referencias disponibles en decisiones utilizables. Mira los materiales antes de afirmar que los analizaste. Distingue conservar un sujeto, transferir relaciones de diseño y transformar una imagen base. No atribuyas a una referencia autoridad sobre todos los aspectos del trabajo.
 
+Antes de producir una salida visual, vuelve al director y aplica el [paso de producción](../gorvet-creative-director/references/PRODUCTION_GATE.md). Esta consulta aporta decisiones; no autoriza saltar selección, diseño integrado, compilación o revisión previa.
+
 ## Trabajo en cadena y método
 
 Aplica el [contrato común](../gorvet-creative-director/references/SPECIALIST_CONTRACT.md) y [REFERENCE_TRANSLATION.md](references/REFERENCE_TRANSLATION.md). Recibe fuentes disponibles y el trabajo que debe resolver cada una. Devuelve evidencia, atributos protegidos y relaciones transferibles; en creación o evolución autorizadas aporta el sistema estable en direction.identity. No cambia una marca protegida durante una simple aplicación. O examina las fuentes; T y R describen relaciones útiles. G y V se conservan si ya están definidos: no se inventa una intención del autor ni una nueva historia de marca al analizar una referencia.
