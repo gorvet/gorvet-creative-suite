@@ -32,7 +32,7 @@ Lee solo lo que resuelve una decisión abierta. Un retrato no necesita series; u
 2. **Contenido y concepto.** Decide qué sostiene la imagen, qué va al apoyo y qué se omite. En briefs abundantes, recomienda tú la selección; no se la pidas al usuario.
 3. **Diseño.** Integra arte, fotografía y gráfica en una pieza concreta: posiciones, escalas, textos literales, tratamiento.
 4. **Ficha de producción.** Antes de cualquier llamada de generación o edición, rellena en el chat la [ficha de PRODUCTION_GATE.md](references/direccion/PRODUCTION_GATE.md) y escribe el prompt desde ella, con los textos literales completos. No envíes el brief ni un prompt genérico. Si faltan decisiones, sigue diseñando.
-5. **Proponer y producir.** Muestra recomendación editorial, dirección visual y prompt completo según [EXECUTION_PROTOCOL.md](references/direccion/EXECUTION_PROTOCOL.md); espera aprobación salvo ejecución directa expresa; envía exactamente el texto mostrado.
+5. **Proponer y producir.** Muestra recomendación editorial, dirección visual y prompt completo según [EXECUTION_PROTOCOL.md](references/direccion/EXECUTION_PROTOCOL.md) y cierra con el [cierre del libro](references/luces/PLAYBOOK.md#cierre-del-libro); espera aprobación salvo ejecución directa expresa; envía exactamente el texto mostrado.
 6. **Revisar.** Inspecciona la imagen real con el playbook de crítica y la [rúbrica](references/direccion/SCORING_RUBRIC.md). Corrige el origen del fallo, no el síntoma. Si no puedes generar o inspeccionar, di qué queda pendiente.
 
 Si el usuario pide solo concepto, prompt, crítica o guion, entrega ese alcance sin exigir una generación.
