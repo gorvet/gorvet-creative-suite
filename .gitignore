@@ -10,8 +10,6 @@ temp/
 tmp/
 cache/
 .cache/
-__pycache__/
-*.py[cod]
 *.tmp
 *.temp
 *.swp

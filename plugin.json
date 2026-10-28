@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "gorvet-creative-suite",
-  "version": "2.3.0",
+  "version": "3.0.0",
   "description": "GORVET Creative Director: coordinated visual concept, art direction, photography, graphic design, identity, visual series, video and motion review.",
   "author": {
     "name": "Juank de Gorvet",
@@ -24,7 +24,7 @@
       "interface": {
         "displayName": "GORVET Creative Director",
         "shortDescription": "Agencia creativa visual",
-        "longDescription": "Agencia de diseño y dirección creativa visual de Juank de Gorvet basada en el Método GORVET. Once roles coordinan concepto, arte, fotografía, gráfica, identidad, referencias, series, vídeo, prompts y crítica. La producción parte de una selección editorial y un diseño concreto: textos exactos, posiciones, escalas, tratamiento y recursos gráficos elegidos. Incluye compilación desde decisiones, revisión de cobertura y controles de integridad antes de generar y entregar. El asistente aplica el recorrido en el host; los scripts verifican los registros cuando pueden ejecutarse. No planifica marketing ni campañas comerciales.",
+        "longDescription": "Agencia de diseño y dirección creativa visual de Juank de Gorvet basada en el Método GORVET. Diez especialidades coordinan concepto, arte, fotografía, gráfica, identidad, referencias, series, vídeo, prompts y crítica. La producción parte de una selección editorial y un diseño concreto: textos exactos, posiciones, escalas, tratamiento y recursos gráficos elegidos. Un único skill coordina las especialidades como playbooks y exige una ficha de producción antes de generar. Funciona solo con instrucciones, sin código. No planifica marketing ni campañas comerciales.",
         "developerName": "Juank de Gorvet",
         "logo": "./assets/icon.png",
         "logoDark": "./assets/icon.png",
