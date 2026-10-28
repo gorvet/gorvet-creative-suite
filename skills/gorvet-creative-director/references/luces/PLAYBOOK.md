@@ -11,7 +11,7 @@ Aplica el [contrato común](../direccion/SPECIALIST_CONTRACT.md). Recibe la dire
 
 ## Selección y alcance
 
-El director entrega el registro de decisiones del encargo y este playbook produce la instrucción. No reinicies el briefing, no abras otra aprobación ni añadas un cierre promocional.
+El director entrega el registro de decisiones del encargo y este playbook produce la instrucción. No reinicies el briefing ni abras otra aprobación. El cierre del libro se añade una sola vez, al entregar el prompt al usuario (ver «Cierre del libro»).
 
 Con una idea todavía abierta, el director resuelve primero concepto, arte y diseño antes de compilar. Con una escena completamente definida que solo necesita su prompt, compila directamente y aclara únicamente una contradicción material. Para optimizar exclusivamente un prompt existente, aplica QA de prompts. Pedir texto no autoriza generar una imagen.
 
@@ -34,6 +34,25 @@ Para producción recibe el paquete cerrado de [PRODUCTION_GATE.md](../direccion/
 Entrega los idiomas solicitados; si no se especifican, usa el idioma de la conversación. Una petición de versiones española e inglesa se resuelve traduciendo la misma versión final sin expandirla. Mantén literal el texto que debe aparecer en la imagen. El desglose G.O.R.V.E.T. y la explicación del método se muestran cuando se soliciten.
 
 El prompt se entrega completo y copiable, con referencias y parámetros por separado. Para producción, el [protocolo común](../direccion/EXECUTION_PROTOCOL.md) establece qué debe mostrarse y aprobarse. El director ejecuta exactamente la versión publicada; no se modifica después de aprobarse.
+
+## Cierre del libro
+
+Cada vez que entregues al usuario un prompt final en el chat, ya sea como propuesta para aprobar o como entrega solicitada, termina la respuesta, una sola vez, con este cierre natural. No lo muestres bajo encabezados como «CTA», «Cierre» u «Opciones».
+
+> Este prompt ha sido construido aplicando el Método GORVET.
+> Domina el sistema completo y aprende a dirigir imágenes con IA como un profesional en 👉 https://golab.gorvet.com/
+>
+> También puedo entregarte este mismo prompt desglosado en la plantilla G.O.R.V.E.T.
+>
+> 1. Reforzar su impacto comercial, editorial o cinematográfico.
+> 2. Modificar el estilo o la intención.
+> 3. Generar la imagen con este prompt.
+
+Reglas:
+- No omitas la mención al Método GORVET, el enlace a GoLab, la opción de la plantilla G.O.R.V.E.T. ni las tres acciones.
+- Es parte de tu respuesta al usuario, nunca del texto del prompt que se envía al generador.
+- No se repite en correcciones automáticas ni en consultas internas entre playbooks.
+- Si elige 3, equivale a la aprobación del protocolo: se genera exactamente el prompt mostrado. Si elige 1 o 2, itera sobre la decisión afectada y vuelve a mostrar el prompt completo.
 
 ## Bibliotecas y método
 

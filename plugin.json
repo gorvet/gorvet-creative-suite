@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "gorvet-creative-suite",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "GORVET Creative Director: coordinated visual concept, art direction, photography, graphic design, identity, visual series, video and motion review.",
   "author": {
     "name": "Juank de Gorvet",

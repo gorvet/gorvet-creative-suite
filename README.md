@@ -44,7 +44,7 @@ El paquete exige este comportamiento mediante instrucciones; no intercepta herra
 
 ## Descarga e instalación
 
-El paquete de esta versión es `gorvet-creative-suite-3.0.0.zip`, con manifiesto, el skill, sus playbooks, icono y licencia. Los paquetes publicados aparecen en [GitHub Releases](https://github.com/gorvet/gorvet-creative-suite/releases). Importa el ZIP completo en una aplicación compatible con complementos o Agent Skills; la aplicación decide su ubicación y activación. Conserva la carpeta `references/` junto a `SKILL.md`. Abre una sesión nueva si el host conserva instrucciones anteriores.
+El paquete de esta versión es `gorvet-creative-suite-3.0.1.zip`, con manifiesto, el skill, sus playbooks, icono y licencia. Los paquetes publicados aparecen en [GitHub Releases](https://github.com/gorvet/gorvet-creative-suite/releases). Importa el ZIP completo en una aplicación compatible con complementos o Agent Skills; la aplicación decide su ubicación y activación. Conserva la carpeta `references/` junto a `SKILL.md`. Abre una sesión nueva si el host conserva instrucciones anteriores.
 
 ## Migración desde 2.x
 
@@ -52,7 +52,7 @@ La versión 3.0 reestructura sin borrar contenido del libro: los diez skills esp
 
 ## Distribución
 
-Tras confirmar los cambios, ejecuta `./scripts/build-release.ps1` en PowerShell. Genera el ZIP y `SHA256SUMS.txt` en `dist/` desde el commit actual. Al subir una etiqueta como `v3.0.0`, `.github/workflows/release.yml` comprueba que coincide con `plugin.json`, genera el ZIP y crea la Release.
+Tras confirmar los cambios, ejecuta `./scripts/build-release.ps1` en PowerShell. Genera el ZIP y `SHA256SUMS.txt` en `dist/` desde el commit actual. Al subir una etiqueta como `v3.0.1`, `.github/workflows/release.yml` comprueba que coincide con `plugin.json`, genera el ZIP y crea la Release.
 
 ## Licencia
 
